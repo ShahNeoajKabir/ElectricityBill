@@ -1,0 +1,60 @@
+E:\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.deps.json
+E:\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.dll
+E:\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csprojAssemblyReference.cache
+E:\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfoInputs.cache
+E:\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfo.cs
+E:\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.pdb
+E:\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\BillPayment.DTO.dll
+E:\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\BillPayment.DTO.pdb
+E:\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csproj.CoreCompileInputs.cache
+E:\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csproj.CopyComplete
+E:\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.dll
+E:\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.pdb
+E:\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.pdb
+E:\BappyFinalDefence\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.deps.json
+E:\BappyFinalDefence\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.pdb
+E:\BappyFinalDefence\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\ModelClass.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\ModelClass.pdb
+E:\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csprojAssemblyReference.cache
+E:\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfoInputs.cache
+E:\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfo.cs
+E:\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csproj.CopyComplete
+E:\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csproj.CoreCompileInputs.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.deps.json
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.pdb
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\ModelClass.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\ModelClass.pdb
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csprojAssemblyReference.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfoInputs.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfo.cs
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csproj.CoreCompileInputs.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csproj.CopyComplete
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.pdb
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.deps.json
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.pdb
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\ModelClass.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\ModelClass.pdb
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csprojAssemblyReference.cache
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfoInputs.cache
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfo.cs
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csproj.CoreCompileInputs.cache
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csproj.CopyComplete
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.pdb
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.deps.json
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\Context.pdb
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\ModelClass.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\bin\Debug\netcoreapp3.1\ModelClass.pdb
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csprojAssemblyReference.cache
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfoInputs.cache
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfo.cs
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csproj.CoreCompileInputs.cache
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.csproj.CopyComplete
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\Context\obj\Debug\netcoreapp3.1\Context.pdb

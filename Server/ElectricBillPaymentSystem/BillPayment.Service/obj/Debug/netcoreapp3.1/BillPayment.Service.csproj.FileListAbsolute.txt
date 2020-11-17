@@ -1,0 +1,327 @@
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.DTO.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPaymentDbContext.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csprojAssemblyReference.cache
+E:\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.AssemblyInfoInputs.cache
+E:\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.AssemblyInfo.cs
+E:\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.RazorTargetAssemblyInfo.cache
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\appsettings.json
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.exe
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.deps.json
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.runtimeconfig.json
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.runtimeconfig.dev.json
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.pdb
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPaymentDbContext.pdb
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.DTO.pdb
+E:\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csproj.CoreCompileInputs.cache
+E:\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.MvcApplicationPartsAssemblyInfo.cache
+E:\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csproj.CopyComplete
+E:\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\staticwebassets\BillPayment.Service.StaticWebAssets.Manifest.cache
+E:\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\staticwebassets\BillPayment.Service.StaticWebAssets.xml
+E:\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.pdb
+E:\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.genruntimeconfig.cache
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Context.dll
+E:\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Context.pdb
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\appsettings.json
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.exe
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.deps.json
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.runtimeconfig.json
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.runtimeconfig.dev.json
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.pdb
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Context.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\ModelClass.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Context.pdb
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\ModelClass.pdb
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csprojAssemblyReference.cache
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.AssemblyInfoInputs.cache
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.AssemblyInfo.cs
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csproj.CoreCompileInputs.cache
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.MvcApplicationPartsAssemblyInfo.cache
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.RazorTargetAssemblyInfo.cache
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csproj.CopyComplete
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\staticwebassets\BillPayment.Service.StaticWebAssets.Manifest.cache
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\staticwebassets\BillPayment.Service.StaticWebAssets.xml
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.dll
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.pdb
+E:\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.genruntimeconfig.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\appsettings.Development.json
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\appsettings.json
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.exe
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.deps.json
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.runtimeconfig.json
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.runtimeconfig.dev.json
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.pdb
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Context.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\ModelClass.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Context.pdb
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\ModelClass.pdb
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csprojAssemblyReference.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.AssemblyInfoInputs.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.AssemblyInfo.cs
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csproj.CoreCompileInputs.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.MvcApplicationPartsAssemblyInfo.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.RazorTargetAssemblyInfo.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csproj.CopyComplete
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\staticwebassets\BillPayment.Service.StaticWebAssets.Manifest.cache
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\staticwebassets\BillPayment.Service.StaticWebAssets.xml
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.dll
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.pdb
+E:\Final Defence\BappyFinalDefence\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.genruntimeconfig.cache
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.exe
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.deps.json
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.runtimeconfig.json
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.runtimeconfig.dev.json
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.pdb
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Context.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\ModelClass.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Context.pdb
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\ModelClass.pdb
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csprojAssemblyReference.cache
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.AssemblyInfoInputs.cache
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.AssemblyInfo.cs
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csproj.CoreCompileInputs.cache
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.RazorTargetAssemblyInfo.cache
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csproj.CopyComplete
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\staticwebassets\BillPayment.Service.StaticWebAssets.Manifest.cache
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\staticwebassets\BillPayment.Service.StaticWebAssets.xml
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.dll
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.pdb
+C:\Users\PC\Downloads\Compressed\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.genruntimeconfig.cache
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\appsettings.Development.json
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\appsettings.json
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.exe
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.deps.json
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.runtimeconfig.json
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.runtimeconfig.dev.json
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\BillPayment.Service.pdb
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Context.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\ModelClass.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\Context.pdb
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\bin\Debug\netcoreapp3.1\ModelClass.pdb
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csprojAssemblyReference.cache
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.AssemblyInfoInputs.cache
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.AssemblyInfo.cs
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csproj.CoreCompileInputs.cache
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.MvcApplicationPartsAssemblyInfo.cache
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.RazorTargetAssemblyInfo.cache
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.csproj.CopyComplete
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\staticwebassets\BillPayment.Service.StaticWebAssets.Manifest.cache
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\staticwebassets\BillPayment.Service.StaticWebAssets.xml
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.pdb
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\BillPayment.Service\obj\Debug\netcoreapp3.1\BillPayment.Service.genruntimeconfig.cache

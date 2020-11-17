@@ -1,0 +1,62 @@
+<aside class="menu-sidebar d-none d-lg-block" style="width: 15%; background-color: rgb(12, 79, 82);">
+  <div class="logo" style="background-color: rgb(118, 199, 199); text-align: center;">
+      <a href="#">
+          <img style="width: 120px;height: 120px;" src="assets\images\icon\60e362b7788c61d935e05dd4bf4a575f-removebg-preview.png" alt="Logo" />
+      </a>
+      <!-- <ul class="nav navbar-nav mobileVisibility">
+
+
+
+                  <li>
+                      <a style="cursor: pointer; ;" class="btn-default">
+                          <strong>Logout</strong>
+                      </a>
+                  </li>
+
+      </ul> -->
+  </div>
+  <div class="menu-sidebar__content js-scrollbar1">
+      <nav class="navbar-sidebar">
+          <ul class="list-unstyled navbar__list" >
+              <li >
+                  <a   style="cursor: pointer;color: white !important; ">
+                      <i class="fas fa-tachometer-alt" style="color: white !important;"></i >Dashboard</a>
+
+              </li>
+              <li>
+                  <a style="cursor: pointer;color: white !important;">
+                      <i class="zmdi zmdi-account-o"style="color: white !important;"></i> Profile</a>
+              </li>
+              <li>
+                  <a  style="cursor: pointer;color: white !important;" [routerLink]="['/user/AddUser']">
+                      <i class="zmdi zmdi-account-o"style="color: white !important;" ></i> User</a>
+              </li>
+              <li>
+                  <a   style="cursor: pointer;color: white !important;">
+                      <i class="zmdi zmdi-account-o"style="color: white !important;"></i>Role</a>
+              </li>
+              <li>
+                  <a  style="cursor: pointer;color: white !important;">
+                      <i class="zmdi zmdi-account-o"style="color: white !important;"></i>Meter</a>
+              </li>
+              <li>
+                  <a style="cursor: pointer;color: white !important;" [routerLink]="['/notice/AddNotice']">
+                     <i class="far fa-check-square"style="color: white !important;"></i> Notice</a>
+              </li>
+              <li>
+                <a style="cursor: pointer;color: white !important;">
+                   <i class="far fa-check-square"style="color: white !important;" [routerLink]="['/support/AddSupport']" ></i> Support</a>
+            </li>
+            <li>
+              <a style="cursor: pointer;color: white !important;">
+                 <i class="far fa-check-square"style="color: white !important;"></i> Logout</a>
+          </li>
+
+
+
+
+          </ul>
+      </nav>
+  </div>
+</aside>
+  <router-outlet></router-outlet>

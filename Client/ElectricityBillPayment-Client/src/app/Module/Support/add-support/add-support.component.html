@@ -1,0 +1,35 @@
+<div class="Main">
+  <div class="page-wrapper" style="height: 2300px;">
+     <div class="page-content--bge5">
+         <div class="container">
+             <div class="login-wrap">
+                 <div class="login-content">
+                     <div class="login-logo">
+                         <a href="#">
+                             <img src="assets\images\icon\202-2024703_avatar-person-picture-profile-user-multiple-comments-multiple.png" alt="Add User">
+                         </a>
+                     </div>
+                     <div class="login-form">
+                         <form >
+
+                         <div class="form-group">
+                             <label>Support Content</label>
+                             <input type="text"  name="SupportContent" [(ngModel)]="objSupport.SupportContent" class="au-input au-input--full"  autocomplete="off">
+                           </div>
+                        <div class="form-group">
+                          <label>Support Subjevt</label>
+                          <input type="text" class="au-input au-input--full"  name="SupportSubject" [(ngModel)]="objSupport.SupportSubject" aria-describedby="emailHelp" autocomplete="off">
+                        </div>
+                         <button type="submit" (click)="AddSupport()" class="btn btn-primary">Add Complain</button>
+
+                         </form>
+
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </div>
+
+   </div>
+   </div>
+
