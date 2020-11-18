@@ -258,7 +258,7 @@ namespace Context.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("MeterNumber")
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -270,10 +270,6 @@ namespace Context.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("MeterId");
-
-                    b.HasIndex("MeterNumber")
-                        .IsUnique()
-                        .HasFilter("[MeterNumber] IS NOT NULL");
 
                     b.ToTable("MeterTable");
                 });

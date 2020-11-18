@@ -1,0 +1,16 @@
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\bin\Debug\netcoreapp3.1\ElectricityBillPayment.Bll.deps.json
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\bin\Debug\netcoreapp3.1\ElectricityBillPayment.Bll.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\bin\Debug\netcoreapp3.1\ElectricityBillPayment.Bll.pdb
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\bin\Debug\netcoreapp3.1\Context.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\bin\Debug\netcoreapp3.1\ElectricBillPayment.Common.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\bin\Debug\netcoreapp3.1\ModelClass.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\bin\Debug\netcoreapp3.1\Context.pdb
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\bin\Debug\netcoreapp3.1\ElectricBillPayment.Common.pdb
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\bin\Debug\netcoreapp3.1\ModelClass.pdb
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\obj\Debug\netcoreapp3.1\ElectricityBillPayment.Bll.csprojAssemblyReference.cache
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\obj\Debug\netcoreapp3.1\ElectricityBillPayment.Bll.AssemblyInfoInputs.cache
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\obj\Debug\netcoreapp3.1\ElectricityBillPayment.Bll.AssemblyInfo.cs
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\obj\Debug\netcoreapp3.1\ElectricityBillPayment.Bll.csproj.CoreCompileInputs.cache
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\obj\Debug\netcoreapp3.1\ElectricityBillPayment.Bll.csproj.CopyComplete
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\obj\Debug\netcoreapp3.1\ElectricityBillPayment.Bll.dll
+G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ElectricityBillPayment.Bll\obj\Debug\netcoreapp3.1\ElectricityBillPayment.Bll.pdb
