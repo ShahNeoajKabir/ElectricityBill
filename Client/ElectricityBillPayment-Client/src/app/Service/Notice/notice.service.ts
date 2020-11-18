@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class NoticeService {
-  url="https://localhost:44368/";
+  url="https://localhost:44368/api/Notice/";
 
 
   constructor(

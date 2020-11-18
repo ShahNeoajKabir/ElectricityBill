@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ZaTcwUj9X1+X1Filh3dpTV/L+46+XuRH+wULUqXBI2khhTwKa7NdDtboRyQSd0Xirli23YWkLK9eXz40tTySWA==",
+  "dgSpecHash": "E1DIZ3U2KbwKO2Gc1ZmMWC2pT+plrF7+9iuBlyGfPUrdYsO9zTJZ6xHx9aeqavKarPoiXEgRJTaYT5I5yjSUcA==",
   "success": true,
-  "projectFilePath": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj",
+  "projectFilePath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

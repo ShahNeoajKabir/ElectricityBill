@@ -57,11 +57,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\ElectricBillPayment.Common.csproj",
+      "projectUniqueName": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\ElectricBillPayment.Common.csproj",
       "projectName": "ElectricBillPayment.Common",
-      "projectPath": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\ElectricBillPayment.Common.csproj",
+      "projectPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\ElectricBillPayment.Common.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\obj\\",
+      "outputPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",

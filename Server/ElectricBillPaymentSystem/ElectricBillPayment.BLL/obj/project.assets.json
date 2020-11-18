@@ -5345,11 +5345,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.BLL\\ElectricBillPayment.BLL.csproj",
+      "projectUniqueName": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.BLL\\ElectricBillPayment.BLL.csproj",
       "projectName": "ElectricBillPayment.BLL",
-      "projectPath": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.BLL\\ElectricBillPayment.BLL.csproj",
+      "projectPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.BLL\\ElectricBillPayment.BLL.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.BLL\\obj\\",
+      "outputPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5365,14 +5365,14 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\BillPayment.Service\\BillPayment.Service.csproj": {
-              "projectPath": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\BillPayment.Service\\BillPayment.Service.csproj"
+            "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\BillPayment.Service\\BillPayment.Service.csproj": {
+              "projectPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\BillPayment.Service\\BillPayment.Service.csproj"
             },
-            "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\Context\\Context.csproj": {
-              "projectPath": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\Context\\Context.csproj"
+            "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Context\\Context.csproj": {
+              "projectPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Context\\Context.csproj"
             },
-            "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\ElectricBillPayment.Common.csproj": {
-              "projectPath": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\ElectricBillPayment.Common.csproj"
+            "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\ElectricBillPayment.Common.csproj": {
+              "projectPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\ElectricBillPayment.Common.csproj"
             }
           }
         }

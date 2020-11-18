@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj": {}
+    "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj": {}
   },
   "projects": {
-    "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj": {
+    "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj",
+        "projectUniqueName": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj",
         "projectName": "ModelClass",
-        "projectPath": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj",
+        "projectPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ModelClass\\ModelClass.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ModelClass\\obj\\",
+        "outputPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ModelClass\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",

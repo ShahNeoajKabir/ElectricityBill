@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iiigrlP6RqO0Jg8uC/HQz6o86MeDeF8q46RDt/SDpRhlamas9EWwpzlIqiKJKKq9gpRdOW6o+UmtH5PqK9KsYw==",
+  "dgSpecHash": "sZcI4UqrBDFzQSCu1s6NtBIJJjQ1n89n3MJUhOFkMMJmuldncbMVPTJO5XKSsZcBXVUMdexjlg2VbWncJA/Chg==",
   "success": true,
-  "projectFilePath": "G:\\Bappy\\ElectricityBillPaymentManagement-main\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\ElectricBillPayment.Common.csproj",
+  "projectFilePath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\ElectricBillPayment.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
   ],

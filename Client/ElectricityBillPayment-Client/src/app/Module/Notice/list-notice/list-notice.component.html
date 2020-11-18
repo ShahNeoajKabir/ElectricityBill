@@ -1,1 +1,43 @@
-<p>list-notice works! hahaha</p>
+<div class="main">
+  <div class="Header">
+      <div>
+          <button class="au-btn au-btn-icon au-btn--green au-btn--small" [routerLink]="['/notice/AddNotice']" >
+              <i class="zmdi zmdi-plus"></i>Add Notice</button>
+
+      </div>
+  <div>
+      <form class="form-header" action="" method="POST">
+          <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for Information &amp; reports..." />
+          <button class="au-btn--submit" type="submit">
+              <i class="zmdi zmdi-search"></i>
+          </button>
+      </form>
+  </div>
+  </div>
+  <div class="row m-t-30">
+      <div class="col-md-12">
+          <!-- DATA TABLE-->
+          <div class="table-responsive m-b-40">
+              <table class="table table-borderless table-data3">
+                  <thead>
+                      <tr>
+                          <th>User Name</th>
+                          <th>Email</th>
+                          <th>Password</th>
+                          <th>Mobile Number</th>
+                          <th>User Type</th>
+                          <th>Status</th>
+
+
+                      </tr>
+                  </thead>
+                  <tbody style="text-align: center;">
+
+                  </tbody>
+              </table>
+          </div>
+          <!-- END DATA TABLE-->
+      </div>
+  </div>
+  </div>
+

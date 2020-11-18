@@ -42,3 +42,12 @@ G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\
 G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.csproj.CoreCompileInputs.cache
 G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.dll
 G:\Bappy\ElectricityBillPaymentManagement-main\Server\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.pdb
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\ModelClass\bin\Debug\netcoreapp3.1\ModelClass.deps.json
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\ModelClass\bin\Debug\netcoreapp3.1\ModelClass.dll
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\ModelClass\bin\Debug\netcoreapp3.1\ModelClass.pdb
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.csprojAssemblyReference.cache
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.AssemblyInfoInputs.cache
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.AssemblyInfo.cs
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.csproj.CoreCompileInputs.cache
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.dll
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.pdb
