@@ -30,6 +30,13 @@ namespace ElectricityBillPayment.Service
         {
             services.AddControllers();
             services.AddDbContext<PaymentDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("StudentPortal_DB")), ServiceLifetime.Transient);
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader());
+            });
             services.AddScoped<IUserBLLManager, UserBLLManager>();
         }
 
@@ -44,6 +51,7 @@ namespace ElectricityBillPayment.Service
             app.UseHttpsRedirection();
 
             app.UseRouting();
+            app.UseCors("CorsPolicy");
 
             app.UseAuthorization();
 

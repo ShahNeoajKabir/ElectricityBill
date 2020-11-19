@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { User } from 'src/app/Model/User';
 import { UserService } from 'src/app/Service/User/user.service';
 
@@ -12,7 +12,9 @@ export class AddUserComponent implements OnInit {
 
   objUser:User=new User();
   constructor(
-    private userservice:UserService
+    private userservice:UserService,
+    private router: Router,
+    private ActivateRouter: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
