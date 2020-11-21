@@ -19,6 +19,11 @@ export class ListUserComponent implements OnInit {
       console.log(this.lstUser);
     })
   }
+  Edit(id: any) {
+
+    console.log(id);
+  }
+
 
 
 

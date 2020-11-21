@@ -20,7 +20,16 @@
                           <label>Support Subject</label>
                           <input type="text" class="au-input au-input--full"  name="SupportSubject" [(ngModel)]="objSupport.SupportSubject" aria-describedby="emailHelp" autocomplete="off">
                         </div>
-                         <button type="submit" (click)="AddSupport()" class="btn btn-primary">Add Complain</button>
+                        <div class="form-group">
+                          <label>Status</label>
+                          <select name="Status" class="form-control"
+                          [(ngModel)]="objSupport.Status">
+                      <!-- <option [value]="-1">-Select-</option> -->
+                      <option *ngFor="let status of lststatus"
+                      [value]="status.key">{{status.value}}</option>
+              </select>
+              </div>
+                         <button style="margin-left: 35% !important;" type="submit" (click)="AddSupport()" class="btn btn-primary">Add Complain</button>
 
                          </form>
 

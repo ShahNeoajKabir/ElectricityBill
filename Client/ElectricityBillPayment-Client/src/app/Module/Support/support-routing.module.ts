@@ -6,7 +6,8 @@ import { ListSupportComponent } from './list-support/list-support.component';
 
 
 const routes: Routes = [{ path: 'AddSupport', component: AddSupportComponent },
-{ path: '', component: ListSupportComponent }
+{ path: 'View', component: ListSupportComponent },
+{path:':id/edit',component:AddSupportComponent}
 
 
 

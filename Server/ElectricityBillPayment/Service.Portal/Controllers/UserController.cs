@@ -44,13 +44,13 @@ namespace Service.Portal.Controllers
         }
         [HttpPost]
         [Route("UpdateUser")]
-        public int UpdateUser([FromBody]TempMessage message)
+        public User UpdateUser([FromBody]User user)
         {
             try
             {
-                User user = JsonConvert.DeserializeObject<User>(message.Content.ToString());
+                
                 this.userBLLManager.UpdateUser(user);
-                return 1;
+                return user;
             }
             catch (Exception ex)
             {
@@ -62,11 +62,11 @@ namespace Service.Portal.Controllers
         }
         [HttpPost]
         [Route("GetbyID")]
-        public User GetbyID([FromBody]TempMessage message)
+        public User GetbyID([FromBody]User user)
         {
             try
             {
-                User user = JsonConvert.DeserializeObject<User>(message.Content.ToString());
+                
                 return this.userBLLManager.GetByID(user);
                 
             }

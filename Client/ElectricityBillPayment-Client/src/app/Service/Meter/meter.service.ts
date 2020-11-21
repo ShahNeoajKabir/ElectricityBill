@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MeterService {
-  url="https://localhost:44368/api/Zone/";
+  url="http://localhost:55109/api/Meter/";
 
   constructor(private httpclient:HttpClient) { }
 
@@ -13,4 +13,16 @@ export class MeterService {
     return this.httpclient.post(this.url+"AddMeter" , MeterTable);
 
   }
+  public GetAll(){
+    return this.httpclient.get(this.url+"GetAll");
+
+  }
+  public UpdateMeter(Meter:any){
+    return this.httpclient.post(this.url+"UpdateMeter",Meter);
+  }
+
+  public GetById(Meter:any){
+    return this.httpclient.post(this.url+"GetById",Meter);
+  }
+
 }

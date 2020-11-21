@@ -5,7 +5,8 @@ import { ListMeterComponent } from './list-meter/list-meter.component';
 
 
 const routes: Routes = [{ path: 'AddMeter', component: AddMeterComponent },
-{ path: '', component: ListMeterComponent }
+{ path: 'View', component: ListMeterComponent },
+{path:':id/editmeter',component:AddMeterComponent}
 
 
 

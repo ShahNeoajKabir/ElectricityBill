@@ -1,7 +1,7 @@
 <div class="main">
   <div class="Header">
       <div>
-          <button class="au-btn au-btn-icon au-btn--green au-btn--small" [routerLink]="['/meter/AddMeter']" >
+          <button class="au-btn au-btn-icon au-btn--green au-btn--small" [routerLink]="['/Meter/AddMeter']" >
               <i class="zmdi zmdi-plus"></i>Add Meter</button>
 
       </div>
@@ -29,8 +29,15 @@
                       </tr>
                   </thead>
                   <tbody style="text-align: center;">
+                    <tr *ngFor="let objmeter of lstMeter">
+                        <td >{{objmeter.MeterNumber}}</td>
+                        <td>{{objmeter.ExpiredDate}}</td>
+                    <td>{{objmeter.Status}}</td>
+                    <td> <a routerLink="../{{objmeter.MeterId }}/editmeter">Edit</a></td>
 
-                  </tbody>
+                    </tr>
+
+                </tbody>
               </table>
           </div>
           <!-- END DATA TABLE-->

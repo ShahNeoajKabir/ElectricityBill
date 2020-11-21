@@ -21,8 +21,7 @@ namespace SecurityBLLManager
             {
                 meter.CreatedBy = "Admin";
                 meter.CreatedDate = DateTime.Now;
-                meter.Status = (int)Electricity.Common.Enum.Enum.Status.Active;
-                 _dbContext.MeterTable.AddAsync(meter);
+                 _dbContext.MeterTable.Add(meter);
                  _dbContext.SaveChanges();
                 return meter;
             }
@@ -44,20 +43,13 @@ namespace SecurityBLLManager
         {
             try
             {
-                var res =  _dbContext.MeterTable.Where(e => e.MeterId == meter.MeterId).FirstOrDefault();
-                if (res != null)
-                {
+                
                     meter.UpdatedBy = "Admin";
                     meter.UpdatedDate = DateTime.Now;
                     _dbContext.MeterTable.Update(meter);
                      _dbContext.SaveChanges();
                     return meter;
-                }
-
-                else
-                {
-                    throw new Exception("Failed To Update");
-                }
+                
             }
             catch (Exception)
             {

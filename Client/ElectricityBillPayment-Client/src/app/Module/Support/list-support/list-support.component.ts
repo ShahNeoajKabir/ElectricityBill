@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { Support } from 'src/app/Model/Support';
+import { SupportService } from 'src/app/Service/Support/support.service';
 
 @Component({
   selector: 'app-list-support',
@@ -7,9 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListSupportComponent implements OnInit {
 
-  constructor() { }
+  public lstSupport:Support[]=new Array<Support>();
+
+  constructor(
+    private supportservice:SupportService,
+    private router:Router,
+    private activeroute:ActivatedRoute
+    ) { }
 
   ngOnInit(): void {
+    this.supportservice.GetAll().subscribe((res:any)=>{
+      this.lstSupport=res;
+      console.log(this.lstSupport);
+
+    })
+  }
+
+  Edit(id:any){
+    console.log(id);
   }
 
 }

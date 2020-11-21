@@ -17,8 +17,17 @@
                         </div>
                         <div class="form-group">
                           <label>ExpiredDate</label>
-                          <input type="text" class="au-input au-input--full"   name="ExpiredDate" [(ngModel)]="objMeter.ExpiredDate" aria-describedby="emailHelp" autocomplete="off">
+                          <input type="date" class="au-input au-input--full"   name="ExpiredDate" [(ngModel)]="objMeter.ExpiredDate" aria-describedby="emailHelp" autocomplete="off">
                         </div>
+                        <div class="form-group">
+                          <label>Status</label>
+                          <select name="Status" class="form-control"
+                          [(ngModel)]="objMeter.Status">
+                      <!-- <option [value]="-1">-Select-</option> -->
+                      <option *ngFor="let status of lstStatus"
+                      [value]="status.key">{{status.value}}</option>
+              </select>
+              </div>
 
                          <button type="submit" (click)="AddMeter()" class="btn btn-primary">Add Meter</button>
 

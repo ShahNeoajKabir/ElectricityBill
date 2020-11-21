@@ -16,6 +16,7 @@ export class AddUserComponent implements OnInit {
   public lstStatus:any ;
   public lstGender:any;
   public lstType:any;
+  public objuseredit: User = new User();
   constructor(
     private userservice:UserService,
     private router: Router,
@@ -28,18 +29,41 @@ export class AddUserComponent implements OnInit {
     this.lstGender = this.utility.enumToArray(Gender);
     this.lstType=this.utility.enumToArray(UserType);
 
+    if (this.ActivateRouter.snapshot.params['id'] !== undefined) {
+
+      this.objuseredit.UserId = this.ActivateRouter.snapshot.params['id' ];
+      this.userservice.GetById(this.objuseredit).subscribe(( res: any) => {
+
+        this.objUser = res;
+        console.log(this.objUser);
+     });
+      console.log(this.ActivateRouter.snapshot.params['id' ] );
+
+    }
+
   }
 
 
   AddUser(){
     console.log(this.objUser);
-    this.userservice.AddUser(this.objUser).subscribe(res => {
-      if (res === 1) {
-        this.router.navigate(['/User/View']);
+    if (this.objUser.UserId > 0 ) {
+      this.userservice.UpdateUser(this.objUser).subscribe(res => {
+        if (res === 1) {
+          this.router.navigate(['/User/View']);
+          console.log(res);
+        }
         console.log(res);
-      }
-      console.log(res);
-    } );
+      } );
+    } else {
+      this.userservice.AddUser(this.objUser).subscribe(res => {
+        if (res === 1) {
+          this.router.navigate(['/User/View']);
+          console.log(res);
+        }
+        console.log(res);
+      } );
+    }
+
 
   }
 

@@ -1,6 +1,6 @@
 export class MeterTable{
-  MeterId=0;
-  MeterNumber='';
+  MeterId:number=0;
+  MeterNumber:string='';
   CreatedBy: string='';
   ExpiredDate:Date | undefined;
   CreatedDate: Date |undefined;
