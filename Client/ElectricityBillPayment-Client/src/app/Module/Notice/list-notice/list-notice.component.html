@@ -21,19 +21,21 @@
               <table class="table table-borderless table-data3">
                   <thead>
                       <tr>
-                          <th>User Name</th>
-                          <th>Email</th>
-                          <th>Password</th>
-                          <th>Mobile Number</th>
-                          <th>User Type</th>
+                          <th>Notice Name </th>
                           <th>Status</th>
 
 
                       </tr>
                   </thead>
                   <tbody style="text-align: center;">
+                    <tr *ngFor="let objnotice of lstNotice">
+                        <td >{{objnotice.Notices}}</td>
+                        <td>{{objnotice.Status}}</td>
+                    <td> <a routerLink="../{{ objnotice.NoticeId }}/editnotice">Edit</a></td>
 
-                  </tbody>
+                    </tr>
+
+                </tbody>
               </table>
           </div>
           <!-- END DATA TABLE-->

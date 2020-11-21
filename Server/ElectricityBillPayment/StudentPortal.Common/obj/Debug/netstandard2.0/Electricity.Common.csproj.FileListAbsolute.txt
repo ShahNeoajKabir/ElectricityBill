@@ -1,0 +1,9 @@
+E:\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\bin\Debug\netstandard2.0\Electricity.Common.deps.json
+E:\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\bin\Debug\netstandard2.0\Electricity.Common.dll
+E:\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\bin\Debug\netstandard2.0\Electricity.Common.pdb
+E:\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.csprojAssemblyReference.cache
+E:\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.AssemblyInfoInputs.cache
+E:\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.AssemblyInfo.cs
+E:\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.csproj.CoreCompileInputs.cache
+E:\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.dll
+E:\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.pdb

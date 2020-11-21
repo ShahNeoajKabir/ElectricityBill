@@ -2,8 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Context;
+using Contextt;
 using ElectricBillPayment.BLL;
+using ElectricityBillPayment.Bll;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -38,6 +39,15 @@ namespace ElectricityBillPayment.Service
                     .AllowAnyHeader());
             });
             services.AddScoped<IUserBLLManager, UserBLLManager>();
+            services.AddScoped<INoticeBLLManager ,NoticeBLLManager> ();
+            services.AddScoped<ISupportBLLManager, SupportBLLManager>();
+            services.AddScoped<ICustomerBLLManager, CustomerBLLManager>();
+            services.AddScoped<IMeterBLLManager, MeterBLLManager>();
+            services.AddScoped<IRoleBLLManager, RoleBLLManager>();
+            services.AddScoped<IZoneBLLManager, ZoneBLLManager>();
+
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

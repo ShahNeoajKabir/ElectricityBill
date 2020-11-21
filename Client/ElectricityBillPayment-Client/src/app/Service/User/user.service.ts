@@ -5,12 +5,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UserService {
 
-  url="https://localhost:44368/api/User/";
+  url="http://localhost:55109/api/User/";
   constructor(
     private httpclient: HttpClient
   ) { }
 
  public AddUser(User:any){
     return this.httpclient.post(this.url+"AddUser" , User);
+  }
+
+  public GetAll(){
+    return this.httpclient.get(this.url+"GetAll");
   }
 }

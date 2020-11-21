@@ -32,8 +32,17 @@
                       </tr>
                   </thead>
                   <tbody style="text-align: center;">
+                    <tr *ngFor="let objuser of lstUser">
+                        <td >{{objuser.UserName}}</td>
+                        <td>{{objuser.Email}}</td>
+                        <td>{{objuser.Password}}</td>
+                        <td>{{objuser.MobileNo}}</td>
+                    <td>{{objuser.Status}}</td>
+                    <td> <a routerLink="../{{ objuser.UserId }}/editstudent">Edit</a></td>
 
-                  </tbody>
+                    </tr>
+
+                </tbody>
               </table>
           </div>
           <!-- END DATA TABLE-->

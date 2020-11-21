@@ -11,6 +11,10 @@
                      </div>
                      <div class="login-form">
                          <form >
+                          <div class="form-group">
+                            <label>Image</label>
+                            <input type="text"  name="Image" [(ngModel)]="objUser.Image" class="au-input au-input--full"  autocomplete="off">
+                          </div>
 
                          <div class="form-group">
                              <label>User Name</label>
@@ -29,11 +33,39 @@
                           <input type="text" class="au-input au-input--full"  name="MobileNo" [(ngModel)]="objUser.MobileNo" aria-describedby="emailHelp" autocomplete="off">
                         </div>
                         <div class="form-group">
-                          <label>User Type</label>
-                          <input type="text" class="au-input au-input--full"   name="UserType" [(ngModel)]="objUser.UserTypeId" aria-describedby="emailHelp" autocomplete="off">
-                        </div>
+                          <label>Gender</label>
+                          <select name="Gender" class="form-control"
+                          [(ngModel)]="objUser.Gender">
+                      <!-- <option [value]="-1">-Select-</option> -->
+                      <option *ngFor="let gender of lstGender"
+                      [value]="gender.key">{{gender.value}}</option>
+              </select>
+              </div>
+              <div class="form-group">
+                <label>User Type</label>
+                <select name="UserTypeId" class="form-control"
+                [(ngModel)]="objUser.UserTypeId">
+            <!-- <option [value]="-1">-Select-</option> -->
+            <option *ngFor="let type of lstType"
+            [value]="type.key">{{type.value}}</option>
+    </select>
+    </div>
+    <div class="form-group">
+      <label>UserTypeName</label>
+      <input type="text" class="au-input au-input--full"  name="UserTypeName" [(ngModel)]="objUser.UserTypeName" aria-describedby="emailHelp" autocomplete="off">
+    </div>
 
-                         <button type="submit" (click)="save()" class="btn btn-primary">Add User</button>
+                        <div class="form-group">
+                          <label>Status</label>
+                          <select name="Status" class="form-control"
+                          [(ngModel)]="objUser.Status">
+                      <!-- <option [value]="-1">-Select-</option> -->
+                      <option *ngFor="let status of lstStatus"
+                      [value]="status.key">{{status.value}}</option>
+              </select>
+              </div>
+
+                         <button type="submit" (click)="AddUser()" class="btn btn-primary">Add User</button>
 
                          </form>
 

@@ -4,14 +4,14 @@
     "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ElectricityBillPayment.Bll\\ElectricityBillPayment.Bll.csproj": {}
   },
   "projects": {
-    "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Context\\Context.csproj": {
+    "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Contextt\\Contextt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Context\\Context.csproj",
-        "projectName": "Context",
-        "projectPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Context\\Context.csproj",
+        "projectUniqueName": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Contextt\\Contextt.csproj",
+        "projectName": "Contextt",
+        "projectPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Contextt\\Contextt.csproj",
         "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Context\\obj\\",
+        "outputPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Contextt\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -44,15 +44,13 @@
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[5.0.0, )"
             },
-            "Microsoft.EntityFrameworkCore.Relational": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.9, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[5.0.0, )"
             }
           },
           "imports": [
@@ -155,8 +153,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Context\\Context.csproj": {
-                "projectPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Context\\Context.csproj"
+              "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Contextt\\Contextt.csproj": {
+                "projectPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\Contextt\\Contextt.csproj"
               },
               "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\ElectricBillPayment.Common.csproj": {
                 "projectPath": "E:\\ElectricityBill\\Server\\ElectricBillPaymentSystem\\ElectricBillPayment.Common\\ElectricBillPayment.Common.csproj"
@@ -224,6 +222,14 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

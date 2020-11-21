@@ -6,9 +6,11 @@ export class User{
     MobileNo: string='';
     UserTypeName: string='';
     UserTypeId: number=0;
+    Gender:number=0;
     CreatedBy: string='';
     CreatedDate: Date |undefined;
     UpdatedBy: string='';
     UpdatedDate: Date|undefined;
     Status: number=0;
+    Image:string='';
 }

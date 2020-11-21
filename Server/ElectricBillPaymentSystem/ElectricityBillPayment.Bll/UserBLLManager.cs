@@ -1,4 +1,5 @@
-﻿using Context;
+﻿
+using Contextt;
 using ElectricBillPayment.Common.Utility;
 using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
@@ -32,7 +33,7 @@ namespace ElectricBillPayment.BLL
                 return user;
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
 
                 throw;
@@ -73,7 +74,7 @@ namespace ElectricBillPayment.BLL
                 return user;
 
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
                 throw;

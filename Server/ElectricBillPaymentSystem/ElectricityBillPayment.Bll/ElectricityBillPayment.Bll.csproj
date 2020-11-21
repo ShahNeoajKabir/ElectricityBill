@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Context\Context.csproj" />
+    <ProjectReference Include="..\Contextt\Contextt.csproj" />
     <ProjectReference Include="..\ElectricBillPayment.Common\ElectricBillPayment.Common.csproj" />
   </ItemGroup>
 

@@ -1,0 +1,15 @@
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\bin\Debug\netcoreapp3.1\Contextt.deps.json
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\bin\Debug\netcoreapp3.1\Contextt.runtimeconfig.json
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\bin\Debug\netcoreapp3.1\Contextt.runtimeconfig.dev.json
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\bin\Debug\netcoreapp3.1\Contextt.dll
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\bin\Debug\netcoreapp3.1\Contextt.pdb
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\bin\Debug\netcoreapp3.1\ModelClass.dll
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\bin\Debug\netcoreapp3.1\ModelClass.pdb
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\obj\Debug\netcoreapp3.1\Contextt.csprojAssemblyReference.cache
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\obj\Debug\netcoreapp3.1\Contextt.AssemblyInfoInputs.cache
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\obj\Debug\netcoreapp3.1\Contextt.AssemblyInfo.cs
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\obj\Debug\netcoreapp3.1\Contextt.csproj.CoreCompileInputs.cache
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\obj\Debug\netcoreapp3.1\Contextt.csproj.CopyComplete
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\obj\Debug\netcoreapp3.1\Contextt.dll
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\obj\Debug\netcoreapp3.1\Contextt.pdb
+E:\ElectricityBill\Server\ElectricBillPaymentSystem\Contextt\obj\Debug\netcoreapp3.1\Contextt.genruntimeconfig.cache

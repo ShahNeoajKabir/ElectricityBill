@@ -15,4 +15,7 @@ export class NoticeService {
     return this.httpclient.post(this.url+'AddNotice', Notice);
 
   }
+  public GetAll(){
+    return this.httpclient.get(this.url+"GetAll");
+  }
 }
