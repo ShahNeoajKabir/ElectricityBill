@@ -1,12 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "Be9r8+brPFPsHLWXAcOjcMjee2/9s3dxcMrgNCH5L0YzdHbAURnh4IllUDBIFMpDppPJ9ISTiEjTJ0Ggs0AEEg==",
+  "dgSpecHash": "6ypCSPjSp6I7c0t+aYrnXZT72Z9lWoDJWmmPZoAtaav2NAj9RTIh5tDIDeykAk3GJkhVRlwODqqb6hVbr73a7Q==",
   "success": true,
   "projectFilePath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DAL\\Electricity.DAL.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore\\2.1.14\\microsoft.entityframeworkcore.2.1.14.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\2.1.14\\microsoft.entityframeworkcore.abstractions.2.1.14.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\2.1.14\\microsoft.entityframeworkcore.analyzers.2.1.14.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.design\\2.1.14\\microsoft.entityframeworkcore.design.2.1.14.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\2.1.14\\microsoft.entityframeworkcore.relational.2.1.14.nupkg.sha512",
+    "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\2.1.14\\microsoft.entityframeworkcore.tools.2.1.14.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\2.1.1\\microsoft.extensions.caching.abstractions.2.1.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.caching.memory\\2.1.1\\microsoft.extensions.caching.memory.2.1.1.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.extensions.configuration\\2.1.1\\microsoft.extensions.configuration.2.1.1.nupkg.sha512",

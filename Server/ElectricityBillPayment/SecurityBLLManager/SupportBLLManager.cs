@@ -42,20 +42,15 @@ namespace SecurityBLLManager
         {
             try
             {
-                var res = _dbContext.Support.Where(p => p.SupportId == support.SupportId).FirstOrDefault();
-                if (res != null)
-                {
+                
                     support.UpdatedBy = "Customer";
                     support.UpdatedDate = DateTime.Now;
                     _dbContext.Support.Update(support);
                     _dbContext.SaveChanges();
                     return support;
-                }
+                
 
-                else
-                {
-                    throw new Exception("Update Failed");
-                }
+              
             }
             catch (Exception)
             {

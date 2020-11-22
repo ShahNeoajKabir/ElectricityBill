@@ -1,0 +1,162 @@
+<style>
+  .panel-title{
+    display: flex;
+    justify-content: center;
+    font-size:3em  !important;
+  }
+  .panel-heading{
+    text-transform: uppercase;
+    color: #ffffff !important;
+    background-color: #0e918c !important;
+
+  }
+  .panel-body{
+    background-color: darkcyan !important;
+
+  }
+  .col-md-3 {
+    font-weight: bolder !important;
+    color: #ffffff !important;
+    font-size: 1.5em !important;
+  }
+  .form-control{
+    font-weight: bolder !important;
+    font-size: 1.5em !important;
+    line-height: 4em !important;
+    border-radius: 6em !important;
+  }
+</style>
+<div class="container">
+  <div style="margin-top:50px" class="mainbox col-md-12 col-sm-12">
+    <div class="panel panel-info">
+      <div class="panel-heading">
+        <div class="panel-title">Sign Up</div>
+      </div>
+        <div class="panel-body">
+          <form id="signupform" class="form-horizontal" role="form">
+            <div id="signupalert" style="display:none" class="alert alert-danger">
+              <p>Error:</p>
+              <span></span>
+            </div>
+            <div class="form-group">
+              <label for="CustomerName" class="col-md-3 control-label">UserName</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="CustomerName" [(ngModel)]="registration.CustomerName"
+                  placeholder="User Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="FatherName" class="col-md-3 control-label">Father Name</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="UserName" [(ngModel)]="registration.FatherName"
+                  placeholder="Father Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="MotherName" class="col-md-3 control-label">Mother Name</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="MotherName" [(ngModel)]="registration.MotherName"
+                  placeholder="Mother Name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email" class="col-md-3 control-label">Email</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="email" [(ngModel)]="registration.Email"
+                  placeholder="Email Address">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="password" class="col-md-3 control-label">Password</label>
+              <div class="col-md-9">
+                <input type="password" class="form-control" name="passwd" [(ngModel)]="registration.Password"
+                  placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="MobileNo" class="col-md-3 control-label">Mobile Number</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="MobileNo" [(ngModel)]="registration.MobileNo"
+                  placeholder="Mobile Number">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="DateOfBirth" class="col-md-3 control-label">Date Of Birth</label>
+              <div class="col-md-9">
+                <input type="date" class="form-control" name="DateOfBirth" [(ngModel)]="registration.DateOfBirth"
+                  placeholder="DateOfBirth">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="DateOfBirth" class="col-md-3 control-label">Gender</label>
+              <select style="width: 69% !important; margin-left: 28% !important;" name="DateOfBirth" class="form-control"
+                [(ngModel)]="registration.Gender">
+                <!-- <option [value]="-1">-Select-</option> -->
+                <option *ngFor="let gender of lstGender" [value]="gender.key">{{gender.value}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="lstreligion" class="col-md-3 control-label">Religion</label>
+              <select style="width: 69% !important; margin-left: 28% !important;" name="lstreligion" class="form-control"
+                [(ngModel)]="lstreligion.Religion">
+                <!-- <option [value]="-1">-Select-</option> -->
+                <option *ngFor="let religion of lstreligion" [value]="religion.key">{{religion.value}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="lstcutomertype" class="col-md-3 control-label">Customer Type</label>
+              <select style="width: 69% !important; margin-left: 28% !important;" name="lstcutomertype"
+                class="form-control" [(ngModel)]="lstcutomertype.Religion">
+                <!-- <option [value]="-1">-Select-</option> -->
+                <option *ngFor="let customertype of lstcutomertype" [value]="customertype.key">{{customertype.value}}
+                </option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="Nationality" class="col-md-3 control-label">Nationality</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="Nationality" [(ngModel)]="registration.Nationality"
+                  placeholder="Nationality">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="BloodGroup" class="col-md-3 control-label">Blood Group</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="BloodGroup" [(ngModel)]="registration.BloodGroup"
+                  placeholder="Blood Group">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="Latitude" class="col-md-3 control-label">Latitude</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="Latitude" [(ngModel)]="registration.Latitude"
+                  placeholder="Latitude">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="Longitude" class="col-md-3 control-label">Longitude</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="Longitude" [(ngModel)]="registration.Longitude"
+                  placeholder="Longitude">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="Address" class="col-md-3 control-label">Address</label>
+              <div class="col-md-9">
+                <input type="text" class="form-control" name="Address" [(ngModel)]="registration.Address"
+                  placeholder="Address">
+              </div>
+            </div>
+            <div class="form-group">
+              <!-- Button -->
+              <div class="col-md-offset-3 col-md-9">
+                <button id="btn-signup" type="button" class="btn btn-info"
+                  style="margin-left: 30% !important; width: 30% !important; font-weight: bold !important; font-size: 15px !important;"><i
+                    class="icon-hand-right"></i> Sign Up</button>
+              </div>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 export enum Gender {
   Male= 1,
   Female= 2,
-  Select= -1
+  Other=3
 }
 export enum Status {
   Active= 1,

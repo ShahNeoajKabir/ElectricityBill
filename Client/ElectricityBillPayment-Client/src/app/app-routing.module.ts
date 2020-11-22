@@ -1,10 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { from } from 'rxjs';
+import { CustomerRegistrationComponent } from './Component/customer-registration/customer-registration.component';
 import {LayoutComponent} from './Component/layout/layout.component'
+import { LoginComponent } from './Component/login/login.component';
 
 
 const routes: Routes = [
+  {path:'Login' , component:LoginComponent},
+  {path:'Registration' , component:CustomerRegistrationComponent},
+
+
+
+
   {path: '',component: LayoutComponent,
   children:[
     { path: 'User', loadChildren: () => import('./Module/user/user.module').then(m => m.UserModule) },

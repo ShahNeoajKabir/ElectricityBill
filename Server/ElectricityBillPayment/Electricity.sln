@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SecurityBLLManager", "Secur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service.Portal", "Service.Portal\Service.Portal.csproj", "{5A7CC4DA-4B00-4653-BA10-37388795C7AF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bill.DAL", "Bill.DAL\Bill.DAL.csproj", "{06DFE60D-25C7-4DEB-90D3-D51057BB5A58}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{5A7CC4DA-4B00-4653-BA10-37388795C7AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A7CC4DA-4B00-4653-BA10-37388795C7AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A7CC4DA-4B00-4653-BA10-37388795C7AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06DFE60D-25C7-4DEB-90D3-D51057BB5A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06DFE60D-25C7-4DEB-90D3-D51057BB5A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06DFE60D-25C7-4DEB-90D3-D51057BB5A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06DFE60D-25C7-4DEB-90D3-D51057BB5A58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{A173D2DE-092A-47A1-BCAC-83626C2637ED} = {EC0C3F10-8D2B-4493-BF50-1C3942D390E0}
 		{FE1AD245-1E6D-4808-A799-514B7D9FE20D} = {86EA9123-F704-4DD9-9765-898BF877352B}
 		{5A7CC4DA-4B00-4653-BA10-37388795C7AF} = {75F6FF45-BD74-459C-8F12-69B21A3819F9}
+		{06DFE60D-25C7-4DEB-90D3-D51057BB5A58} = {EC0C3F10-8D2B-4493-BF50-1C3942D390E0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E832B85D-DA8C-4E59-8E4C-8327EAA560C9}
