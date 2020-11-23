@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { JwtHelperService } from '@auth0/angular-jwt';
+
 const LOCAL_STORAGE_KEY = 'token';
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,7 @@ export class TokenServiceService {
 
   constructor() { }
 
-  public GetToken(): string {
+  public GetToken(): any {
     return localStorage.getItem(LOCAL_STORAGE_KEY);
   }
 
@@ -22,7 +23,7 @@ export class TokenServiceService {
     localStorage.removeItem(LOCAL_STORAGE_KEY);
   }
 
-  public GetTokenExpiration(): Date {
+  public GetTokenExpiration(): any {
     return this.jwtHelper.getTokenExpirationDate(this.GetToken());
   }
 
