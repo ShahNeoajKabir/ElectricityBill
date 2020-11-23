@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { CustomerRegistrationComponent } from './Component/customer-registration/customer-registration.component';
 import { LoginComponent } from './Component/login/login.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

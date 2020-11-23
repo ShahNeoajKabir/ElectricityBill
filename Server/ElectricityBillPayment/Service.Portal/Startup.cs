@@ -85,6 +85,7 @@ namespace Service.Portal
             services.AddScoped<IMeterBLLManager, MeterBLLManager>();
             services.AddScoped<ICustomerBLLManager, CustomerBLLManager>();
             services.AddScoped<ISecurityBLLmanager, SecurityBLLManager.SecurityBLLManager>();
+            services.AddScoped<IMeterAssignBLLmanager, MeterAssignBLLmanager>();
 
       
 

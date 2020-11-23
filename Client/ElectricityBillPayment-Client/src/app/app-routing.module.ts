@@ -22,6 +22,7 @@ const routes: Routes = [
     {path: 'role', loadChildren:()=>import('./Module/Role/role.module').then(n=>n.RoleModule)}
 
 
+
   ]
 
 }
