@@ -1,4 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
 
 
 import { NgModule } from '@angular/core';
@@ -10,7 +13,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CustomerRegistrationComponent } from './Component/customer-registration/customer-registration.component';
 import { LoginComponent } from './Component/login/login.component';
-import { ToastrModule } from 'ngx-toastr/toastr/toastr.module';
 
 @NgModule({
   declarations: [
