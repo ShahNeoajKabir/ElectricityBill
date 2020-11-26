@@ -1,1 +1,48 @@
-<p>list-assign-meter works!</p>
+<div class="main">
+    <div class="Header">
+        <div>
+            <button class="au-btn au-btn-icon au-btn--green au-btn--small" [routerLink]="['/AssignMeter/AddAssignMeter']" >
+                <i class="zmdi zmdi-plus"></i>Assign Meter</button>
+  
+        </div>
+    <div>
+        <form class="form-header" action="" method="POST">
+            <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for Information &amp; reports..." />
+            <button class="au-btn--submit" type="submit">
+                <i class="zmdi zmdi-search"></i>
+            </button>
+        </form>
+    </div>
+    </div>
+    <div class="row m-t-30">
+        <div class="col-md-12">
+            <!-- DATA TABLE-->
+            <div class="table-responsive m-b-40">
+                <table class="table table-borderless table-data3">
+                    <thead>
+                        <tr>
+                            <th>Customer Name</th>
+                            <th>Meter Number</th>
+                            <th>Status</th>
+  
+  
+                        </tr>
+                    </thead>
+                    <tbody style="text-align: center;">
+                      <tr *ngFor="let lstassign of objassign">
+                          <td >{{lstassign.Customer.CustomerName}}</td>
+                          <td>{{lstassign.MeterTable.MeterNumber}}</td>
+                          
+                      <td>{{lstassign.Status}}</td>
+                      <td> <a routerLink="../{{ lstassign.MeterAssignId }}/edit">Edit</a></td>
+  
+                      </tr>
+  
+                  </tbody>
+                </table>
+            </div>
+            <!-- END DATA TABLE-->
+        </div>
+    </div>
+    </div>
+  

@@ -10,6 +10,6 @@ export class MeterAssign{
   UpdatedBy:string='';
   UpdatedDate:Date|undefined;
   Status:number=0;
-  Customer:Customer | undefined;
-  MeterTable:MeterTable | undefined;
+  Customer: Customer = new Customer;
+  MeterTable: MeterTable = new MeterTable;
 }
