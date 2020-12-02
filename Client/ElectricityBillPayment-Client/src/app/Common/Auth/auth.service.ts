@@ -13,6 +13,7 @@ import { TokenServiceService } from './token-service.service';
 
 export class AuthService {
 
+  url="http://localhost:55109/api/Security/"
   constructor(
     private http: HttpClient,
     private tokenService: TokenServiceService,
@@ -22,13 +23,13 @@ export class AuthService {
 
   login(authData: VMLogin) {
     const body = {
-      Username: authData.UserName,
+      Username: authData.Email,
       Password: authData.Password
     };
-    // return this.http.post(ApiConstant.AccountApi.Login, body).pipe(map((res: any) => {
-    //   const loginData = res;
-    //   this.tokenService.SaveToken(loginData.Token);
-    // }));
+    return this.http.post(this.url+"Login", body).pipe(map((res: any) => {
+      const loginData = res;
+      this.tokenService.SaveToken(loginData);
+    }));
 
   }
 

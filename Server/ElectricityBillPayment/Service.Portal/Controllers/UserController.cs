@@ -25,12 +25,12 @@ namespace Service.Portal.Controllers
 
         [HttpPost]
         [Route("AddUser")]
-        public User AddUser([FromBody]User user)
+        public User AddUser([FromBody]TempMessage message)
         {
             try
             {
 
-               
+                User user = JsonConvert.DeserializeObject<User>(message.Content.ToString());
                 this.userBLLManager.AddUser(user);
                 return user;
             }

@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelClass.DTO;
+using ModelClass.ViewModel;
+using Newtonsoft.Json;
 using SecurityBLLManager;
 
 namespace Service.Portal.Controllers
@@ -21,12 +23,13 @@ namespace Service.Portal.Controllers
 
         [HttpPost]
         [Route("AssignMeter")]
-        public MeterAssign AssignMeter([FromBody] MeterAssign meter)
+        public async Task<ActionResult> AssignMeter([FromBody] TempMessage message)
         {
             try
             {
+                MeterAssign meter = JsonConvert.DeserializeObject<MeterAssign>(message.Content.ToString());
                 _bLLmanager.AssignMeter(meter);
-                return meter;
+                return Ok(meter);
             }
             catch (Exception)
             {

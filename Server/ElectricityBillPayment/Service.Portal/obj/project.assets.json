@@ -8638,19 +8638,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Portal\\Service.Portal.csproj",
+      "projectUniqueName": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Portal\\Service.Portal.csproj",
       "projectName": "Service.Portal",
-      "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Portal\\Service.Portal.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Portal\\obj\\",
+      "projectPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Portal\\Service.Portal.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Portal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8663,8 +8663,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj": {
-              "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj"
+            "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj": {
+              "projectPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj"
             }
           }
         }
@@ -8729,7 +8729,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

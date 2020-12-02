@@ -5,7 +5,7 @@ import { RequestMessage } from './RequestMessage';
 import { finalize } from 'rxjs/internal/operators/finalize';
 import { tap } from 'rxjs/internal/operators/tap';
 import { LoaderService } from './loader.service';
-import { NotificationService } from './notification.service';
+
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +14,7 @@ export class RequestInterceptorService {
 
   constructor(private loaderService: LoaderService,
               private auth: AuthService,
-              private notification: NotificationService) { }
+             ) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler) {
     const requestMessage =
@@ -32,7 +32,7 @@ export class RequestInterceptorService {
         }
       }
       , (error: any) => {
-        this.notification.dynamic(error);
+        // this.notification.dynamic(error);
       }
       ),
       finalize(() => {

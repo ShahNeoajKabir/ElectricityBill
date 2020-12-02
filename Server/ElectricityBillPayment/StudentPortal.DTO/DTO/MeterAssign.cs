@@ -6,6 +6,10 @@ namespace ModelClass.DTO
 {
     public class MeterAssign
     {
+        public MeterAssign()
+        {
+
+        }
         public int MeterAssignId { get; set; }
         public int CustomerId { get; set; }
         public int MeterId { get; set; }
@@ -14,8 +18,8 @@ namespace ModelClass.DTO
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
-        public virtual Customer Customer { get; set; }
-        public virtual MeterTable MeterTable { get; set; }
+        public  Customer Customer { get; set; }
+        public  MeterTable MeterTable { get; set; }
         public ICollection<MeterReadingTable> MeterReadingTable{get;set;}
     }
 }

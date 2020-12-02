@@ -22,3 +22,15 @@ E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\ob
 E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.csproj.CopyComplete
 E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.dll
 E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.pdb
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\bin\Debug\netstandard2.0\Electricity.DAL.deps.json
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\bin\Debug\netstandard2.0\Electricity.DAL.dll
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\bin\Debug\netstandard2.0\Electricity.DAL.pdb
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\bin\Debug\netstandard2.0\ModelClass.dll
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\bin\Debug\netstandard2.0\ModelClass.pdb
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.csprojAssemblyReference.cache
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.AssemblyInfoInputs.cache
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.AssemblyInfo.cs
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.csproj.CoreCompileInputs.cache
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.csproj.CopyComplete
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.dll
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.pdb

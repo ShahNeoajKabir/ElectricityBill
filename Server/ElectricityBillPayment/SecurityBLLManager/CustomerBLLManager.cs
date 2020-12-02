@@ -20,14 +20,15 @@ namespace SecurityBLLManager
         {
             try
             {
-                customer.CreatedBy = "CoOrdinator";
+                customer.ZoneId = 1;
+                customer.CreatedBy = customer.CustomerName;
                 customer.CreatedDate = DateTime.Now;
                 customer.Password = new EncryptionService().Encrypt(customer.Password);
-                 _dbContext.Customer.Add(customer);
+                _dbContext.Customer.Add(customer);
                 _dbContext.SaveChanges();
                 return customer;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw new Exception("Failed To Registration");

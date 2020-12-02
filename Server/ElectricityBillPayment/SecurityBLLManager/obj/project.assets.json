@@ -2667,19 +2667,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\PC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj",
+      "projectUniqueName": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj",
       "projectName": "SecurityBLLManager",
-      "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\obj\\",
+      "projectPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj",
+      "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+      "outputPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2692,14 +2692,14 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.Common\\Electricity.Common.csproj": {
-              "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.Common\\Electricity.Common.csproj"
+            "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.Common\\Electricity.Common.csproj": {
+              "projectPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.Common\\Electricity.Common.csproj"
             },
-            "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DAL\\Electricity.DAL.csproj": {
-              "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DAL\\Electricity.DAL.csproj"
+            "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DAL\\Electricity.DAL.csproj": {
+              "projectPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DAL\\Electricity.DAL.csproj"
             },
-            "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DTO\\ModelClass.csproj": {
-              "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DTO\\ModelClass.csproj"
+            "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DTO\\ModelClass.csproj": {
+              "projectPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DTO\\ModelClass.csproj"
             }
           }
         }
@@ -2730,7 +2730,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

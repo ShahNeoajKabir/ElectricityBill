@@ -1,4 +1,5 @@
-﻿using Electricity.DAL;
+﻿using Electricity.Common.Utility;
+using Electricity.DAL;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Text;
 
 namespace SecurityBLLManager
 {
-    public class MeterAssignBLLmanager: IMeterAssignBLLmanager
+    public class MeterAssignBLLmanager : IMeterAssignBLLmanager
     {
 
         private readonly PaymentDbContext _dbContext;
@@ -21,15 +22,32 @@ namespace SecurityBLLManager
         {
             try
             {
-                meter.CreatedBy = "CoOrdinator";
-                meter.CreatedDate = DateTime.Now;
-                _dbContext.MeterAssign.Add(meter);
+                var customer = _dbContext.Customer.Where(p => p.CustomerId == meter.CustomerId).FirstOrDefault();
+                _dbContext.Database.BeginTransaction();
+                if (customer != null)
+                {
+                    meter.CreatedBy = "CoOrdinator";
+                    meter.CreatedDate = DateTime.Now;
+                    _dbContext.MeterAssign.Add(meter);
+                    _dbContext.SaveChanges();
+
+                }
+                else
+                {
+                    throw new Exception("Customer not Fount");
+                }
+
+                
+                customer.UserId= addCustomerIntoUserTable(customer);
+
+                _dbContext.Customer.Update(customer);
+                _dbContext.Database.CommitTransaction();
                 _dbContext.SaveChanges();
                 return meter;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
+                _dbContext.Database.RollbackTransaction();
                 throw;
             }
         }
@@ -52,7 +70,7 @@ namespace SecurityBLLManager
                     meter.UpdatedDate = DateTime.Now;
                     _dbContext.MeterAssign.Update(meter);
                     _dbContext.SaveChanges();
-                    
+
                 }
                 else
                 {
@@ -70,6 +88,33 @@ namespace SecurityBLLManager
         public MeterAssign GetById(MeterAssign meter)
         {
             return _dbContext.MeterAssign.Find(meter.MeterId);
+        }
+
+        private int addCustomerIntoUserTable(Customer customer)
+        {
+            int result = 0;
+            User user = new User()
+            {
+                Email = customer.Email,
+                Gender = customer.Gender,
+                UserName = customer.CustomerName,
+                Image = customer.Image,
+                MobileNo = customer.MobileNo,
+                Password = new EncryptionService().Encrypt("123456"),
+                UserTypeId = (int)Electricity.Common.Enum.Enum.UserType.Customer,
+                CreatedBy = "Admin",
+                CreatedDate = DateTime.Now,
+                Status = (int)Electricity.Common.Enum.Enum.Status.Active
+
+            };
+            _dbContext.User.Add(user);
+            var res = _dbContext.SaveChanges();
+            if (res == 1)
+            {
+                result = user.UserId;
+            }
+            return result;
+
         }
     }
 

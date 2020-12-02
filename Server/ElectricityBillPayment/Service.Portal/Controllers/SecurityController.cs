@@ -28,17 +28,19 @@ namespace Service.Portal.Controllers
 
         [HttpPost]
         [Route("Login")]
-        public JsonResult Login([FromBody] TempMessage message)
+        public async Task<ActionResult> Login([FromBody] TempMessage message)
         {
             VMLogin userLogin = JsonConvert.DeserializeObject<VMLogin>(message.Content);
-            var result = this.securityBLLManager.Login(userLogin).Result;
+            var result =await this.securityBLLManager.Login(userLogin);
             if (result != null)
             {
-                return new JsonResult(new { Token = this.authenticationManager.BuildToken(Converter.ObjectConvert<User>(result)) });
+                var token = this.authenticationManager.BuildToken(result);
+                return Ok(token);
+                //return  ok(new { Token = this.authenticationManager.BuildToken(Converter.ObjectConvert<User>(result)) });
             }
             else
             {
-                return new JsonResult("User not Authenticate") { StatusCode = 400 };
+                return  NotFound("User not Authenticate");
             }
 
 

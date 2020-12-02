@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelClass.DTO;
+using ModelClass.ViewModel;
+using Newtonsoft.Json;
 using SecurityBLLManager;
 
 namespace Service.Portal.Controllers
@@ -21,10 +23,11 @@ namespace Service.Portal.Controllers
 
         [HttpPost]
         [Route("AddMeter")]
-        public MeterTable AddMeter([FromBody] MeterTable meter)
+        public MeterTable AddMeter([FromBody] TempMessage message)
         {
             try
             {
+                MeterTable meter = JsonConvert.DeserializeObject<MeterTable>(message.Content.ToString());
                 _meterBLL.AddMeter(meter);
                 return meter;
             }
