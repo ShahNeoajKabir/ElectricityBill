@@ -7,6 +7,7 @@ using System.Linq;
 using ModelClass.DTO;
 using Electricity.DAL;
 using Electricity.Common.Utility;
+using Microsoft.EntityFrameworkCore;
 
 namespace SecurityBLLManager
 {
@@ -29,24 +30,39 @@ namespace SecurityBLLManager
             return user;
         }
 
-        public List<User> GetAll()
+        public async Task<List<User>> GetAll()
         {
-            List<User> user = _db.User.Where(p=>p.Status==(int)Electricity.Common.Enum.Enum.Status.Active).ToList();
+            List<User> user = await _db.User.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToListAsync();
             return user;
         }
 
         public User UpdateUser(User user)
         {
-            user.UpdatedBy = "Admin";
-            user.UpdatedDate = DateTime.Now;
+            try
+            {
+                
+                    user.UpdatedBy = "Admin";
+                    user.UpdatedDate = DateTime.Now;
 
-            _db.User.Update(user);
-             _db.SaveChanges();
-            return user;
+                    _db.User.Update(user);
+                    _db.SaveChanges();
+
+                
+                
+
+                return user;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
         }
         public User GetByID(User user)
         {
-            return _db.User.Find(user.UserId); 
+            return _db.User.Find(user.UserId);
         }
     }
     public interface IUserBLLManager
@@ -55,6 +71,6 @@ namespace SecurityBLLManager
         User UpdateUser(User user);
         User GetByID(User user);
 
-        List<User> GetAll();
+        Task<List<User>> GetAll();
     }
 }

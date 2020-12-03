@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DXDQzQgjXyyhttlmtW/uPwVCwKshray9sf6WfsauIbgAJ6MSxNv7ige/Obyy9euEy/o9J6cszaRc1jARJk6zgQ==",
+  "dgSpecHash": "m4VauVyuwR0D40UDnp7IHLAO0mh7+J4+7RDcK07Y81ehgHze2mfUQ+FEnqiALVvYZssn5Z0/tbP1EQ15hKiA9w==",
   "success": true,
-  "projectFilePath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DAL\\Electricity.DAL.csproj",
+  "projectFilePath": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DAL\\Electricity.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore\\2.1.14\\microsoft.entityframeworkcore.2.1.14.nupkg.sha512",

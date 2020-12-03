@@ -25,3 +25,12 @@ G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPort
 G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.csproj.CoreCompileInputs.cache
 G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.dll
 G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\bin\Debug\netstandard2.0\Electricity.Common.deps.json
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\bin\Debug\netstandard2.0\Electricity.Common.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\bin\Debug\netstandard2.0\Electricity.Common.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.csprojAssemblyReference.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.AssemblyInfoInputs.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.AssemblyInfo.cs
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.csproj.CoreCompileInputs.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.Common\obj\Debug\netstandard2.0\Electricity.Common.pdb

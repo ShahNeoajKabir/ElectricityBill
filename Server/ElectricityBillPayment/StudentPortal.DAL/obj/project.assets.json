@@ -2763,11 +2763,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DAL\\Electricity.DAL.csproj",
+      "projectUniqueName": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DAL\\Electricity.DAL.csproj",
       "projectName": "Electricity.DAL",
-      "projectPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DAL\\Electricity.DAL.csproj",
+      "projectPath": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DAL\\Electricity.DAL.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DAL\\obj\\",
+      "outputPath": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DAL\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -2783,8 +2783,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DTO\\ModelClass.csproj": {
-              "projectPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DTO\\ModelClass.csproj"
+            "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DTO\\ModelClass.csproj": {
+              "projectPath": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DTO\\ModelClass.csproj"
             }
           }
         }

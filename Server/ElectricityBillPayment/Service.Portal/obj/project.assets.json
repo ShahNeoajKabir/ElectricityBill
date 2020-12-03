@@ -8643,11 +8643,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Portal\\Service.Portal.csproj",
+      "projectUniqueName": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Portal\\Service.Portal.csproj",
       "projectName": "Service.Portal",
-      "projectPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Portal\\Service.Portal.csproj",
+      "projectPath": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Portal\\Service.Portal.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Portal\\obj\\",
+      "outputPath": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Portal\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -8663,8 +8663,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj": {
-              "projectPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj"
+            "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj": {
+              "projectPath": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj"
             }
           }
         }

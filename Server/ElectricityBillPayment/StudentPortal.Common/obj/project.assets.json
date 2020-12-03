@@ -226,11 +226,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.Common\\Electricity.Common.csproj",
+      "projectUniqueName": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.Common\\Electricity.Common.csproj",
       "projectName": "Electricity.Common",
-      "projectPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.Common\\Electricity.Common.csproj",
+      "projectPath": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.Common\\Electricity.Common.csproj",
       "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-      "outputPath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.Common\\obj\\",
+      "outputPath": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.Common\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",

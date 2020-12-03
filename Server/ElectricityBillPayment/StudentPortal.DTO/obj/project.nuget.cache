@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "URXr+k9dCYSvzDOGfVrf26SNUhhlxXRd8W7s8ony0la3JIEq13uFBTpuoBwea/o4woXOeLyJE2jh1rcmxj4vkw==",
+  "dgSpecHash": "VQFHHmLL6N0gOQi4i5YN3n7+nfmBrC4zNAaNQC1iQexyPRvdldbjXFlkR6+n7fzfDYs8msNaI0gVVa58C0u+zw==",
   "success": true,
-  "projectFilePath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DTO\\ModelClass.csproj",
+  "projectFilePath": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\StudentPortal.DTO\\ModelClass.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"

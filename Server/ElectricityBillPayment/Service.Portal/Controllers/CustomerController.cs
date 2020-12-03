@@ -25,14 +25,14 @@ namespace Service.Portal.Controllers
 
         [HttpPost]
         [Route("Registration")]
-        public async Task<ActionResult> Registration([FromBody] TempMessage message)
+        public Customer Registration([FromBody] TempMessage message)
         {
             try
             {
 
                 Customer customer = JsonConvert.DeserializeObject<Customer>(message.Content.ToString());
                 _customerBLLManager.AddCustomer(customer);
-                return Ok(customer);
+                return customer;
             }
             catch (Exception ex)
             {
@@ -44,10 +44,11 @@ namespace Service.Portal.Controllers
         }
         [HttpPost]
         [Route("UpdateCustomer")]
-        public Customer UpdateCustomer([FromBody] Customer customer)
+        public Customer UpdateCustomer([FromBody] TempMessage message)
         {
             try
             {
+                Customer customer = JsonConvert.DeserializeObject<Customer>(message.Content.ToString());
 
                 _customerBLLManager.UpdateUser(customer);
                 return customer;
@@ -76,40 +77,26 @@ namespace Service.Portal.Controllers
 
                 throw;
             }
+        }
 
 
-            //}
-            //[HttpGet]
-            //[Route("GetAll")]
-            //public List<User> GetAll()
-            //{
-            //    try
-            //    {
-            //        return this.userBLLManager.GetAll();
-            //    }
-            //    catch (Exception ex)
-            //    {
 
-            //        throw;
-            //    }
+        [HttpGet]
+        [Route("GetAll")]
+        public List<Customer> GetAll()
+        {
+            try
+            {
+                return _customerBLLManager.GetAll();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
 
 
-            //}
 
-            //[HttpGet]
-            //[Route("Gets")]
-
-            //public string Gets()
-            //{
-
-            //    return "hello";
-            //}
-            //[HttpPost]
-            //[Route("AddUser")]
-            //public void AddUser([FromBody]User user)
-            //{
-            //    _userBLLManager.AddUser(user);
-            //}
 
         }
     }

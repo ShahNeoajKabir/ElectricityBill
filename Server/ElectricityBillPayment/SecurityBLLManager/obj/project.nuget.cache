@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "fXZmjwkVKqkNwgmonO1zebDn5b+olgHhcnrkAbkCiWdIugQRzYbolEh0/80ROFo8OiOEgrZhFgqYCMM3+M68pA==",
+  "dgSpecHash": "cDt0TjRzd0N8OdfSO7oJeEVt8FRVm9N0sVkCpgwNsEjygM443fFqLH+xmKznEVT9dtvQRFqhnlBBtRIveOPWjg==",
   "success": true,
-  "projectFilePath": "G:\\Bappy\\Project final\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj",
+  "projectFilePath": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore\\2.1.14\\microsoft.entityframeworkcore.2.1.14.nupkg.sha512",
     "C:\\Users\\PC\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\2.1.14\\microsoft.entityframeworkcore.abstractions.2.1.14.nupkg.sha512",

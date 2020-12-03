@@ -23,13 +23,13 @@ namespace Service.Portal.Controllers
 
         [HttpPost]
         [Route("AssignMeter")]
-        public async Task<ActionResult> AssignMeter([FromBody] TempMessage message)
+        public MeterAssign AssignMeter([FromBody] TempMessage message)
         {
             try
             {
                 MeterAssign meter = JsonConvert.DeserializeObject<MeterAssign>(message.Content.ToString());
                 _bLLmanager.AssignMeter(meter);
-                return Ok(meter);
+                return meter;
             }
             catch (Exception)
             {
@@ -47,24 +47,26 @@ namespace Service.Portal.Controllers
 
         [HttpPost]
         [Route("UpdateAssign")]
-        public MeterAssign UpdateAssign([FromBody] MeterAssign meter)
+        public MeterAssign UpdateAssign([FromBody] TempMessage message)
         {
             try
             {
+                MeterAssign meter = JsonConvert.DeserializeObject<MeterAssign>(message.Content.ToString());
                 _bLLmanager.UpdateAssign(meter);
                 return meter;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw new Exception("Failed To UPdate");
             }
         }
 
         [HttpPost]
         [Route("GetById")]
-        public MeterAssign GetById([FromBody] MeterAssign meter)
+        public MeterAssign GetById([FromBody] TempMessage message)
         {
+            MeterAssign meter = JsonConvert.DeserializeObject<MeterAssign>(message.Content.ToString());
             return _bLLmanager.GetById(meter);
         }
     }

@@ -25,7 +25,7 @@ namespace Service.Portal.Controllers
 
         [HttpPost]
         [Route("AddUser")]
-        public User AddUser([FromBody]TempMessage message)
+        public User AddUser([FromBody] TempMessage message)
         {
             try
             {
@@ -44,11 +44,12 @@ namespace Service.Portal.Controllers
         }
         [HttpPost]
         [Route("UpdateUser")]
-        public User UpdateUser([FromBody]User user)
+        public User UpdateUser([FromBody] TempMessage message)
         {
             try
             {
-                
+                User user = JsonConvert.DeserializeObject<User>(message.Content.ToString());
+
                 this.userBLLManager.UpdateUser(user);
                 return user;
             }
@@ -62,13 +63,14 @@ namespace Service.Portal.Controllers
         }
         [HttpPost]
         [Route("GetbyID")]
-        public User GetbyID([FromBody]User user)
+        public User GetbyID([FromBody] TempMessage message)
         {
             try
             {
-                
+                User user = JsonConvert.DeserializeObject<User>(message.Content.ToString());
+
                 return this.userBLLManager.GetByID(user);
-                
+
             }
             catch (Exception ex)
             {
@@ -80,7 +82,7 @@ namespace Service.Portal.Controllers
         }
         [HttpGet]
         [Route("GetAll")]
-        public List<User> GetAll()
+        public Task<List<User>> GetAll()
         {
             try
             {

@@ -81,10 +81,6 @@ p {
     margin: 0;
 }
 
-.table-responsive {
-    padding-right: 1px;
-}
-
 .card {
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
@@ -266,11 +262,6 @@ section {
 
 /* ----- Page Wrapper----- */
 /*Override Grid Bootstrap*/
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1320px;
-    }
-}
 
 /*Page Objects*/
 .page-wrapper {

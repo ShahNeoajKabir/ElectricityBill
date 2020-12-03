@@ -15,7 +15,7 @@ namespace SecurityBLLManager
             _db = db;
         }
 
-        public Role AddUser(Role role)
+        public Role AddRole(Role role)
         {
             role.CreatedBy = "Admin";
             role.CreatedDate = DateTime.Now;
@@ -65,7 +65,7 @@ namespace SecurityBLLManager
 
     public interface IRoleBLLManager
     {
-        Role AddUser(Role role);
+        Role AddRole(Role role);
         List<Role> GetAll();
         Role UpdateRole(Role role);
         Role GetByID(Role role);

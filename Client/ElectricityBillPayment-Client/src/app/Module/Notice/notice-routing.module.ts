@@ -6,7 +6,7 @@ import { ListNoticeComponent } from './list-notice/list-notice.component';
 
 const route: Routes =[
   { path: 'AddNotice', component: AddNoticeComponent},
-  {path: '', component:ListNoticeComponent}
+  {path: 'View', component:ListNoticeComponent}
 ]
 
 @NgModule({
