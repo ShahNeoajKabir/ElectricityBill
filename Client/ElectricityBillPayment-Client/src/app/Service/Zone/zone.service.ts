@@ -5,11 +5,22 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ZoneService {
-  url="https://localhost:44368/api/Zone/";
+  url="http://localhost:55109/api/Zone/";
+
 
   constructor(private httpclient:HttpClient) { }
 
   public AddZone(Zone:any){
     return this.httpclient.post(this.url+"AddZone", Zone );
+  }
+  public GetAll(){
+    return this.httpclient.get(this.url+"GetAll");
+  }
+
+  public UpdateZone(zone:any){
+    return this.httpclient.post(this.url+"UpdateZone",zone);
+  }
+  public GetById(zone:any){
+    return this.httpclient.post(this.url+"GetById",zone);
   }
 }

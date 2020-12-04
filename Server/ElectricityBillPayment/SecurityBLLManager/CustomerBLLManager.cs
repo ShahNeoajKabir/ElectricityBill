@@ -50,20 +50,13 @@ namespace SecurityBLLManager
         {
             try
             {
-                var res = _dbContext.Customer.Where(p => p.CustomerId == customer.CustomerId).FirstOrDefault();
-                if (res != null)
-                {
+                
                     customer.UpdatedBy = "Customer";
                     customer.UpdatedDate = DateTime.Now;
                     _dbContext.Customer.Update(customer);
                      _dbContext.SaveChanges();
                     return customer;
-                }
-
-                else
-                {
-                    throw new Exception("Failed To Update");
-                }
+                
             }
             catch (Exception)
             {

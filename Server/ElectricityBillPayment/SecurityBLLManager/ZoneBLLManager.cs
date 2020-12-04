@@ -45,19 +45,14 @@ namespace SecurityBLLManager
         {
             try
             {
-                var res = _dbContext.Zone.Where(p => p.ZoneId == zone.ZoneId).FirstOrDefault();
-                if (res != null)
-                {
+                
                     zone.UpdatedBy = "Admin";
                     zone.UpdatedDate = DateTime.Now;
                     _dbContext.Zone.Update(zone);
                     _dbContext.SaveChanges();
 
-                }
-                else
-                {
-                    throw new Exception("Failed");
-                }
+                
+                
             }
             catch (Exception)
             {

@@ -15,7 +15,17 @@
                          <div class="form-group">
                              <label>Role Name</label>
                              <input type="text"  name="RoleName" [(ngModel)]="objRole.RoleName" class="au-input au-input--full"  autocomplete="off">
-                           </div> <button type="submit" (click)="AddRole()" class="btn btn-primary">AddRole</button>
+                            <div class="form-group">
+                              <label>Status</label>
+                              <select name="Status" class="form-control"
+                                  [(ngModel)]="objRole.Status">
+                                  <!-- <option [value]="-1">-Select-</option> -->
+                                <option *ngFor="let status of lststatus"
+                                  [value]="status.key">{{status.value}}
+                                </option>
+                              </select>
+                           </div>
+                          </div> <button type="submit" (click)="AddRole()" class="btn btn-primary">AddRole</button>
 
                          </form>
 

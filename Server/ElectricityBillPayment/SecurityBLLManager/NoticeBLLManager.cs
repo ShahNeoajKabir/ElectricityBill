@@ -44,19 +44,13 @@ namespace SecurityBLLManager
         {
             try
             {
-                var res =  _dbContext.Notice.Where(p => p.NoticeId == notice.NoticeId).FirstOrDefault();
-                if (res != null)
-                {
+                
                     notice.UpdatedBy = "CoOrdinator";
                     notice.UpdatedDate = DateTime.Now;
                     _dbContext.Notice.Update(notice);
                      _dbContext.SaveChanges();
                     return notice;
-                }
-                else
-                {
-                    throw new Exception("Failed To Update");
-                }
+                
             }
             catch (Exception)
             {

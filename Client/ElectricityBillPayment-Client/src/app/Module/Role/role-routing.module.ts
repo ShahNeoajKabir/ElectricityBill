@@ -5,7 +5,10 @@ import { ListRoleComponent } from './list-role/list-role.component';
 
 
 const routes: Routes = [{ path: 'AddRole', component: AddRoleComponent },
-{ path: '', component: ListRoleComponent }
+{ path: 'View', component: ListRoleComponent },
+{ path: ':id/edit', component: AddRoleComponent }
+
+
 
 
 

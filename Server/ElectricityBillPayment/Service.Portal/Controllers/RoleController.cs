@@ -40,7 +40,7 @@ namespace Service.Portal.Controllers
 
         [HttpGet]
         [Route("GetAll")]
-        public List<Role>GetAll([FromBody] TempMessage message)
+        public List<Role>GetAll()
         {
             return _roleBLL.GetAll();
         }

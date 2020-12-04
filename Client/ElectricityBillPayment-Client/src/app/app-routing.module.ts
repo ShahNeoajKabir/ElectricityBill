@@ -19,8 +19,10 @@ const routes: Routes = [
     { path: 'Notice', loadChildren: () => import('./Module/Notice/Notice.modules').then(p=>p.NoticeModule)},
     {path: 'Support', loadChildren:()=> import('./Module/Support/support.module').then(p=>p.SupportModule)},
     {path: 'Meter', loadChildren:()=>import('./Module/Meter/meter.module').then(n=>n.MeterModule)},
-    {path: 'role', loadChildren:()=>import('./Module/Role/role.module').then(n=>n.RoleModule)},
-    {path:'AssignMeter' ,loadChildren:()=>import('./Module/MeterAssign/AssignMeter.modules').then(n=>n.AssignMeterModule)}
+    {path: 'Role', loadChildren:()=>import('./Module/Role/role.module').then(n=>n.RoleModule)},
+    {path:'AssignMeter' ,loadChildren:()=>import('./Module/MeterAssign/AssignMeter.modules').then(n=>n.AssignMeterModule)},
+    {path:'Zone' ,loadChildren:()=>import('./Module/Zone/zone.module').then(n=>n.ZoneModule)}
+
 
 
 

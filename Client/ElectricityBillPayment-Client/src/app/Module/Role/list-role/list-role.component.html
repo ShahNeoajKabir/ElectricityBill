@@ -1,1 +1,47 @@
-<p>list-role works!</p>
+<div class="container">
+  <div class="padding-bottom:15px;">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="col-md-4">
+          <button class="au-btn au-btn-icon au-btn--green au-btn--small" [routerLink]="['/Role/AddRole']" >
+              <i class="zmdi zmdi-plus"></i>add Role</button>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+          <form class="form-header" action="" method="POST">
+              <input class="form-control" type="text" name="search" placeholder="Search for Information &amp; reports..." />
+              <button class="btn btn-success" type="submit">
+                  <i class="zmdi zmdi-search"></i>
+              </button>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+            <!-- DATA TABLE-->
+            <div class="table-responsive">
+              <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>Role Name</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                      <tr *ngFor="let objrole of lstrole">
+                          <td >{{objrole.RoleName}}</td>
+                          <td>{{objrole.Status}}</td>
+                          <td> <a class="btn btn-warning" routerLink="../{{ objrole.RoleId }}/edit"><i class="fas fa-edit"></i></a></td>
+                      </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- END DATA TABLE-->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

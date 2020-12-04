@@ -35,19 +35,13 @@ namespace SecurityBLLManager
         {
             try
             {
-                var res = _db.Role.Where(e => e.RoleId == role.RoleId).FirstOrDefault();
-                if (res != null)
-                {
+                
                     role.UpdatedBy = "Admin";
                     role.UpdatedDate = DateTime.Now;
                     _db.Role.Update(role);
                     _db.SaveChanges();
 
-                }
-                else
-                {
-                    throw new Exception("Failed To Update");
-                }
+                
             }
             catch (Exception)
             {

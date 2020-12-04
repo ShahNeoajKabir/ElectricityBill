@@ -23,5 +23,9 @@ export class ListNoticeComponent implements OnInit {
     })
 
   }
+  Edit(id: any) {
+
+    console.log(id);
+  }
 
 }

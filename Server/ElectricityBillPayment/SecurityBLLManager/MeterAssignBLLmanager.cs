@@ -63,22 +63,14 @@ namespace SecurityBLLManager
         {
             try
             {
-                var res = _dbContext.MeterAssign.Where(p => p.MeterAssignId == meter.MeterAssignId).FirstOrDefault();
-                if (res != null)
-                {
+               
                     meter.UpdatedBy = "CoOrdinator";
                     meter.UpdatedDate = DateTime.Now;
                     _dbContext.MeterAssign.Update(meter);
                     _dbContext.SaveChanges();
-
-                }
-                else
-                {
-                    throw new Exception("Inavlide Request");
-                }
                 return meter;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
