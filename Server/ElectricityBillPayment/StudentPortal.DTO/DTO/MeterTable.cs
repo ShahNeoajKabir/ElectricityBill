@@ -14,7 +14,7 @@ namespace ModelClass.DTO
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
-        public ICollection<MeterAssign> MeterAssign { get; set; }
+        public virtual ICollection<MeterAssign> MeterAssign { get; set; }
         
     }
 }

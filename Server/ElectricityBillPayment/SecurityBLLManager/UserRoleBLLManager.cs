@@ -70,7 +70,8 @@ namespace SecurityBLLManager
 
         public UserRole GetById(UserRole userRole)
         {
-            return _dbContext.UserRole.Find(userRole.UserRoleId);
+            var res = _dbContext.UserRole.Where(p => p.UserRoleId == userRole.UserRoleId).FirstOrDefault();
+            return res;
         }
 
 

@@ -69,7 +69,8 @@ namespace SecurityBLLManager
         }
         public User GetByID(User user)
         {
-            return _db.User.Find(user.UserId);
+            var res = _db.User.Where(p => p.UserId == user.UserId).FirstOrDefault();
+            return res;
         }
     }
     public interface IUserBLLManager

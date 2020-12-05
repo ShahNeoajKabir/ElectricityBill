@@ -62,7 +62,8 @@ namespace SecurityBLLManager
                 MeterTable=t.MeterTable,
                 Customer=t.Customer,
                 MeterId=t.MeterId,
-                CustomerId=t.CustomerId
+                CustomerId=t.CustomerId,
+                MeterAssignId=t.MeterAssignId
             }).ToList();
             return meter;
 
@@ -88,6 +89,7 @@ namespace SecurityBLLManager
 
         public MeterAssign GetById(MeterAssign meter)
         {
+
             return _dbContext.MeterAssign.Find(meter.MeterAssignId);
         }
 
