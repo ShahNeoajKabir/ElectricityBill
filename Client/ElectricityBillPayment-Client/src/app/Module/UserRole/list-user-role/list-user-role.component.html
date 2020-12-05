@@ -34,7 +34,7 @@
                     <tbody >
                       <tr *ngFor="let objuserrole of lstuserrole">
                           <td >{{objuserrole.User.UserName}}</td>
-                          <td >{{objuserrole.Role.RoleId}}</td>
+                          <td >{{objuserrole.Role.RoleName}}</td>
                           <td>{{objuserrole.Status}}</td>
                           <td><a class="btn btn-warning" routerLink="../{{ objuserrole.UserRoleId }}/edit"><i class="fas fa-edit"></i></a></td>
                       </tr>
