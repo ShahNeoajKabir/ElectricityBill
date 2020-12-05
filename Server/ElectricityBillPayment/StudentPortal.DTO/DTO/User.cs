@@ -24,4 +24,9 @@ namespace ModelClass.DTO
         public virtual ICollection<UserRole> UserRole { get; set; }
 
     }
+
+    public class UserSearch
+    {
+        public string search { get; set; }
+    }
 }
