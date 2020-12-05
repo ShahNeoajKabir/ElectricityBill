@@ -20,4 +20,8 @@ export class CustomerService {
   public UpdateUser(Custome:any){
     return this.httpclient.post(this.url+"UpdateCustomer",Custome);
   }
+
+  public GetAll(){
+    return this.httpclient.get(this.url+"GetAll");
+  }
 }

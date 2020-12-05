@@ -29,7 +29,14 @@ namespace SecurityBLLManager
             _db.SaveChanges();
             return user;
         }
-
+        //public void Search(User user)
+        //{
+        //    var name = "Bappy";
+        //   // var search = _db.User(user.UserName);
+        //   var search = _db.User.Where(c => c.UserName.Contains(name));
+        //}
+        //customers.Where(c => c.Name.Contains());
+        //customers.Where(c => SqlMethods.Like(c.Name, "%john%")); 
         public async Task<List<User>> GetAll()
         {
             List<User> user = await _db.User.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToListAsync();

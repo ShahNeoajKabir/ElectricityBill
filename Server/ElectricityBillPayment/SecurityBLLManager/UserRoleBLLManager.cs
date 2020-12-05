@@ -36,7 +36,16 @@ namespace SecurityBLLManager
 
         public List<UserRole> GetAll()
         {
-            List<UserRole> userRole = _dbContext.UserRole.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
+            List<UserRole> userRole = _dbContext.UserRole.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).Select(t=>new UserRole()
+            {
+                CreatedBy=t.CreatedBy,
+                CreatedDate=t.CreatedDate,
+                Status=t.Status,
+                User=t.User,
+                Role=t.Role,
+                UserId=t.UserId,
+                RoleId=t.RoleId
+            }).ToList();
             return userRole;
         }
 

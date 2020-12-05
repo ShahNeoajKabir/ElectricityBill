@@ -13,7 +13,7 @@ namespace ModelClass.DTO
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
-        public virtual Customer Customer { get; set; }
+        public  Customer Customer { get; set; }
 
     }
 }

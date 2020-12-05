@@ -20,6 +20,7 @@ export class ListAssignMeterComponent implements OnInit {
       console.log(this.objassign);
     })
   }
+
   Edit(id:any){
     console.log(id);
   }

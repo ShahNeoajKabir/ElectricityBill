@@ -54,7 +54,16 @@ namespace SecurityBLLManager
 
         public List<MeterAssign> GetAll()
         {
-            List<MeterAssign> meter = _dbContext.MeterAssign.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
+            List<MeterAssign> meter = _dbContext.MeterAssign.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).Select(t => new MeterAssign()
+            {
+                CreatedBy = t.CreatedBy,
+                CreatedDate=t.CreatedDate,
+                Status=t.Status,
+                MeterTable=t.MeterTable,
+                Customer=t.Customer,
+                MeterId=t.MeterId,
+                CustomerId=t.CustomerId
+            }).ToList();
             return meter;
 
         }
@@ -79,7 +88,7 @@ namespace SecurityBLLManager
 
         public MeterAssign GetById(MeterAssign meter)
         {
-            return _dbContext.MeterAssign.Find(meter.MeterId);
+            return _dbContext.MeterAssign.Find(meter.MeterAssignId);
         }
 
         private int addCustomerIntoUserTable(Customer customer)

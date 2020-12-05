@@ -6,6 +6,8 @@ namespace ModelClass.DTO
 {
     public class UserRole
     {
+        public UserRole(){
+            }
         public int UserRoleId { get; set; }
         public int RoleId { get; set; }
         public int UserId { get; set; }
@@ -14,7 +16,7 @@ namespace ModelClass.DTO
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
-        public virtual Role Role { get; set; }
-        public virtual User User { get; set; }
+        public  Role Role { get; set; }
+        public  User User { get; set; }
     }
 }
