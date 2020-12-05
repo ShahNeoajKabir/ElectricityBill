@@ -47,15 +47,16 @@ namespace SecurityBLLManager
         {
             try
             {
-                
+                var id = _db.User.Where(p => p.UserId == user.UserId).AsNoTracking().FirstOrDefault();
+                if (id !=null)
+                {
                     user.UpdatedBy = "Admin";
                     user.UpdatedDate = DateTime.Now;
 
                     _db.User.Update(user);
                     _db.SaveChanges();
 
-                
-                
+                }
 
                 return user;
 
