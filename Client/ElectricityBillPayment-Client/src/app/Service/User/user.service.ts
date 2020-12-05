@@ -18,6 +18,10 @@ export class UserService {
     return this.httpclient.get(this.url+"GetAll");
   }
 
+  public SearchUser(search:any){
+    return this.httpclient.post(this.url+"SearchUser",search);
+  }
+
   public GetById(User:any){
     return this.httpclient.post(this.url+"GetByID",User);
   }

@@ -29,14 +29,14 @@ namespace SecurityBLLManager
             _db.SaveChanges();
             return user;
         }
-        //public void Search(User user)
-        //{
-        //    var name = "Bappy";
-        //   // var search = _db.User(user.UserName);
-        //   var search = _db.User.Where(c => c.UserName.Contains(name));
-        //}
-        //customers.Where(c => c.Name.Contains());
-        //customers.Where(c => SqlMethods.Like(c.Name, "%john%")); 
+        public List<User> Search(string UserName)
+        {
+            var name = "Bappy";
+            // var search = _db.User(user.UserName);
+            var search = _db.User.Where(c => c.UserName.Contains(UserName)).ToList();
+            return search;
+        }
+
         public async Task<List<User>> GetAll()
         {
             List<User> user = await _db.User.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToListAsync();
@@ -48,7 +48,7 @@ namespace SecurityBLLManager
             try
             {
                 var id = _db.User.Where(p => p.UserId == user.UserId).AsNoTracking().FirstOrDefault();
-                if (id !=null)
+                if (id != null)
                 {
                     user.UpdatedBy = "Admin";
                     user.UpdatedDate = DateTime.Now;
@@ -81,5 +81,7 @@ namespace SecurityBLLManager
         User GetByID(User user);
 
         Task<List<User>> GetAll();
+
+        List<User> Search(string UserName);
     }
 }

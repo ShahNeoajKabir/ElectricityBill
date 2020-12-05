@@ -10,6 +10,7 @@ import { UserService } from 'src/app/Service/User/user.service';
 })
 export class ListUserComponent implements OnInit {
   public lstUser:User[]= new Array<User>();
+  public searchuser:string="";
 
   constructor(private userservice:UserService, private router:Router) { }
 
@@ -22,6 +23,15 @@ export class ListUserComponent implements OnInit {
   Edit(id: any) {
 
     console.log(id);
+  }
+
+  searchUsers(){
+
+    this.userservice.SearchUser(this.searchuser).subscribe((res:any)=>{
+      this.lstUser=res;
+      console.log(this.lstUser);
+    })
+
   }
 
 

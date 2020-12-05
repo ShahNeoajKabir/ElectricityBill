@@ -61,6 +61,25 @@ namespace Service.Portal.Controllers
 
 
         }
+
+        [HttpPost]
+        [Route("SearchUser")]
+        public List<User> SearchUser([FromBody] TempMessage message)
+        {
+            try
+            {
+                string username = JsonConvert.DeserializeObject<string>(message.Content.ToString());
+
+                return this.userBLLManager.Search(username);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
         [HttpPost]
         [Route("GetbyID")]
         public User GetbyID([FromBody] TempMessage message)
