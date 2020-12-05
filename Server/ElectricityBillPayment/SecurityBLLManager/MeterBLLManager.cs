@@ -34,9 +34,19 @@ namespace SecurityBLLManager
 
         public List<MeterTable> GetAll()
         {
-            var meterassignLiost = _dbContext.MeterAssign.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).Select(c=>c.MeterAssignId).ToArray();
+            List<MeterTable> meter = new List<MeterTable>();
+            var meterassignLiost = _dbContext.MeterAssign.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).Select(c => c.MeterId).ToArray();
+            if (meterassignLiost.Length > 0)
+            {
+                meter = _dbContext.MeterTable.Where(p => !meterassignLiost.Contains(p.MeterId) && p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
 
-            List<MeterTable> meter = _dbContext.MeterTable.Where(p => !p.MeterId.Equals(meterassignLiost) && p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
+            }
+            else
+            {
+                meter = _dbContext.MeterTable.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
+
+            }
+
             return meter;
         }
 

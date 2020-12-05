@@ -44,7 +44,8 @@ namespace SecurityBLLManager
                 User=t.User,
                 Role=t.Role,
                 UserId=t.UserId,
-                RoleId=t.RoleId
+                RoleId=t.RoleId,
+                UserRoleId=t.UserRoleId
             }).ToList();
             return userRole;
         }
