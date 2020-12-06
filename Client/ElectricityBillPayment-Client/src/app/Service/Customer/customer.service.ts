@@ -17,6 +17,10 @@ export class CustomerService {
   public GetById(Customer:any){
     return this.httpclient.post(this.url+"GetbyID",Customer);
   }
+
+  public Search(search:any){
+    return this.httpclient.post(this.url+"SearchCustomer",search);
+  }
   public UpdateUser(Custome:any){
     return this.httpclient.post(this.url+"UpdateCustomer",Custome);
   }

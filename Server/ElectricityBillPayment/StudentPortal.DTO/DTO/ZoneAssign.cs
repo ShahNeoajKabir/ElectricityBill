@@ -15,4 +15,9 @@ namespace ModelClass.DTO
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
     }
+
+    public class ZoneAssignSearch
+    {
+        public string Search { get; set; }
+    }
 }

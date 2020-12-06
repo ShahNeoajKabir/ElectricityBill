@@ -1,5 +1,6 @@
 ﻿using Electricity.Common.Utility;
 using Electricity.DAL;
+using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
@@ -69,15 +70,26 @@ namespace SecurityBLLManager
 
         }
 
+        public List<MeterAssign> Search(string MeterNumber)
+        {
+            var search = _dbContext.MeterAssign.Where(c => c.MeterTable.MeterNumber.Contains(MeterNumber)).ToList();
+            return search;
+        }
+
         public MeterAssign UpdateAssign(MeterAssign meter)
         {
             try
             {
-               
+                var id = _dbContext.MeterAssign.Where(p => p.MeterAssignId == meter.MeterAssignId).AsNoTracking().FirstOrDefault();
+                if (id != null)
+                {
                     meter.UpdatedBy = "CoOrdinator";
                     meter.UpdatedDate = DateTime.Now;
                     _dbContext.MeterAssign.Update(meter);
                     _dbContext.SaveChanges();
+                }
+               
+                    
                 return meter;
             }
             catch (Exception ex)
@@ -90,7 +102,8 @@ namespace SecurityBLLManager
         public MeterAssign GetById(MeterAssign meter)
         {
 
-            return _dbContext.MeterAssign.Find(meter.MeterAssignId);
+            var res= _dbContext.MeterAssign.Where(c=>c.MeterAssignId==meter.MeterAssignId).FirstOrDefault();
+            return res;
         }
 
         private int addCustomerIntoUserTable(Customer customer)
@@ -127,5 +140,6 @@ namespace SecurityBLLManager
         List<MeterAssign> GetAll();
         MeterAssign UpdateAssign(MeterAssign meter);
         MeterAssign GetById(MeterAssign meter);
+        List<MeterAssign> Search(string MeterNumber);
     }
 }

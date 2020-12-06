@@ -10,6 +10,7 @@ import { UserRoleService } from 'src/app/Service/UserRole/user-role.service';
 })
 export class ListUserRoleComponent implements OnInit {
   public lstuserrole:UserRole[]=new Array<UserRole>();
+  public search:string="";
 
   constructor(private userroleservice:UserRoleService,private router:Router) { }
 
@@ -22,6 +23,12 @@ export class ListUserRoleComponent implements OnInit {
   }
   Edit(id:any){
     console.log(id);
+  }
+  Search(){
+    this.userroleservice.Search(this.search).subscribe((res:any)=>{
+      this.lstuserrole=res;
+      console.log(this.lstuserrole);
+    })
   }
 
 }

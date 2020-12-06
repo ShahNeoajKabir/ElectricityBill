@@ -1,4 +1,5 @@
 ﻿using Electricity.DAL;
+using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
@@ -41,15 +42,27 @@ namespace SecurityBLLManager
         }
 
 
+        public List<Zone>Search(string ZoneName)
+        {
+            var search = _dbContext.Zone.Where(c => c.ZoneName.Contains(ZoneName)).ToList();
+            return search;
+        }
+
+
         public Zone UpdateZone(Zone zone)
         {
             try
             {
-                
+                var id = _dbContext.Zone.Where(c => c.ZoneId == zone.ZoneId).AsNoTracking().FirstOrDefault();
+                if (id != null)
+                {
                     zone.UpdatedBy = "Admin";
                     zone.UpdatedDate = DateTime.Now;
                     _dbContext.Zone.Update(zone);
                     _dbContext.SaveChanges();
+                }
+                
+                    
 
                 
                 
@@ -64,7 +77,8 @@ namespace SecurityBLLManager
 
         public Zone GetById(Zone zone)
         {
-            return _dbContext.Zone.Find(zone.ZoneId);
+            var res= _dbContext.Zone.Where(p=>p.ZoneId==zone.ZoneId).FirstOrDefault();
+            return res;
         }
     }
 
@@ -74,6 +88,7 @@ namespace SecurityBLLManager
        List<Zone> GetAll();
         Zone UpdateZone(Zone zone);
         Zone GetById(Zone zone);
+        List<Zone> Search(string ZoneName);
 
     }
 }

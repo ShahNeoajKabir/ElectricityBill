@@ -45,6 +45,26 @@ namespace Service.Portal.Controllers
             return _roleBLL.GetAll();
         }
 
+
+        [HttpPost]
+        [Route("SearchRole")]
+        public List<Role> SearchZone([FromBody] TempMessage message)
+        {
+            try
+            {
+                string rolename = JsonConvert.DeserializeObject<string>(message.Content.ToString());
+
+                return _roleBLL.Search(rolename);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
+
         [HttpPost]
         [Route("UpdateRole")]
         public Role UpdateRole([FromBody] TempMessage message)

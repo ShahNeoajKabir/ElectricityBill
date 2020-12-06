@@ -99,5 +99,25 @@ namespace Service.Portal.Controllers
 
 
         }
+
+
+        [HttpPost]
+        [Route("SearchCustomer")]
+        public List<Customer> SearchZone([FromBody] TempMessage message)
+        {
+            try
+            {
+                string customername = JsonConvert.DeserializeObject<string>(message.Content.ToString());
+
+                return _customerBLLManager.Search(customername);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
     }
 }

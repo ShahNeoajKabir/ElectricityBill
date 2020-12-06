@@ -1,4 +1,5 @@
 ﻿using Electricity.DAL;
+using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
@@ -50,15 +51,26 @@ namespace SecurityBLLManager
             return userRole;
         }
 
+        public List<UserRole> Search(string UserName)
+        {
+            var search = _dbContext.UserRole.Where(c => c.User.UserName.Contains(UserName)).ToList();
+            return search;
+        }
+
 
         public UserRole UpdateUserRole(UserRole userRole)
         {
             try
             {
-                userRole.UpdatedBy = "Admin";
-                userRole.UpdatedDate = DateTime.Now;
-                _dbContext.UserRole.Update(userRole);
-                _dbContext.SaveChanges();
+                var res=_dbContext.UserRole.Where(p=>p.UserRoleId==userRole.UserRoleId).AsNoTracking().FirstOrDefault();
+                if (res != null)
+                {
+                    userRole.UpdatedBy = "Admin";
+                    userRole.UpdatedDate = DateTime.Now;
+                    _dbContext.UserRole.Update(userRole);
+                    _dbContext.SaveChanges();
+                }
+                
                 return userRole;
             }
             catch (Exception ex)
@@ -84,5 +96,6 @@ namespace SecurityBLLManager
         List<UserRole> GetAll();
         UserRole UpdateUserRole(UserRole userRole);
         UserRole GetById(UserRole userRole);
+        List<UserRole> Search(string UserName);
     }
 }

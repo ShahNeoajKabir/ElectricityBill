@@ -12,8 +12,8 @@
             </div>
             <div class="col-md-4">
               <form class="form-header" action="" method="POST">
-                  <input class="form-control" type="text" name="search" placeholder="Search for Information &amp; reports..." />
-                  <button class="btn btn-success" type="submit">
+                  <input class="form-control" [(ngModel)]="search" type="text" name="search" placeholder="Search for Information &amp; reports..." />
+                  <button class="btn btn-success" (click)="Search()" type="submit">
                       <i class="zmdi zmdi-search"></i>
                   </button>
               </form>

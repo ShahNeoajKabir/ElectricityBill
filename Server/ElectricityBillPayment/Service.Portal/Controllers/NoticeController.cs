@@ -45,6 +45,25 @@ namespace Service.Portal.Controllers
             return _noticeBLL.GetAll();
         }
 
+        [HttpPost]
+        [Route("SearchNotice")]
+        public List<Notice> SearchZone([FromBody] TempMessage message)
+        {
+            try
+            {
+                string noticename = JsonConvert.DeserializeObject<string>(message.Content.ToString());
+
+                return _noticeBLL.Search(noticename);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
+
 
         [HttpPost]
         [Route("UpdateNotice")]

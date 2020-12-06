@@ -19,4 +19,9 @@ namespace ModelClass.DTO
         public BillTable BillTable { get; set; }
 
     }
+
+    public class PaymentSearch
+    {
+        public string Search { get; set; }
+    }
 }

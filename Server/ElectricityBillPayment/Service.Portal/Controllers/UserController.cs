@@ -98,7 +98,7 @@ namespace Service.Portal.Controllers
             }
 
 
-        }
+        } 
         [HttpGet]
         [Route("GetAll")]
         public Task<List<User>> GetAll()

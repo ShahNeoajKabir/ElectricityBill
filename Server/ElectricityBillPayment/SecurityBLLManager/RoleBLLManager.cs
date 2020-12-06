@@ -1,4 +1,5 @@
 ﻿using Electricity.DAL;
+using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
@@ -31,15 +32,25 @@ namespace SecurityBLLManager
             return role;
         }
 
+        public List<Role>Search(string RoleName)
+        {
+            var search = _db.Role.Where(c => c.RoleName.Contains(RoleName)).ToList();
+            return search;
+        }
+
         public Role UpdateRole(Role role)
         {
             try
             {
-                
+                var id = _db.Role.Where(p => p.RoleId == role.RoleId).AsNoTracking().FirstOrDefault();
+                if (id != null)
+                {
                     role.UpdatedBy = "Admin";
                     role.UpdatedDate = DateTime.Now;
                     _db.Role.Update(role);
                     _db.SaveChanges();
+                }
+                    
 
                 
             }
@@ -52,7 +63,8 @@ namespace SecurityBLLManager
         }
         public Role GetByID(Role role)
         {
-            return _db.Role.Find(role.RoleId);
+            var res= _db.Role.Where(c=>c.RoleId==role.RoleId).FirstOrDefault();
+            return res;
         }
 
     }
@@ -63,5 +75,6 @@ namespace SecurityBLLManager
         List<Role> GetAll();
         Role UpdateRole(Role role);
         Role GetByID(Role role);
+        List<Role> Search(string RoleName);
     }
 }

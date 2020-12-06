@@ -11,6 +11,7 @@ import { SupportService } from 'src/app/Service/Support/support.service';
 export class ListSupportComponent implements OnInit {
 
   public lstSupport:Support[]=new Array<Support>();
+  public search:string="";
 
   constructor(
     private supportservice:SupportService,
@@ -28,6 +29,12 @@ export class ListSupportComponent implements OnInit {
 
   Edit(id:any){
     console.log(id);
+  }
+  Search(){
+    this.supportservice.Search(this.search).subscribe((res:any)=>{
+      this.lstSupport=res;
+      console.log(this.lstSupport);
+    })
   }
 
 }

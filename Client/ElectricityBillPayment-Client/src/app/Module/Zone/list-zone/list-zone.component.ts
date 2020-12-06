@@ -10,6 +10,7 @@ import { ZoneService } from 'src/app/Service/Zone/zone.service';
 })
 export class ListZoneComponent implements OnInit {
   public lstzone:Zone[]=new Array<Zone>();
+  public search:string="";
 
   constructor(
     private zoneservice:ZoneService,
@@ -27,6 +28,12 @@ export class ListZoneComponent implements OnInit {
   }
   Edit(id:any){
     console.log(id);
+  }
+  Search(){
+    this.zoneservice.Search(this.search).subscribe((res:any)=>{
+      this.lstzone=res;
+      console.log(this.lstzone);
+    })
   }
 
 }

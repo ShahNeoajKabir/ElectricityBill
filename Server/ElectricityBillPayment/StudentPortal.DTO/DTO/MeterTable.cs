@@ -17,4 +17,9 @@ namespace ModelClass.DTO
         public virtual ICollection<MeterAssign> MeterAssign { get; set; }
         
     }
+
+    public class MeterTableSearch
+    {
+        public string Search { get; set; }
+    }
 }

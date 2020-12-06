@@ -19,4 +19,8 @@ namespace ModelClass.DTO
         public  BillTable BillTable{get;set;}
         public  MeterAssign MeterAssign{get;set;}
     }
+    public class MeterReadingTableSearch
+    {
+        public string Search { get; set; }
+    }
 }

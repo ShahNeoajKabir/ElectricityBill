@@ -1,0 +1,12 @@
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\bin\Debug\netstandard2.0\Electricity.DAL.deps.json
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\bin\Debug\netstandard2.0\Electricity.DAL.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\bin\Debug\netstandard2.0\Electricity.DAL.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\bin\Debug\netstandard2.0\ModelClass.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\bin\Debug\netstandard2.0\ModelClass.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.csprojAssemblyReference.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.AssemblyInfoInputs.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.AssemblyInfo.cs
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.csproj.CoreCompileInputs.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.csproj.CopyComplete
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DAL\obj\Debug\netstandard2.0\Electricity.DAL.pdb

@@ -48,6 +48,25 @@ namespace Service.Portal.Controllers
         }
 
         [HttpPost]
+        [Route("SearchMeter")]
+        public List<MeterTable> SearchZone([FromBody] TempMessage message)
+        {
+            try
+            {
+                string meternumber = JsonConvert.DeserializeObject<string>(message.Content.ToString());
+
+                return _meterBLL.Search(meternumber);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
+
+        [HttpPost]
         [Route("UpdateMeter")]
         public MeterTable UpdateMeter([FromBody] TempMessage message)
         {

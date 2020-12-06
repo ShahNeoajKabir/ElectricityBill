@@ -47,6 +47,27 @@ namespace Service.Portal.Controllers
             return _bLLManager.GetAll();
         }
 
+
+        [HttpPost]
+        [Route("SearchUserRole")]
+        public List<UserRole> SearchUser([FromBody] TempMessage message)
+        {
+            try
+            {
+                string username = JsonConvert.DeserializeObject<string>(message.Content.ToString());
+
+                return _bLLManager.Search(username);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
+
+
         [HttpPost]
         [Route("UpdateUserRole")]
         public UserRole UpdateUserRole([FromBody]TempMessage message)

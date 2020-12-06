@@ -31,8 +31,7 @@ namespace SecurityBLLManager
         }
         public List<User> Search(string UserName)
         {
-            var name = "Bappy";
-            // var search = _db.User(user.UserName);
+            
             var search = _db.User.Where(c => c.UserName.Contains(UserName)).ToList();
             return search;
         }

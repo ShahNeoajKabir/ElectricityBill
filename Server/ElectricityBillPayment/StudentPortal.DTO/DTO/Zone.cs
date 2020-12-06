@@ -16,4 +16,9 @@ namespace ModelClass.DTO
         public  Customer Customer { get; set; }
 
     }
+
+    public class ZoneSearch
+    {
+        public string Search { get; set; }
+    }
 }

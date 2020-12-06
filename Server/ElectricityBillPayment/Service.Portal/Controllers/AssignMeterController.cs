@@ -45,6 +45,26 @@ namespace Service.Portal.Controllers
             return _bLLmanager.GetAll();
         }
 
+
+        [HttpPost]
+        [Route("SearchMeterAssign")]
+        public List<MeterAssign> SearchZone([FromBody] TempMessage message)
+        {
+            try
+            {
+                string meternumber = JsonConvert.DeserializeObject<string>(message.Content.ToString());
+
+                return _bLLmanager.Search(meternumber);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
+
         [HttpPost]
         [Route("UpdateAssign")]
         public MeterAssign UpdateAssign([FromBody] TempMessage message)

@@ -22,4 +22,9 @@ namespace ModelClass.DTO
         public virtual MeterTable MeterTable { get; set; }
         public ICollection<MeterReadingTable> MeterReadingTable{get;set;}
     }
+
+    public class MeterAssignSearch
+    {
+        public string Search { get; set; }
+    }
 }

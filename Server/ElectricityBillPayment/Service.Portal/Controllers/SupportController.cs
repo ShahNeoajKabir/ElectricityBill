@@ -46,6 +46,26 @@ namespace Service.Portal.Controllers
             return _supportBLL.GetAll();
         }
 
+
+        [HttpPost]
+        [Route("SearchSupport")]
+        public List<Support> SearchZone([FromBody] TempMessage message)
+        {
+            try
+            {
+                string supportname = JsonConvert.DeserializeObject<string>(message.Content.ToString());
+
+                return _supportBLL.Search(supportname);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
+
         [HttpPost]
         [Route("UpdateSupport")]
         public Support UpdateSupport([FromBody] TempMessage message)

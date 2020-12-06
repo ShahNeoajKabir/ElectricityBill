@@ -1,0 +1,62 @@
+<form>
+<div class="row">
+<div class="col-md-5">
+  <label>Image</label>
+  <input type="text"  name="Image" [(ngModel)]="objUser.Image" class="form-control"  autocomplete="off">
+</div>
+<div class="col-md-5">
+    <label>User Name</label>
+    <input type="text"  name="UserName" [(ngModel)]="objUser.UserName" class="form-control"  autocomplete="off">
+</div>
+<div class="col-md-5">
+  <label>Email</label>
+  <input type="email"  name="Image"  [(ngModel)]="objUser.Email" class="form-control"  autocomplete="off">
+</div>
+<div class="col-md-5">
+    <label>Password</label>
+    <input type="password"  name="UserName" [(ngModel)]="objUser.Password" class="form-control"  autocomplete="off">
+</div>
+<div class="col-md-5">
+  <label>Mobile Number</label>
+  <input type="text"  name="Image" [(ngModel)]="objUser.MobileNo" class="form-control"  autocomplete="off">
+</div>
+<div class="col-md-5">
+  <label>Gender</label>
+  <select name="Gender" class="form-control"
+  [(ngModel)]="objUser.Gender">
+<!-- <option [value]="-1">-Select-</option> -->
+<option *ngFor="let gender of lstGender"
+[value]="gender.key">{{gender.value}}</option>
+</select>
+</div>
+<div class="col-md-5">
+  <label>User Type</label>
+  <select name="UserTypeId" class="form-control"[(ngModel)]="objUser.UserTypeId">
+    <option *ngFor="let type of lstType"
+    [value]="type.key">{{type.value}}</option>
+  </select>
+</div>
+<div class="col-md-5">
+  <label>UserType Name</label>
+  <input type="text"  name="Image" [(ngModel)]="objUser.UserTypeName" class="form-control"  autocomplete="off">
+</div>
+<div class="col-md-5">
+  <label>Status</label>
+  <select name="Status" class="form-control"
+  [(ngModel)]="objUser.Status">
+  <!-- <option [value]="-1">-Select-</option> -->
+  <option *ngFor="let status of lstStatus"
+  [value]="status.key">{{status.value}}</option>
+  </select>
+</div>
+</div>
+<div class="row">
+  <div class="col-md-5">
+  </div>
+  <div class="col-md-1">
+    <button aria-pressed="true" class="btn btn-pill btn-block btn-primary active"(click)="AddUser()" type="button">Add User</button>
+  </div>
+  <div class="col-md-5">
+  </div>
+</div>
+</form>

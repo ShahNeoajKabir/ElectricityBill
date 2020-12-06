@@ -34,4 +34,9 @@ namespace ModelClass.DTO
         public  Zone Zone { get; set; }
 
     }
+
+    public class CustomerSearch
+    {
+        public string Search { get; set; }
+    }
 }

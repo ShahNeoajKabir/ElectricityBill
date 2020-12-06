@@ -64,6 +64,25 @@ namespace Service.Portal.Controllers
         }
 
         [HttpPost]
+        [Route("SearchZone")]
+        public List<Zone> SearchZone([FromBody] TempMessage message)
+        {
+            try
+            {
+                string zonename = JsonConvert.DeserializeObject<string>(message.Content.ToString());
+
+                return _zoneBLL.Search(zonename);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
+
+        [HttpPost]
         [Route("GetById")]
         public Zone GetById([FromBody]TempMessage message)
         {

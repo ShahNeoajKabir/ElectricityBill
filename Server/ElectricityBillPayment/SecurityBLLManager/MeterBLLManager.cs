@@ -1,4 +1,5 @@
 ﻿using Electricity.DAL;
+using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
@@ -49,17 +50,26 @@ namespace SecurityBLLManager
 
             return meter;
         }
+        public List<MeterTable> Search(string MeterNumber)
+        {
+            var search = _dbContext.MeterTable.Where(c => c.MeterNumber.Contains(MeterNumber)).ToList();
+            return search;
+        }
 
 
         public MeterTable UpdateMeter(MeterTable meter)
         {
             try
             {
-                
+                var id = _dbContext.MeterTable.Where(p => p.MeterId == meter.MeterId).AsNoTracking().FirstOrDefault();
+                if (id != null)
+                {
                     meter.UpdatedBy = "Admin";
                     meter.UpdatedDate = DateTime.Now;
                     _dbContext.MeterTable.Update(meter);
-                     _dbContext.SaveChanges();
+                    _dbContext.SaveChanges();
+                }
+                    
                     return meter;
                 
             }
@@ -72,7 +82,8 @@ namespace SecurityBLLManager
 
         public MeterTable GetById(MeterTable meter)
         {
-            return _dbContext.MeterTable.Find(meter.MeterId);
+            var res= _dbContext.MeterTable.Where(c=>c.MeterId==meter.MeterId).FirstOrDefault();
+            return res;
         }
     }
 
@@ -83,7 +94,7 @@ namespace SecurityBLLManager
         List<MeterTable> GetAll();
         MeterTable UpdateMeter(MeterTable meter);
         MeterTable GetById(MeterTable meter);
-
+        List<MeterTable> Search(string MeterNumber);
 
     }
 }

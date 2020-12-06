@@ -24,4 +24,9 @@ namespace ModelClass.DTO
         public  MeterReadingTable MeterReadingTable { get; set; }
         public  Payment Payment { get; set; }
     }
+
+    public class BillTableSearch
+    {
+        public string Search { get; set; }
+    }
 }

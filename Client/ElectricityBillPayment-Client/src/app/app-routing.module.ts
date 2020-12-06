@@ -4,11 +4,14 @@ import { from } from 'rxjs';
 import { CustomerRegistrationComponent } from './Component/customer-registration/customer-registration.component';
 import {LayoutComponent} from './Component/layout/layout.component'
 import { LoginComponent } from './Component/login/login.component';
+import { CustomerLayoutComponent } from './Module/Customer/customer-layout/customer-layout.component';
 
 
 const routes: Routes = [
   {path:'Login' , component:LoginComponent},
   {path:'Registration' , component:CustomerRegistrationComponent},
+  {path:'Dashboard' , component:CustomerLayoutComponent},
+
 
 
 
@@ -22,7 +25,9 @@ const routes: Routes = [
     {path: 'Role', loadChildren:()=>import('./Module/Role/role.module').then(n=>n.RoleModule)},
     {path:'AssignMeter' ,loadChildren:()=>import('./Module/MeterAssign/AssignMeter.modules').then(n=>n.AssignMeterModule)},
     {path:'Zone' ,loadChildren:()=>import('./Module/Zone/zone.module').then(n=>n.ZoneModule)},
-    {path:'UserRole' ,loadChildren:()=>import('./Module/UserRole/userrole.module').then(n=>n.UserRoleModule)}
+    {path:'UserRole' ,loadChildren:()=>import('./Module/UserRole/userrole.module').then(n=>n.UserRoleModule)},
+    {path:'Customer' ,loadChildren:()=>import('./Module/Customer/customer.module').then(n=>n.CustomerModule)}
+
   ]
 
 }

@@ -15,4 +15,9 @@ namespace ModelClass.DTO
         public int Status { get; set; }
         public virtual ICollection<UserRole> UserRole { get; set; }
     }
+
+    public class RoleSearch
+    {
+        public string Search { get; set; }
+    }
 }

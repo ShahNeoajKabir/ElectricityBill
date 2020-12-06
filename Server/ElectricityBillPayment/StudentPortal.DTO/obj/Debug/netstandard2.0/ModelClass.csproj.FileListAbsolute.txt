@@ -1,0 +1,9 @@
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\bin\Debug\netstandard2.0\ModelClass.deps.json
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\bin\Debug\netstandard2.0\ModelClass.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\bin\Debug\netstandard2.0\ModelClass.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.AssemblyInfoInputs.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.AssemblyInfo.cs
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.csproj.CoreCompileInputs.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.csprojAssemblyReference.cache
