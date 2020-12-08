@@ -1,59 +1,59 @@
 ﻿
+using Common.Electricity.Utility;
+using Context;
+using Microsoft.EntityFrameworkCore;
+using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Linq;
-using ModelClass.DTO;
-using Electricity.DAL;
-using Electricity.Common.Utility;
-using Microsoft.EntityFrameworkCore;
 
 namespace SecurityBLLManager
 {
     public class UserBLLManager : IUserBLLManager
     {
-        private readonly PaymentDbContext _db;
-        public UserBLLManager(PaymentDbContext db)
+        private readonly DatabaseContext _db;
+        public UserBLLManager(DatabaseContext db)
         {
             _db = db;
         }
-        public User AddUser(User user)
+        public async Task<User> AddUser(User user)
         {
             user.CreatedBy = "Admin";
             user.CreatedDate = DateTime.Now;
 
-            user.Password = new EncryptionService().Encrypt(user.Password);
+            user.Password = new EncryptionService().Encrypt(user.Password) ;
 
-            _db.User.Add(user);
-            _db.SaveChanges();
+            await _db.User.AddAsync(user);
+            await _db.SaveChangesAsync();
             return user;
         }
-        public List<User> Search(string UserName)
+        public async Task<List<User>> Search(string UserName)
         {
-            
-            var search = _db.User.Where(c => c.UserName.Contains(UserName)).ToList();
+
+            var search = await _db.User.Where(c => c.UserName.Contains(UserName)).ToListAsync();
             return search;
         }
 
-        public async Task<List<User>> GetAll()
+        public List<User> GetAll()
         {
-            List<User> user = await _db.User.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToListAsync();
+            List<User> user = _db.User.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
             return user;
         }
 
-        public User UpdateUser(User user)
+        public async Task< User> UpdateUser(User user)
         {
             try
             {
-                var id = _db.User.Where(p => p.UserId == user.UserId).AsNoTracking().FirstOrDefault();
+                var id = await _db.User.Where(p => p.UserId == user.UserId).AsNoTracking().FirstOrDefaultAsync();
                 if (id != null)
                 {
                     user.UpdatedBy = "Admin";
                     user.UpdatedDate = DateTime.Now;
 
                     _db.User.Update(user);
-                    _db.SaveChanges();
+                    await _db.SaveChangesAsync();
 
                 }
 
@@ -67,20 +67,20 @@ namespace SecurityBLLManager
             }
 
         }
-        public User GetByID(User user)
+        public async Task<User> GetByID(User user)
         {
-            var res = _db.User.Where(p => p.UserId == user.UserId).FirstOrDefault();
+            var res = await _db.User.Where(p => p.UserId == user.UserId).FirstOrDefaultAsync();
             return res;
         }
     }
     public interface IUserBLLManager
     {
-        User AddUser(User user);
-        User UpdateUser(User user);
-        User GetByID(User user);
+        Task<User> AddUser(User user);
+        Task<User> UpdateUser(User user);
+        Task<User> GetByID(User user);
 
-        Task<List<User>> GetAll();
+        List<User> GetAll();
 
-        List<User> Search(string UserName);
+        Task<List<User>> Search(string UserName);
     }
 }

@@ -1,23 +1,24 @@
-﻿using Electricity.Common.Utility;
-using Electricity.DAL;
+﻿using Common.Electricity.Utility;
+using Context;
 using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SecurityBLLManager
 {
     public class CustomerBLLManager : ICustomerBLLManager
     {
-        private readonly PaymentDbContext _dbContext;
-        public CustomerBLLManager(PaymentDbContext dbContext)
+        private readonly DatabaseContext _dbContext;
+        public CustomerBLLManager(DatabaseContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public Customer AddCustomer(Customer customer)
+        public async Task<Customer> AddCustomer(Customer customer)
         {
             try
             {
@@ -25,8 +26,8 @@ namespace SecurityBLLManager
                 customer.CreatedBy = customer.CustomerName;
                 customer.CreatedDate = DateTime.Now;
                 customer.Password = new EncryptionService().Encrypt(customer.Password);
-                _dbContext.Customer.Add(customer);
-                _dbContext.SaveChanges();
+                await _dbContext.Customer.AddAsync(customer);
+                await _dbContext.SaveChangesAsync();
                 return customer;
             }
             catch (Exception ex)
@@ -36,39 +37,39 @@ namespace SecurityBLLManager
             }
         }
 
-        public List<Customer> GetAll()
+        public  Task<List<Customer>> GetAll()
         {
-            List<Customer> customer = _dbContext.Customer.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
+            Task<List<Customer>> customer = _dbContext.Customer.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToListAsync();
             return customer;
         }
 
-        public List<Customer> Search(string CustomerName)
+        public async Task<List<Customer>> Search(string CustomerName)
         {
-            var search = _dbContext.Customer.Where(c => c.CustomerName.Contains(CustomerName)).ToList();
+            var search = await _dbContext.Customer.Where(c => c.CustomerName.Contains(CustomerName)).ToListAsync();
             return search;
         }
 
-        public Customer GetById(Customer customer)
+        public async Task<Customer> GetById(Customer customer)
         {
-            var res= _dbContext.Customer.Where(c=>c.CustomerId==customer.CustomerId).FirstOrDefault();
+            var res =await  _dbContext.Customer.Where(c => c.CustomerId == customer.CustomerId).FirstOrDefaultAsync();
             return res;
         }
 
-        public Customer UpdateUser(Customer customer)
+        public async Task<Customer> UpdateUser(Customer customer)
         {
             try
             {
-                var id = _dbContext.Customer.Where(p => p.CustomerId == customer.CustomerId).AsNoTracking().FirstOrDefault();
+                var id = await _dbContext.Customer.Where(p => p.CustomerId == customer.CustomerId).AsNoTracking().FirstOrDefaultAsync();
                 if (id != null)
                 {
                     customer.UpdatedBy = "Customer";
                     customer.UpdatedDate = DateTime.Now;
                     _dbContext.Customer.Update(customer);
-                    _dbContext.SaveChanges();
+                    await _dbContext.SaveChangesAsync();
                 }
-                    
-                    return customer;
-                
+
+                return customer;
+
             }
             catch (Exception)
             {
@@ -81,10 +82,10 @@ namespace SecurityBLLManager
 
     public interface ICustomerBLLManager
     {
-        Customer AddCustomer(Customer customer);
-        List<Customer> GetAll();
-        Customer GetById(Customer customer);
-        Customer UpdateUser(Customer customer);
-        List<Customer> Search(string CustomerName);
+        Task<Customer> AddCustomer(Customer customer);
+        Task<List<Customer>> GetAll();
+        Task<Customer> GetById(Customer customer);
+        Task<Customer> UpdateUser(Customer customer);
+        Task<List<Customer>> Search(string CustomerName);
     }
 }

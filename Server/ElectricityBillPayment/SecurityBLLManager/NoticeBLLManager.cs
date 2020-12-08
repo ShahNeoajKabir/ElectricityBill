@@ -1,29 +1,30 @@
-﻿using Electricity.DAL;
+﻿using Context;
 using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SecurityBLLManager
 {
     public class NoticeBLLManager : INoticeBLLManager
     {
-        private readonly PaymentDbContext _dbContext;
-        public NoticeBLLManager(PaymentDbContext dbContext)
+        private readonly DatabaseContext _dbContext;
+        public NoticeBLLManager(DatabaseContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public Notice AddNotice(Notice notice)
+        public async Task<Notice> AddNotice(Notice notice)
         {
             try
             {
                 notice.CreatedBy = "CoOrdinator";
                 notice.CreatedDate = DateTime.Now;
-                 _dbContext.Notice.Add(notice);
-                _dbContext.SaveChanges();
+                await _dbContext.Notice.AddAsync(notice);
+                await _dbContext.SaveChangesAsync();
                 return notice;
 
             }
@@ -37,32 +38,32 @@ namespace SecurityBLLManager
 
         public List<Notice> GetAll()
         {
-            List<Notice> notice =  _dbContext.Notice.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
+            List<Notice> notice = _dbContext.Notice.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
             return notice;
         }
 
-        public List<Notice>Search(string NoticeName)
+        public async Task<List<Notice>> Search(string NoticeName)
         {
-            var search = _dbContext.Notice.Where(c => c.Notices.Contains(NoticeName)).ToList();
+            var search = await _dbContext.Notice.Where(c => c.Notices.Contains(NoticeName)).ToListAsync();
             return search;
         }
 
-        public Notice UpdateNotice(Notice notice)
+        public async Task<Notice> UpdateNotice(Notice notice)
         {
             try
             {
-                var id = _dbContext.Notice.Where(p => p.NoticeId == notice.NoticeId).AsNoTracking().FirstOrDefault();
+                var id = await _dbContext.Notice.Where(p => p.NoticeId == notice.NoticeId).AsNoTracking().FirstOrDefaultAsync();
                 if (id != null)
                 {
                     notice.UpdatedBy = "CoOrdinator";
                     notice.UpdatedDate = DateTime.Now;
                     _dbContext.Notice.Update(notice);
-                    _dbContext.SaveChanges();
+                   await _dbContext.SaveChangesAsync();
                 }
-                
-                    
-                    return notice;
-                
+
+
+                return notice;
+
             }
             catch (Exception)
             {
@@ -71,22 +72,22 @@ namespace SecurityBLLManager
             }
         }
 
-        public Notice GetById(Notice notice)
+        public async Task<Notice> GetById(Notice notice)
         {
-            var res= _dbContext.Notice.Where(c=>c.NoticeId==notice.NoticeId).FirstOrDefault();
+            var res = await _dbContext.Notice.Where(c => c.NoticeId == notice.NoticeId).FirstOrDefaultAsync();
             return res;
         }
 
-        
+
     }
 
 
     public interface INoticeBLLManager
     {
-        Notice AddNotice(Notice notice);
+        Task<Notice> AddNotice(Notice notice);
         List<Notice> GetAll();
-        Notice UpdateNotice(Notice notice);
-        Notice GetById(Notice notice);
-        List<Notice> Search(string NoticeName);
+        Task<Notice> UpdateNotice(Notice notice);
+        Task<Notice> GetById(Notice notice);
+        Task<List<Notice>> Search(string NoticeName);
     }
 }

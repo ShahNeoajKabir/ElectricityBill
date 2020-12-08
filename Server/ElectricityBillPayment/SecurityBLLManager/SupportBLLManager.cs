@@ -1,29 +1,30 @@
-﻿using Electricity.DAL;
+﻿using Context;
 using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SecurityBLLManager
 {
     public class SupportBLLManager : ISupportBLLManager
     {
-        private readonly PaymentDbContext _dbContext;
-        public SupportBLLManager(PaymentDbContext dbContext)
+        private readonly DatabaseContext _dbContext;
+        public SupportBLLManager(DatabaseContext dbContext)
         {
             _dbContext = dbContext;
         }
 
-        public Support AddSupport(Support support)
+        public async Task<Support> AddSupport(Support support)
         {
             try
             {
                 support.CreatedBy = "Customer";
                 support.CreatedDate = DateTime.Now;
-                _dbContext.Support.Add(support);
-                _dbContext.SaveChanges();
+                await _dbContext.Support.AddAsync(support);
+                await _dbContext.SaveChangesAsync();
                 return support;
             }
             catch (Exception)
@@ -35,28 +36,28 @@ namespace SecurityBLLManager
 
         public List<Support> GetAll()
         {
-            List<Support> support = _dbContext.Support.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
+            List<Support> support = _dbContext.Support.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
             return support;
         }
 
 
-        public List<Support> Search(string SupportSubject)
+        public async Task<List<Support>> Search(string SupportSubject)
         {
-            var search = _dbContext.Support.Where(c => c.SupportSubject.Contains(SupportSubject)).ToList();
+            var search = await _dbContext.Support.Where(c => c.SupportSubject.Contains(SupportSubject)).ToListAsync();
             return search;
         }
 
-        public Support UpdateSupport(Support support)
+        public async Task<Support> UpdateSupport(Support support)
         {
             try
             {
-                var id = _dbContext.Support.Where(p => p.SupportId == support.SupportId).AsNoTracking().FirstOrDefault();
+                var id = await _dbContext.Support.Where(p => p.SupportId == support.SupportId).AsNoTracking().FirstOrDefaultAsync();
                 if (id != null)
                 {
                     support.UpdatedBy = "Customer";
                     support.UpdatedDate = DateTime.Now;
                     _dbContext.Support.Update(support);
-                    _dbContext.SaveChanges();
+                    await _dbContext.SaveChangesAsync();
                 }
 
 
@@ -72,9 +73,9 @@ namespace SecurityBLLManager
             }
         }
 
-        public Support GetById(Support support)
+        public async Task<Support> GetById(Support support)
         {
-            var res= _dbContext.Support.Where(p=>p.SupportId==support.SupportId).FirstOrDefault();
+            var res = await _dbContext.Support.Where(p => p.SupportId == support.SupportId).FirstOrDefaultAsync();
             return res;
         }
 
@@ -84,10 +85,10 @@ namespace SecurityBLLManager
 
     public interface ISupportBLLManager
     {
-        Support AddSupport(Support support);
+        Task<Support> AddSupport(Support support);
         List<Support> GetAll();
-        Support UpdateSupport(Support support);
-        Support GetById(Support support);
-        List<Support> Search(string SupportSubject);
+        Task<Support> UpdateSupport(Support support);
+        Task<Support> GetById(Support support);
+        Task<List<Support>> Search(string SupportSubject);
     }
 }

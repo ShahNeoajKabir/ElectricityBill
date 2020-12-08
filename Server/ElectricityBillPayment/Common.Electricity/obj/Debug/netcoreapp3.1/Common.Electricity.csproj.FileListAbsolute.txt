@@ -1,0 +1,12 @@
+E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.deps.json
+E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.dll
+E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.csprojAssemblyReference.cache
+E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.AssemblyInfoInputs.cache
+E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.AssemblyInfo.cs
+E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.runtimeconfig.json
+E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.runtimeconfig.dev.json
+E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.pdb
+E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.csproj.CoreCompileInputs.cache
+E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.dll
+E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.pdb
+E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.genruntimeconfig.cache

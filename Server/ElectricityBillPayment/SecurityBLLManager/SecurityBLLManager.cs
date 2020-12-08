@@ -1,5 +1,5 @@
-﻿using Electricity.Common.Utility;
-using Electricity.DAL;
+﻿using Common.Electricity.Utility;
+using Context;
 using ModelClass.DTO;
 using ModelClass.ViewModel;
 using System;
@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace SecurityBLLManager
 {
-    public class SecurityBLLManager :ISecurityBLLmanager
+    public class SecurityBLLManager : ISecurityBLLmanager
     {
-        private readonly PaymentDbContext _dbContext;
-        public SecurityBLLManager(PaymentDbContext dbContext)
+        private readonly DatabaseContext _dbContext;
+        public SecurityBLLManager(DatabaseContext dbContext)
         {
             _dbContext = dbContext;
         }
@@ -40,10 +40,9 @@ namespace SecurityBLLManager
         }
     }
 
-        public interface ISecurityBLLmanager
-        {
+    public interface ISecurityBLLmanager
+    {
         Task<User> Login(VMLogin vMLogin);
 
-        }
-    
+    }
 }

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MeterAssignService {
-  url="http://localhost:55109/api/AssignMeter/";
+  url="http://localhost:54667/api/AssignMeter/";
 
 
   constructor(private httpclient:HttpClient) { }

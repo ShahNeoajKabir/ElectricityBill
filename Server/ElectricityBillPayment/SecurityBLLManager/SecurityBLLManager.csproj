@@ -1,13 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\StudentPortal.Common\Electricity.Common.csproj" />
-    <ProjectReference Include="..\StudentPortal.DAL\Electricity.DAL.csproj" />
-    <ProjectReference Include="..\StudentPortal.DTO\ModelClass.csproj" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common.Electricity\Common.Electricity.csproj" />
+    <ProjectReference Include="..\Context\Context.csproj" />
   </ItemGroup>
 
 </Project>

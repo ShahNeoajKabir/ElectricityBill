@@ -1,58 +1,59 @@
-﻿using Electricity.DAL;
+﻿using Context;
 using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SecurityBLLManager
 {
     public class RoleBLLManager : IRoleBLLManager
     {
-        private readonly PaymentDbContext _db;
-        public RoleBLLManager(PaymentDbContext db)
+        private readonly DatabaseContext _db;
+        public RoleBLLManager(DatabaseContext db)
         {
             _db = db;
         }
 
-        public Role AddRole(Role role)
+        public async Task<Role> AddRole(Role role)
         {
             role.CreatedBy = "Admin";
             role.CreatedDate = DateTime.Now;
 
-            _db.Role.Add(role);
-            _db.SaveChanges();
+            await _db.Role.AddAsync(role);
+            await _db.SaveChangesAsync();
             return role;
         }
 
         public List<Role> GetAll()
         {
-            List<Role> role = _db.Role.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
+            List<Role> role = _db.Role.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
             return role;
         }
 
-        public List<Role>Search(string RoleName)
+        public async Task<List<Role>> Search(string RoleName)
         {
-            var search = _db.Role.Where(c => c.RoleName.Contains(RoleName)).ToList();
+            var search = await _db.Role.Where(c => c.RoleName.Contains(RoleName)).ToListAsync();
             return search;
         }
 
-        public Role UpdateRole(Role role)
+        public async Task<Role> UpdateRole(Role role)
         {
             try
             {
-                var id = _db.Role.Where(p => p.RoleId == role.RoleId).AsNoTracking().FirstOrDefault();
+                var id = await _db.Role.Where(p => p.RoleId == role.RoleId).AsNoTracking().FirstOrDefaultAsync();
                 if (id != null)
                 {
                     role.UpdatedBy = "Admin";
                     role.UpdatedDate = DateTime.Now;
                     _db.Role.Update(role);
-                    _db.SaveChanges();
+                    await _db.SaveChangesAsync();
                 }
-                    
 
-                
+
+
             }
             catch (Exception)
             {
@@ -61,9 +62,9 @@ namespace SecurityBLLManager
             }
             return role;
         }
-        public Role GetByID(Role role)
+        public async Task<Role> GetByID(Role role)
         {
-            var res= _db.Role.Where(c=>c.RoleId==role.RoleId).FirstOrDefault();
+            var res =await _db.Role.Where(c => c.RoleId == role.RoleId).FirstOrDefaultAsync();
             return res;
         }
 
@@ -71,10 +72,10 @@ namespace SecurityBLLManager
 
     public interface IRoleBLLManager
     {
-        Role AddRole(Role role);
+        Task<Role> AddRole(Role role);
         List<Role> GetAll();
-        Role UpdateRole(Role role);
-        Role GetByID(Role role);
-        List<Role> Search(string RoleName);
+        Task<Role> UpdateRole(Role role);
+        Task<Role> GetByID(Role role);
+        Task<List<Role>> Search(string RoleName);
     }
 }

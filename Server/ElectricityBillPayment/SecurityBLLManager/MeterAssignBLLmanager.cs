@@ -1,36 +1,37 @@
-﻿using Electricity.Common.Utility;
-using Electricity.DAL;
+﻿using Common.Electricity.Utility;
+using Context;
 using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace SecurityBLLManager
 {
     public class MeterAssignBLLmanager : IMeterAssignBLLmanager
     {
 
-        private readonly PaymentDbContext _dbContext;
-        public MeterAssignBLLmanager(PaymentDbContext dbContext)
+        private readonly DatabaseContext _dbContext;
+        public MeterAssignBLLmanager(DatabaseContext dbContext)
         {
             _dbContext = dbContext;
         }
 
 
-        public MeterAssign AssignMeter(MeterAssign meter)
+        public async Task<MeterAssign> AssignMeter(MeterAssign meter)
         {
             try
             {
-                var customer = _dbContext.Customer.Where(p => p.CustomerId == meter.CustomerId).FirstOrDefault();
+                var customer = await _dbContext.Customer.Where(p => p.CustomerId == meter.CustomerId).FirstOrDefaultAsync();
                 _dbContext.Database.BeginTransaction();
                 if (customer != null)
                 {
                     meter.CreatedBy = "CoOrdinator";
                     meter.CreatedDate = DateTime.Now;
-                    _dbContext.MeterAssign.Add(meter);
-                    _dbContext.SaveChanges();
+                    await _dbContext.MeterAssign.AddAsync(meter);
+                    await _dbContext.SaveChangesAsync();
 
                 }
                 else
@@ -38,8 +39,8 @@ namespace SecurityBLLManager
                     throw new Exception("Customer not Fount");
                 }
 
-                
-                customer.UserId= addCustomerIntoUserTable(customer);
+
+                customer.UserId = addCustomerIntoUserTable(customer);
 
                 _dbContext.Customer.Update(customer);
                 _dbContext.Database.CommitTransaction();
@@ -55,41 +56,41 @@ namespace SecurityBLLManager
 
         public List<MeterAssign> GetAll()
         {
-            List<MeterAssign> meter = _dbContext.MeterAssign.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).Select(t => new MeterAssign()
+            List<MeterAssign> meter =_dbContext.MeterAssign.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).Select(t => new MeterAssign()
             {
                 CreatedBy = t.CreatedBy,
-                CreatedDate=t.CreatedDate,
-                Status=t.Status,
-                MeterTable=t.MeterTable,
-                Customer=t.Customer,
-                MeterId=t.MeterId,
-                CustomerId=t.CustomerId,
-                MeterAssignId=t.MeterAssignId
+                CreatedDate = t.CreatedDate,
+                Status = t.Status,
+                MeterTable = t.MeterTable,
+                Customer = t.Customer,
+                MeterId = t.MeterId,
+                CustomerId = t.CustomerId,
+                MeterAssignId = t.MeterAssignId
             }).ToList();
             return meter;
 
         }
 
-        public List<MeterAssign> Search(string MeterNumber)
+        public async Task<List<MeterAssign>> Search(string MeterNumber)
         {
-            var search = _dbContext.MeterAssign.Where(c => c.MeterTable.MeterNumber.Contains(MeterNumber)).ToList();
+            var search = await _dbContext.MeterAssign.Where(c => c.MeterTable.MeterNumber.Contains(MeterNumber)).ToListAsync();
             return search;
         }
 
-        public MeterAssign UpdateAssign(MeterAssign meter)
+        public async Task<MeterAssign> UpdateAssign(MeterAssign meter)
         {
             try
             {
-                var id = _dbContext.MeterAssign.Where(p => p.MeterAssignId == meter.MeterAssignId).AsNoTracking().FirstOrDefault();
+                var id = await _dbContext.MeterAssign.Where(p => p.MeterAssignId == meter.MeterAssignId).AsNoTracking().FirstOrDefaultAsync();
                 if (id != null)
                 {
                     meter.UpdatedBy = "CoOrdinator";
                     meter.UpdatedDate = DateTime.Now;
                     _dbContext.MeterAssign.Update(meter);
-                    _dbContext.SaveChanges();
+                    await _dbContext.SaveChangesAsync();
                 }
-               
-                    
+
+
                 return meter;
             }
             catch (Exception ex)
@@ -99,10 +100,10 @@ namespace SecurityBLLManager
             }
         }
 
-        public MeterAssign GetById(MeterAssign meter)
+        public async Task<MeterAssign> GetById(MeterAssign meter)
         {
 
-            var res= _dbContext.MeterAssign.Where(c=>c.MeterAssignId==meter.MeterAssignId).FirstOrDefault();
+            var res =await _dbContext.MeterAssign.Where(c => c.MeterAssignId == meter.MeterAssignId).FirstOrDefaultAsync();
             return res;
         }
 
@@ -117,10 +118,10 @@ namespace SecurityBLLManager
                 Image = customer.Image,
                 MobileNo = customer.MobileNo,
                 Password = new EncryptionService().Encrypt("123456"),
-                UserTypeId = (int)Electricity.Common.Enum.Enum.UserType.Customer,
+                UserTypeId = (int)Common.Electricity.Enum.Enum.UserType.Customer,
                 CreatedBy = "Admin",
                 CreatedDate = DateTime.Now,
-                Status = (int)Electricity.Common.Enum.Enum.Status.Active
+                Status = (int)Common.Electricity.Enum.Enum.Status.Active
 
             };
             _dbContext.User.Add(user);
@@ -136,10 +137,10 @@ namespace SecurityBLLManager
 
     public interface IMeterAssignBLLmanager
     {
-        MeterAssign AssignMeter(MeterAssign meter);
+        Task<MeterAssign> AssignMeter(MeterAssign meter);
         List<MeterAssign> GetAll();
-        MeterAssign UpdateAssign(MeterAssign meter);
-        MeterAssign GetById(MeterAssign meter);
-        List<MeterAssign> Search(string MeterNumber);
+        Task<MeterAssign> UpdateAssign(MeterAssign meter);
+        Task<MeterAssign> GetById(MeterAssign meter);
+        Task<List<MeterAssign>> Search(string MeterNumber);
     }
 }
