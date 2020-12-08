@@ -11,6 +11,7 @@ import { MeterAssignService } from 'src/app/Service/MeterAssign/meter-assign.ser
 export class ListAssignMeterComponent implements OnInit {
 
   public objassign:MeterAssign[]=new Array<MeterAssign>();
+  public search:string="";
 
   constructor(private meterassignservice:MeterAssignService,private router:Router ) { }
 
@@ -20,8 +21,15 @@ export class ListAssignMeterComponent implements OnInit {
       console.log(this.objassign);
     })
   }
+
   Edit(id:any){
     console.log(id);
+  }
+  Search(){
+    this.meterassignservice.Search(this.search).subscribe((res:any)=>{
+      this.objassign=res;
+      console.log(this.objassign);
+    })
   }
 
 }

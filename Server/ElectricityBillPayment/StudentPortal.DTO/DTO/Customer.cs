@@ -30,8 +30,13 @@ namespace ModelClass.DTO
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
         public string Image { get; set; }
-        public ICollection<MeterAssign> MeterAssign { get; set; }
-        public virtual Zone Zone { get; set; }
+        public virtual ICollection<MeterAssign> MeterAssign { get; set; }
+        public  Zone Zone { get; set; }
 
+    }
+
+    public class CustomerSearch
+    {
+        public string Search { get; set; }
     }
 }

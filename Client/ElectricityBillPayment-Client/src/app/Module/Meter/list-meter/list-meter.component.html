@@ -1,47 +1,51 @@
-<div class="main">
-  <div class="Header">
-      <div>
-          <button class="au-btn au-btn-icon au-btn--green au-btn--small" [routerLink]="['/Meter/AddMeter']" >
-              <i class="zmdi zmdi-plus"></i>Add Meter</button>
+<div class="container">
+  <div style="padding-bottom:15px;" class="row">
+    <div class="col-md-4">
+      <button class="au-btn au-btn-icon au-btn--green au-btn--small"  [routerLink]="['/Meter/AddMeter']" >
+          <i class="zmdi zmdi-plus"></i>add Meter</button>
+    </div>
+    <div class="col-md-4">
 
-      </div>
-  <div>
+    </div>
+    <div class="col-md-4">
       <form class="form-header" action="" method="POST">
-          <input class="au-input au-input--xl" type="text" name="search" placeholder="Search for Information &amp; reports..." />
-          <button class="au-btn--submit" type="submit">
+          <input class="form-control" [(ngModel)]="search" type="text" name="search" placeholder="Search for Information &amp; reports..." />
+          <button class="btn btn-success" (click)="Search()" type="submit">
               <i class="zmdi zmdi-search"></i>
           </button>
       </form>
   </div>
   </div>
-  <div class="row m-t-30">
+  <div class="row">
       <div class="col-md-12">
           <!-- DATA TABLE-->
-          <div class="table-responsive m-b-40">
-              <table class="table table-borderless table-data3">
-                  <thead>
-                      <tr>
-                          <th>Meter Number</th>
-                          <th>Expired Date</th>
-                          <th>Status</th>
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                    <th>Meter Number</th>
+                    <th>Expired Date</th>
+                    <th>Status</th>
+                    <th>Action</th>
 
 
-                      </tr>
-                  </thead>
-                  <tbody style="text-align: center;">
-                    <tr *ngFor="let objmeter of lstMeter">
-                        <td >{{objmeter.MeterNumber}}</td>
-                        <td>{{objmeter.ExpiredDate}}</td>
-                    <td>{{objmeter.Status}}</td>
-                    <td> <a routerLink="../{{objmeter.MeterId }}/editmeter">Edit</a></td>
+                </tr>
+            </thead>
+            <tbody >
+              <tr *ngFor="let objmeter of lstMeter">
+                  <td >{{objmeter.MeterNumber}}</td>
+                  <td>{{objmeter.ExpiredDate}}</td>
+              <td>{{objmeter.Status}}</td>
+              <td> <a class="btn btn-warning" routerLink="../{{objmeter.MeterId }}/editmeter"><i class="fas fa-edit"></i></a></td>
 
-                    </tr>
+              </tr>
 
-                </tbody>
+          </tbody>
               </table>
           </div>
           <!-- END DATA TABLE-->
       </div>
+    </div>
   </div>
-  </div>
+
 

@@ -1,4 +1,5 @@
 ﻿using Electricity.DAL;
+using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
@@ -22,7 +23,7 @@ namespace SecurityBLLManager
                 support.CreatedBy = "Customer";
                 support.CreatedDate = DateTime.Now;
                 _dbContext.Support.Add(support);
-               _dbContext.SaveChanges();
+                _dbContext.SaveChanges();
                 return support;
             }
             catch (Exception)
@@ -34,23 +35,35 @@ namespace SecurityBLLManager
 
         public List<Support> GetAll()
         {
-            List<Support> support =  _dbContext.Support.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
+            List<Support> support = _dbContext.Support.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
             return support;
+        }
+
+
+        public List<Support> Search(string SupportSubject)
+        {
+            var search = _dbContext.Support.Where(c => c.SupportSubject.Contains(SupportSubject)).ToList();
+            return search;
         }
 
         public Support UpdateSupport(Support support)
         {
             try
             {
-                
+                var id = _dbContext.Support.Where(p => p.SupportId == support.SupportId).AsNoTracking().FirstOrDefault();
+                if (id != null)
+                {
                     support.UpdatedBy = "Customer";
                     support.UpdatedDate = DateTime.Now;
                     _dbContext.Support.Update(support);
                     _dbContext.SaveChanges();
-                    return support;
-                
+                }
 
-              
+
+                return support;
+
+
+
             }
             catch (Exception)
             {
@@ -61,7 +74,8 @@ namespace SecurityBLLManager
 
         public Support GetById(Support support)
         {
-            return _dbContext.Support.Find(support.SupportId);
+            var res= _dbContext.Support.Where(p=>p.SupportId==support.SupportId).FirstOrDefault();
+            return res;
         }
 
 
@@ -74,5 +88,6 @@ namespace SecurityBLLManager
         List<Support> GetAll();
         Support UpdateSupport(Support support);
         Support GetById(Support support);
+        List<Support> Search(string SupportSubject);
     }
 }

@@ -23,7 +23,7 @@ namespace SecurityBLLManager
             try
             {
                 vMLogin.Password = new EncryptionService().Encrypt(vMLogin.Password);
-                objuser = _dbContext.User.Where(p => p.Email == vMLogin.Email && p.Password == vMLogin.Password).Select(u => new User()
+                objuser = _dbContext.User.Where(p => p.Email == vMLogin.UserName && p.Password == vMLogin.Password).Select(u => new User()
                 {
                     UserTypeId = u.UserTypeId,
                     Email = u.Email

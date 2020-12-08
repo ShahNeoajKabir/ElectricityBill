@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelClass.DTO;
+using ModelClass.ViewModel;
+using Newtonsoft.Json;
 using SecurityBLLManager;
 
 namespace Service.Portal.Controllers
@@ -21,10 +23,11 @@ namespace Service.Portal.Controllers
 
         [HttpPost]
         [Route("AssignMeter")]
-        public MeterAssign AssignMeter([FromBody] MeterAssign meter)
+        public MeterAssign AssignMeter([FromBody] TempMessage message)
         {
             try
             {
+                MeterAssign meter = JsonConvert.DeserializeObject<MeterAssign>(message.Content.ToString());
                 _bLLmanager.AssignMeter(meter);
                 return meter;
             }
@@ -42,26 +45,48 @@ namespace Service.Portal.Controllers
             return _bLLmanager.GetAll();
         }
 
+
         [HttpPost]
-        [Route("UpdateAssign")]
-        public MeterAssign UpdateAssign([FromBody] MeterAssign meter)
+        [Route("SearchMeterAssign")]
+        public List<MeterAssign> SearchZone([FromBody] TempMessage message)
         {
             try
             {
-                _bLLmanager.UpdateAssign(meter);
-                return meter;
+                string meternumber = JsonConvert.DeserializeObject<string>(message.Content.ToString());
+
+                return _bLLmanager.Search(meternumber);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
+            }
+
+
+        }
+
+        [HttpPost]
+        [Route("UpdateAssign")]
+        public MeterAssign UpdateAssign([FromBody] TempMessage message)
+        {
+            try
+            {
+                MeterAssign meter = JsonConvert.DeserializeObject<MeterAssign>(message.Content.ToString());
+                _bLLmanager.UpdateAssign(meter);
+                return meter;
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Failed To UPdate");
             }
         }
 
         [HttpPost]
         [Route("GetById")]
-        public MeterAssign GetById([FromBody] MeterAssign meter)
+        public MeterAssign GetById([FromBody] TempMessage message)
         {
+            MeterAssign meter = JsonConvert.DeserializeObject<MeterAssign>(message.Content.ToString());
             return _bLLmanager.GetById(meter);
         }
     }

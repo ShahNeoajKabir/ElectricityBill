@@ -1,4 +1,5 @@
 ﻿using Electricity.DAL;
+using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
@@ -34,8 +35,25 @@ namespace SecurityBLLManager
 
         public List<MeterTable> GetAll()
         {
-            List<MeterTable> meter = _dbContext.MeterTable.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
+            List<MeterTable> meter = new List<MeterTable>();
+            var meterassignLiost = _dbContext.MeterAssign.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).Select(c => c.MeterId).ToArray();
+            if (meterassignLiost.Length > 0)
+            {
+                meter = _dbContext.MeterTable.Where(p => !meterassignLiost.Contains(p.MeterId) && p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
+
+            }
+            else
+            {
+                meter = _dbContext.MeterTable.Where(p => p.Status == (int)Electricity.Common.Enum.Enum.Status.Active).ToList();
+
+            }
+
             return meter;
+        }
+        public List<MeterTable> Search(string MeterNumber)
+        {
+            var search = _dbContext.MeterTable.Where(c => c.MeterNumber.Contains(MeterNumber)).ToList();
+            return search;
         }
 
 
@@ -43,11 +61,15 @@ namespace SecurityBLLManager
         {
             try
             {
-                
+                var id = _dbContext.MeterTable.Where(p => p.MeterId == meter.MeterId).AsNoTracking().FirstOrDefault();
+                if (id != null)
+                {
                     meter.UpdatedBy = "Admin";
                     meter.UpdatedDate = DateTime.Now;
                     _dbContext.MeterTable.Update(meter);
-                     _dbContext.SaveChanges();
+                    _dbContext.SaveChanges();
+                }
+                    
                     return meter;
                 
             }
@@ -60,7 +82,8 @@ namespace SecurityBLLManager
 
         public MeterTable GetById(MeterTable meter)
         {
-            return _dbContext.MeterTable.Find(meter.MeterId);
+            var res= _dbContext.MeterTable.Where(c=>c.MeterId==meter.MeterId).FirstOrDefault();
+            return res;
         }
     }
 
@@ -71,7 +94,7 @@ namespace SecurityBLLManager
         List<MeterTable> GetAll();
         MeterTable UpdateMeter(MeterTable meter);
         MeterTable GetById(MeterTable meter);
-
+        List<MeterTable> Search(string MeterNumber);
 
     }
 }

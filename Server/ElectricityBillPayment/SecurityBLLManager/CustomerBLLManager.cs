@@ -1,5 +1,6 @@
 ﻿using Electricity.Common.Utility;
 using Electricity.DAL;
+using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
@@ -20,14 +21,15 @@ namespace SecurityBLLManager
         {
             try
             {
-                customer.CreatedBy = "CoOrdinator";
+                customer.ZoneId = 1;
+                customer.CreatedBy = customer.CustomerName;
                 customer.CreatedDate = DateTime.Now;
                 customer.Password = new EncryptionService().Encrypt(customer.Password);
-                 _dbContext.Customer.Add(customer);
+                _dbContext.Customer.Add(customer);
                 _dbContext.SaveChanges();
                 return customer;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw new Exception("Failed To Registration");
@@ -40,29 +42,33 @@ namespace SecurityBLLManager
             return customer;
         }
 
+        public List<Customer> Search(string CustomerName)
+        {
+            var search = _dbContext.Customer.Where(c => c.CustomerName.Contains(CustomerName)).ToList();
+            return search;
+        }
+
         public Customer GetById(Customer customer)
         {
-            return _dbContext.Customer.Find(customer.CustomerId);
+            var res= _dbContext.Customer.Where(c=>c.CustomerId==customer.CustomerId).FirstOrDefault();
+            return res;
         }
 
         public Customer UpdateUser(Customer customer)
         {
             try
             {
-                var res = _dbContext.Customer.Where(p => p.CustomerId == customer.CustomerId).FirstOrDefault();
-                if (res != null)
+                var id = _dbContext.Customer.Where(p => p.CustomerId == customer.CustomerId).AsNoTracking().FirstOrDefault();
+                if (id != null)
                 {
                     customer.UpdatedBy = "Customer";
                     customer.UpdatedDate = DateTime.Now;
                     _dbContext.Customer.Update(customer);
-                     _dbContext.SaveChanges();
+                    _dbContext.SaveChanges();
+                }
+                    
                     return customer;
-                }
-
-                else
-                {
-                    throw new Exception("Failed To Update");
-                }
+                
             }
             catch (Exception)
             {
@@ -79,5 +85,6 @@ namespace SecurityBLLManager
         List<Customer> GetAll();
         Customer GetById(Customer customer);
         Customer UpdateUser(Customer customer);
+        List<Customer> Search(string CustomerName);
     }
 }

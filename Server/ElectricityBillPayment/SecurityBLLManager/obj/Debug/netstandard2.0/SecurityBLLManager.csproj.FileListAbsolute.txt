@@ -61,3 +61,35 @@ E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\o
 E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.csproj.CopyComplete
 E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.dll
 E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.pdb
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\SecurityBLLManager.deps.json
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\SecurityBLLManager.dll
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\SecurityBLLManager.pdb
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\Electricity.Common.dll
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\Electricity.DAL.dll
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\ModelClass.dll
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\Electricity.Common.pdb
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\Electricity.DAL.pdb
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\ModelClass.pdb
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.csprojAssemblyReference.cache
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.AssemblyInfoInputs.cache
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.AssemblyInfo.cs
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.csproj.CoreCompileInputs.cache
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.csproj.CopyComplete
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.dll
+G:\Bappy\Project final\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\SecurityBLLManager.deps.json
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\SecurityBLLManager.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\SecurityBLLManager.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\Electricity.Common.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\Electricity.DAL.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\ModelClass.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\Electricity.Common.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\Electricity.DAL.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netstandard2.0\ModelClass.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.csprojAssemblyReference.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.AssemblyInfoInputs.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.AssemblyInfo.cs
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.csproj.CoreCompileInputs.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.csproj.CopyComplete
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netstandard2.0\SecurityBLLManager.pdb

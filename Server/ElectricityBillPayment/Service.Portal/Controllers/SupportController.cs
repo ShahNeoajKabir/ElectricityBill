@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelClass.DTO;
+using ModelClass.ViewModel;
+using Newtonsoft.Json;
 using SecurityBLLManager;
 
 namespace Service.Portal.Controllers
@@ -22,10 +24,11 @@ namespace Service.Portal.Controllers
         [HttpPost]
         [Route("AddSupport")]
 
-        public Support AddSupport([FromBody]Support support)
+        public Support AddSupport([FromBody]TempMessage message)
         {
             try
             {
+                Support support = JsonConvert.DeserializeObject<Support>(message.Content.ToString());
                 _supportBLL.AddSupport(support);
                 return support;
             }
@@ -43,12 +46,34 @@ namespace Service.Portal.Controllers
             return _supportBLL.GetAll();
         }
 
+
         [HttpPost]
-        [Route("UpdateSupport")]
-        public Support UpdateSupport([FromBody] Support support)
+        [Route("SearchSupport")]
+        public List<Support> SearchZone([FromBody] TempMessage message)
         {
             try
             {
+                string supportname = JsonConvert.DeserializeObject<string>(message.Content.ToString());
+
+                return _supportBLL.Search(supportname);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
+
+        [HttpPost]
+        [Route("UpdateSupport")]
+        public Support UpdateSupport([FromBody] TempMessage message)
+        {
+            try
+            {
+                Support support = JsonConvert.DeserializeObject<Support>(message.Content.ToString());
+
                 _supportBLL.UpdateSupport(support);
                 return support;
             }
@@ -63,8 +88,10 @@ namespace Service.Portal.Controllers
         [HttpPost]
         [Route("GetById")]
 
-        public Support GetById([FromBody]Support support)
+        public Support GetById([FromBody]TempMessage message)
         {
+            Support support = JsonConvert.DeserializeObject<Support>(message.Content.ToString());
+
             return _supportBLL.GetById(support);
              
         }

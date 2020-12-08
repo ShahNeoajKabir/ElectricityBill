@@ -25,12 +25,12 @@ namespace Service.Portal.Controllers
 
         [HttpPost]
         [Route("AddUser")]
-        public User AddUser([FromBody]User user)
+        public User AddUser([FromBody] TempMessage message)
         {
             try
             {
 
-               
+                User user = JsonConvert.DeserializeObject<User>(message.Content.ToString());
                 this.userBLLManager.AddUser(user);
                 return user;
             }
@@ -44,11 +44,12 @@ namespace Service.Portal.Controllers
         }
         [HttpPost]
         [Route("UpdateUser")]
-        public User UpdateUser([FromBody]User user)
+        public User UpdateUser([FromBody] TempMessage message)
         {
             try
             {
-                
+                User user = JsonConvert.DeserializeObject<User>(message.Content.ToString());
+
                 this.userBLLManager.UpdateUser(user);
                 return user;
             }
@@ -60,15 +61,16 @@ namespace Service.Portal.Controllers
 
 
         }
+
         [HttpPost]
-        [Route("GetbyID")]
-        public User GetbyID([FromBody]User user)
+        [Route("SearchUser")]
+        public List<User> SearchUser([FromBody] TempMessage message)
         {
             try
             {
-                
-                return this.userBLLManager.GetByID(user);
-                
+                string username = JsonConvert.DeserializeObject<string>(message.Content.ToString());
+
+                return this.userBLLManager.Search(username);
             }
             catch (Exception ex)
             {
@@ -78,9 +80,28 @@ namespace Service.Portal.Controllers
 
 
         }
+        [HttpPost]
+        [Route("GetbyID")]
+        public User GetbyID([FromBody] TempMessage message)
+        {
+            try
+            {
+                User user = JsonConvert.DeserializeObject<User>(message.Content.ToString());
+
+                return this.userBLLManager.GetByID(user);
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        } 
         [HttpGet]
         [Route("GetAll")]
-        public List<User> GetAll()
+        public Task<List<User>> GetAll()
         {
             try
             {

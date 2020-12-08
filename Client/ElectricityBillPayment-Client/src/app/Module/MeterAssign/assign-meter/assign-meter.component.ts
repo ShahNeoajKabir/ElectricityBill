@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Status } from 'src/app/Common/Enum';
 import { Utility } from 'src/app/Common/Utility';
 import { MeterAssign } from 'src/app/Model/MeterAssign';
+import { CustomerService } from 'src/app/Service/Customer/customer.service';
 import { MeterService } from 'src/app/Service/Meter/meter.service';
 import { MeterAssignService } from 'src/app/Service/MeterAssign/meter-assign.service';
 
@@ -17,14 +18,15 @@ export class AssignMeterComponent implements OnInit {
   public objedit:MeterAssign=new MeterAssign();
   public lstmetertable:any;
   public lstcustomer:any;
-  
+
 
   constructor(
     private meterassignservice:MeterAssignService,
     private router:Router,
     private activeroute:ActivatedRoute,
     private utility:Utility,
-    private meterservice:MeterService
+    private meterservice:MeterService,
+    private customerservice:CustomerService
     ) { }
 
   ngOnInit(): void {
@@ -36,6 +38,14 @@ export class AssignMeterComponent implements OnInit {
       console.log(this.lstmetertable);
 
     });
+    this.customerservice.GetAll().subscribe((res: any) => {
+      console.log(res);
+
+      this.lstcustomer = res;
+      console.log(this.lstcustomer);
+
+    });
+
     if (this.activeroute.snapshot.params[ 'id'] !== undefined) {
       this.objedit.MeterAssignId = this.activeroute.snapshot.params[ 'id'];
       this.meterassignservice.GetById(this.objedit).subscribe((res: any) => {
@@ -70,6 +80,6 @@ export class AssignMeterComponent implements OnInit {
 
 }
 
-  
+
 
 }

@@ -14,4 +14,8 @@ namespace ModelClass.DTO
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
     }
+    public class SearchSearch
+    {
+        public string Search { get; set; }
+    }
 }

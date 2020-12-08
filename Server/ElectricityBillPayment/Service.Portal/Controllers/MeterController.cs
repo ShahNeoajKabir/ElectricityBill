@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelClass.DTO;
+using ModelClass.ViewModel;
+using Newtonsoft.Json;
 using SecurityBLLManager;
 
 namespace Service.Portal.Controllers
@@ -21,14 +23,15 @@ namespace Service.Portal.Controllers
 
         [HttpPost]
         [Route("AddMeter")]
-        public MeterTable AddMeter([FromBody] MeterTable meter)
+        public MeterTable AddMeter([FromBody] TempMessage message)
         {
             try
             {
+                MeterTable meter = JsonConvert.DeserializeObject<MeterTable>(message.Content.ToString());
                 _meterBLL.AddMeter(meter);
                 return meter;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw new Exception("Failed To Add");
@@ -41,19 +44,39 @@ namespace Service.Portal.Controllers
         public List<MeterTable> GetAll()
         {
             return _meterBLL.GetAll();
-          
+
+        }
+
+        [HttpPost]
+        [Route("SearchMeter")]
+        public List<MeterTable> SearchZone([FromBody] TempMessage message)
+        {
+            try
+            {
+                string meternumber = JsonConvert.DeserializeObject<string>(message.Content.ToString());
+
+                return _meterBLL.Search(meternumber);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
         }
 
         [HttpPost]
         [Route("UpdateMeter")]
-        public MeterTable UpdateMeter([FromBody] MeterTable meter)
+        public MeterTable UpdateMeter([FromBody] TempMessage message)
         {
             try
             {
+                MeterTable meter = JsonConvert.DeserializeObject<MeterTable>(message.Content.ToString());
                 _meterBLL.UpdateMeter(meter);
                 return meter;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw new Exception("Failed To Update");
@@ -62,8 +85,9 @@ namespace Service.Portal.Controllers
 
         [HttpPost]
         [Route("GetById")]
-        public MeterTable GetById([FromBody] MeterTable meter)
+        public MeterTable GetById([FromBody] TempMessage message)
         {
+            MeterTable meter = JsonConvert.DeserializeObject<MeterTable>(message.Content.ToString());
             return _meterBLL.GetById(meter);
         }
     }

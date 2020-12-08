@@ -1,4 +1,5 @@
 ﻿using Electricity.DAL;
+using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
@@ -15,7 +16,7 @@ namespace SecurityBLLManager
             _db = db;
         }
 
-        public Role AddUser(Role role)
+        public Role AddRole(Role role)
         {
             role.CreatedBy = "Admin";
             role.CreatedDate = DateTime.Now;
@@ -31,23 +32,27 @@ namespace SecurityBLLManager
             return role;
         }
 
+        public List<Role>Search(string RoleName)
+        {
+            var search = _db.Role.Where(c => c.RoleName.Contains(RoleName)).ToList();
+            return search;
+        }
+
         public Role UpdateRole(Role role)
         {
             try
             {
-                var res = _db.Role.Where(e => e.RoleId == role.RoleId).FirstOrDefault();
-                if (res != null)
+                var id = _db.Role.Where(p => p.RoleId == role.RoleId).AsNoTracking().FirstOrDefault();
+                if (id != null)
                 {
                     role.UpdatedBy = "Admin";
                     role.UpdatedDate = DateTime.Now;
                     _db.Role.Update(role);
                     _db.SaveChanges();
+                }
+                    
 
-                }
-                else
-                {
-                    throw new Exception("Failed To Update");
-                }
+                
             }
             catch (Exception)
             {
@@ -58,16 +63,18 @@ namespace SecurityBLLManager
         }
         public Role GetByID(Role role)
         {
-            return _db.Role.Find(role.RoleId);
+            var res= _db.Role.Where(c=>c.RoleId==role.RoleId).FirstOrDefault();
+            return res;
         }
 
     }
 
     public interface IRoleBLLManager
     {
-        Role AddUser(Role role);
+        Role AddRole(Role role);
         List<Role> GetAll();
         Role UpdateRole(Role role);
         Role GetByID(Role role);
+        List<Role> Search(string RoleName);
     }
 }

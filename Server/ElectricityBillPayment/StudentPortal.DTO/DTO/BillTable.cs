@@ -21,7 +21,12 @@ namespace ModelClass.DTO
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
-        public virtual MeterReadingTable MeterReadingTable { get; set; }
-        public virtual Payment Payment { get; set; }
+        public  MeterReadingTable MeterReadingTable { get; set; }
+        public  Payment Payment { get; set; }
+    }
+
+    public class BillTableSearch
+    {
+        public string Search { get; set; }
     }
 }

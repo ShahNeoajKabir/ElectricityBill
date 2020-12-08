@@ -11,6 +11,7 @@ import { NoticeService } from 'src/app/Service/Notice/notice.service';
 })
 export class ListNoticeComponent implements OnInit {
   public lstNotice:Notice[]= new Array<Notice>();
+  public search:string="";
 
 
   constructor(private readonly noticeservice:NoticeService, private router:Router) { }
@@ -22,6 +23,16 @@ export class ListNoticeComponent implements OnInit {
       console.log(this.lstNotice);
     })
 
+  }
+  Edit(id: any) {
+
+    console.log(id);
+  }
+  Search(){
+    this.noticeservice.Search(this.search).subscribe((res:any)=>{
+      this.lstNotice=res;
+      console.log(this.lstNotice);
+    })
   }
 
 }

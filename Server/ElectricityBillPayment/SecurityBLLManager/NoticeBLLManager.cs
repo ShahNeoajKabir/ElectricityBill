@@ -1,4 +1,5 @@
 ﻿using Electricity.DAL;
+using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
@@ -40,23 +41,28 @@ namespace SecurityBLLManager
             return notice;
         }
 
+        public List<Notice>Search(string NoticeName)
+        {
+            var search = _dbContext.Notice.Where(c => c.Notices.Contains(NoticeName)).ToList();
+            return search;
+        }
+
         public Notice UpdateNotice(Notice notice)
         {
             try
             {
-                var res =  _dbContext.Notice.Where(p => p.NoticeId == notice.NoticeId).FirstOrDefault();
-                if (res != null)
+                var id = _dbContext.Notice.Where(p => p.NoticeId == notice.NoticeId).AsNoTracking().FirstOrDefault();
+                if (id != null)
                 {
                     notice.UpdatedBy = "CoOrdinator";
                     notice.UpdatedDate = DateTime.Now;
                     _dbContext.Notice.Update(notice);
-                     _dbContext.SaveChanges();
+                    _dbContext.SaveChanges();
+                }
+                
+                    
                     return notice;
-                }
-                else
-                {
-                    throw new Exception("Failed To Update");
-                }
+                
             }
             catch (Exception)
             {
@@ -67,7 +73,8 @@ namespace SecurityBLLManager
 
         public Notice GetById(Notice notice)
         {
-            return _dbContext.Notice.Find(notice.NoticeId);
+            var res= _dbContext.Notice.Where(c=>c.NoticeId==notice.NoticeId).FirstOrDefault();
+            return res;
         }
 
         
@@ -80,5 +87,6 @@ namespace SecurityBLLManager
         List<Notice> GetAll();
         Notice UpdateNotice(Notice notice);
         Notice GetById(Notice notice);
+        List<Notice> Search(string NoticeName);
     }
 }

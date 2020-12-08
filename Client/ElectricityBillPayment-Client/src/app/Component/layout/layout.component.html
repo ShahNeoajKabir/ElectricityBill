@@ -1,66 +1,47 @@
-<aside class="menu-sidebar" style="width: 15%; background-color: rgb(12, 79, 82);">
-  <div class="logo" style="background-color: rgb(118, 199, 199); text-align: center;">
-      <a href="#">
-          <img style="width: 120px;height: 120px;" src="assets\images\icon\60e362b7788c61d935e05dd4bf4a575f-removebg-preview.png" alt="Logo" />
-      </a>
-      <!-- <ul class="nav navbar-nav mobileVisibility">
-
-
-
-                  <li>
-                      <a style="cursor: pointer; ;" class="btn-default">
-                          <strong>Logout</strong>
-                      </a>
-                  </li>
-
-      </ul> -->
+<nav class="navbar navbar-light bg-nav">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Elctricity</a>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <!-- <li class="nav-item active">
+        <a class="nav-link" [routerLink]="['/User/View']">Dashboard <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/User/View']">Profile <span class="sr-only"></span></a>
+      </li> -->
+      <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/User/View']">User <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/Meter/View']">Meter <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/Role/View']">Role <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/UserRole/View']">UserRole <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/Notice/View']">Notice <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/Support/View']">Support <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/Zone/View']">Zone <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/Customer/View']">Customer <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/AssignMeter/View']">AssignMeter <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link" [routerLink]="['/Notice/View']">Logout <span class="sr-only"></span></a>
+      </li>
+    </ul>
   </div>
-  <div class="menu-sidebar__content js-scrollbar1">
-      <nav class="navbar-sidebar">
-          <ul class="list-unstyled navbar__list" >
-              <li >
-                  <a   style="cursor: pointer;color: white !important; ">
-                      <i class="fas fa-tachometer-alt" style="color: white !important;"></i >Dashboard</a>
-
-              </li>
-              <li>
-                  <a style="cursor: pointer;color: white !important;">
-                      <i class="zmdi zmdi-account-o"style="color: white !important;"></i> Profile</a>
-              </li>
-              <li>
-                  <a  style="cursor: pointer;color: white !important;" [routerLink]="['/User/View']">
-                      <i class="zmdi zmdi-account-o"style="color: white !important;" ></i> User</a>
-              </li>
-              <li>
-                  <a   style="cursor: pointer;color: white !important;" [routerLink]="['/role/AddRole']">
-                      <i class="zmdi zmdi-account-o"style="color: white !important;"></i>Role</a>
-              </li>
-              <li>
-                  <a  style="cursor: pointer;color: white !important;" [routerLink]="['/Meter/View']">
-                      <i class="zmdi zmdi-account-o"style="color: white !important;" ></i>Meter</a>
-              </li>
-              <li>
-                  <a style="cursor: pointer;color: white !important;" [routerLink]="['/notice/']">
-                     <i class="far fa-check-square"style="color: white !important;"></i> Notice</a>
-              </li>
-              <li>
-                <a style="cursor: pointer;color: white !important;" routerLink="/Support/View">
-                   <i class="far fa-check-square"style="color: white !important;"  ></i> Support</a>
-            </li>
-            <li>
-                <a style="cursor: pointer;color: white !important;" routerLink="/AssignMeter/View">
-                   <i class="far fa-check-square"style="color: white !important;"  ></i> Assaign Meter</a>
-            </li>
-            <li>
-              <a style="cursor: pointer;color: white !important;">
-                 <i class="far fa-check-square"style="color: white !important;"></i> Logout</a>
-          </li>
-
-
-
-
-          </ul>
-      </nav>
-  </div>
-</aside>
+</nav>
 <router-outlet></router-outlet>
