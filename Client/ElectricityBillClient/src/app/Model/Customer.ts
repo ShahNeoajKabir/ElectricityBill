@@ -1,5 +1,5 @@
 export class Customer{
-  CustomerId:number=0;;
+  CustomerId:number=0;
   UserId:number=0;
   ZoneId:number=0;
   CustomerName:string='';
@@ -11,8 +11,8 @@ export class Customer{
   DateOfBirth:Date|undefined;
   Gender=0;
   Religion=0;
-  Nationality='';
-  BloodGroup=''
+  Nationality=0;
+  BloodGroup=0;
   Address='';
   CustomerType=0;
   Latitude='';

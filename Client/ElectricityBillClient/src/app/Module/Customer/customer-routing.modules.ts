@@ -2,10 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { ListCustomerComponent } from './list-customer/list-customer.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 const routes: Routes = [
-{ path: 'View', component: ListCustomerComponent }
+{ path: 'View', component: ListCustomerComponent },
+{ path: 'Registration', component: RegistrationComponent },
+{ path: ':id/edit', component: RegistrationComponent }
+
+
 
 
 

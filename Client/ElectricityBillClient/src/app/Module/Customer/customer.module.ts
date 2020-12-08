@@ -5,11 +5,12 @@ import { ListCustomerComponent } from './list-customer/list-customer.component';
 import { CustomerRoutingModule } from './customer-routing.modules';
 import { CustomerLayoutComponent } from './customer-layout/customer-layout.component';
 import { CustomerService } from '../../Service/Customer/customer.service';
+import { RegistrationComponent } from './registration/registration.component';
 
 
 
 @NgModule({
-  declarations: [ ListCustomerComponent, CustomerLayoutComponent],
+  declarations: [ ListCustomerComponent, CustomerLayoutComponent, RegistrationComponent],
   imports: [
     CommonModule,
     CustomerRoutingModule,

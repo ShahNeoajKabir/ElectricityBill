@@ -18,8 +18,8 @@ namespace ModelClass.DTO
         public DateTime DateOfBirth { get; set; }
         public int Gender { get; set; }
         public int Religion { get; set; }
-        public string Nationality { get; set; }
-        public string BloodGroup { get; set; }
+        public int Nationality { get; set; }
+        public int BloodGroup { get; set; }
         public string Address { get; set; }
         public int CustomerType { get; set; }
         public string Latitude { get; set; }

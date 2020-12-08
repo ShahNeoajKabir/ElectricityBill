@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { VMLogin } from 'src/app/Common/VMLogin';
+import { VMLogin } from '../../Model/VMLogin';
 
 @Injectable({
   providedIn: 'root'

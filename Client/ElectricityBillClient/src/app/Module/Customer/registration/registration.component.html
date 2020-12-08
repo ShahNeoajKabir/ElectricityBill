@@ -1,0 +1,93 @@
+ <form>
+    <div class="row">
+    <div class="col-md-5">
+      <label>Customer Name</label>
+      <input type="text"  name="Image" [(ngModel)]="registration.CustomerName" class="form-control"  autocomplete="off">
+    </div>
+    <div class="col-md-5">
+        <label>Father Name</label>
+        <input type="text"  name="UserName" [(ngModel)]="registration.FatherName" class="form-control"  autocomplete="off">
+    </div>
+    <div class="col-md-5">
+        <label>Mother Name</label>
+        <input type="text"  name="UserName" [(ngModel)]="registration.MotherName" class="form-control"  autocomplete="off">
+    </div>
+    <div class="col-md-5">
+      <label>Email</label>
+      <input type="email"  name="Image"  [(ngModel)]="registration.Email" class="form-control"  autocomplete="off">
+    </div>
+    <div class="col-md-5">
+        <label>Password</label>
+        <input type="password"  name="UserName" [(ngModel)]="registration.Password" class="form-control"  autocomplete="off">
+    </div>
+    <div class="col-md-5">
+      <label>Mobile Number</label>
+      <input type="text"  name="Image" [(ngModel)]="registration.MobileNo" class="form-control"  autocomplete="off">
+    </div>
+    <div class="col-md-5">
+        <label>Date Of Birth</label>
+        <input type="text"  name="Image" [(ngModel)]="registration.DateOfBirth" class="form-control"  autocomplete="off">
+      </div>
+    <div class="col-md-5">
+      <label>Gender</label>
+      <select name="Gender" class="form-control"
+      [(ngModel)]="registration.Gender">
+    <!-- <option [value]="-1">-Select-</option> -->
+    <option *ngFor="let gender of lstGender"
+    [value]="gender.key">{{gender.value}}</option>
+    </select>
+    </div>
+    <div class="col-md-5">
+        <label>Religion</label>
+        <select name="Gender" class="form-control"
+        [(ngModel)]="registration.Religion">
+      <!-- <option [value]="-1">-Select-</option> -->
+      <option *ngFor="let religion of lstreligion"
+      [value]="religion.key">{{religion.value}}</option>
+      </select>
+      </div>
+    <div class="col-md-5">
+      <label>Customer Type</label>
+      <select name="CustomerType" class="form-control"[(ngModel)]="registration.CustomerType">
+        <option *ngFor="let customertype of lstcutomertype"
+        [value]="customertype.key">{{customertype.value}}</option>
+      </select>
+    </div>
+    <div class="col-md-5">
+      <label>Nationality</label>
+      <select name="CustomerType" class="form-control"[(ngModel)]="registration.Nationality">
+        <option *ngFor="let nationality of lstnationality"
+        [value]="nationality.key">{{nationality.value}}</option>
+      </select>
+    </div>
+    <div class="col-md-5">
+        <label>Blood Group</label>
+        <select name="CustomerType" class="form-control"[(ngModel)]="registration.Nationality">
+            <option *ngFor="let blood of lstblood"
+            [value]="blood.key">{{blood.value}}</option>
+          </select>
+      </div>
+      <div class="col-md-5">
+        <label>Latitude</label>
+        <input type="text"  name="Image" [(ngModel)]="registration.Latitude" class="form-control"  autocomplete="off">
+      </div>
+      <div class="col-md-5">
+        <label>Longetude</label>
+        <input type="text"  name="Image" [(ngModel)]="registration.Longetude" class="form-control"  autocomplete="off">
+      </div>
+      <div class="col-md-5">
+        <label>Address</label>
+        <input type="text"  name="Image" [(ngModel)]="registration.Address" class="form-control"  autocomplete="off">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+      </div>
+      <div class="col-md-1">
+        <button aria-pressed="true" class="btn btn-block btn-success active"(click)="AddCustomer()" type="button">SignUp</button>
+      </div>
+      <div class="col-md-5">
+      </div>
+    </div>
+    </form>
+  

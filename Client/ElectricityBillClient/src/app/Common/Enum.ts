@@ -34,6 +34,21 @@ export enum UserType {
   SuperAdmin= -1
 
 }
+export enum Blood
+        {
+            A = 1,
+            B = 2,
+            AB=3,
+            O=4
+        }
+export enum Nationality
+        {
+            Bangladesh=1,
+            India=2,
+            Pakistan=3,
+            America=4,
+            England
+        }
 export enum ErrorCode {
   INTERNAL_SERVER_ERROR = 500,
   BAD_REQUEST = 400,

@@ -10,6 +10,22 @@ namespace Electricity.Common.Enum
         Male=1,
         Female=2
         }
+
+        public enum Blood
+        {
+            A = 1,
+            B = 2,
+            AB=3,
+            O=4
+        }
+        public enum Mationality
+        {
+            Bangladesh=1,
+            India=2,
+            Pakistan=3,
+            America=4,
+            England
+        }
         public enum Status
         {
             Active = 1,

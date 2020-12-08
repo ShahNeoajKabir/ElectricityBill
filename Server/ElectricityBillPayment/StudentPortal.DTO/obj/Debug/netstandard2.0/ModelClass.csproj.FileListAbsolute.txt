@@ -7,3 +7,12 @@ G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPort
 G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.dll
 G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.pdb
 G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.csprojAssemblyReference.cache
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\bin\Debug\netstandard2.0\ModelClass.deps.json
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\bin\Debug\netstandard2.0\ModelClass.dll
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\bin\Debug\netstandard2.0\ModelClass.pdb
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.csprojAssemblyReference.cache
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.AssemblyInfoInputs.cache
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.AssemblyInfo.cs
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.csproj.CoreCompileInputs.cache
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.dll
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\StudentPortal.DTO\obj\Debug\netstandard2.0\ModelClass.pdb

@@ -3,8 +3,8 @@ import { map } from 'rxjs/operators';
 
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { VMLogin } from '../VMLogin';
 import { TokenServiceService } from './token-service.service';
+import { VMLogin } from '../../Model/VMLogin';
 
 
 @Injectable({
