@@ -2,31 +2,31 @@
     <div class="row">
     <div class="col-md-5">
       <label>Customer Name</label>
-      <input type="text"  name="Image" [(ngModel)]="registration.CustomerName" class="form-control"  autocomplete="off">
+      <input type="text"  name="Image" [(ngModel)]="registration.CustomerName" class="form-control"  >
     </div>
     <div class="col-md-5">
         <label>Father Name</label>
-        <input type="text"  name="UserName" [(ngModel)]="registration.FatherName" class="form-control"  autocomplete="off">
+        <input type="text"  name="UserName" [(ngModel)]="registration.FatherName" class="form-control"  >
     </div>
     <div class="col-md-5">
         <label>Mother Name</label>
-        <input type="text"  name="UserName" [(ngModel)]="registration.MotherName" class="form-control"  autocomplete="off">
+        <input type="text"  name="UserName" [(ngModel)]="registration.MotherName" class="form-control"  >
     </div>
     <div class="col-md-5">
       <label>Email</label>
-      <input type="email"  name="Image"  [(ngModel)]="registration.Email" class="form-control"  autocomplete="off">
+      <input type="email"  name="Image"  [(ngModel)]="registration.Email" class="form-control" >
     </div>
     <div class="col-md-5">
         <label>Password</label>
-        <input type="password"  name="UserName" [(ngModel)]="registration.Password" class="form-control"  autocomplete="off">
+        <input type="password"  name="UserName" [(ngModel)]="registration.Password" class="form-control"  >
     </div>
     <div class="col-md-5">
       <label>Mobile Number</label>
-      <input type="text"  name="Image" [(ngModel)]="registration.MobileNo" class="form-control"  autocomplete="off">
+      <input type="text"  name="Image" [(ngModel)]="registration.MobileNo" class="form-control"  >
     </div>
     <div class="col-md-5">
         <label>Date Of Birth</label>
-        <input type="text"  name="Image" [(ngModel)]="registration.DateOfBirth" class="form-control"  autocomplete="off">
+        <input type="date"  name="Image" [(ngModel)]="registration.DateOfBirth" class="form-control"  >
       </div>
     <div class="col-md-5">
       <label>Gender</label>
@@ -62,7 +62,7 @@
     </div>
     <div class="col-md-5">
         <label>Blood Group</label>
-        <select name="CustomerType" class="form-control"[(ngModel)]="registration.Nationality">
+        <select name="CustomerType" class="form-control"[(ngModel)]="registration.BloodGroup">
             <option *ngFor="let blood of lstblood"
             [value]="blood.key">{{blood.value}}</option>
           </select>

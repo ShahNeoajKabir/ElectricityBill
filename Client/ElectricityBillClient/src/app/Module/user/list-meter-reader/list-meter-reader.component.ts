@@ -11,7 +11,7 @@ import { UserService } from '../../../Service/User/user.service';
 export class ListMeterReaderComponent implements OnInit {
   // public lstUser:User[]=new Array<User>();
 
-  constructor(private userservice:UserService,private router:Router,private activerouter:ActivatedRoute) { }
+  constructor() { }
 
   ngOnInit(): void {
     // this.userservice.GetAllMeterReader().subscribe((res:any)=>{

@@ -23,7 +23,9 @@ namespace SecurityBLLManager
             try
             {
                 customer.ZoneId = 1;
-                customer.CreatedBy = customer.CustomerName;
+                customer.CreatedBy = "Admin";
+                customer.Image = "asd";
+                customer.Status = (int)Common.Electricity.Enum.Enum.Status.Active;
                 customer.CreatedDate = DateTime.Now;
                 customer.Password = new EncryptionService().Encrypt(customer.Password);
                 await _dbContext.Customer.AddAsync(customer);

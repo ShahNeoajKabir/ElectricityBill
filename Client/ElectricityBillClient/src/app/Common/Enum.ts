@@ -46,7 +46,7 @@ export enum Nationality
             India=2,
             Pakistan=3,
             America=4,
-            England
+            England=5
         }
 export enum ErrorCode {
   INTERNAL_SERVER_ERROR = 500,
