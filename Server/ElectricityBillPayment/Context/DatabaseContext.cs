@@ -11,7 +11,7 @@ namespace Context
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -49,6 +49,15 @@ namespace Context
             modelBuilder.Entity<ZoneAssign>(entity =>
             {
                 entity.HasKey(e => e.ZoneAssignId);
+                entity.HasOne(d => d.User)
+                .WithMany(p => p.ZoneAssign)
+                .HasForeignKey(d => d.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+                entity.HasOne(d => d.Zone)
+                .WithMany(p => p.ZoneAssign)
+                .HasForeignKey(d => d.ZoneId)
+                .OnDelete(DeleteBehavior.Cascade);
             });
 
 
@@ -56,6 +65,7 @@ namespace Context
 
             modelBuilder.Entity<BillTable>(entity =>
             {
+                
                 entity.HasKey(e => e.BillId);
                 entity.Property(d => d.CustomerId);
                 entity.Property(d => d.MeterId);

@@ -10,15 +10,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Context.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20201208173726_Notice")]
+    [Migration("20201209082541_Notice")]
     partial class Notice
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                
-                
+                .UseIdentityColumns()
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.1");
 
@@ -27,7 +26,7 @@ namespace Context.Migrations
                     b.Property<int>("BillId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                         ;
+                        .UseIdentityColumn();
 
                     b.Property<double>("BillAmount")
                         .HasColumnType("float");
@@ -84,7 +83,7 @@ namespace Context.Migrations
                     b.Property<int>("CustomerId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                         ;
+                        .UseIdentityColumn();
 
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
@@ -168,7 +167,7 @@ namespace Context.Migrations
                     b.Property<int>("MeterAssignId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                         ;
+                        .UseIdentityColumn();
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -205,7 +204,7 @@ namespace Context.Migrations
                     b.Property<int>("MeterReadingId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                         ;
+                        .UseIdentityColumn();
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -246,7 +245,7 @@ namespace Context.Migrations
                     b.Property<int>("MeterId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                         ;
+                        .UseIdentityColumn();
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -279,7 +278,7 @@ namespace Context.Migrations
                     b.Property<int>("NoticeId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                         ;
+                        .UseIdentityColumn();
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -309,7 +308,7 @@ namespace Context.Migrations
                     b.Property<int>("PaymentId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                         ;
+                        .UseIdentityColumn();
 
                     b.Property<int>("BillId")
                         .HasColumnType("int");
@@ -351,7 +350,7 @@ namespace Context.Migrations
                     b.Property<int>("RoleId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                         ;
+                        .UseIdentityColumn();
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -381,7 +380,7 @@ namespace Context.Migrations
                     b.Property<int>("SupportId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                         ;
+                        .UseIdentityColumn();
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -414,7 +413,7 @@ namespace Context.Migrations
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                         ;
+                        .UseIdentityColumn();
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -465,7 +464,7 @@ namespace Context.Migrations
                     b.Property<int>("UserRoleId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                         ;
+                        .UseIdentityColumn();
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -502,7 +501,7 @@ namespace Context.Migrations
                     b.Property<int>("ZoneId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                         ;
+                        .UseIdentityColumn();
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
@@ -532,16 +531,13 @@ namespace Context.Migrations
                     b.Property<int>("ZoneAssignId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                         ;
+                        .UseIdentityColumn();
 
                     b.Property<string>("CreatedBy")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("MeterReaderId")
-                        .HasColumnType("int");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -552,10 +548,17 @@ namespace Context.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.Property<int>("ZoneId")
                         .HasColumnType("int");
 
                     b.HasKey("ZoneAssignId");
+
+                    b.HasIndex("UserId");
+
+                    b.HasIndex("ZoneId");
 
                     b.ToTable("ZoneAssign");
                 });
@@ -642,6 +645,25 @@ namespace Context.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("ModelClass.DTO.ZoneAssign", b =>
+                {
+                    b.HasOne("ModelClass.DTO.User", "User")
+                        .WithMany("ZoneAssign")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ModelClass.DTO.Zone", "Zone")
+                        .WithMany("ZoneAssign")
+                        .HasForeignKey("ZoneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+
+                    b.Navigation("Zone");
+                });
+
             modelBuilder.Entity("ModelClass.DTO.BillTable", b =>
                 {
                     b.Navigation("Payment");
@@ -675,11 +697,15 @@ namespace Context.Migrations
             modelBuilder.Entity("ModelClass.DTO.User", b =>
                 {
                     b.Navigation("UserRole");
+
+                    b.Navigation("ZoneAssign");
                 });
 
             modelBuilder.Entity("ModelClass.DTO.Zone", b =>
                 {
                     b.Navigation("Customer");
+
+                    b.Navigation("ZoneAssign");
                 });
 #pragma warning restore 612, 618
         }

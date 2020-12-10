@@ -13,4 +13,5 @@ export class User{
     UpdatedDate: Date|undefined;
     Status: number=0;
     Image:string='';
+    ZoneId:number;
 }

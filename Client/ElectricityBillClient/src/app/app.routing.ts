@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
+import { ListUserComponent } from './Module/user/list-user/list-user.component';
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
@@ -48,6 +49,7 @@ export const routes: Routes = [
       title: 'Register Page'
     }
   },
+  
   {
     path: '',
     component: DefaultLayoutComponent,
@@ -65,6 +67,11 @@ export const routes: Routes = [
       {path:'Zone' ,loadChildren:()=>import('./Module/Zone/zone.module').then(n=>n.ZoneModule)},
       {path:'UserRole' ,loadChildren:()=>import('./Module/UserRole/userrole.module').then(n=>n.UserRoleModule)},
       {path:'Customer' ,loadChildren:()=>import('./Module/Customer/customer.module').then(n=>n.CustomerModule)},
+      {path:'ZoneAssign' ,loadChildren:()=>import('./Module/ZoneAssign/ZoneAssign.module').then(n=>n.ZoneAssignModule)},
+      {path:'Security' ,loadChildren:()=>import('./Components/signin.module').then(n=>n.SigninModule)},
+
+
+      
 
 
       {

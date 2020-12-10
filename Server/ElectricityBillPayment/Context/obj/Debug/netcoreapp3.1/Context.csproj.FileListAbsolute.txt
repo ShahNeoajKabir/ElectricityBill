@@ -13,3 +13,18 @@ E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Context\obj\Debug\netc
 E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.pdb
 E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.genruntimeconfig.cache
 E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.csproj.CoreCompileInputs.cache
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\Context.deps.json
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\Context.runtimeconfig.json
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\Context.runtimeconfig.dev.json
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\Context.dll
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\Context.pdb
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\ModelClass.dll
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\ModelClass.pdb
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.csprojAssemblyReference.cache
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfoInputs.cache
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfo.cs
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.csproj.CopyComplete
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.dll
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.pdb
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.genruntimeconfig.cache
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.csproj.CoreCompileInputs.cache

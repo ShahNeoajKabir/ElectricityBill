@@ -55,8 +55,18 @@ export const navItems: INavData[] = [
     icon: 'icon-location-pin'
   },
   {
+    name: 'ZoneAssign',
+    url: '/ZoneAssign/View',
+    icon: 'icon-location-pin'
+  },
+  {
     name: 'Customer',
     url: '/Customer/View',
+    icon: 'icon-user'
+  },
+  {
+    name: 'Signin',
+    url: '/Security/Login',
     icon: 'icon-user'
   },
   {

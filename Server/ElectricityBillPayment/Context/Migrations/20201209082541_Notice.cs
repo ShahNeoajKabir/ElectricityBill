@@ -125,25 +125,6 @@ namespace Context.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "ZoneAssign",
-                columns: table => new
-                {
-                    ZoneAssignId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    MeterReaderId = table.Column<int>(type: "int", nullable: false),
-                    ZoneId = table.Column<int>(type: "int", nullable: false),
-                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    Status = table.Column<int>(type: "int", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ZoneAssign", x => x.ZoneAssignId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "UserRole",
                 columns: table => new
                 {
@@ -209,6 +190,37 @@ namespace Context.Migrations
                     table.PrimaryKey("PK_Customer", x => x.CustomerId);
                     table.ForeignKey(
                         name: "FK_Customer_Zone_ZoneId",
+                        column: x => x.ZoneId,
+                        principalTable: "Zone",
+                        principalColumn: "ZoneId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "ZoneAssign",
+                columns: table => new
+                {
+                    ZoneAssignId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserId = table.Column<int>(type: "int", nullable: false),
+                    ZoneId = table.Column<int>(type: "int", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    UpdatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Status = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_ZoneAssign", x => x.ZoneAssignId);
+                    table.ForeignKey(
+                        name: "FK_ZoneAssign_User_UserId",
+                        column: x => x.UserId,
+                        principalTable: "User",
+                        principalColumn: "UserId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_ZoneAssign_Zone_ZoneId",
                         column: x => x.ZoneId,
                         principalTable: "Zone",
                         principalColumn: "ZoneId",
@@ -374,6 +386,16 @@ namespace Context.Migrations
                 name: "IX_UserRole_UserId",
                 table: "UserRole",
                 column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ZoneAssign_UserId",
+                table: "ZoneAssign",
+                column: "UserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ZoneAssign_ZoneId",
+                table: "ZoneAssign",
+                column: "ZoneId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

@@ -1430,6 +1430,7 @@
       },
       "Common.Electricity/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.1",
           "Newtonsoft.Json": "12.0.3"
         },
         "runtime": {
@@ -1443,6 +1444,7 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.1",
           "Microsoft.EntityFrameworkCore.Relational": "5.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.1",
           "ModelClass": "1.0.0"
         },
         "runtime": {
@@ -1453,6 +1455,9 @@
         }
       },
       "ModelClass/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.1"
+        },
         "runtime": {
           "ModelClass.dll": {}
         },
@@ -1463,7 +1468,8 @@
       "SecurityBLLManager/1.0.0": {
         "dependencies": {
           "Common.Electricity": "1.0.0",
-          "Context": "1.0.0"
+          "Context": "1.0.0",
+          "Microsoft.EntityFrameworkCore.SqlServer": "5.0.1"
         },
         "runtime": {
           "SecurityBLLManager.dll": {}

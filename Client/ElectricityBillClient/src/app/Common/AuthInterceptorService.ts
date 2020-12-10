@@ -1,11 +1,10 @@
 import { HttpRequest, HttpHandler } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { TokenServiceService } from './Auth/token-service.service';
-
+import { TokenService } from './Auth/token.service';
 
 @Injectable()
 export class AuthInterceptorService {
-  constructor(private token: TokenServiceService) {
+  constructor(private token: TokenService) {
 
   }
   intercept(req: HttpRequest<any>, next: HttpHandler) {

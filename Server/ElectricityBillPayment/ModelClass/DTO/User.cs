@@ -21,7 +21,9 @@ namespace ModelClass.DTO
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
         
-        public virtual ICollection<UserRole> UserRole { get; set; }
+        public  ICollection<UserRole> UserRole { get; set; }
+        public ICollection<ZoneAssign> ZoneAssign { get; set; }
+
 
     }
 

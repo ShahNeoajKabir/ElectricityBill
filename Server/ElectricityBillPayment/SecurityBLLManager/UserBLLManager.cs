@@ -20,13 +20,22 @@ namespace SecurityBLLManager
         }
         public async Task<User> AddUser(User user)
         {
-            user.CreatedBy = "Admin";
-            user.CreatedDate = DateTime.Now;
+            try
+            {
+                user.CreatedBy = "Admin";
+                user.CreatedDate = DateTime.Now;
 
-            user.Password = new EncryptionService().Encrypt(user.Password) ;
+                user.Password = new EncryptionService().Encrypt(user.Password);
 
-            await _db.User.AddAsync(user);
-            await _db.SaveChangesAsync();
+                await _db.User.AddAsync(user);
+                await _db.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            
             return user;
         }
         public async Task<List<User>> Search(string UserName)
@@ -39,6 +48,11 @@ namespace SecurityBLLManager
         public List<User> GetAll()
         {
             List<User> user = _db.User.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
+            return user;
+        }
+        public List<User> GetAllMeterReader()
+        {
+            List<User> user = _db.User.Where(p => p.UserTypeId == 4).ToList();
             return user;
         }
 
@@ -80,6 +94,7 @@ namespace SecurityBLLManager
         Task<User> GetByID(User user);
 
         List<User> GetAll();
+        List<User> GetAllMeterReader();
 
         Task<List<User>> Search(string UserName);
     }

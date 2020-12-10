@@ -13,7 +13,7 @@ namespace ModelClass.DTO
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
-        public virtual ICollection<UserRole> UserRole { get; set; }
+        public  ICollection<UserRole> UserRole { get; set; }
     }
 
     public class RoleSearch

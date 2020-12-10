@@ -1,22 +1,22 @@
+
 import { Injectable } from '@angular/core';
 import { map } from 'rxjs/operators';
 
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { TokenServiceService } from './token-service.service';
+import { TokenService } from './token.service';
 import { VMLogin } from '../../Model/VMLogin';
-
 
 @Injectable({
   providedIn: 'root'
 })
 
 export class AuthService {
+  url="http://localhost:54667/api/Security/";
 
-  url="http://localhost:55109/api/Security/"
   constructor(
     private http: HttpClient,
-    private tokenService: TokenServiceService,
+    private tokenService: TokenService,
     private router: Router
   ) { }
 
@@ -28,7 +28,7 @@ export class AuthService {
     };
     return this.http.post(this.url+"Login", body).pipe(map((res: any) => {
       const loginData = res;
-      this.tokenService.SaveToken(loginData);
+      this.tokenService.SaveToken(loginData.Token);
     }));
 
   }
@@ -65,4 +65,5 @@ export class AuthService {
     }
     return '';
   }
+
 }

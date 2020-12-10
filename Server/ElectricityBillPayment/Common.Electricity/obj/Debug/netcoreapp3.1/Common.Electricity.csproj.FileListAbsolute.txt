@@ -10,3 +10,15 @@ E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\obj
 E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.dll
 E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.pdb
 E:\Final Defence\BappyFinalDefence\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.genruntimeconfig.cache
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.deps.json
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.runtimeconfig.json
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.runtimeconfig.dev.json
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.dll
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.pdb
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.csprojAssemblyReference.cache
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.AssemblyInfoInputs.cache
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.AssemblyInfo.cs
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.dll
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.pdb
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.genruntimeconfig.cache
+E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.csproj.CoreCompileInputs.cache

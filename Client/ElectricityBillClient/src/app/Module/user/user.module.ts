@@ -5,12 +5,13 @@ import { ListUserComponent } from './list-user/list-user.component';
 import { UserRoutingModule } from './user-routing.module';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '../../Service/User/user.service';
+import { ListMeterReaderComponent } from './list-meter-reader/list-meter-reader.component';
 
 
 
 
 @NgModule({
-  declarations: [AddUserComponent, ListUserComponent],
+  declarations: [AddUserComponent, ListUserComponent, ListMeterReaderComponent],
   imports: [
     CommonModule,
     UserRoutingModule,

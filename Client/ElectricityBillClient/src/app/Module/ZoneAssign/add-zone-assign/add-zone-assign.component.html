@@ -1,0 +1,47 @@
+<form>
+    <div class="row">
+    <div class="col-md-5">
+    <label>User Name</label>
+    <select name="UserName" class="form-control"
+    [(ngModel)]="objzoneassign.UserId">
+    <!-- <option [value]="-1">-Select-</option> -->
+    <option *ngFor="let User of lstuser"
+    [value]="User.UserId">{{User.UserName}}</option>
+    </select>
+    </div>
+    
+    <div class="col-md-5">
+    <label>Zone Name</label>
+    <select name="ZoneName" class="form-control"
+    [(ngModel)]="objzoneassign.ZoneId">
+    
+    <option *ngFor="let Zone of lstzone"
+    [value]="Zone.ZoneId">{{Zone.ZoneName}}
+    </option>
+    </select>
+    </div>
+    
+    <div class="col-md-5">
+    <label>Status</label>
+    <select name="Status" class="form-control"
+    [(ngModel)]="objzoneassign.Status">
+    
+    <option *ngFor="let status of lststatus"
+    [value]="status.key">{{status.value}}</option>
+    </select>  
+    </div>
+    </div>
+    
+    
+    <div class="row">
+    <div class="col-md-5">
+    </div>
+    <div class="col-md-1">
+    <button aria-pressed="true" class="btn btn-pill btn-block btn-primary active" (click)="submit()" type="button">Assign</button>
+    </div>
+    <div class="col-md-5">
+    </div>
+    </div>
+    </form>
+    
+    

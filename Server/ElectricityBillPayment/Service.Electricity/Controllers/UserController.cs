@@ -115,6 +115,23 @@ namespace Service.Electricity.Controllers
 
 
         }
+        [HttpGet]
+        [Route("GetAllMeterReader")]
+        public List<User> GetAllMeterReader()
+        {
+            try
+            {
+                return this.userBLLManager.GetAllMeterReader();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
+
 
         [HttpGet]
         [Route("Gets")]

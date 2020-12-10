@@ -30,8 +30,7 @@ export enum UserType {
   Admin= 1,
   CoOrdinator= 2,
   Customer= 3,
-  MeterReader= 4,
-  SuperAdmin= -1
+  MeterReader= 4
 
 }
 export enum Blood
