@@ -1,7 +1,7 @@
 export class Support{
-  SupportId=0;
-  SupportContent='';
-  SupportSubject='';
+  SupportId:number=0;
+  SupportContent:string='';
+  SupportSubject:string='';
   CreatedBy: string='';
   CreatedDate: Date |undefined;
   UpdatedBy: string='';

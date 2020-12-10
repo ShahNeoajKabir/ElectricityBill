@@ -5,23 +5,23 @@ export class Customer{
   CustomerName:string='';
   FatherName:string='';
   MotherName:string='';
-  Email='';
-  Password=''
-  MobileNo=''
+  Email:string='';
+  Password:string=''
+  MobileNo:string=''
   DateOfBirth:Date|undefined;
-  Gender=0;
-  Religion=0;
-  Nationality=0;
-  BloodGroup=0;
-  Address='';
-  CustomerType=0;
-  Latitude='';
-  Longitude='';
-  CreatedBy='';
+  Gender:number=0;
+  Religion:number=0;
+  Nationality:number=0;
+  BloodGroup:number=0;
+  Address:string='';
+  CustomerType:number=0;
+  Latitude:string='';
+  Longitude:string='';
+  CreatedBy:string='';
   CreatedDate:Date|undefined;
-  UpdatedBy='';
+  UpdatedBy:string='';
   UpdatedDate:Date|undefined;
-  Status=0;
-  Image='';
+  Status:number=0;
+  Image:string='';
 
 }

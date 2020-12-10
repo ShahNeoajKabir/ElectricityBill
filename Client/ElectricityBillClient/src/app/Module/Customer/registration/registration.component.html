@@ -2,31 +2,31 @@
     <div class="row">
     <div class="col-md-5">
       <label>Customer Name</label>
-      <input type="text"  name="Image" [(ngModel)]="registration.CustomerName" class="form-control"  >
+      <input type="text"  name="CustomerName" [(ngModel)]="registration.CustomerName" class="form-control"  >
     </div>
     <div class="col-md-5">
         <label>Father Name</label>
-        <input type="text"  name="UserName" [(ngModel)]="registration.FatherName" class="form-control"  >
+        <input type="text"  name="FatherName" [(ngModel)]="registration.FatherName" class="form-control"  >
     </div>
     <div class="col-md-5">
         <label>Mother Name</label>
-        <input type="text"  name="UserName" [(ngModel)]="registration.MotherName" class="form-control"  >
+        <input type="text"  name="MotherName" [(ngModel)]="registration.MotherName" class="form-control"  >
     </div>
     <div class="col-md-5">
       <label>Email</label>
-      <input type="email"  name="Image"  [(ngModel)]="registration.Email" class="form-control" >
+      <input type="email"  name="Email"  [(ngModel)]="registration.Email" class="form-control" >
     </div>
     <div class="col-md-5">
         <label>Password</label>
-        <input type="password"  name="UserName" [(ngModel)]="registration.Password" class="form-control"  >
+        <input type="password"  name="Password" [(ngModel)]="registration.Password" class="form-control"  >
     </div>
     <div class="col-md-5">
       <label>Mobile Number</label>
-      <input type="text"  name="Image" [(ngModel)]="registration.MobileNo" class="form-control"  >
+      <input type="text"  name="MobileNo" [(ngModel)]="registration.MobileNo" class="form-control"  >
     </div>
     <div class="col-md-5">
         <label>Date Of Birth</label>
-        <input type="date"  name="Image" [(ngModel)]="registration.DateOfBirth" class="form-control"  >
+        <input type="date"  name="DateOfBirth" [(ngModel)]="registration.DateOfBirth" class="form-control"  >
       </div>
     <div class="col-md-5">
       <label>Gender</label>
@@ -39,7 +39,7 @@
     </div>
     <div class="col-md-5">
         <label>Religion</label>
-        <select name="Gender" class="form-control"
+        <select name="Religion" class="form-control"
         [(ngModel)]="registration.Religion">
       <!-- <option [value]="-1">-Select-</option> -->
       <option *ngFor="let religion of lstreligion"
@@ -55,29 +55,29 @@
     </div>
     <div class="col-md-5">
       <label>Nationality</label>
-      <select name="CustomerType" class="form-control"[(ngModel)]="registration.Nationality">
+      <select name="Nationality" class="form-control"[(ngModel)]="registration.Nationality">
         <option *ngFor="let nationality of lstnationality"
         [value]="nationality.key">{{nationality.value}}</option>
       </select>
     </div>
     <div class="col-md-5">
         <label>Blood Group</label>
-        <select name="CustomerType" class="form-control"[(ngModel)]="registration.BloodGroup">
+        <select name="BloodGroup" class="form-control"[(ngModel)]="registration.BloodGroup">
             <option *ngFor="let blood of lstblood"
             [value]="blood.key">{{blood.value}}</option>
           </select>
       </div>
       <div class="col-md-5">
         <label>Latitude</label>
-        <input type="text"  name="Image" [(ngModel)]="registration.Latitude" class="form-control"  autocomplete="off">
+        <input type="text"  name="Latitude" [(ngModel)]="registration.Latitude" class="form-control"  autocomplete="off">
       </div>
       <div class="col-md-5">
         <label>Longetude</label>
-        <input type="text"  name="Image" [(ngModel)]="registration.Longetude" class="form-control"  autocomplete="off">
+        <input type="text"  name="Longetude" [(ngModel)]="registration.Longetude" class="form-control"  autocomplete="off">
       </div>
       <div class="col-md-5">
         <label>Address</label>
-        <input type="text"  name="Image" [(ngModel)]="registration.Address" class="form-control"  autocomplete="off">
+        <input type="text"  name="Address" [(ngModel)]="registration.Address" class="form-control"  autocomplete="off">
       </div>
     </div>
     <div class="row">

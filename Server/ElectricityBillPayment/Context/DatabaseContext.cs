@@ -13,10 +13,10 @@ namespace Context
         {
             //Database.EnsureCreated();
         }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.EnableSensitiveDataLogging();
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.EnableSensitiveDataLogging();
+        //}
 
         public virtual DbSet<BillTable> BillTable { get; set; }
         public virtual DbSet<Notice> Notice { get; set; }

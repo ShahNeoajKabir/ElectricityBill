@@ -8,7 +8,7 @@ namespace ModelClass.DTO
     {
         public int CustomerId { get; set; }
         public int? UserId { get; set; }
-        public int ZoneId { get; set; }
+        public int? ZoneId { get; set; }
         public string CustomerName { get; set; }
         public string FatherName { get; set; }
         public string MotherName { get; set; }
@@ -28,7 +28,7 @@ namespace ModelClass.DTO
         public DateTime CreatedDate { get; set; }
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
-        public int Status { get; set; }
+        public int? Status { get; set; }
         public string Image { get; set; }
         public  ICollection<MeterAssign> MeterAssign { get; set; }
         public  Zone Zone { get; set; }
