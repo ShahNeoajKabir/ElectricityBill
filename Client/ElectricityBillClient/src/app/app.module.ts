@@ -43,6 +43,8 @@ import { ChartsModule } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
 import { httpInterceptorProviders } from './Common/interceptor';
 import { LoginComponent } from './views/login/login.component';
+import { AddUnitPriceComponent } from './Module/UnitPrice/add-unit-price/add-unit-price.component';
+import { ListUnitPriceComponent } from './Module/UnitPrice/list-unit-price/list-unit-price.component';
 
 
 
@@ -74,7 +76,9 @@ import { LoginComponent } from './views/login/login.component';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddUnitPriceComponent,
+    ListUnitPriceComponent
   ],
   providers: [HttpClientModule,httpInterceptorProviders,{
     provide: LocationStrategy,

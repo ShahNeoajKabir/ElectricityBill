@@ -406,6 +406,39 @@ namespace Context.Migrations
                     b.ToTable("Support");
                 });
 
+            modelBuilder.Entity("ModelClass.DTO.UnitPrice", b =>
+                {
+                    b.Property<int>("UnitPriceId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CustomerType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<double>("UnitperPrice")
+                        .HasColumnType("float");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("UnitPriceId");
+
+                    b.ToTable("UnitPrice");
+                });
+
             modelBuilder.Entity("ModelClass.DTO.User", b =>
                 {
                     b.Property<int>("UserId")

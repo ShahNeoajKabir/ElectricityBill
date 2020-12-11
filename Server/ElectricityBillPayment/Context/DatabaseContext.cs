@@ -31,6 +31,7 @@ namespace Context
         public  DbSet<UserRole> UserRole { get; set; }
         public  DbSet<Zone> Zone { get; set; }
         public  DbSet<ZoneAssign> ZoneAssign { get; set; }
+        public  DbSet<UnitPrice> UnitPrice { get; set; }
 
 
 
@@ -81,6 +82,12 @@ namespace Context
                 entity.HasKey(e => e.UserId);
                 entity.Property(d => d.UserName);
                 entity.Property(d => d.Email);
+            });
+            modelBuilder.Entity<UnitPrice>(entity =>
+            {
+                entity.HasKey(e => e.UnitPriceId);
+                entity.Property(d => d.CustomerType);
+                entity.Property(d => d.UnitperPrice);
             });
 
 
