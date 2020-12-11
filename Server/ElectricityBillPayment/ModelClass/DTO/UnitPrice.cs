@@ -17,6 +17,6 @@ namespace ModelClass.DTO
     }
     public class UnitPriceSearch
     {
-        public string search { get; set; }
+        public int search { get; set; }
     }
 }
