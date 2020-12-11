@@ -22,7 +22,9 @@ namespace SecurityBLLManager
         {
             try
             {
-                
+
+                customer.Status = (int)Common.Electricity.Enum.Enum.Status.Active;
+                customer.Image = "Asd";
                 customer.CreatedBy = "Admin";
                 customer.CreatedDate = DateTime.Now;
                 customer.Password = new EncryptionService().Encrypt(customer.Password);

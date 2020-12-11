@@ -47,6 +47,14 @@ namespace Service.Electricity.Controllers
 
         }
 
+        [HttpGet]
+        [Route("GetAllMeter")]
+        public List<MeterTable> GetAllMeter()
+        {
+            return _meterBLL.GetAllMeter();
+
+        }
+
         [HttpPost]
         [Route("SearchMeter")]
         public Task<List<MeterTable>> SearchZone([FromBody] TempMessage message)

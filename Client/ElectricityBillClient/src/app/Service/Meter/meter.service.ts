@@ -17,6 +17,10 @@ export class MeterService {
     return this.httpclient.get(this.url+"GetAll");
 
   }
+  public GetAllMeter(){
+    return this.httpclient.get(this.url+"GetAllMeter");
+
+  }
   public SearchMeter(search:any){
     return this.httpclient.post(this.url+"SearchMeter",search);
   }

@@ -16,7 +16,7 @@ export class ListMeterComponent implements OnInit {
   constructor(private meterservice:MeterService, private router:Router) { }
 
   ngOnInit(): void {
-    this.meterservice.GetAll().subscribe((res:any)=>{
+    this.meterservice.GetAllMeter().subscribe((res:any)=>{
       this.lstMeter=res;
       console.log(this.lstMeter);
     })

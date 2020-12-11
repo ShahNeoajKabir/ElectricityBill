@@ -6,9 +6,11 @@ namespace ModelClass.DTO
 {
     public class Customer
     {
+        public Customer(){
+            }
         public int CustomerId { get; set; }
         public int? UserId { get; set; }
-        public int? ZoneId { get; set; }
+        public int ZoneId { get; set; }
         public string CustomerName { get; set; }
         public string FatherName { get; set; }
         public string MotherName { get; set; }

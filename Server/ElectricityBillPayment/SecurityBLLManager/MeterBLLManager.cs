@@ -51,6 +51,12 @@ namespace SecurityBLLManager
 
             return meter;
         }
+
+        public List<MeterTable> GetAllMeter()
+        {
+            List<MeterTable> meter = _dbContext.MeterTable.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
+            return meter;
+        }
         public async Task<List<MeterTable>> Search(string MeterNumber)
         {
             var search = await _dbContext.MeterTable.Where(c => c.MeterNumber.Contains(MeterNumber)).ToListAsync();
@@ -96,6 +102,7 @@ namespace SecurityBLLManager
         Task<MeterTable> UpdateMeter(MeterTable meter);
         Task<MeterTable> GetById(MeterTable meter);
         Task<List<MeterTable>> Search(string MeterNumber);
+        List<MeterTable> GetAllMeter();
 
     }
 }

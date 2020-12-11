@@ -4,6 +4,7 @@ import { Blood, CustomerType, Gender, Nationality, Religion } from '../../../Com
 import { Utility } from '../../../Common/Utility';
 import { Customer } from '../../../Model/Customer';
 import { CustomerService } from '../../../Service/Customer/customer.service';
+import { ZoneService } from '../../../Service/Zone/zone.service';
 
 @Component({
   selector: 'app-registration',
@@ -18,9 +19,10 @@ export class RegistrationComponent implements OnInit {
   public lstcutomertype:any;
   public lstblood:any;
   public lstnationality:any;
+  public  lstzone:any;
   public objedit:Customer=new Customer();
 
-  constructor(private utility:Utility, private customerservice:CustomerService,private router:Router, private ActiveRouter:ActivatedRoute) { }
+  constructor(private utility:Utility, private customerservice:CustomerService,private router:Router, private ActiveRouter:ActivatedRoute,private zoneservice:ZoneService) { }
 
   ngOnInit(): void {
     this.lstGender=this.utility.enumToArray(Gender);
@@ -28,6 +30,12 @@ export class RegistrationComponent implements OnInit {
     this.lstcutomertype=this.utility.enumToArray(CustomerType);
     this.lstblood=this.utility.enumToArray(Blood);
     this.lstnationality=this.utility.enumToArray(Nationality);
+
+    this.zoneservice.GetAll().subscribe((res:any)=>{
+      this.lstzone=res;
+      console.log(this.lstzone);
+
+    });
 
 
 

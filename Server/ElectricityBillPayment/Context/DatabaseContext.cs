@@ -13,24 +13,24 @@ namespace Context
         {
             //Database.EnsureCreated();
         }
-        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        //{
-        //    optionsBuilder.EnableSensitiveDataLogging();
-        //}
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.EnableSensitiveDataLogging();
+        }
 
-        public virtual DbSet<BillTable> BillTable { get; set; }
-        public virtual DbSet<Notice> Notice { get; set; }
-        public virtual DbSet<Customer> Customer { get; set; }
-        public virtual DbSet<MeterAssign> MeterAssign { get; set; }
-        public virtual DbSet<MeterReadingTable> MeterReadingTable { get; set; }
-        public virtual DbSet<MeterTable> MeterTable { get; set; }
-        public virtual DbSet<Payment> Payment { get; set; }
-        public virtual DbSet<Role> Role { get; set; }
-        public virtual DbSet<Support> Support { get; set; }
-        public virtual DbSet<User> User { get; set; }
-        public virtual DbSet<UserRole> UserRole { get; set; }
-        public virtual DbSet<Zone> Zone { get; set; }
-        public virtual DbSet<ZoneAssign> ZoneAssign { get; set; }
+        public  DbSet<BillTable> BillTable { get; set; }
+        public  DbSet<Notice> Notice { get; set; }
+        public  DbSet<Customer> Customer { get; set; }
+        public  DbSet<MeterAssign> MeterAssign { get; set; }
+        public  DbSet<MeterReadingTable> MeterReadingTable { get; set; }
+        public  DbSet<MeterTable> MeterTable { get; set; }
+        public  DbSet<Payment> Payment { get; set; }
+        public  DbSet<Role> Role { get; set; }
+        public  DbSet<Support> Support { get; set; }
+        public  DbSet<User> User { get; set; }
+        public  DbSet<UserRole> UserRole { get; set; }
+        public  DbSet<Zone> Zone { get; set; }
+        public  DbSet<ZoneAssign> ZoneAssign { get; set; }
 
 
 

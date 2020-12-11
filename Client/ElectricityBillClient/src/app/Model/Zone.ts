@@ -8,5 +8,4 @@ export class Zone{
    UpdatedBy:string='';
    UpdatedDate:Date|undefined;
    Status:number=0;
-   Customer: Customer = new Customer;
 }

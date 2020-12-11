@@ -1,3 +1,5 @@
+import { Zone } from './Zone';
+
 export class Customer{
   CustomerId:number=0;
   UserId:number=0;
@@ -23,5 +25,6 @@ export class Customer{
   UpdatedDate:Date|undefined;
   Status:number=0;
   Image:string='';
+  Zone:Zone=new Zone;
 
 }
