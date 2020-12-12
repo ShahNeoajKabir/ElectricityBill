@@ -1,1 +1,60 @@
-<p>list-unit-price works!</p>
+
+<div class="animated fadeIn">
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="col-md-2">
+            <button aria-pressed="true" class="btn btn-block btn-success active" [routerLink]="['/UnitPrice/AddUnitPrice']" type="button"><i class="fas fa-user-plus"></i> Add UnitPrice</button>
+        </div>
+        <div class="col-md-10">
+    
+        </div>
+        <!-- <div class="col-md-4">
+          <form class="form-header" action="" method="POST">
+              <input class="form-control" [(ngModel)]="searchuser" type="text" name="search" placeholder="Search for Information &amp; reports..." />
+              <button class="btn btn-success" (click)="searchUsers()" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+          </form>
+        </div> -->
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i> UnitPrice Table
+        </div>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                  <th>Customer Type</th>
+                  <th>Unit per Price</th>
+                  <th>Status</th>
+                  <th>Action</th>
+              </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor="let objunit of lstunitprice">
+                <td >{{objunit.CustomerType}}</td>
+                <td>{{objunit.UnitPerPrice}}</td>
+                <td>{{objunit.Status}}</td>
+                <td> <a class="btn btn-warning" routerLink="../{{ objunit.UnitPriceId}}/edit"><i class="fas fa-edit"></i></a></td>
+            </tr>
+          </tbody>
+    
+    
+          </table>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/.col-->
+    </div>
+    

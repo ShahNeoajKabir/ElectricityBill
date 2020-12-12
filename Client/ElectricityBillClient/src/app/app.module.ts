@@ -76,9 +76,7 @@ import { ListUnitPriceComponent } from './Module/UnitPrice/list-unit-price/list-
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent,
-    AddUnitPriceComponent,
-    ListUnitPriceComponent
+    RegisterComponent
   ],
   providers: [HttpClientModule,httpInterceptorProviders,{
     provide: LocationStrategy,

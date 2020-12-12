@@ -75,6 +75,11 @@ export const navItems: INavData[] = [
     icon: 'icon-list'
   },
   {
+    name: 'Unit Price',
+    url: '/UnitPrice/View',
+    icon: 'icon-list'
+  },
+  {
     name: 'Typography',
     url: '/theme/typography',
     icon: 'icon-pencil'
