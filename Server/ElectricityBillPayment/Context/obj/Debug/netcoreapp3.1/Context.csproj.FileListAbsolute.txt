@@ -28,3 +28,18 @@ E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\ne
 E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.pdb
 E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.genruntimeconfig.cache
 E:\25.11.2020\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.csproj.CoreCompileInputs.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\Context.deps.json
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\Context.runtimeconfig.json
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\Context.runtimeconfig.dev.json
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\Context.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\Context.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\ModelClass.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\bin\Debug\netcoreapp3.1\ModelClass.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.csprojAssemblyReference.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfoInputs.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.AssemblyInfo.cs
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.csproj.CoreCompileInputs.cache
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.csproj.CopyComplete
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.dll
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.pdb
+G:\Bappy\Final Defence\ElectricityBill\Server\ElectricityBillPayment\Context\obj\Debug\netcoreapp3.1\Context.genruntimeconfig.cache

@@ -20,7 +20,7 @@ export class UnitPriceService {
   }
 
   public GetById(User:any){
-    return this.httpclient.post(this.url+"GetByID",User);
+    return this.httpclient.post(this.url+"GetById",User);
   }
   public UpdateUnitPrice(UnitPrice:any){
     return this.httpclient.post(this.url+"UpdateUnitPrice",UnitPrice);

@@ -10,6 +10,6 @@ export class UserRole  {
            UpdatedBy:string='';
            UpdatedDate:Date|undefined;
            Status:number=0;
-           Role:Role = new Role;
-           User:User = new User;
+          //  Role:Role = new Role;
+          //  User:User = new User;
 }

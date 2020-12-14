@@ -35,8 +35,11 @@
               <tr *ngFor="let lstassign of objassign">
                   <td >{{lstassign.Customer.CustomerName}}</td>
                   <td>{{lstassign.MeterTable.MeterNumber}}</td>
+                  <td ><span class="btn-success" *ngIf="lstassign.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
+                    <span class="btn-danger" *ngIf="lstassign.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
+              </td>
 
-              <td>{{lstassign.Status}}</td>
+
               <td> <a class="btn btn-warning" routerLink="../{{ lstassign.MeterAssignId }}/edit"><i class="fas fa-edit"></i></a></td>
 
               </tr>

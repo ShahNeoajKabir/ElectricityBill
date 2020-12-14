@@ -41,7 +41,9 @@
             <td>{{objuser.Password}}</td>
             <td>{{objuser.MobileNo}}</td>
             <td>{{objuser.UserTypeId}}</td>
-        <td>{{objuser.Status}}</td>
+            <td ><span class="btn-success" *ngIf="objuser.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
+              <span class="btn-danger" *ngIf="objuser.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
+        </td>
         <td> <a class="btn btn-warning" routerLink="../{{ objuser.UserId }}/edit"><i class="fas fa-edit"></i></a></td>
         </tr>
       </tbody>

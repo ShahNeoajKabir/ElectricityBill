@@ -425,8 +425,8 @@ namespace Context.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
-                    b.Property<double>("UnitperPrice")
-                        .HasColumnType("float");
+                    b.Property<int>("UnitperPrice")
+                        .HasColumnType("int");
 
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");

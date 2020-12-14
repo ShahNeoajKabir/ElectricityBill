@@ -87,6 +87,7 @@ namespace Service.Electricity
             services.AddScoped<IUserRoleBLLManager, UserRoleBLLManager>();
             services.AddScoped<IZoneAssignBLLManager, ZoneAssignBLLManager>();
             services.AddScoped<IUnitPriceBLLManager, UnitPriceBLLManager>();
+            services.AddScoped<IMeterReadingBLLManager, MeterReadingBLLManager>();
 
         }
 

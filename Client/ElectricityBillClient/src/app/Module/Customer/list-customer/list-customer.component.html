@@ -48,11 +48,22 @@
               <td>{{objcustomer.Password}}</td>
               <td>{{objcustomer.MobileNo}}</td>
               <td >{{objcustomer.DateOfBirth}}</td>
-              <td >{{objcustomer.Gender}}</td>
-              <td>{{objcustomer.CustomerType}}</td>
-              <td>{{objcustomer.CustomerType}}</td>
+              <td ><span class="btn-success" *ngIf="objcustomer.Gender===1">  Male</span>
+                <span class="btn-success" *ngIf="objcustomer.Gender===2">  Female</span>
+                <span class="btn-success" *ngIf="objcustomer.Gender===3"> Others</span>
+
+          </td>
+              <td>{{objcustomer.BloodGroup}}</td>
+              <td ><span class="btn-success" *ngIf="objcustomer.CustomerType===1">  Business</span>
+                <span class="btn-success" *ngIf="objcustomer.CustomerType===2">  Economi</span>
+                <span class="btn-success" *ngIf="objcustomer.CustomerType===3"> House</span>
+
+          </td>
+
               <td>{{objcustomer.Address}}</td>
-              <td>{{objcustomer.Status}}</td>
+              <td ><span class="btn-success" *ngIf="objcustomer.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
+                <span class="btn-danger" *ngIf="objcustomer.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
+          </td>
               <td> <a class="btn btn-warning" routerLink="../{{ objcustomer.CustomerId }}/edit"><i class="fas fa-edit"></i></a></td>
           </tr>
         </tbody>

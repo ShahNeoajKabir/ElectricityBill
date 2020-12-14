@@ -65,8 +65,8 @@ namespace SecurityBLLManager
 
         public async Task<UnitPrice>GetById(UnitPrice unitPrice)
         {
-            await _database.UnitPrice.Where(p => p.UnitPriceId == unitPrice.UnitPriceId).FirstOrDefaultAsync();
-            return unitPrice;
+           var res= await _database.UnitPrice.Where(p => p.UnitPriceId == unitPrice.UnitPriceId).FirstOrDefaultAsync();
+            return res;
         }
     }
 

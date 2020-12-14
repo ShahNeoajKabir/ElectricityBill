@@ -1,0 +1,67 @@
+<form>
+  <div class="row">
+  <div class="col-md-5">
+  <label>MeterAssignId</label>
+  <select name="MeterAssignId" class="form-control"
+  [(ngModel)]="objmeterreading.UserId">
+  <!-- <option [value]="-1">-Select-</option> -->
+  <option *ngFor="let meterassign of lstmeterassign"
+  [value]="meterassign.MeterAssignId">{{meterassign.MeterAssignId}}</option>
+  </select>
+  </div>
+
+  <div class="col-md-5">
+  <label>Mobile No</label>
+  <select name="MobileNo" class="form-control"
+  [(ngModel)]="objmeterreading.CustomerId">
+
+  <option *ngFor="let customer of lstcustomer"
+  [value]="customer.CustomerId">{{customer.MobileNo}}
+  </option>
+  </select>
+  </div>
+  <div class="col-md-5">
+    <label>Meter Number</label>
+    <select name="MeterNumber" class="form-control"
+    [(ngModel)]="objmeterreading.MeterId">
+
+    <option *ngFor="let meter of lstmeter"
+    [value]="meter.MeterId">{{meter.MeterNumber}}
+    </option>
+    </select>
+    </div>
+
+    <div class="col-md-5">
+      <label>Month</label>
+      <select name="Month" class="form-control"
+      [(ngModel)]="objmeterreading.Month">
+
+      <option *ngFor="let month of lstmonth"
+      [value]="month.key">{{month.value}}</option>
+      </select>
+      </div>
+
+  <div class="col-md-5">
+  <label>Status</label>
+  <select name="Status" class="form-control"
+  [(ngModel)]="objmeterreading.Status">
+
+  <option *ngFor="let status of lststatus"
+  [value]="status.key">{{status.value}}</option>
+  </select>
+  </div>
+  </div>
+
+
+  <div class="row">
+  <div class="col-md-5">
+  </div>
+  <div class="col-md-1">
+  <button aria-pressed="true" class="btn btn-pill btn-block btn-primary active" (click)="submit()" type="button">Assign</button>
+  </div>
+  <div class="col-md-5">
+  </div>
+  </div>
+  </form>
+
+

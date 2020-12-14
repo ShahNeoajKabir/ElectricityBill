@@ -36,8 +36,11 @@
             <tr *ngFor="let objsupport of lstSupport">
                 <td >{{objsupport.SupportContent}}</td>
                 <td>{{objsupport.SupportSubject}}</td>
+                <td ><span class="btn-success" *ngIf="objsupport.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
+                  <span class="btn-danger" *ngIf="objsupport.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
+            </td>
 
-            <td>{{objsupport.Status}}</td>
+
 
             <td> <a class="btn btn-warning" routerLink="../{{ objsupport.SupportId }}/edit"><i class="fas fa-edit"></i></a></td>
 

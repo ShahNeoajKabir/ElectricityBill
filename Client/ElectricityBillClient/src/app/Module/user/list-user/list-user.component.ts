@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from '../../../Model/User';
 import { UserService } from '../../../Service/User/user.service';
-import { navItems } from '../../../_nav';
 
 @Component({
   selector: 'app-list-user',
@@ -14,7 +13,7 @@ export class ListUserComponent implements OnInit {
   public lstuser:User[]= new Array<User>();
 
   public searchuser:string="";
- 
+
 
   constructor(private userservice:UserService, private router:Router) { }
 

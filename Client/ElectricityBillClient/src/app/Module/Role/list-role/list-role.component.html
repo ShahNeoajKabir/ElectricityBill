@@ -32,7 +32,9 @@
         <tbody >
           <tr *ngFor="let objrole of lstrole">
               <td >{{objrole.RoleName}}</td>
-              <td>{{objrole.Status}}</td>
+              <td ><span class="btn-success" *ngIf="objrole.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
+                <span class="btn-danger" *ngIf="objrole.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
+          </td>
               <td> <a class="btn btn-warning" routerLink="../{{ objrole.RoleId }}/edit"><i class="fas fa-edit"></i></a></td>
           </tr>
         </tbody>

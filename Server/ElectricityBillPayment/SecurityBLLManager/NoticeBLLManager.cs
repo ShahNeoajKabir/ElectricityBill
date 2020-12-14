@@ -38,7 +38,7 @@ namespace SecurityBLLManager
 
         public List<Notice> GetAll()
         {
-            List<Notice> notice = _dbContext.Notice.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
+            List<Notice> notice = _dbContext.Notice.ToList();
             return notice;
         }
 

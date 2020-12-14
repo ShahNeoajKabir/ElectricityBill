@@ -15,6 +15,7 @@ namespace ModelClass.DTO
         public double BillAmount { get; set; }
         public int CurrentMonth { get; set; }
         public int PreviousMonth { get; set; }
+        public int Year { get; set; }
         public int BillStatus { get; set; }
         public string CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }

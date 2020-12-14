@@ -6,7 +6,7 @@
             <button aria-pressed="true" class="btn btn-block btn-success active" [routerLink]="['/UnitPrice/AddUnitPrice']" type="button"><i class="fas fa-user-plus"></i> Add UnitPrice</button>
         </div>
         <div class="col-md-10">
-    
+
         </div>
         <!-- <div class="col-md-4">
           <form class="form-header" action="" method="POST">
@@ -35,12 +35,14 @@
             <tr *ngFor="let objunit of lstunitprice">
                 <td >{{objunit.CustomerType}}</td>
                 <td>{{objunit.UnitPerPrice}}</td>
-                <td>{{objunit.Status}}</td>
+                <td ><span class="btn-success" *ngIf="objunit.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
+                  <span class="btn-danger" *ngIf="objunit.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
+            </td>
                 <td> <a class="btn btn-warning" routerLink="../{{ objunit.UnitPriceId}}/edit"><i class="fas fa-edit"></i></a></td>
             </tr>
           </tbody>
-    
-    
+
+
           </table>
           <ul class="pagination">
             <li class="page-item"><a class="page-link" href="#">Prev</a></li>
@@ -57,4 +59,3 @@
     </div>
     <!--/.col-->
     </div>
-    

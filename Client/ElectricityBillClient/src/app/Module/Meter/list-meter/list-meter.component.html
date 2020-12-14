@@ -36,7 +36,9 @@
             <tr *ngFor="let objmeter of lstMeter">
                 <td >{{objmeter.MeterNumber}}</td>
                 <td>{{objmeter.ExpiredDate}}</td>
-            <td>{{objmeter.Status}}</td>
+                <td ><span class="btn-success" *ngIf="objmeter.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
+                  <span class="btn-danger" *ngIf="objmeter.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
+            </td>
             <td> <a class="btn btn-warning" routerLink="../{{objmeter.MeterId }}/editmeter"><i class="fas fa-edit"></i></a></td>
 
             </tr>

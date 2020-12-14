@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
-import { ListUserComponent } from './Module/user/list-user/list-user.component';
 
 import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
@@ -21,35 +20,35 @@ export const routes: Routes = [
 
   },
 
-  {
-    path: '404',
-    component: P404Component,
-    data: {
-      title: 'Page 404'
-    }
-  },
-  {
-    path: '500',
-    component: P500Component,
-    data: {
-      title: 'Page 500'
-    }
-  },
-  {
-    path: 'login',
-    component: LoginComponent,
-    data: {
-      title: 'Login Page'
-    }
-  },
-  {
-    path: 'register',
-    component: RegisterComponent,
-    data: {
-      title: 'Register Page'
-    }
-  },
-  
+  // {
+  //   path: '404',
+  //   component: P404Component,
+  //   data: {
+  //     title: 'Page 404'
+  //   }
+  // },
+  // {
+  //   path: '500',
+  //   component: P500Component,
+  //   data: {
+  //     title: 'Page 500'
+  //   }
+  // },
+  // {
+  //   path: 'login',
+  //   component: LoginComponent,
+  //   data: {
+  //     title: 'Login Page'
+  //   }
+  // },
+  // {
+  //   path: 'register',
+  //   component: RegisterComponent,
+  //   data: {
+  //     title: 'Register Page'
+  //   }
+  // },
+
   {
     path: '',
     component: DefaultLayoutComponent,
@@ -70,47 +69,49 @@ export const routes: Routes = [
       {path:'ZoneAssign' ,loadChildren:()=>import('./Module/ZoneAssign/ZoneAssign.module').then(n=>n.ZoneAssignModule)},
       {path:'Security' ,loadChildren:()=>import('./Components/signin.module').then(n=>n.SigninModule)},
       {path:'UnitPrice' ,loadChildren:()=>import('./Module/UnitPrice/unitprice.module').then(n=>n.UnitPriceModule)},
+      {path:'MeterReading' ,loadChildren:()=>import('./Module/MeterReading/meterreading.module').then(n=>n.MeterReadingModule)},
 
 
 
-      
 
 
-      {
-        path: 'base',
-        loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
-      },
-      {
-        path: 'buttons',
-        loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule)
-      },
-      {
-        path: 'charts',
-        loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule)
-      },
+
+
+      // {
+      //   path: 'base',
+      //   loadChildren: () => import('./views/base/base.module').then(m => m.BaseModule)
+      // },
+      // {
+      //   path: 'buttons',
+      //   loadChildren: () => import('./views/buttons/buttons.module').then(m => m.ButtonsModule)
+      // },
+      // {
+      //   path: 'charts',
+      //   loadChildren: () => import('./views/chartjs/chartjs.module').then(m => m.ChartJSModule)
+      // },
       {
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
       },
-      {
-        path: 'icons',
-        loadChildren: () => import('./views/icons/icons.module').then(m => m.IconsModule)
-      },
-      {
-        path: 'notifications',
-        loadChildren: () => import('./views/notifications/notifications.module').then(m => m.NotificationsModule)
-      },
-      {
-        path: 'theme',
-        loadChildren: () => import('./views/theme/theme.module').then(m => m.ThemeModule)
-      },
-      {
-        path: 'widgets',
-        loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
-      }
+      // {
+      //   path: 'icons',
+      //   loadChildren: () => import('./views/icons/icons.module').then(m => m.IconsModule)
+      // },
+      // {
+      //   path: 'notifications',
+      //   loadChildren: () => import('./views/notifications/notifications.module').then(m => m.NotificationsModule)
+      // },
+      // {
+      //   path: 'theme',
+      //   loadChildren: () => import('./views/theme/theme.module').then(m => m.ThemeModule)
+      // },
+      // {
+      //   path: 'widgets',
+      //   loadChildren: () => import('./views/widgets/widgets.module').then(m => m.WidgetsModule)
+      // }
     ]
   },
-  { path: '**', component: P404Component }
+  // { path: '**', component: P404Component }
 ];
 
 @NgModule({

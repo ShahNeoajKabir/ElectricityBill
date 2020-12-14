@@ -5,7 +5,7 @@
             <button aria-pressed="true" class="btn btn-block btn-success active" [routerLink]="['/ZoneAssign/AssignZone']" type="button"><i class="fa fa-plus-circle fa-lg "></i> ZoneAssign</button>
         </div>
         <div class="col-md-7">
-  
+
         </div>
         <div class="col-md-4">
           <form class="form-header" action="" method="POST">
@@ -34,12 +34,14 @@
             <tr *ngFor="let objZoneAssign of lstzoneassign">
                 <td >{{objZoneAssign.User.UserName}}</td>
                 <td >{{objZoneAssign.Zone.ZoneName}}</td>
-                <td>{{objZoneAssign.Status}}</td>
+                <td ><span class="btn-success" *ngIf="objZoneAssign.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
+                  <span class="btn-danger" *ngIf="objZoneAssign.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
+            </td>
                 <td><a class="btn btn-warning" routerLink="../{{ objZoneAssign.ZoneAssignId }}/edit"><i class="fas fa-edit"></i></a></td>
             </tr>
           </tbody>
-  
-  
+
+
           </table>
           <ul class="pagination">
             <li class="page-item"><a class="page-link" href="#">Prev</a></li>
@@ -56,4 +58,4 @@
     </div>
     <!--/.col-->
     </div>
-  
+

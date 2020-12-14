@@ -8,7 +8,7 @@ namespace ModelClass.DTO
     {
         public int UnitPriceId { get; set; }
         public int CustomerType { get; set; }
-        public double UnitperPrice { get; set; }
+        public int UnitperPrice { get; set; }
         public string CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }
         public string UpdatedBy { get; set; }

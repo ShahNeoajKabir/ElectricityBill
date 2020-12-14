@@ -42,9 +42,6 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
 import { httpInterceptorProviders } from './Common/interceptor';
-import { LoginComponent } from './views/login/login.component';
-import { AddUnitPriceComponent } from './Module/UnitPrice/add-unit-price/add-unit-price.component';
-import { ListUnitPriceComponent } from './Module/UnitPrice/list-unit-price/list-unit-price.component';
 
 
 
@@ -73,10 +70,10 @@ import { ListUnitPriceComponent } from './Module/UnitPrice/list-unit-price/list-
   declarations: [
     AppComponent,
     ...APP_CONTAINERS,
-    P404Component,
-    P500Component,
-    LoginComponent,
-    RegisterComponent
+    // P404Component,
+    // P500Component,
+    // LoginComponent,
+    // RegisterComponent
   ],
   providers: [HttpClientModule,httpInterceptorProviders,{
     provide: LocationStrategy,

@@ -34,7 +34,9 @@
           <tr *ngFor="let objuserrole of lstuserrole">
               <td >{{objuserrole.User.UserName}}</td>
               <td >{{objuserrole.Role.RoleName}}</td>
-              <td>{{objuserrole.Status}}</td>
+              <td ><span class="btn-success" *ngIf="objuserrole.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
+                <span class="btn-danger" *ngIf="objuserrole.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
+          </td>
               <td><a class="btn btn-warning" routerLink="../{{ objuserrole.UserRoleId }}/edit"><i class="fas fa-edit"></i></a></td>
           </tr>
         </tbody>

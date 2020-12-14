@@ -10,6 +10,6 @@ export class ZoneAssign{
         UpdatedBy:string
         UpdatedDate:Date
         Status:number
-        Zone:Zone;
-        User:User; 
+        // Zone:Zone;
+        // User:User;
 }
