@@ -25,12 +25,9 @@
           <thead>
             <tr>
                 <th>Customer Name</th>
-                <th>FatherName</th>
-                <th>MotherName</th>
                 <th>Email</th>
                 <th>Password</th>
                 <th>Mobile Number</th>
-                <th>Birthday</th>
                 <th>Gender</th>
                 <th>Blood Group</th>
                 <th>CustomerType</th>
@@ -42,21 +39,22 @@
         <tbody >
           <tr *ngFor="let objcustomer of lstcustomer">
               <td >{{objcustomer.CustomerName}}</td>
-              <td >{{objcustomer.FatherName}}</td>
-              <td >{{objcustomer.MotherName}}</td>
               <td>{{objcustomer.Email}}</td>
               <td>{{objcustomer.Password}}</td>
               <td>{{objcustomer.MobileNo}}</td>
-              <td >{{objcustomer.DateOfBirth}}</td>
-              <td ><span class="btn-success" *ngIf="objcustomer.Gender===1">  Male</span>
-                <span class="btn-success" *ngIf="objcustomer.Gender===2">  Female</span>
-                <span class="btn-success" *ngIf="objcustomer.Gender===3"> Others</span>
+              <td ><span class="btn-default" *ngIf="objcustomer.Gender===1">  Male</span>
+                <span class="btn-default" *ngIf="objcustomer.Gender===2">  Female</span>
+                <span class="btn-default" *ngIf="objcustomer.Gender===3"> Others</span>
 
           </td>
-              <td>{{objcustomer.BloodGroup}}</td>
-              <td ><span class="btn-success" *ngIf="objcustomer.CustomerType===1">  Business</span>
-                <span class="btn-success" *ngIf="objcustomer.CustomerType===2">  Economi</span>
-                <span class="btn-success" *ngIf="objcustomer.CustomerType===3"> House</span>
+          <td ><span class="btn-default" *ngIf="objcustomer.BloodGroup===1">  A(+ve)</span>
+            <span class="btn-default" *ngIf="objcustomer.BloodGroup===2">  B(+ve)</span>
+           <span class="btn-default" *ngIf="objcustomer.BloodGroup===3"> AB(+ve)</span>
+            <span class="btn-default" *ngIf="objcustomer.BloodGroup===4">  O(+ve)</span>
+       </td>
+              <td ><span class="btn-default" *ngIf="objcustomer.CustomerType===1">  Business</span>
+                <span class="btn-default" *ngIf="objcustomer.CustomerType===2">  Economi</span>
+                <span class="btn-default" *ngIf="objcustomer.CustomerType===3"> House</span>
 
           </td>
 

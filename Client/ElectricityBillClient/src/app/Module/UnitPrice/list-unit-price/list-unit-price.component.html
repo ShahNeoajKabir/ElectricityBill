@@ -33,11 +33,15 @@
           </thead>
           <tbody >
             <tr *ngFor="let objunit of lstunitprice">
-                <td >{{objunit.CustomerType}}</td>
-                <td>{{objunit.UnitPerPrice}}</td>
+                <td ><span class="btn-default" *ngIf="objunit.CustomerType===1">Business</span>
+                  <span class="btn-default" *ngIf="objunit.CustomerType===2">Economi</span>
+                  <span class="btn-default" *ngIf="objunit.CustomerType===3"> Regular</span>
+
+                </td>
+                <td >{{objunit.UnitperPrice}}</td>
                 <td ><span class="btn-success" *ngIf="objunit.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
                   <span class="btn-danger" *ngIf="objunit.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
-            </td>
+                </td>
                 <td> <a class="btn btn-warning" routerLink="../{{ objunit.UnitPriceId}}/edit"><i class="fas fa-edit"></i></a></td>
             </tr>
           </tbody>

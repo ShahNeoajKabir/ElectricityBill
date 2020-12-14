@@ -40,7 +40,11 @@
             <td>{{objuser.Email}}</td>
             <td>{{objuser.Password}}</td>
             <td>{{objuser.MobileNo}}</td>
-            <td>{{objuser.UserTypeId}}</td>
+            <td ><span class="btn-success" *ngIf="objuser.UserTypeId===1">  Admin</span>
+                 <span class="btn-danger" *ngIf="objuser.UserTypeId===2">  CoOrdinator</span>
+                <span class="btn-warning" *ngIf="objuser.UserTypeId===3"> MeterReader</span>
+                 <span class="btn-light" *ngIf="objuser.UserTypeId===4">  Customer</span>
+            </td>
             <td ><span class="btn-success" *ngIf="objuser.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
               <span class="btn-danger" *ngIf="objuser.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
         </td>

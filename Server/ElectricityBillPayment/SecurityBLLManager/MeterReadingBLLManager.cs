@@ -19,22 +19,57 @@ namespace SecurityBLLManager
         }
 
 
-        public async Task<MeterReadingTable> AddMeterReading(VMAddMeterReading VmMeter)
+        public async Task<MeterReadingTable> AddMeterReading(VMAddMeterReading VmMeter , int ReaderId)
         {
             MeterReadingTable meterReadingTable = new MeterReadingTable();
-            Customer customer = new Customer();
-            MeterTable meter = new MeterTable();
+            //Customer customer = new Customer();
+            //MeterTable meter = new MeterTable();
+            
             try
             {
-                var mobileno = await _database.Customer.Where(p => p.MobileNo == VmMeter.MobileNo).FirstOrDefaultAsync();
-                var meternumber = await _database.MeterTable.Where(p => p.MeterNumber == VmMeter.MeterNumber).FirstOrDefaultAsync();
-                if(mobileno!=null && meternumber != null)
+                var customer = await _database.Customer.Where(p => p.MobileNo == VmMeter.MobileNo).FirstOrDefaultAsync();
+                var readerzone = await _database.ZoneAssign.Where(p => p.UserId == ReaderId).FirstOrDefaultAsync();
+                if (readerzone.ZoneId != customer.ZoneId)
                 {
-                    meterReadingTable.CreatedBy = "MeterReader";
-                    meterReadingTable.CreatedDate = DateTime.Now;
+                    throw new Exception("You are not eligible for this zone");
+                }
+                var meternumber = await _database.MeterTable.Where(p => p.MeterNumber == VmMeter.MeterNumber).FirstOrDefaultAsync();
+                if(customer!=null && meternumber != null)
+                {
+                    
+                    var res = await _database.MeterAssign.Where(p => p.CustomerId == customer.CustomerId && p.MeterId==meternumber.MeterId && p.Status==(int)Common.Electricity.Enum.Enum.Status.Active).FirstOrDefaultAsync();
+                    _database.Database.BeginTransaction();
+                    meterReadingTable = new MeterReadingTable()
+                    {
+                        MeterId = meternumber.MeterId,
+                        CustomerId = customer.CustomerId,
+                        MeterAssignId = res.MeterAssignId,
+                        Status = res.Status,
+                        CurrentUnit = VmMeter.CurrentUnit,
+                        CreatedBy = "MeterReader",
+                        CreatedDate = DateTime.Now
+
+                    };
                     await _database.MeterReadingTable.AddAsync(meterReadingTable);
                     await _database.SaveChangesAsync();
+                    if (meterReadingTable.MeterReadingId > 0)
+                    {
+                        int bill=await GenerateBill(meterReadingTable, VmMeter, customer.CustomerType);
+                        if (bill > 0)
+                        {
+                            _database.Database.CommitTransaction();
+                        }
+                        
+
+                    }
                     
+
+                    //meterReadingTable.CreatedBy = "MeterReader";
+                    //meterReadingTable.CreatedDate = DateTime.Now;
+                    //await _database.MeterReadingTable.AddAsync(meterReadingTable);
+                    //await _database.SaveChangesAsync();
+
+
                 }
                 else
                 {
@@ -45,9 +80,60 @@ namespace SecurityBLLManager
             }
             catch (Exception ex)
             {
-
+                _database.Database.RollbackTransaction();
                 throw;
             }
+        }
+        private async Task<int> GenerateBill(MeterReadingTable meterReadingTable, VMAddMeterReading VmMeter , int CustomerType)
+        {
+            BillTable bill = new BillTable();
+            var unit =await _database.UnitPrice.Where(p => p.CustomerType == CustomerType && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).FirstOrDefaultAsync();
+            var prvmonth = await _database.BillTable.Where(p => p.CustomerId == meterReadingTable.CustomerId && p.MeterId == meterReadingTable.MeterId).LastOrDefaultAsync();
+            if (prvmonth != null )
+            {
+                var CalBillAmount = unit.UnitperPrice * (meterReadingTable.CurrentUnit - bill.CurrentUnit);
+
+                bill = new BillTable()
+                {
+                    CurrentMonth = VmMeter.Month,
+                    CurrentUnit = VmMeter.CurrentUnit,
+                    CustomerId = meterReadingTable.CustomerId,
+                    MeterId = meterReadingTable.MeterId,
+                    BillStatus = 1,
+                    BillAmount = CalBillAmount,
+                    MeterReadingId = meterReadingTable.MeterReadingId,
+                    PreviousUnit = prvmonth.CurrentUnit,
+                    Status = 1,
+                    Year = VmMeter.Year,
+                    PreviousMonth = prvmonth.CurrentMonth,
+                    CreatedBy = "MeterReader",
+                    CreatedDate = DateTime.Now
+                };
+            }
+            else
+            {
+                var CalBillAmount = unit.UnitperPrice * meterReadingTable.CurrentUnit ;
+
+                bill = new BillTable()
+                {
+                    CurrentMonth = VmMeter.Month,
+                    CurrentUnit = VmMeter.CurrentUnit,
+                    CustomerId = meterReadingTable.CustomerId,
+                    MeterId = meterReadingTable.MeterId,
+                    BillStatus = 1,
+                    BillAmount = CalBillAmount,
+                    MeterReadingId = meterReadingTable.MeterReadingId,
+                    PreviousUnit = 0,
+                    Status = 1,
+                    Year = VmMeter.Year,
+                    PreviousMonth = 0,
+                    CreatedBy = "MeterReader",
+                    CreatedDate = DateTime.Now
+                };
+            }
+            await _database.BillTable.AddAsync(bill);
+            await _database.SaveChangesAsync();
+            return bill.BillId;
         }
 
         public List<MeterReadingTable> GetAll()
@@ -96,7 +182,7 @@ namespace SecurityBLLManager
 
     public interface IMeterReadingBLLManager
     {
-        Task<MeterReadingTable> AddMeterReading(VMAddMeterReading VmMeter);
+        Task<MeterReadingTable> AddMeterReading(VMAddMeterReading VmMeter, int ReaderId);
         List<MeterReadingTable> GetAll();
         Task<MeterReadingTable> UpdateMeterReading(MeterReadingTable meter);
         Task<MeterReadingTable> GetById(MeterReadingTable meter);
