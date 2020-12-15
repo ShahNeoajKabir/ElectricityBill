@@ -38,6 +38,23 @@ namespace SecurityBLLManager
                 throw new Exception("Failed To Registration");
             }
         }
+        public List<Customer> GetAlll()
+        {
+            List<Customer> customer = new List<Customer>();
+            var meterassignLiost = _dbContext.MeterAssign.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).Select(c => c.CustomerId).ToArray();
+            if (meterassignLiost.Length > 0)
+            {
+                customer = _dbContext.Customer.Where(p => !meterassignLiost.Contains(p.CustomerId) && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
+
+            }
+            else
+            {
+                customer = _dbContext.Customer.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
+
+            }
+
+            return customer;
+        }
 
         public  Task<List<Customer>> GetAll()
         {
@@ -89,5 +106,6 @@ namespace SecurityBLLManager
         Task<Customer> GetById(Customer customer);
         Task<Customer> UpdateUser(Customer customer);
         Task<List<Customer>> Search(string CustomerName);
+        List<Customer> GetAlll();
     }
 }

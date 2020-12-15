@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Context.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20201209082541_Notice")]
+    [Migration("20201215053659_Notice")]
     partial class Notice
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -69,6 +69,9 @@ namespace Context.Migrations
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
 
                     b.HasKey("BillId");
 
@@ -139,7 +142,7 @@ namespace Context.Migrations
                     b.Property<int>("Religion")
                         .HasColumnType("int");
 
-                    b.Property<int>("Status")
+                    b.Property<int?>("Status")
                         .HasColumnType("int");
 
                     b.Property<string>("UpdatedBy")
@@ -155,9 +158,6 @@ namespace Context.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("CustomerId");
-
-                    b.HasIndex("ZoneId")
-                        .IsUnique();
 
                     b.ToTable("Customer");
                 });
@@ -408,6 +408,39 @@ namespace Context.Migrations
                     b.ToTable("Support");
                 });
 
+            modelBuilder.Entity("ModelClass.DTO.UnitPrice", b =>
+                {
+                    b.Property<int>("UnitPriceId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("CustomerType")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UnitperPrice")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("UnitPriceId");
+
+                    b.ToTable("UnitPrice");
+                });
+
             modelBuilder.Entity("ModelClass.DTO.User", b =>
                 {
                     b.Property<int>("UserId")
@@ -574,17 +607,6 @@ namespace Context.Migrations
                     b.Navigation("MeterReadingTable");
                 });
 
-            modelBuilder.Entity("ModelClass.DTO.Customer", b =>
-                {
-                    b.HasOne("ModelClass.DTO.Zone", "Zone")
-                        .WithOne("Customer")
-                        .HasForeignKey("ModelClass.DTO.Customer", "ZoneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Zone");
-                });
-
             modelBuilder.Entity("ModelClass.DTO.MeterAssign", b =>
                 {
                     b.HasOne("ModelClass.DTO.Customer", "Customer")
@@ -703,8 +725,6 @@ namespace Context.Migrations
 
             modelBuilder.Entity("ModelClass.DTO.Zone", b =>
                 {
-                    b.Navigation("Customer");
-
                     b.Navigation("ZoneAssign");
                 });
 #pragma warning restore 612, 618

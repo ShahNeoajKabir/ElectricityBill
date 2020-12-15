@@ -13,3 +13,13 @@
   margin: 44px auto;
   width: 200px;
 }
+img.img.img-responsive.img-full {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: solid;
+}
+.card {
+  justify-content: center;
+  align-items: center;
+}

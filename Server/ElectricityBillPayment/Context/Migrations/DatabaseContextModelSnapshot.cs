@@ -68,6 +68,9 @@ namespace Context.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
                     b.HasKey("BillId");
 
                     b.HasIndex("MeterReadingId")
@@ -153,9 +156,6 @@ namespace Context.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("CustomerId");
-
-                    b.HasIndex("ZoneId")
-                        .IsUnique();
 
                     b.ToTable("Customer");
                 });
@@ -605,17 +605,6 @@ namespace Context.Migrations
                     b.Navigation("MeterReadingTable");
                 });
 
-            modelBuilder.Entity("ModelClass.DTO.Customer", b =>
-                {
-                    b.HasOne("ModelClass.DTO.Zone", "Zone")
-                        .WithOne("Customer")
-                        .HasForeignKey("ModelClass.DTO.Customer", "ZoneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Zone");
-                });
-
             modelBuilder.Entity("ModelClass.DTO.MeterAssign", b =>
                 {
                     b.HasOne("ModelClass.DTO.Customer", "Customer")
@@ -734,8 +723,6 @@ namespace Context.Migrations
 
             modelBuilder.Entity("ModelClass.DTO.Zone", b =>
                 {
-                    b.Navigation("Customer");
-
                     b.Navigation("ZoneAssign");
                 });
 #pragma warning restore 612, 618

@@ -26,7 +26,6 @@
             <tr>
                 <th>Customer Name</th>
                 <th>Email</th>
-                <th>Password</th>
                 <th>Mobile Number</th>
                 <th>Gender</th>
                 <th>Blood Group</th>
@@ -40,7 +39,6 @@
           <tr *ngFor="let objcustomer of lstcustomer">
               <td >{{objcustomer.CustomerName}}</td>
               <td>{{objcustomer.Email}}</td>
-              <td>{{objcustomer.Password}}</td>
               <td>{{objcustomer.MobileNo}}</td>
               <td ><span class="btn-default" *ngIf="objcustomer.Gender===1">  Male</span>
                 <span class="btn-default" *ngIf="objcustomer.Gender===2">  Female</span>

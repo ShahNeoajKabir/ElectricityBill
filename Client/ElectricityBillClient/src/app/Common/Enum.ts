@@ -48,8 +48,8 @@ export enum Religion{
 export enum UserType {
   Admin= 1,
   CoOrdinator= 2,
-  Customer= 3,
-  MeterReader= 4
+  Customer= 4,
+  MeterReader= 3
 
 }
 export enum Blood

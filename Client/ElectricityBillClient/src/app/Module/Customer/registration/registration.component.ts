@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Blood, CustomerType, Gender, Nationality, Religion } from '../../../Common/Enum';
 import { Utility } from '../../../Common/Utility';
 import { Customer } from '../../../Model/Customer';
+import { Zone } from '../../../Model/Zone';
 import { CustomerService } from '../../../Service/Customer/customer.service';
 import { ZoneService } from '../../../Service/Zone/zone.service';
 
@@ -19,7 +20,7 @@ export class RegistrationComponent implements OnInit {
   public lstcutomertype:any;
   public lstblood:any;
   public lstnationality:any;
-  public  lstzone:any;
+  public  lstzone:Zone[]=new Array<Zone>();
   public objedit:Customer=new Customer();
 
   constructor(private utility:Utility, private customerservice:CustomerService,private router:Router, private ActiveRouter:ActivatedRoute,private zoneservice:ZoneService) { }

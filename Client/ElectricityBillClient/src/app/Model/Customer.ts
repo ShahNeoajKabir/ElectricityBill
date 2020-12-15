@@ -25,6 +25,5 @@ export class Customer{
   UpdatedDate:Date|undefined;
   Status:number=0;
   Image:string='';
-  Zone:Zone=new Zone;
 
 }

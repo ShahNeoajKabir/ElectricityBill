@@ -1,6 +1,6 @@
 <form>
 <div class="row">
-<div class="col-md-5">
+<div class="col-md-12 d-flex justify-content-center">
   <div class="form-group">
     <label>Image</label>
     <input type="file" (change)="fileChangeEvent($event)" name="Image" class="au-input au-input--full"  autocomplete="off">
@@ -12,7 +12,6 @@
     </div>
   </div>
 </div>
-
 <div class="col-md-5">
     <label>User Name</label>
     <input type="text"  name="UserName" [(ngModel)]="objUser.UserName" class="form-control"  autocomplete="off">

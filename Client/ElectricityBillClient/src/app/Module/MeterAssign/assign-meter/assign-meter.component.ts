@@ -38,7 +38,7 @@ export class AssignMeterComponent implements OnInit {
       console.log(this.lstmetertable);
 
     });
-    this.customerservice.GetAll().subscribe((res: any) => {
+    this.customerservice.GetAlll().subscribe((res: any) => {
       console.log(res);
 
       this.lstcustomer = res;

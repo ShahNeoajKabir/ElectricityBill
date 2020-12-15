@@ -97,6 +97,24 @@ namespace Service.Electricity.Controllers
 
 
         }
+        [HttpGet]
+        [Route("GetAlll")]
+        public List<Customer> GetAlll()
+        {
+            try
+            {
+                return _customerBLLManager.GetAlll();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+
+
+        }
 
 
         [HttpPost]

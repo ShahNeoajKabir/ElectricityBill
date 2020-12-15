@@ -159,9 +159,7 @@ namespace Context
                 entity.Property(d => d.Email);
                 entity.Property(d => d.CustomerName);
 
-                entity.HasOne(e => e.Zone)
-               .WithOne(e => e.Customer)
-               .HasForeignKey<Customer>(e => e.ZoneId);
+                entity.Property(d => d.ZoneId);
 
             });
 

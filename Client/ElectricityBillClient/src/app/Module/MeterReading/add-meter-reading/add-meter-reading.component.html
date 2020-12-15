@@ -1,40 +1,21 @@
 <form>
   <div class="row">
-  <div class="col-md-5">
-  <label>MeterAssignId</label>
-  <select name="MeterAssignId" class="form-control"
-  [(ngModel)]="objmeterreading.UserId">
-  <!-- <option [value]="-1">-Select-</option> -->
-  <option *ngFor="let meterassign of lstmeterassign"
-  [value]="meterassign.MeterAssignId">{{meterassign.MeterAssignId}}</option>
-  </select>
-  </div>
-
-  <div class="col-md-5">
-  <label>Mobile No</label>
-  <select name="MobileNo" class="form-control"
-  [(ngModel)]="objmeterreading.CustomerId">
-
-  <option *ngFor="let customer of lstcustomer"
-  [value]="customer.CustomerId">{{customer.MobileNo}}
-  </option>
-  </select>
-  </div>
-  <div class="col-md-5">
-    <label>Meter Number</label>
-    <select name="MeterNumber" class="form-control"
-    [(ngModel)]="objmeterreading.MeterId">
-
-    <option *ngFor="let meter of lstmeter"
-    [value]="meter.MeterId">{{meter.MeterNumber}}
-    </option>
-    </select>
+    <div class="col-md-5">
+      <label>MeterNumber</label>
+      <input type="text"  name="MeterNumber" [(ngModel)]="vmaddmeter.MeterNumber" class="form-control"  autocomplete="off">
     </div>
-
+    <div class="col-md-5">
+      <label>Mobile Number</label>
+      <input type="text"  name="MobileNo" [(ngModel)]="vmaddmeter.MobileNo" class="form-control"  autocomplete="off">
+    </div>
+    <div class="col-md-5">
+      <label>CurrentUnit</label>
+      <input type="text"  name="CurrentUnit" [(ngModel)]="vmaddmeter.CurrentUnit" class="form-control"  autocomplete="off">
+    </div>
     <div class="col-md-5">
       <label>Month</label>
       <select name="Month" class="form-control"
-      [(ngModel)]="objmeterreading.Month">
+      [(ngModel)]="vmaddmeter.Month">
 
       <option *ngFor="let month of lstmonth"
       [value]="month.key">{{month.value}}</option>
@@ -42,18 +23,18 @@
       </div>
       <div class="col-md-5">
         <label>Year</label>
-        <input type="text"  name="Year" [(ngModel)]="objmeterreading.Year" class="form-control"  autocomplete="off">
+        <input type="text"  name="Year" [(ngModel)]="vmaddmeter.Year" class="form-control"  autocomplete="off">
       </div>
 
-  <div class="col-md-5">
+  <!-- <div class="col-md-5">
   <label>Status</label>
   <select name="Status" class="form-control"
-  [(ngModel)]="objmeterreading.Status">
+  [(ngModel)]="vmaddmeter.Status">
 
   <option *ngFor="let status of lststatus"
   [value]="status.key">{{status.value}}</option>
   </select>
-  </div>
+  </div> -->
   </div>
 
 
@@ -61,7 +42,7 @@
   <div class="col-md-5">
   </div>
   <div class="col-md-1">
-  <button aria-pressed="true" class="btn btn-pill btn-block btn-primary active" (click)="submit()" type="button">Assign</button>
+  <button aria-pressed="true" class="btn btn-pill btn-block btn-primary active" (click)="Submit()" type="button">Assign</button>
   </div>
   <div class="col-md-5">
   </div>

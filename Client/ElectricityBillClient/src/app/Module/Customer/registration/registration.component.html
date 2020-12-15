@@ -71,7 +71,7 @@
         <label>Zone Name</label>
         <select name="ZoneName" class="form-control"
         [(ngModel)]="registration.ZoneId">
-        
+
         <option *ngFor="let Zone of lstzone"
         [value]="Zone.ZoneId">{{Zone.ZoneName}}
         </option>
@@ -100,4 +100,3 @@
       </div>
     </div>
     </form>
-  

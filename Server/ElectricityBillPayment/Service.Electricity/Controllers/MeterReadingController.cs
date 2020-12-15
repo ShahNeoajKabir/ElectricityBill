@@ -24,12 +24,12 @@ namespace Service.Electricity.Controllers
 
         [HttpPost]
         [Route("AddMeterReading")]
-        public async Task<ActionResult> AssMeterReading([FromBody] TempMessage message)
+        public async Task<ActionResult> AddMeterReading([FromBody] TempMessage message, int ReaderId)
         {
             try
             {
                 VMAddMeterReading meterReadingTable = JsonConvert.DeserializeObject<VMAddMeterReading>(message.Content.ToString());
-                await _bLLManager.AddMeterReading(meterReadingTable);
+                await _bLLManager.AddMeterReading(meterReadingTable, ReaderId);
                 return Ok(meterReadingTable);
             }
             catch (Exception)

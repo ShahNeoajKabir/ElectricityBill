@@ -33,7 +33,7 @@ namespace ModelClass.DTO
         public int? Status { get; set; }
         public string Image { get; set; }
         public  ICollection<MeterAssign> MeterAssign { get; set; }
-        public  Zone Zone { get; set; }
+        
 
     }
 

@@ -27,6 +27,7 @@ namespace SecurityBLLManager
             
             try
             {
+                ReaderId = 1;
                 var customer = await _database.Customer.Where(p => p.MobileNo == VmMeter.MobileNo).FirstOrDefaultAsync();
                 var readerzone = await _database.ZoneAssign.Where(p => p.UserId == ReaderId).FirstOrDefaultAsync();
                 if (readerzone.ZoneId != customer.ZoneId)
@@ -88,7 +89,7 @@ namespace SecurityBLLManager
         {
             BillTable bill = new BillTable();
             var unit =await _database.UnitPrice.Where(p => p.CustomerType == CustomerType && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).FirstOrDefaultAsync();
-            var prvmonth = await _database.BillTable.Where(p => p.CustomerId == meterReadingTable.CustomerId && p.MeterId == meterReadingTable.MeterId).LastOrDefaultAsync();
+            var prvmonth = await _database.BillTable.Where(p => p.CustomerId == meterReadingTable.CustomerId && p.MeterId == meterReadingTable.MeterId).OrderBy(p=>p.CreatedDate).LastOrDefaultAsync();
             if (prvmonth != null )
             {
                 var CalBillAmount = unit.UnitperPrice * (meterReadingTable.CurrentUnit - bill.CurrentUnit);
