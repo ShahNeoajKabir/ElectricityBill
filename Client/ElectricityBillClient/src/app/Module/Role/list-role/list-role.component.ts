@@ -18,6 +18,10 @@ export class ListRoleComponent implements OnInit {
     this.roleservice.GetAll().subscribe((res:any)=>{
       this.lstrole=res;
       console.log(this.lstrole);
+    },err=>{
+      
+      this.router.navigate(['/Login']);
+
     })
   }
   Edit(id:any){

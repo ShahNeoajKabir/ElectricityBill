@@ -29,15 +29,16 @@ namespace Service.Electricity.Handler
             DateTime expDate = DateTime.Now.AddHours(Convert.ToInt16(_jwtSetting.ExpiresOn));
 
             var claims = new List<Claim> {
-                    new Claim(JwtRegisteredClaimNames.UniqueName, user.UserName?? string.Empty),
+                    new Claim(JwtRegisteredClaimNames.UniqueName, user.UserTypeId.ToString()?? string.Empty),
                     new Claim(JwtClaims.Email, user.Email?? string.Empty),
+
                     new Claim(JwtClaims.ExpiresDate, expDate.ToString()),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                     new Claim(JwtClaims.AccessRight, user.UserTypeId.ToString() ?? string.Empty)
                 };
 
 
-            claims.Add(new Claim(ClaimTypes.Role, user?.UserTypeName ?? string.Empty));
+            //claims.Add(new Claim(ClaimTypes.Role, user?.UserTypeName ?? string.Empty));
 
             SymmetricSecurityKey key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSetting.Key));
             SigningCredentials credential = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

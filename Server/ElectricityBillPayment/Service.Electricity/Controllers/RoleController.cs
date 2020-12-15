@@ -8,9 +8,11 @@ using ModelClass.DTO;
 using ModelClass.ViewModel;
 using Newtonsoft.Json;
 using SecurityBLLManager;
+using Service.Electricity.Handler;
 
 namespace Service.Electricity.Controllers
 {
+    [Authorize]
     [Route("api/Role")]
     [ApiController]
     public class RoleController : ControllerBase
@@ -27,6 +29,8 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
+
                 Role role = JsonConvert.DeserializeObject<Role>(message.Content.ToString());
                 await _roleBLL.AddRole(role);
                 return Ok( role);

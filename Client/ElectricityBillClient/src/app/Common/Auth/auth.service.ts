@@ -28,7 +28,7 @@ export class AuthService {
     };
     return this.http.post(this.url+"Login", body).pipe(map((res: any) => {
       const loginData = res;
-      this.tokenService.SaveToken(loginData.Token);
+      this.tokenService.SaveToken(loginData);
     }));
 
   }

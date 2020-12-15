@@ -86,7 +86,7 @@ namespace Service.Electricity.Controllers
         {
             try
             {
-                User user = JsonConvert.DeserializeObject<User>(message.Content.ToString());
+                int user = JsonConvert.DeserializeObject<int>(message.Content.ToString());
 
                 return Ok(await this.userBLLManager.GetByID(user));
 
