@@ -81,9 +81,9 @@ namespace SecurityBLLManager
             }
 
         }
-        public async Task<User> GetByID(User user)
+        public async Task<User> GetByID(int user)
         {
-            var res = await _db.User.Where(p => p.UserId == user.UserId).FirstOrDefaultAsync();
+            var res = await _db.User.Where(p => p.UserId == user).FirstOrDefaultAsync();
             return res;
         }
     }
@@ -91,7 +91,7 @@ namespace SecurityBLLManager
     {
         Task<User> AddUser(User user);
         Task<User> UpdateUser(User user);
-        Task<User> GetByID(User user);
+        Task<User> GetByID(int user);
 
         List<User> GetAll();
         List<User> GetAllMeterReader();
