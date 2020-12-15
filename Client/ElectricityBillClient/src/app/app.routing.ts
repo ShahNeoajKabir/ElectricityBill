@@ -48,6 +48,7 @@ export const routes: Routes = [
   //     title: 'Register Page'
   //   }
   // },
+  { path: '', loadChildren: () => import('../app/Components/signin.module').then(m => m.SigninModule) },
 
   {
     path: '',
@@ -67,7 +68,7 @@ export const routes: Routes = [
       {path:'UserRole' ,loadChildren:()=>import('./Module/UserRole/userrole.module').then(n=>n.UserRoleModule)},
       {path:'Customer' ,loadChildren:()=>import('./Module/Customer/customer.module').then(n=>n.CustomerModule)},
       {path:'ZoneAssign' ,loadChildren:()=>import('./Module/ZoneAssign/ZoneAssign.module').then(n=>n.ZoneAssignModule)},
-      {path:'Security' ,loadChildren:()=>import('./Components/signin.module').then(n=>n.SigninModule)},
+      // {path:'Security' ,loadChildren:()=>import('./Components/signin.module').then(n=>n.SigninModule)},
       {path:'UnitPrice' ,loadChildren:()=>import('./Module/UnitPrice/unitprice.module').then(n=>n.UnitPriceModule)},
       {path:'MeterReading' ,loadChildren:()=>import('./Module/MeterReading/meterreading.module').then(n=>n.MeterReadingModule)},
 
