@@ -1,0 +1,64 @@
+<div class="padding">
+  <div class="row">
+      <div class="container-fluid d-flex justify-content-center">
+          <div class="col-sm-8 col-md-6">
+              <div class="card">
+                  <div class="card-header">
+                      <div class="row">
+                          <div class="col-md-6"> <span>CREDIT/DEBIT CARD PAYMENT</span> </div>
+                          <div class="col-md-6 text-right" style="margin-top: -5px;"> <img src="https://img.icons8.com/color/36/000000/visa.png"> <img src="https://img.icons8.com/color/36/000000/mastercard.png"> <img src="https://img.icons8.com/color/36/000000/amex.png"> </div>
+                      </div>
+                  </div>
+                  <div class="card-body" style="height: 350px">
+                    <div class="row">
+                    <div class="col-md-6">
+                      <label>User Name</label>
+                      <input type="text"  name="CardName" [(ngModel)]="objcard.CardName" class="form-control"  autocomplete="off">
+                   </div>
+                   <div class="col-md-6">
+                    <label>Card Number</label>
+                    <input type="text"  name="CardNumber" [(ngModel)]="objcard.CardNumber" class="form-control"  autocomplete="off">
+                   </div>
+                   <div class="col-md-6">
+                    <label>Card CVC</label>
+                    <input type="text"  name="CVV" [(ngModel)]="objcard.CVV" class="form-control"  autocomplete="off">
+                   </div>
+                   <div class="col-md-6">
+                    <label>Card Pin</label>
+                    <input type="password"  name="Pin" [(ngModel)]="objcard.Pin" class="form-control"  autocomplete="off">
+                   </div>
+                   <div class="col-md-6">
+                    <label>Card ExpiredDate</label>
+                    <input type="date"  name="ExpiredDate" [(ngModel)]="objcard.ExpiredDate" class="form-control"  autocomplete="off">
+                   </div>
+                   <div class="col-md-6">
+                    <label>Card Balance</label>
+                    <input type="text"  name="Balance" [(ngModel)]="objcard.Balance" class="form-control"  autocomplete="off">
+                   </div>
+
+                      <div class="col-md-6">
+                        <label>Status</label>
+                        <select name="Status" class="form-control"
+                        [(ngModel)]="objcard.Status">
+                    <!-- <option [value]="-1">-Select-</option> -->
+                    <option *ngFor="let status of lststatus"
+                    [value]="status.key">{{status.value}}</option>
+                    </select>
+                    </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-4">
+                        </div>
+                        <div class="col-md-4">
+                          <button aria-pressed="true" class="btn btn-pill btn-block btn-primary active"(click)="AddCard()" type="button">Add Card</button>
+                        </div>
+                        <div class="col-md-4">
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

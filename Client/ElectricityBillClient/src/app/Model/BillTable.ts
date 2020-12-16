@@ -15,7 +15,4 @@ export class BillTable{
   UpdatedBy= "";
   UpdatedDate= "";
   Status= 0;
-
-
-
 }

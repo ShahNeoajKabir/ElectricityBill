@@ -79,6 +79,39 @@ namespace Context.Migrations
                     b.ToTable("BillTable");
                 });
 
+            modelBuilder.Entity("ModelClass.DTO.CardInformation", b =>
+                {
+                    b.Property<int>("CardInformationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<double>("Balance")
+                        .HasColumnType("float");
+
+                    b.Property<string>("CVV")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CardName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CardNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ExpiredDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Pin")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("CardInformationId");
+
+                    b.ToTable("CardInformation");
+                });
+
             modelBuilder.Entity("ModelClass.DTO.Customer", b =>
                 {
                     b.Property<int>("CustomerId")
@@ -271,6 +304,30 @@ namespace Context.Migrations
                     b.ToTable("MeterTable");
                 });
 
+            modelBuilder.Entity("ModelClass.DTO.MobileBanking", b =>
+                {
+                    b.Property<int>("MobileBankingId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<double>("Balance")
+                        .HasColumnType("float");
+
+                    b.Property<string>("MobileNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Pin")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("MobileBankingId");
+
+                    b.ToTable("MobileBanking");
+                });
+
             modelBuilder.Entity("ModelClass.DTO.Notice", b =>
                 {
                     b.Property<int>("NoticeId")
@@ -323,8 +380,8 @@ namespace Context.Migrations
                     b.Property<int>("MeterId")
                         .HasColumnType("int");
 
-                    b.Property<string>("PaymentMethod")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("PaymentMethod")
+                        .HasColumnType("int");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");

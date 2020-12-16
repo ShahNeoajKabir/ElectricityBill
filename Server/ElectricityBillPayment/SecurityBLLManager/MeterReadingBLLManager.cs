@@ -27,7 +27,7 @@ namespace SecurityBLLManager
             
             try
             {
-                ReaderId = 1;
+                ReaderId = 6;
                 var customer = await _database.Customer.Where(p => p.MobileNo == VmMeter.MobileNo).FirstOrDefaultAsync();
                 var readerzone = await _database.ZoneAssign.Where(p => p.UserId == ReaderId).FirstOrDefaultAsync();
                 if (readerzone.ZoneId != customer.ZoneId)
@@ -89,10 +89,10 @@ namespace SecurityBLLManager
         {
             BillTable bill = new BillTable();
             var unit =await _database.UnitPrice.Where(p => p.CustomerType == CustomerType && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).FirstOrDefaultAsync();
-            var prvmonth = await _database.BillTable.Where(p => p.CustomerId == meterReadingTable.CustomerId && p.MeterId == meterReadingTable.MeterId).OrderBy(p=>p.CreatedDate).LastOrDefaultAsync();
-            if (prvmonth != null )
+            var Prvmonthbill = await _database.BillTable.Where(p => p.CustomerId == meterReadingTable.CustomerId && p.MeterId == meterReadingTable.MeterId).OrderBy(p=>p.CreatedDate).LastOrDefaultAsync();
+            if (Prvmonthbill != null )
             {
-                var CalBillAmount = unit.UnitperPrice * (meterReadingTable.CurrentUnit - bill.CurrentUnit);
+                var CalBillAmount = unit.UnitperPrice * (meterReadingTable.CurrentUnit - Prvmonthbill.CurrentUnit);
 
                 bill = new BillTable()
                 {
@@ -103,10 +103,10 @@ namespace SecurityBLLManager
                     BillStatus = 1,
                     BillAmount = CalBillAmount,
                     MeterReadingId = meterReadingTable.MeterReadingId,
-                    PreviousUnit = prvmonth.CurrentUnit,
+                    PreviousUnit = Prvmonthbill.CurrentUnit,
                     Status = 1,
                     Year = VmMeter.Year,
-                    PreviousMonth = prvmonth.CurrentMonth,
+                    PreviousMonth = Prvmonthbill.CurrentMonth,
                     CreatedBy = "MeterReader",
                     CreatedDate = DateTime.Now
                 };
@@ -139,7 +139,17 @@ namespace SecurityBLLManager
 
         public List<MeterReadingTable> GetAll()
         {
-            List<MeterReadingTable> meter = _database.MeterReadingTable.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
+            List<MeterReadingTable> meter = _database.MeterReadingTable.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).Select(t => new MeterReadingTable()
+            {
+                CreatedBy = t.CreatedBy,
+                CreatedDate = t.CreatedDate,
+                Status = t.Status,
+                MeterId = t.MeterId,
+                CustomerId = t.CustomerId,
+                MeterAssignId = t.MeterAssignId,
+                CurrentUnit=t.CurrentUnit
+                
+            }).ToList();
             return meter;
         }
 

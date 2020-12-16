@@ -30,6 +30,13 @@ namespace Common.Electricity.Enum
             
         }
 
+        public enum PaymentMethod
+        {
+            Card=1,
+            BKash=2,
+            Rocket=3
+        }
+
         public enum Blood
         {
             A = 1,
@@ -71,6 +78,20 @@ namespace Common.Electricity.Enum
             Hindhu = 2,
             Cristian = 3,
             Budho=4
+        }
+
+
+        public enum ErrorCode
+        {
+            INTERNAL_SERVER_ERROR = 500,
+            BAD_REQUEST = 400,
+            NOT_FOUND = 404,
+            UNAUTHENTICATE = 401,
+            UNAUTHORIZED = 403,
+            TOKEN_EXPIRED = 402,
+            SESSION_EXPIRED = 419,
+            MISSING_TOKEN = 417,
+            INVALID_TOKEN_FORMAT = 406
         }
     }
 }

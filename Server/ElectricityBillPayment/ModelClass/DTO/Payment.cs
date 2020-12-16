@@ -10,7 +10,7 @@ namespace ModelClass.DTO
         public int BillId { get; set; }
         public int CustomerId { get; set; }
         public int MeterId { get; set; }
-        public string PaymentMethod { get; set; }
+        public int PaymentMethod { get; set; }
         public string CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }
         public string UpdatedBy { get; set; }

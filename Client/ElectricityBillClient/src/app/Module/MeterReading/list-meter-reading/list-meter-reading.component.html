@@ -33,9 +33,9 @@
         </thead>
         <tbody >
           <tr *ngFor="let objmeterreading of lstmeterreading">
-              <td >{{objmeterreading.User.UserName}}</td>
-              <td >{{objmeterreading.Role.RoleName}}</td>
-              <td >{{objmeterreading.Role.RoleName}}</td>
+              <td >{{objmeterreading.MeterId}}</td>
+              <td >{{objmeterreading.CustomerId}}</td>
+              <td >{{objmeterreading.CurrentUnit}}</td>
 
               <td ><span class="btn-success" *ngIf="objmeterreading.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
                 <span class="btn-danger" *ngIf="objmeterreading.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>

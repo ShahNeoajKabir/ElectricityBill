@@ -32,6 +32,8 @@ namespace Context
         public  DbSet<Zone> Zone { get; set; }
         public  DbSet<ZoneAssign> ZoneAssign { get; set; }
         public  DbSet<UnitPrice> UnitPrice { get; set; }
+        public  DbSet<CardInformation> CardInformation { get; set; }
+        public  DbSet<MobileBanking> MobileBanking { get; set; }
 
 
 
@@ -178,6 +180,20 @@ namespace Context
             {
                 entity.HasKey(e => e.SupportId);
                 entity.Property(d => d.SupportSubject);
+            });
+            modelBuilder.Entity<CardInformation>(entity =>
+            {
+                entity.HasKey(e => e.CardInformationId);
+                entity.Property(d => d.CardNumber);
+                entity.Property(d => d.Balance);
+
+            });
+            modelBuilder.Entity<MobileBanking>(entity =>
+            {
+                entity.HasKey(e => e.MobileBankingId);
+                entity.Property(d => d.MobileNo);
+                entity.Property(d => d.Pin);
+                entity.Property(d => d.Balance);
             });
         }
     }

@@ -6,10 +6,7 @@ namespace ModelClass.DTO
 {
     public class MeterReadingTable
     {
-        public MeterReadingTable()
-        {
-
-        }
+        
         public int MeterReadingId { get; set; }
         public int MeterAssignId { get; set; }
         public int CustomerId { get; set; }

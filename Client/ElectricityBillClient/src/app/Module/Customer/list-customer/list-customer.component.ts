@@ -11,6 +11,7 @@ import { CustomerService } from '../../../Service/Customer/customer.service';
 })
 export class ListCustomerComponent implements OnInit {
   public lstcustomer:Customer[]=new Array<Customer>();
+
   public search:string="";
 
   constructor(private customerservice:CustomerService,private router:Router,private activatedroute:ActivatedRoute) { }

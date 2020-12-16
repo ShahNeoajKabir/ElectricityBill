@@ -71,6 +71,11 @@ export const routes: Routes = [
       // {path:'Security' ,loadChildren:()=>import('./Components/signin.module').then(n=>n.SigninModule)},
       {path:'UnitPrice' ,loadChildren:()=>import('./Module/UnitPrice/unitprice.module').then(n=>n.UnitPriceModule)},
       {path:'MeterReading' ,loadChildren:()=>import('./Module/MeterReading/meterreading.module').then(n=>n.MeterReadingModule)},
+      {path:'BillTable' ,loadChildren:()=>import('./Module/BillPayment/bill.module').then(n=>n.BillModule)},
+      {path:'Card' ,loadChildren:()=>import('./Module/Card/card.module').then(n=>n.CardModule)},
+      {path:'MobileBanking' ,loadChildren:()=>import('./Module/MobileBanking/mobilebanking.module').then(n=>n.MobileBankingModule)},
+
+
 
 
 

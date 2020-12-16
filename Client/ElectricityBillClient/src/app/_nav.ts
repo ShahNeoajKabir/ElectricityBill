@@ -60,6 +60,26 @@ export const navItems: INavData[] = [
     icon: 'icon-user'
   },
   {
+    name: 'Dashboard',
+    url: '/Customer/Dashboard',
+    icon: 'icon-user'
+  },
+  {
+    name: 'Billl',
+    url: '/BillTable/View',
+    icon: 'icon-user'
+  },
+  {
+    name: 'Card',
+    url: '/Card/View',
+    icon: 'icon-user'
+  },
+  {
+    name: 'MobileBanking',
+    url: '/MobileBanking/View',
+    icon: 'icon-user'
+  },
+  {
     name: 'Signin',
     url: '/Security/Login',
     icon: 'icon-user'
