@@ -1,6 +1,6 @@
 <div class="animated fadeIn">
     <div class="col-lg-12">
-      <div class="row">
+      <div class="row" style="margin-bottom: 20px; margin-top: 10px;">
         <div class="col-md-1">
             <button aria-pressed="true" class="btn btn-block btn-success active" [routerLink]="['/Support/AddSupport']" type="button"><i class="fa fa-plus-circle fa-lg "></i> Support</button>
         </div>
@@ -8,7 +8,7 @@
 
         </div>
         <div class="col-md-4">
-          <form class="form-header" action="" method="POST">
+          <form class="form-inline" action="" method="POST">
               <input class="form-control" [(ngModel)]="search" type="text" name="search" placeholder="Search for Information &amp; reports..." />
               <button class="btn btn-success" (click)="Search()" type="submit">
                 <i class="fas fa-search"></i>
