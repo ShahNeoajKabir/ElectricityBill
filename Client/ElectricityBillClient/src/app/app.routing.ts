@@ -49,6 +49,7 @@ export const routes: Routes = [
   //   }
   // },
   { path: '', loadChildren: () => import('../app/Components/signin.module').then(m => m.SigninModule) },
+  {path:'Customer' ,loadChildren:()=>import('./Module/Customer/customer.module').then(n=>n.CustomerModule)},
 
 
   {
@@ -67,7 +68,7 @@ export const routes: Routes = [
       {path:'AssignMeter' ,loadChildren:()=>import('./Module/MeterAssign/AssignMeter.modules').then(n=>n.AssignMeterModule)},
       {path:'Zone' ,loadChildren:()=>import('./Module/Zone/zone.module').then(n=>n.ZoneModule)},
       {path:'UserRole' ,loadChildren:()=>import('./Module/UserRole/userrole.module').then(n=>n.UserRoleModule)},
-      {path:'Customer' ,loadChildren:()=>import('./Module/Customer/customer.module').then(n=>n.CustomerModule)},
+    
       {path:'ZoneAssign' ,loadChildren:()=>import('./Module/ZoneAssign/ZoneAssign.module').then(n=>n.ZoneAssignModule)},
       // {path:'Security' ,loadChildren:()=>import('./Components/signin.module').then(n=>n.SigninModule)},
       {path:'UnitPrice' ,loadChildren:()=>import('./Module/UnitPrice/unitprice.module').then(n=>n.UnitPriceModule)},

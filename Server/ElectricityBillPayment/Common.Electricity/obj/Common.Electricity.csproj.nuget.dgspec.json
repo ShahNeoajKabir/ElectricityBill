@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj": {}
+    "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj": {}
   },
   "projects": {
-    "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj": {
+    "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
+        "projectUniqueName": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
         "projectName": "Common.Electricity",
-        "projectPath": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
-        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
-        "outputPath": "G:\\Bappy\\Final Defence\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\obj\\",
+        "projectPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
