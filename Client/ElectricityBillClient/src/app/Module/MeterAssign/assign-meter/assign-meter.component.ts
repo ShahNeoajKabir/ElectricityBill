@@ -38,22 +38,30 @@ export class AssignMeterComponent implements OnInit {
       console.log(this.lstmetertable);
 
     });
-    this.customerservice.GetAlll().subscribe((res: any) => {
+    this.customerservice.GetAllPendingCustomer().subscribe((res: any) => {
       console.log(res);
 
       this.lstcustomer = res;
       console.log(this.lstcustomer);
 
     });
-
     if (this.activeroute.snapshot.params[ 'id'] !== undefined) {
-      this.objedit.MeterAssignId = this.activeroute.snapshot.params[ 'id'];
-      this.meterassignservice.GetById(this.objedit).subscribe((res: any) => {
-        this.lstmeterassign = res;
-        console.log(this.lstmeterassign);
-      });
+      this.lstmeterassign.CustomerId = this.activeroute.snapshot.params[ 'id'];
+      // this.meterassignservice.GetById(this.objedit).subscribe((res: any) => {
+      //   this.lstmeterassign = res;
+      //   console.log(this.lstmeterassign);
+      // });
       console.log(this.activeroute.snapshot.params[ 'id']);
     }
+
+    // if (this.activeroute.snapshot.params[ 'id'] !== undefined) {
+    //   this.objedit.MeterAssignId = this.activeroute.snapshot.params[ 'id'];
+    //   this.meterassignservice.GetById(this.objedit).subscribe((res: any) => {
+    //     this.lstmeterassign = res;
+    //     console.log(this.lstmeterassign);
+    //   });
+    //   console.log(this.activeroute.snapshot.params[ 'id']);
+    // }
   }
   submit() {
     console.log(this.lstmeterassign);

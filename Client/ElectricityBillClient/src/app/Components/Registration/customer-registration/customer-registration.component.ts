@@ -8,11 +8,11 @@ import { CustomerService } from '../../../Service/Customer/customer.service';
 import { ZoneService } from '../../../Service/Zone/zone.service';
 
 @Component({
-  selector: 'app-registration',
-  templateUrl: './registration.component.html',
-  styleUrls: ['./registration.component.css']
+  selector: 'app-customer-registration',
+  templateUrl: './customer-registration.component.html',
+  styleUrls: ['./customer-registration.component.css']
 })
-export class RegistrationComponent implements OnInit {
+export class CustomerRegistrationComponent implements OnInit {
 
   public registration:Customer=new Customer();
   public lstGender:any;
@@ -74,5 +74,6 @@ export class RegistrationComponent implements OnInit {
     }
 
   }
+
 
 }

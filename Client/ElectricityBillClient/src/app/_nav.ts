@@ -60,6 +60,11 @@ export const navItems: INavData[] = [
     icon: 'icon-user'
   },
   {
+    name: 'Pending Customer',
+    url: '/Customer/PendingCustomer',
+    icon: 'icon-user'
+  },
+  {
     name: 'Dashboard',
     url: '/Customer/Dashboard',
     icon: 'icon-user'

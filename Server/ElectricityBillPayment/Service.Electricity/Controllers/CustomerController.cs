@@ -98,12 +98,30 @@ namespace Service.Electricity.Controllers
 
         }
         [HttpGet]
-        [Route("GetAlll")]
+        [Route("GetAllPendingCustomer")]
         public List<Customer> GetAlll()
         {
             try
             {
-                return _customerBLLManager.GetAlll();
+                return _customerBLLManager.GetAllPendingCustomer();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+
+
+        }
+        [HttpGet]
+        [Route("GetAllPending")]
+        public Task<List<Customer>> GetAllPending()
+        {
+            try
+            {
+                return _customerBLLManager.GetAllPending();
             }
             catch (Exception ex)
             {

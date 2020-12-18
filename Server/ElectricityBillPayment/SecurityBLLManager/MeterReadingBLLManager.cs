@@ -27,7 +27,7 @@ namespace SecurityBLLManager
             
             try
             {
-                ReaderId = 6;
+                ReaderId = 1;
                 var customer = await _database.Customer.Where(p => p.MobileNo == VmMeter.MobileNo).FirstOrDefaultAsync();
                 var readerzone = await _database.ZoneAssign.Where(p => p.UserId == ReaderId).FirstOrDefaultAsync();
                 if (readerzone.ZoneId != customer.ZoneId)

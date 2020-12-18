@@ -5,7 +5,7 @@ import { AssignMeterComponent } from './assign-meter/assign-meter.component';
 import { ListAssignMeterComponent } from './list-assign-meter/list-assign-meter.component';
 
 const route: Routes =[
-  { path: 'AddAssignMeter', component: AssignMeterComponent},
+  { path: ':id/AddAssignMeter', component: AssignMeterComponent},
   {path: 'View', component:ListAssignMeterComponent},
   {path: ':id/edit', component:AssignMeterComponent}
 

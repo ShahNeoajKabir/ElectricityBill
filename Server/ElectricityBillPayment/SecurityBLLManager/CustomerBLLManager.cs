@@ -23,7 +23,7 @@ namespace SecurityBLLManager
             try
             {
 
-                customer.Status = (int)Common.Electricity.Enum.Enum.Status.Active;
+                customer.Status = (int)Common.Electricity.Enum.Enum.Status.Pending;
                 customer.Image = "Asd";
                 customer.CreatedBy = "Admin";
                 customer.CreatedDate = DateTime.Now;
@@ -38,10 +38,10 @@ namespace SecurityBLLManager
                 throw new Exception("Failed To Registration");
             }
         }
-        public List<Customer> GetAlll()
+        public List<Customer> GetAllPendingCustomer()
         {
             List<Customer> customer = new List<Customer>();
-            var meterassignLiost = _dbContext.MeterAssign.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).Select(c => c.CustomerId).ToArray();
+            var meterassignLiost = _dbContext.MeterAssign.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Pending).Select(c => c.CustomerId).ToArray();
             if (meterassignLiost.Length > 0)
             {
                 customer = _dbContext.Customer.Where(p => !meterassignLiost.Contains(p.CustomerId) && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
@@ -53,6 +53,11 @@ namespace SecurityBLLManager
 
             }
 
+            return customer;
+        }
+        public Task<List<Customer>> GetAllPending()
+        {
+            Task<List<Customer>> customer = _dbContext.Customer.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Pending).ToListAsync();
             return customer;
         }
 
@@ -106,6 +111,7 @@ namespace SecurityBLLManager
         Task<Customer> GetById(Customer customer);
         Task<Customer> UpdateUser(Customer customer);
         Task<List<Customer>> Search(string CustomerName);
-        List<Customer> GetAlll();
+        List<Customer> GetAllPendingCustomer();
+        Task<List<Customer>> GetAllPending();
     }
 }

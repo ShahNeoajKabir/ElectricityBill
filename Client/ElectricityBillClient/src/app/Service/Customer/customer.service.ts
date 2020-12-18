@@ -27,7 +27,10 @@ export class CustomerService {
   public GetAll(){
     return this.httpclient.get(this.url+"GetAll");
   }
-  public GetAlll(){
-    return this.httpclient.get(this.url+"GetAlll");
+  public GetAllPendingCustomer(){
+    return this.httpclient.get(this.url+"GetAllPendingCustomer");
+  }
+  public GetAllPending(){
+    return this.httpclient.get(this.url+"GetAllPending");
   }
 }

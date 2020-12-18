@@ -3,7 +3,7 @@
 <div class="col-md-12 d-flex justify-content-center">
   <div class="form-group">
     <label>Image</label>
-    <input type="file" (change)="fileChangeEvent($event)" name="Image" class="au-input au-input--full"  autocomplete="off">
+    <input type="file" (change)="fileChangeEvent($event)" name="Image" class="au-input au-input--full"  >
   </div>
   <div class="card" style="width: 18rem;">
     <img   [src]="objUser.Image" alt="Add Image" class="img img-responsive img-full">
@@ -14,19 +14,19 @@
 </div>
 <div class="col-md-5">
     <label>User Name</label>
-    <input type="text"  name="UserName" [(ngModel)]="objUser.UserName" class="form-control"  autocomplete="off">
+    <input type="text"  name="UserName" [(ngModel)]="objUser.UserName" class="form-control"  >
 </div>
 <div class="col-md-5">
   <label>Email</label>
-  <input type="email"  name="Email"  [(ngModel)]="objUser.Email" class="form-control"  autocomplete="off">
+  <input type="email"  name="Email"  [(ngModel)]="objUser.Email" class="form-control"  >
 </div>
 <div class="col-md-5">
     <label>Password</label>
-    <input type="password"  name="Password" [(ngModel)]="objUser.Password" class="form-control"  autocomplete="off">
+    <input type="password"  name="Password" [(ngModel)]="objUser.Password" class="form-control"  >
 </div>
 <div class="col-md-5">
   <label>Mobile Number</label>
-  <input type="text"  name="MobileNo" [(ngModel)]="objUser.MobileNo" class="form-control"  autocomplete="off">
+  <input type="text"  name="MobileNo" [(ngModel)]="objUser.MobileNo" class="form-control"  >
 </div>
 <div class="col-md-5">
   <label>Gender</label>
@@ -56,7 +56,7 @@
   </div>
 <div class="col-md-5">
   <label>UserType Name</label>
-  <input type="text"  name="Image" [(ngModel)]="objUser.UserTypeName" class="form-control"  autocomplete="off">
+  <input type="text"  name="Image" [(ngModel)]="objUser.UserTypeName" class="form-control"  >
 </div>
 <div class="col-md-5">
   <label>Status</label>

@@ -41,7 +41,7 @@ namespace SecurityBLLManager
 
 
                 customer.UserId = addCustomerIntoUserTable(customer);
-
+                customer.Status = (int)Common.Electricity.Enum.Enum.Status.Active;
                 _dbContext.Customer.Update(customer);
                 _dbContext.Database.CommitTransaction();
                 _dbContext.SaveChanges();

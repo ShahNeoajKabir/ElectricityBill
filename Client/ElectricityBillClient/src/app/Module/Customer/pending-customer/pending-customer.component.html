@@ -1,0 +1,86 @@
+<div class="animated fadeIn">
+    <div class="col-lg-12">
+      <div class="row" style="margin-bottom: 20px; margin-top: 10px;">
+        <div class="col-md-1">
+            <button aria-pressed="true" class="btn btn-block btn-success active" [routerLink]="['/MeterReading/AddMeterReading']"  type="button"><i class="fa fa-plus-circle fa-lg "></i>  Customer</button>
+        </div>
+        <div class="col-md-7">
+  
+        </div>
+        <div class="col-md-4">
+          <form class="form-inline" action="" method="POST">
+              <input class="form-control" [(ngModel)]="search" type="text" name="search" placeholder="Search for Information &amp; reports..." />
+              <button class="btn btn-success" (click)="Search()" type="submit">
+                <i class="fas fa-search"></i>
+              </button>
+          </form>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <i class="fa fa-align-justify"></i>  Customer Table
+        </div>
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                  <th>Customer Name</th>
+                  <th>Email</th>
+                  <th>Mobile Number</th>
+                  <th>Gender</th>
+                  <th>CustomerType</th>
+                  <th>Status</th>
+                  <th>Action</th>
+              </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor="let objcustomer of lstcustomer">
+                <td >{{objcustomer.CustomerName}}</td>
+                <td>{{objcustomer.Email}}</td>
+                <td>{{objcustomer.MobileNo}}</td>
+                <td ><span class="btn-default" *ngIf="objcustomer.Gender===1">  Male</span>
+                  <span class="btn-default" *ngIf="objcustomer.Gender===2">  Female</span>
+                  <span class="btn-default" *ngIf="objcustomer.Gender===3"> Others</span>
+  
+            </td> <td ><span class="btn-default" *ngIf="objcustomer.CustomerType===1">  Business</span>
+                  <span class="btn-default" *ngIf="objcustomer.CustomerType===2">  Economi</span>
+                  <span class="btn-default" *ngIf="objcustomer.CustomerType===3"> House</span>
+  
+            </td>
+                <td ><span class="btn-success" *ngIf="objcustomer.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
+                  <span class="btn-danger" *ngIf="objcustomer.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
+            </td>
+                <td> <a class="btn btn-warning" routerLink="../../AssignMeter/{{ objcustomer.CustomerId }}/AddAssignMeter"><i class="fas fa-edit"></i></a></td>
+            </tr>
+          </tbody>
+  
+  
+          </table>
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">4</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!--/.col-->
+    </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

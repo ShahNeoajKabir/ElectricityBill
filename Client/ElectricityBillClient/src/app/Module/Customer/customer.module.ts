@@ -3,14 +3,13 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { ListCustomerComponent } from './list-customer/list-customer.component';
 import { CustomerRoutingModule } from './customer-routing.modules';
-import { CustomerLayoutComponent } from './customer-layout/customer-layout.component';
 import { CustomerService } from '../../Service/Customer/customer.service';
-import { RegistrationComponent } from './registration/registration.component';
+import { PendingCustomerComponent } from './pending-customer/pending-customer.component';
 
 
 
 @NgModule({
-  declarations: [ ListCustomerComponent, CustomerLayoutComponent, RegistrationComponent],
+  declarations: [ ListCustomerComponent,PendingCustomerComponent],
   imports: [
     CommonModule,
     CustomerRoutingModule,

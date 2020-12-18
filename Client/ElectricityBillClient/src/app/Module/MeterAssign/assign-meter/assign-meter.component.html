@@ -11,7 +11,7 @@
     
     <div class="col-md-5">
     <label>Customer Name</label>
-    <select name="CustomerName" class="form-control"
+    <select name="CustomerName" disabled class="form-control"
     [(ngModel)]="lstmeterassign.CustomerId">
     <option *ngFor="let customer of lstcustomer"
     [value]="customer.CustomerId">{{customer.CustomerName}}</option>
