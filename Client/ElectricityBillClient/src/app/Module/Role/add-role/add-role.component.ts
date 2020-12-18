@@ -20,6 +20,7 @@ export class AddRoleComponent implements OnInit {
     private router:Router,
     private utility:Utility,
     private ActivateRouter:ActivatedRoute
+    
     ) { }
 
   ngOnInit(): void {
