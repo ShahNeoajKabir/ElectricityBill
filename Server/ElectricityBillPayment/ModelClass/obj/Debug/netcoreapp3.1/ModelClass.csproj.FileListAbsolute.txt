@@ -46,3 +46,15 @@ E:\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp
 E:\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.dll
 E:\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.pdb
 E:\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.genruntimeconfig.cache
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\ModelClass\bin\Debug\netcoreapp3.1\ModelClass.deps.json
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\ModelClass\bin\Debug\netcoreapp3.1\ModelClass.runtimeconfig.json
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\ModelClass\bin\Debug\netcoreapp3.1\ModelClass.runtimeconfig.dev.json
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\ModelClass\bin\Debug\netcoreapp3.1\ModelClass.dll
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\ModelClass\bin\Debug\netcoreapp3.1\ModelClass.pdb
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.csprojAssemblyReference.cache
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.AssemblyInfoInputs.cache
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.AssemblyInfo.cs
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.csproj.CoreCompileInputs.cache
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.dll
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.pdb
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.genruntimeconfig.cache

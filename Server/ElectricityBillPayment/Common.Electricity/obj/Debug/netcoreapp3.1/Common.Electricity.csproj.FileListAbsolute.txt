@@ -46,3 +46,15 @@ E:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\ne
 E:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.dll
 E:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.pdb
 E:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.genruntimeconfig.cache
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.deps.json
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.runtimeconfig.json
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.runtimeconfig.dev.json
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.dll
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.pdb
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.csprojAssemblyReference.cache
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.AssemblyInfoInputs.cache
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.AssemblyInfo.cs
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.csproj.CoreCompileInputs.cache
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.dll
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.pdb
+D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.genruntimeconfig.cache
