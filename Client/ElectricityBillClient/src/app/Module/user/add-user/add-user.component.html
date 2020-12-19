@@ -44,7 +44,7 @@
     [value]="type.key">{{type.value}}</option>
   </select>
 </div>
-<div class="col-md-5">
+<div class="col-md-5" *ngIf="objUser.UserTypeId==3">
   <label>Zone Name</label>
   <select name="ZoneName" class="form-control"
   [(ngModel)]="objUser.ZoneId">
