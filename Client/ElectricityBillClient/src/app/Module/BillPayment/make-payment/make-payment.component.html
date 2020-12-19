@@ -1,0 +1,129 @@
+<div class="container">
+   
+
+    <div class="row">
+      <div class="col-md-4 order-md-2 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Your Billing Amount</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Current Unit</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$12</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0"></h6>
+              <small class="text-muted">Previous Unit</small>
+            </div>
+            <span class="text-muted">$8</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Bill Amount</h6>
+              <small class="text-muted">Brief description</small>
+            </div>
+            <span class="text-muted">$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div >
+              <h6 class="my-0">Vat </h6>
+              <small>EXAMPLECODE</small>
+            </div>
+            <span >-$5</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="text-success">Total Bill Amount</span>
+            <strong>$20</strong>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-8 order-md-1">
+        <h4 class="mb-3" style="color: rgb(6, 85, 6);font-size: 22px;font-weight: bold;">Make Payment</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="CustomerName">Customer Name</label>
+              <input type="text" class="form-control" id="CustomerName" name="CustomerName" placeholder="" value="" >
+              
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="MeterNumber">Meter number</label>
+              <input type="text" class="form-control" id="MeterNumber" name="MeterNumber" placeholder="" value="" >
+              
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="Email">Email</label>
+            <input type="email" class="form-control" id="Email" name="Email" placeholder="you@example.com">
+          </div>
+          <div class="mb-3">
+            <label>Payment Method</label>
+            <select name="PaymentMethod" class="form-control"
+            [(ngModel)]="objpayment.PaymentMethod"
+            >
+            <!-- <option [value]="-1">-Select-</option> -->
+            <option *ngFor="let payment of lstpaymnetmethod"
+            [value]="payment.key">{{payment.value}}</option>
+            </select>
+          </div>
+          <div class="row"*ngIf="objpayment.PaymentMethod==1">
+            <div class="col-md-6 mb-3">
+              <label for="cc-name">Name on card</label>
+              <input type="text" class="form-control" id="cc-name" placeholder="" required="">
+              <small class="text-muted">Full name as displayed on card</small>
+              <div class="invalid-feedback">
+                Name on card is required
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="CardNumber">card number</label>
+              <input type="text" class="form-control" id="CardNumber" name="CardNumber" placeholder="" required="">
+              <div class="invalid-feedback">
+                card number is required
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="CVV">CVV</label>
+              <input type="text" class="form-control" id="CVV" placeholder="" name="CVV">
+              <div class="invalid-feedback">
+                Security code required
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="Pin">Pin Number</label>
+              <input type="password" class="form-control" id="Pin" name="Pin" placeholder="">
+            </div>
+          </div>
+          <div class="row"*ngIf="objpayment.PaymentMethod==2">
+            <div class="col-md-6 mb-3">
+              <label for="cc-name">BKash Number</label>
+              <input type="text" class="form-control" id="MobileNo" placeholder="" required="">
+              
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="Pin">Pin Number</label>
+              <input type="password" class="form-control" id="Pin" name="Pin" placeholder="">
+            </div>
+          </div>
+          <div class="row"*ngIf="objpayment.PaymentMethod==3">
+            <div class="col-md-6 mb-3">
+              <label for="cc-name">Rocket Number</label>
+              <input type="text" class="form-control" id="MobileNo" placeholder="" required="">
+              
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="Pin">Pin Number</label>
+              <input type="password" class="form-control" id="Pin" name="Pin" placeholder="">
+            </div>
+          </div>
+          <hr class="mb-4">
+          <button class="btn btn-primary btn-lg btn-block" type="submit">Make Payment</button>
+        </form>
+      </div>
+    </div>
+  </div>

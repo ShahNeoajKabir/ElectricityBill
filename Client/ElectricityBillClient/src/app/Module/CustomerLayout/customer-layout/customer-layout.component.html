@@ -3,13 +3,13 @@
     <div class="navbar-collapse collapse show" id="navbarColor01" >
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/CustomerLayout/Profile']">Profile <span class="sr-only">(current)</span></a>
+          <a class="nav-link" [routerLink]="['/CustomerDashboard/Profile']">Profile <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/CustomerLayout/BillHistory']">Bill History</a>
+          <a class="nav-link" [routerLink]="['/CustomerDashboard/BillHistory']">Bill History</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/CustomerLayout/PaymentHistory']">Payment History</a>
+          <a class="nav-link" [routerLink]="['/CustomerDashboard/PaymentHistory']">Payment History</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
@@ -21,5 +21,6 @@
       </form>
     </div>
   </nav>
+  <router-outlet></router-outlet>
   
 

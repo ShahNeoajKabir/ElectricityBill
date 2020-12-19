@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CardService {
-  url="http://localhost:54667/api/Card/";
+  url="https://localhost:44318/api/Card/";
   constructor(private httpclient:HttpClient) { }
 
 

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BillTableService {
-  url="http://localhost:54667/api/Bill/";
+  url="https://localhost:44318/api/Bill/";
   constructor(private httpclient:HttpClient) { }
 
   public GetAll(){

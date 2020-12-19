@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class SupportService {
-  url="http://localhost:54667/api/Support/";
+  url="https://localhost:44318/api/Support/";
 
   constructor(private httpclient:HttpClient) { }
 

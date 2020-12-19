@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserRoleService {
-  url="http://localhost:54667/api/UserRole/";
+  url="https://localhost:44318/api/UserRole/";
 
   constructor(private httpclient:HttpClient) { }
 

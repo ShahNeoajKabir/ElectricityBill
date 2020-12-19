@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MobileBankingService {
-  url="http://localhost:54667/api/MobileBanking/";
+  url="https://localhost:44318/api/MobileBanking/";
   constructor(private htppclient:HttpClient) { }
 
   public AddMobile(Mobile:any){
