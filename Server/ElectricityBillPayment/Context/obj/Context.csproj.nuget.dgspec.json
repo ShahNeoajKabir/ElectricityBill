@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj": {}
+    "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj": {}
   },
   "projects": {
-    "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj": {
+    "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj",
+        "projectUniqueName": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj",
         "projectName": "Context",
-        "projectPath": "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj",
-        "packagesPath": "C:\\Users\\Thinkpad\\.nuget\\packages\\",
-        "outputPath": "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\obj\\",
+        "projectPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Thinkpad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,10 +26,9 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj": {
-                "projectPath": "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj"
+              "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj": {
+                "projectPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj"
               }
             }
           }
@@ -42,7 +41,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -78,21 +76,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj": {
+    "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj",
+        "projectUniqueName": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj",
         "projectName": "ModelClass",
-        "projectPath": "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj",
-        "packagesPath": "C:\\Users\\Thinkpad\\.nuget\\packages\\",
-        "outputPath": "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\obj\\",
+        "projectPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Thinkpad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,7 +102,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -116,7 +113,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
@@ -144,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

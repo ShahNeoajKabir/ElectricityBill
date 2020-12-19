@@ -8,10 +8,15 @@ import { ProfileComponent } from './profile/profile.component';
 
 
 const routes: Routes = [
-{ path: 'Dashboard', component: CustomerLayoutComponent },
-{ path: 'BillHistory', component: BillHistroryComponent },
+{ path: '', component: CustomerLayoutComponent ,
+children:[
+  { path: 'BillHistory', component: BillHistroryComponent },
 { path: 'Profile', component: ProfileComponent },
 { path: 'PaymentHistory', component: PaymentHistoryComponent },
+
+]
+},
+
 
 
 

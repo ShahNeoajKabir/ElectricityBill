@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ZoneAssignService {
-  url="http://localhost:54667/api/ZoneAssign/";
+  url="https://localhost:44318/api/ZoneAssign/";
 
 
   constructor(private httpclient:HttpClient) { }

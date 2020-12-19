@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class UnitPriceService {
-  url="http://localhost:54667/api/UnitPrice/";
+  url="https://localhost:44318/api/UnitPrice/";
 
   constructor(private httpclient:HttpClient,private router:Router) { }
 

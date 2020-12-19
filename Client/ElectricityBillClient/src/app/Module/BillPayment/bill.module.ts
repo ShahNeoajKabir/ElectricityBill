@@ -4,11 +4,12 @@ import { FormsModule } from '@angular/forms';
 import { BillTableService } from '../../Service/BillTable/bill-table.service';
 import { BillPaymentComponent } from './bill-payment/bill-payment.component';
 import { BillRoutingModule } from './bill-routing.module';
+import { MakePaymentComponent } from './make-payment/make-payment.component';
 
 
 
 @NgModule({
-  declarations: [ BillPaymentComponent],
+  declarations: [ BillPaymentComponent, MakePaymentComponent],
   imports: [
     CommonModule,
     BillRoutingModule,

@@ -6,7 +6,7 @@ import { VMLogin } from '../../Model/VMLogin';
   providedIn: 'root'
 })
 export class SecurityService {
-  url="http://localhost:54667/api/Security/";
+  url="https://localhost:44318/api/Security/";
 
   constructor(private httpclient:HttpClient) { }
 

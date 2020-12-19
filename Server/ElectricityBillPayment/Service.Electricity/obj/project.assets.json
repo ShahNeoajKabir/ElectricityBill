@@ -507,21 +507,20 @@
           }
         }
       },
-      "MimeKit/2.10.0": {
+      "MimeKit/2.10.1": {
         "type": "package",
         "dependencies": {
           "Portable.BouncyCastle": "1.8.8",
           "System.Buffers": "4.5.1",
-          "System.Data.DataSetExtensions": "4.5.0",
           "System.Reflection.TypeExtensions": "4.4.0",
           "System.Security.Cryptography.Pkcs": "4.7.0",
           "System.Text.Encoding.CodePages": "4.4.0"
         },
         "compile": {
-          "lib/netstandard2.0/MimeKit.dll": {}
+          "lib/netstandard2.1/MimeKit.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.0/MimeKit.dll": {}
+          "lib/netstandard2.1/MimeKit.dll": {}
         }
       },
       "Newtonsoft.Json/12.0.3": {
@@ -778,15 +777,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
-        }
-      },
-      "System.Data.DataSetExtensions/4.5.0": {
-        "type": "package",
-        "compile": {
-          "ref/netstandard2.0/System.Data.DataSetExtensions.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Data.DataSetExtensions.dll": {}
         }
       },
       "System.Diagnostics.Debug/4.3.0": {
@@ -2504,10 +2494,10 @@
         "version.txt"
       ]
     },
-    "MimeKit/2.10.0": {
-      "sha512": "AHbCxNo6Ue98q/r81TKdCisRJSOv5EF0PWctUqhtzjDJx3xeTxguxZHyZy3ATbHfHFDRVR7TeZgmsfRP7dXs6g==",
+    "MimeKit/2.10.1": {
+      "sha512": "rBpIsOdgpMvcNraBDgQSSNCk/MVxxFv7VX2Qq1WnFJ4AnvjIU+r12gaKs6r+SRvCEZWvC5CQlKHuoQbIbO/brA==",
       "type": "package",
-      "path": "mimekit/2.10.0",
+      "path": "mimekit/2.10.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2527,7 +2517,10 @@
         "lib/netstandard2.0/MimeKit.dll",
         "lib/netstandard2.0/MimeKit.pdb",
         "lib/netstandard2.0/MimeKit.xml",
-        "mimekit.2.10.0.nupkg.sha512",
+        "lib/netstandard2.1/MimeKit.dll",
+        "lib/netstandard2.1/MimeKit.pdb",
+        "lib/netstandard2.1/MimeKit.xml",
+        "mimekit.2.10.1.nupkg.sha512",
         "mimekit.nuspec"
       ]
     },
@@ -3206,25 +3199,6 @@
         "ref/netstandard2.0/System.Configuration.ConfigurationManager.xml",
         "system.configuration.configurationmanager.4.7.0.nupkg.sha512",
         "system.configuration.configurationmanager.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
-      ]
-    },
-    "System.Data.DataSetExtensions/4.5.0": {
-      "sha512": "221clPs1445HkTBZPL+K9sDBdJRB8UN8rgjO3ztB0CQ26z//fmJXtlsr6whGatscsKGBrhJl5bwJuKSA8mwFOw==",
-      "type": "package",
-      "path": "system.data.datasetextensions/4.5.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net45/_._",
-        "lib/netstandard2.0/System.Data.DataSetExtensions.dll",
-        "ref/net45/_._",
-        "ref/netstandard2.0/System.Data.DataSetExtensions.dll",
-        "system.data.datasetextensions.4.5.0.nupkg.sha512",
-        "system.data.datasetextensions.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -6054,25 +6028,26 @@
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.1",
       "Microsoft.EntityFrameworkCore.Tools >= 5.0.1",
+      "MimeKit >= 2.10.1",
       "SecurityBLLManager >= 1.0.0",
       "Swashbuckle.AspNetCore >= 5.6.3",
       "Swashbuckle.AspNetCore.Swagger >= 5.6.3"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Thinkpad\\.nuget\\packages\\": {}
+    "C:\\Users\\Admin\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\Service.Electricity.csproj",
+      "projectUniqueName": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\Service.Electricity.csproj",
       "projectName": "Service.Electricity",
-      "projectPath": "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\Service.Electricity.csproj",
-      "packagesPath": "C:\\Users\\Thinkpad\\.nuget\\packages\\",
-      "outputPath": "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\obj\\",
+      "projectPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\Service.Electricity.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Thinkpad\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -6084,13 +6059,12 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj": {
-              "projectPath": "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj"
+            "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj": {
+              "projectPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj"
             },
-            "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj": {
-              "projectPath": "D:\\Remon\\Bappy\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj"
+            "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj": {
+              "projectPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj"
             }
           }
         }
@@ -6103,7 +6077,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "MailKit": {
             "target": "Package",
@@ -6126,6 +6099,10 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[5.0.1, )"
+          },
+          "MimeKit": {
+            "target": "Package",
+            "version": "[2.10.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
@@ -6154,8 +6131,16 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.401\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

@@ -10,6 +10,12 @@ export enum Status {
   Pending=4
 
 }
+export enum PaymentMethod
+        {
+            Card=1,
+            BKash=2,
+            Rocket=3
+        }
 export enum Month
         {
              January= 1,

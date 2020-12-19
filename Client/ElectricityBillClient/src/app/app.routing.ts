@@ -53,7 +53,7 @@ export const routes: Routes = [
 
 
   
-  {path:'CustomerLayout',loadChildren:()=>import('./Module/CustomerLayout/customerlayout.module').then(n=>n.CustomerLayoutModule)},
+  {path:'CustomerDashboard',loadChildren:()=>import('./Module/CustomerLayout/customerlayout.module').then(n=>n.CustomerLayoutModule)},
 
 
   {

@@ -8,6 +8,7 @@ using ModelClass.DTO;
 using ModelClass.ViewModel;
 using Newtonsoft.Json;
 using SecurityBLLManager;
+using Service.Electricity.MailConfig;
 
 namespace Service.Electricity.Controllers
 {
@@ -16,9 +17,11 @@ namespace Service.Electricity.Controllers
     public class CustomerController : ControllerBase
     {
         private readonly ICustomerBLLManager _customerBLLManager;
-        public CustomerController(ICustomerBLLManager customerBLLManager)
+        private readonly IMailer _mailer;
+        public CustomerController(ICustomerBLLManager customerBLLManager, IMailer mailer)
         {
             _customerBLLManager = customerBLLManager;
+            _mailer = mailer;
         }
 
         [HttpPost]
@@ -27,6 +30,7 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                await _mailer.SendEmailAsync("bappyron@gmail.com", "Test", "Pending Customer");
 
                 Customer customer = JsonConvert.DeserializeObject<Customer>(message.Content.ToString());
                 await _customerBLLManager.AddCustomer(customer);

@@ -308,9 +308,6 @@ E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\bin\Debug\n
 E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.csprojAssemblyReference.cache
 E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.AssemblyInfoInputs.cache
 E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.AssemblyInfo.cs
-E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.csproj.CoreCompileInputs.cache
-E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.MvcApplicationPartsAssemblyInfo.cs
-E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.MvcApplicationPartsAssemblyInfo.cache
 E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.RazorTargetAssemblyInfo.cache
 E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.csproj.CopyComplete
 E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\staticwebassets\Service.Electricity.StaticWebAssets.Manifest.cache
@@ -318,6 +315,14 @@ E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\n
 E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.dll
 E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.pdb
 E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.genruntimeconfig.cache
+<<<<<<< HEAD
+E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\bin\Debug\netcoreapp3.1\MailKit.dll
+E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\bin\Debug\netcoreapp3.1\MimeKit.dll
+E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.csproj.CoreCompileInputs.cache
+E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.MvcApplicationPartsAssemblyInfo.cs
+E:\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.MvcApplicationPartsAssemblyInfo.cache
+=======
 D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\bin\Debug\netcoreapp3.1\appsettings.json
 D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\bin\Debug\netcoreapp3.1\Service.Electricity.exe
@@ -401,3 +406,4 @@ D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity
 D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.dll
 D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.pdb
 D:\Remon\Bappy\ElectricityBill\Server\ElectricityBillPayment\Service.Electricity\obj\Debug\netcoreapp3.1\Service.Electricity.genruntimeconfig.cache
+>>>>>>> 3bf6672c9b6ce6cc0a05212e85edeef15fa481df
