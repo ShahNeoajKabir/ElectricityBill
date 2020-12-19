@@ -65,6 +65,8 @@ export const routes: Routes = [
 
     children: [
       { path: 'User', loadChildren: () => import('./Module/user/user.module').then(m => m.UserModule) },
+      { path: 'RolePermission', loadChildren: () => import('./Module/RolePermission/RolePermission.module').then(m => m.RolePermissionModule) },
+     
       { path: 'Notice', loadChildren: () => import('./Module/Notice/Notice.modules').then(p=>p.NoticeModule)},
       {path: 'Support', loadChildren:()=> import('./Module/Support/support.module').then(p=>p.SupportModule)},
       {path: 'Meter', loadChildren:()=>import('./Module/Meter/meter.module').then(n=>n.MeterModule)},
