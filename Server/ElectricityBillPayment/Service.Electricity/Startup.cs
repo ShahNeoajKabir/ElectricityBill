@@ -20,6 +20,7 @@ using ModelClass.ViewModel;
 using Newtonsoft.Json.Serialization;
 using SecurityBLLManager;
 using Service.Electricity.Handler;
+using Service.Electricity.MailConfig;
 
 namespace Service.Electricity
 {
@@ -56,7 +57,8 @@ namespace Service.Electricity
             //            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JwtTokenSetting:Key"]))
             //        };
             //    });
-
+            services.Configure<SmtpSettings>(Configuration.GetSection("SmtpSettings"));
+            services.AddSingleton<IMailer, Mailer>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", null);
