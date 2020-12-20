@@ -1,0 +1,28 @@
+<form>
+    <div class="row">
+    <div class="col-md-5">
+      <label>URL </label>
+      <input type="text"  name="URL" [(ngModel)]="objurl.URL" class="form-control"  autocomplete="off">
+    </div>
+    <div class="col-md-5">
+        <label>Name</label>
+        <input type="text"  name="Name" [(ngModel)]="objurl.Name" class="form-control"  autocomplete="off">
+      </div>
+      <div class="col-md-5">
+        <label>Description</label>
+        <input type="text"  name="Description" [(ngModel)]="objurl.Description" class="form-control"  autocomplete="off">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+      </div>
+      <div class="col-md-1">
+        <button aria-pressed="true" class="btn btn-pill btn-block btn-primary active" (click)="AddUrl()" type="button">Add Url</button>
+      </div>
+      <div class="col-md-5">
+      </div>
+    </div>
+</form>
+    
+
+

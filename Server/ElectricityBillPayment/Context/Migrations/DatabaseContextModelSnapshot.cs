@@ -430,6 +430,24 @@ namespace Context.Migrations
                     b.ToTable("Role");
                 });
 
+            modelBuilder.Entity("ModelClass.DTO.RolePermission", b =>
+                {
+                    b.Property<int>("RolePermissionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UrlId")
+                        .HasColumnType("int");
+
+                    b.HasKey("RolePermissionId");
+
+                    b.ToTable("RolePermission");
+                });
+
             modelBuilder.Entity("ModelClass.DTO.Support", b =>
                 {
                     b.Property<int>("SupportId")
@@ -461,6 +479,27 @@ namespace Context.Migrations
                     b.HasKey("SupportId");
 
                     b.ToTable("Support");
+                });
+
+            modelBuilder.Entity("ModelClass.DTO.URL", b =>
+                {
+                    b.Property<int>("UrlId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UrlId");
+
+                    b.ToTable("URL");
                 });
 
             modelBuilder.Entity("ModelClass.DTO.UnitPrice", b =>

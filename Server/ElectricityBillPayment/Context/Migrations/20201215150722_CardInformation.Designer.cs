@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Context.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20201218143815_Notice")]
-    partial class Notice
+    [Migration("20201215150722_CardInformation")]
+    partial class CardInformation
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -102,9 +102,6 @@ namespace Context.Migrations
 
                     b.Property<DateTime>("ExpiredDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Pin")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -319,8 +316,8 @@ namespace Context.Migrations
                     b.Property<string>("MobileNo")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Pin")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("Pin")
+                        .HasColumnType("int");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");

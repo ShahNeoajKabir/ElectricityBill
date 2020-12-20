@@ -34,6 +34,8 @@ namespace Context
         public  DbSet<UnitPrice> UnitPrice { get; set; }
         public  DbSet<CardInformation> CardInformation { get; set; }
         public  DbSet<MobileBanking> MobileBanking { get; set; }
+        public  DbSet<URL> URL { get; set; }
+        public  DbSet<RolePermission> RolePermission { get; set; }
 
 
 
@@ -194,6 +196,18 @@ namespace Context
                 entity.Property(d => d.MobileNo);
                 entity.Property(d => d.Pin);
                 entity.Property(d => d.Balance);
+            });
+
+            modelBuilder.Entity<URL>(entity =>
+            {
+                entity.HasKey(e => e.UrlId);
+                entity.Property(p => p.Url);
+                entity.Property(p => p.Description);
+            });
+
+            modelBuilder.Entity<RolePermission>(entity =>
+            {
+                entity.HasKey(e => e.RolePermissionId);
             });
         }
     }

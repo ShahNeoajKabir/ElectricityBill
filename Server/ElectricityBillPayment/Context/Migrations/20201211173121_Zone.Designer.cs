@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Context.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20201215175347_db")]
-    partial class db
+    [Migration("20201211173121_Zone")]
+    partial class Zone
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -69,9 +69,6 @@ namespace Context.Migrations
 
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int>("Year")
-                        .HasColumnType("int");
 
                     b.HasKey("BillId");
 
@@ -158,6 +155,9 @@ namespace Context.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("CustomerId");
+
+                    b.HasIndex("ZoneId")
+                        .IsUnique();
 
                     b.ToTable("Customer");
                 });
@@ -415,26 +415,11 @@ namespace Context.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("CustomerType")
                         .HasColumnType("int");
 
-                    b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UnitperPrice")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<double>("UnitperPrice")
+                        .HasColumnType("float");
 
                     b.HasKey("UnitPriceId");
 
@@ -607,6 +592,17 @@ namespace Context.Migrations
                     b.Navigation("MeterReadingTable");
                 });
 
+            modelBuilder.Entity("ModelClass.DTO.Customer", b =>
+                {
+                    b.HasOne("ModelClass.DTO.Zone", "Zone")
+                        .WithOne("Customer")
+                        .HasForeignKey("ModelClass.DTO.Customer", "ZoneId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Zone");
+                });
+
             modelBuilder.Entity("ModelClass.DTO.MeterAssign", b =>
                 {
                     b.HasOne("ModelClass.DTO.Customer", "Customer")
@@ -725,6 +721,8 @@ namespace Context.Migrations
 
             modelBuilder.Entity("ModelClass.DTO.Zone", b =>
                 {
+                    b.Navigation("Customer");
+
                     b.Navigation("ZoneAssign");
                 });
 #pragma warning restore 612, 618

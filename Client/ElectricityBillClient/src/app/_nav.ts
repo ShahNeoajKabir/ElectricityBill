@@ -40,8 +40,8 @@ export const navItems: INavData[] = [
     icon: 'icon-bag'
   },
   {
-    name: 'Support',
-    url: '/Support/View',
+    name: 'URL',
+    url: '/RolePermission/AddUrl',
     icon: 'icon-drop'
   },
   {
@@ -71,7 +71,7 @@ export const navItems: INavData[] = [
   },
   {
     name: 'Billl',
-    url: '/BillTable/View',
+    url: '/Bill/View',
     icon: 'icon-user'
   },
   {
