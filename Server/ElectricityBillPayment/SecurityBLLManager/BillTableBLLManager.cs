@@ -1,4 +1,5 @@
 ﻿using Context;
+using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
@@ -24,6 +25,12 @@ namespace SecurityBLLManager
             return bill;
         }
 
+        public async Task<BillTable> GetById(BillTable bill)
+        {
+            var res = await _database.BillTable.Where(e => e.BillId == bill.BillId).FirstOrDefaultAsync();
+            return res;
+        }
+
         //public List<BillTable> GetAll()
         //{
 
@@ -34,5 +41,6 @@ namespace SecurityBLLManager
     public interface IBillTableBLLManager
     {
         List<BillTable> GetAll();
+        Task<BillTable> GetById(BillTable bill);
     }
 }

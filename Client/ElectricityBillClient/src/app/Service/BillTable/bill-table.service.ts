@@ -11,4 +11,8 @@ export class BillTableService {
   public GetAll(){
     return this.httpclient.get(this.url+"GetAll");
   }
+
+  public GetById(Bill:any){
+    return this.httpclient.post(this.url+"GetById",Bill);
+  }
 }

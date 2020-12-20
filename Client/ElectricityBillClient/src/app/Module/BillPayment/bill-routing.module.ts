@@ -6,7 +6,7 @@ import { MakePaymentComponent } from './make-payment/make-payment.component';
 
 const routes: Routes = [
 { path: 'View', component: BillPaymentComponent },
-{ path: 'Payment', component: MakePaymentComponent },
+{ path: ':id/Payment', component: MakePaymentComponent },
 
 
 

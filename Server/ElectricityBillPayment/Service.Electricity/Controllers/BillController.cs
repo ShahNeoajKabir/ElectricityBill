@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelClass.DTO;
+using ModelClass.ViewModel;
+using Newtonsoft.Json;
 using SecurityBLLManager;
 
 namespace Service.Electricity.Controllers
@@ -25,6 +27,14 @@ namespace Service.Electricity.Controllers
         public List<BillTable> GetAll()
         {
             return _bLLManager.GetAll();
+        }
+
+        [HttpPost]
+        [Route("GetById")]
+        public async Task<ActionResult>GetById([FromBody]TempMessage message)
+        {
+            BillTable bill = JsonConvert.DeserializeObject<BillTable>(message.Content.ToString());
+            return Ok(await _bLLManager.GetById(bill));
         }
 
     }
