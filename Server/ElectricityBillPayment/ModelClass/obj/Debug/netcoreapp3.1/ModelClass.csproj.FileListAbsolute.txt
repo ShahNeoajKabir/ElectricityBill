@@ -57,3 +57,4 @@ E:\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp
 E:\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.dll
 E:\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.pdb
 E:\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.genruntimeconfig.cache
+E:\ElectricityBill\Server\ElectricityBillPayment\ModelClass\obj\Debug\netcoreapp3.1\ModelClass.csprojAssemblyReference.cache

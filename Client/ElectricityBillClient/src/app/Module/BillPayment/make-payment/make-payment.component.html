@@ -12,7 +12,7 @@
               <h6 class="my-0">Current Unit</h6>
               <small class="text-muted">Brief description</small>
             </div>
-            <span class="text-muted">$12</span>
+            <span class="text-muted">{{vmpayment.CurrentUnit}}</span>
           </li>
           <li class="list-group-item d-flex justify-content-between lh-condensed">
             <div>
@@ -26,18 +26,18 @@
               <h6 class="my-0">Bill Amount</h6>
               <small class="text-muted">Brief description</small>
             </div>
-            <span class="text-muted">$5</span>
+            <span class="text-muted">{{vmpayment.BillAmount}}</span>
           </li>
           <li class="list-group-item d-flex justify-content-between bg-light">
             <div >
               <h6 class="my-0">Vat </h6>
               <small>EXAMPLECODE</small>
             </div>
-            <span >-$5</span>
+            <span >{{vmpayment.Vat}}</span>
           </li>
           <li class="list-group-item d-flex justify-content-between">
             <span class="text-success">Total Bill Amount</span>
-            <strong>$20</strong>
+            <strong>{{vmpayment.TotalBillAmount}}</strong>
           </li>
         </ul>
       </div>
@@ -47,19 +47,19 @@
           <div class="row">
             <div class="col-md-6 mb-3">
               <label for="CustomerName">Customer Name</label>
-              <input type="text" class="form-control" id="CustomerName" name="CustomerName" placeholder="" value="" >
+              <input type="text" class="form-control" [(ngModel)]="vmpayment.CustomeName" id="CustomerName" name="CustomerName" placeholder="" value="" >
               
             </div>
             <div class="col-md-6 mb-3">
               <label for="MeterNumber">Meter number</label>
-              <input type="text" class="form-control" id="MeterNumber" name="MeterNumber" placeholder="" value="" >
+              <input type="text" class="form-control" [(ngModel)]="vmpayment.MeterNumber" id="MeterNumber" name="MeterNumber" placeholder="" value="" >
               
             </div>
           </div>
 
           <div class="mb-3">
             <label for="Email">Email</label>
-            <input type="email" class="form-control" id="Email" name="Email" placeholder="you@example.com">
+            <input type="email" [(ngModel)]="vmpayment.Email" class="form-control" id="Email" name="Email" placeholder="you@example.com">
           </div>
           <div class="mb-3">
             <label>Payment Method</label>

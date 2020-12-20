@@ -21,7 +21,27 @@ namespace SecurityBLLManager
 
         public List<BillTable> GetAll()
         {
-            List<BillTable> bill = _database.BillTable.ToList();
+            List<BillTable> bill = _database.BillTable.Select(t => new BillTable()
+            {
+                CreatedBy = t.CreatedBy,
+                CreatedDate = t.CreatedDate,
+                CurrentMonth = t.CurrentMonth,
+                CurrentUnit = t.CurrentUnit,
+                CustomerId = t.CustomerId,
+                BillAmount = t.BillAmount,
+                BillId = t.BillId,
+                BillStatus = t.BillStatus,
+                UpdatedBy = t.UpdatedBy,
+                MeterId = t.MeterId,
+                MeterReadingId = t.MeterReadingId,
+                MeterReadingTable = t.MeterReadingTable,
+                PreviousMonth = t.PreviousMonth,
+                PreviousUnit = t.PreviousUnit,
+                Payment = t.Payment,
+                UpdatedDate = t.UpdatedDate,
+                Status = t.Status,
+                Year = t.Year
+            }).ToList();
             return bill;
         }
 

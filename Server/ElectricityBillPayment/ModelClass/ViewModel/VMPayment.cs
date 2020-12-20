@@ -7,10 +7,12 @@ namespace ModelClass.ViewModel
     public class VMPayment
     {
         public string MeterNumber { get; set; }
-        public string MobileNo { get; set; }
-        public string CardNumber { get; set; }
-        public string MobileNumber { get; set; }
-        public string CVV { get; set; }
-        public double Balance { get; set; }
+        public string CustomeName { get; set; }
+        public string Email { get; set; }
+        public string CurrentUnit { get; set; }
+        public decimal Vat { get; set; }
+        public decimal TotalBillAmount { get; set; }
+        public decimal BillAmount { get; set; }
+
     }
 }
