@@ -31,11 +31,17 @@ namespace SecurityBLLManager
                 throw;
             }
         }
-
+        public List<URL> GetAll()
+        {
+            List<URL>uRLs= _database.URL.ToList();
+            return uRLs;
+        }
         public async Task<RolePermission> AddRolePermission(RolePermission rolePermission)
         {
             try
             {
+                Role role = new Role();
+                rolePermission.RoleId = role.RoleId;
                 await _database.RolePermission.AddAsync(rolePermission);
                 await _database.SaveChangesAsync();
                 return rolePermission;
@@ -69,5 +75,6 @@ namespace SecurityBLLManager
         Task<URL> AddUrl(URL uRL);
         Task<RolePermission> AddRolePermission(RolePermission rolePermission);
         Task<RolePermission> GetById(RolePermission rolePermission);
+        List<URL> GetAll();
     }
 }

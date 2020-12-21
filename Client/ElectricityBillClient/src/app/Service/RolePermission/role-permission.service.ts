@@ -13,4 +13,8 @@ export class RolePermissionService {
   public AddUrl(URLl:any){
     return this.httpclient.post(this.url+ 'AddURL' , URLl);
   }
+
+  public GetAll(){
+    return this.httpclient.get(this.url+"GetAll");
+  }
 }

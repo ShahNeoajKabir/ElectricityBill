@@ -18,10 +18,12 @@ namespace Service.Electricity.Controllers
     {
         private readonly ICustomerBLLManager _customerBLLManager;
         private readonly IMailer _mailer;
-        public CustomerController(ICustomerBLLManager customerBLLManager, IMailer mailer)
+        private readonly ICustomerProfileBLLManager _customerProfileBLL;
+        public CustomerController(ICustomerBLLManager customerBLLManager, IMailer mailer, ICustomerProfileBLLManager customerProfileBLL)
         {
             _customerBLLManager = customerBLLManager;
             _mailer = mailer;
+            _customerProfileBLL = customerProfileBLL;
         }
 
         [HttpPost]
@@ -156,6 +158,14 @@ namespace Service.Electricity.Controllers
             }
 
 
+        }
+
+        [HttpPost]
+        [Route("Profile")]
+        public async Task<ActionResult>Profile([FromBody]TempMessage message)
+        {
+            int UserId = JsonConvert.DeserializeObject<int>(message.Content.ToString());
+            return Ok(await _customerProfileBLL.ViewProfile(UserId));
         }
     }
 }

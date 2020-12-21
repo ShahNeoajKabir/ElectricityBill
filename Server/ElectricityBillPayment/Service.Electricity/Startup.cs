@@ -95,6 +95,7 @@ namespace Service.Electricity
             services.AddScoped<IMobileBankingBLLmanager, MobileBankingBLLmanager>();
             services.AddScoped<IRolePermissionBLLManager, RolePermissionBLLManager>();
             services.AddScoped<IPaymentBLLManager, PaymentBLLManager>();
+            services.AddScoped<ICustomerProfileBLLManager, CustomerProfileBLLManager>();
 
         }
 

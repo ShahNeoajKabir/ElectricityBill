@@ -55,6 +55,13 @@ namespace Service.Electricity.Controllers
             }
         }
 
+        [HttpGet]
+        [Route("GetAll")]
+        public List<URL> GetAll()
+        {
+            return _bLLManager.GetAll();
+        }
+
         [HttpPost]
         [Route("GetById")]
         public async Task<ActionResult>GetById([FromBody] TempMessage message)

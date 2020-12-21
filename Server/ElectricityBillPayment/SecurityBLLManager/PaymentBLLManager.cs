@@ -66,6 +66,8 @@ namespace SecurityBLLManager
             var meter = await _database.MeterTable.Where(p => p.MeterId == bill.MeterId).FirstOrDefaultAsync();
             decimal vat = (decimal)(5 * bill.BillAmount) / 100;
             decimal BillAmount =(decimal) bill.BillAmount - vat;
+            double UsesUnit = bill.CurrentUnit - bill.PreviousUnit;
+
 
             var vmpayment = new VMPayment()
             {
@@ -73,9 +75,12 @@ namespace SecurityBLLManager
                 MeterNumber = meter.MeterNumber,
                 BillAmount = BillAmount,
                 CurrentUnit = bill.CurrentUnit.ToString(),
+                PreviousUnit = bill.PreviousUnit.ToString(),
                 Email = customer.Email,
                 TotalBillAmount = (decimal)bill.BillAmount,
-                Vat = vat
+                Vat = vat,
+                UsesUnit = UsesUnit.ToString()
+                
             };
             return vmpayment;
         }

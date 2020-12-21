@@ -3,6 +3,10 @@ export class VMPayment{
         CustomeName:string;
         Email:string;
         CurrentUnit:number;
+        PreviousUnit:number;
+        UsesUnit:number;
+
+
         Vat:number;
         TotalBillAmount:number
         BillAmount:number;

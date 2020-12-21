@@ -1,1 +1,62 @@
-<p>add-role-permission works!</p>
+
+<div class="col-md-7">
+    <label>Role Name</label>
+    <select name="RoleName" class="form-control"
+    [(ngModel)]="objrolepermision.RoleId">
+    
+    <option *ngFor="let Role of lstrole"
+    [value]="Role.RoleId">{{Role.RoleName}}
+    </option>
+    </select>
+    </div>
+
+
+<div class="animated fadeIn">
+    
+    <div class="col-lg-7">
+      <div class="row" style="margin-bottom: 20px; margin-top: 10px;">
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                  <th>URL</th>
+                  <th>URL Name</th>
+                  <th>URL Description</th>
+                  <th>Action</th>
+
+
+              </tr>
+          </thead>
+          <tbody >
+            <tr *ngFor="let url of lsturl">
+                <td >{{url.Url}}</td>
+                <td>{{url.Name}}</td>
+                <td>{{url.Description}}</td>
+
+
+
+
+            <td> <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="check1" checked>
+                <label class="custom-control-label" for="check1">Check me</label>
+              </div>
+            </td>
+
+            </tr>
+
+        </tbody>
+
+
+          </table>
+        </div>
+      </div>
+    </div>
+    <!--/.col-->
+    </div>
+
+
+
+
+

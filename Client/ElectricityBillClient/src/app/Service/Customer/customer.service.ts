@@ -12,6 +12,9 @@ export class CustomerService {
   public AddCustomer(obj:any){
     return this.httpclient.post(this.url+"Registration",obj);
   }
+  public ViewProfile(obj:any){
+    return this.httpclient.post(this.url+"Profile",obj);
+  }
 
   public GetById(Customer:any){
     return this.httpclient.post(this.url+"GetbyID",Customer);
