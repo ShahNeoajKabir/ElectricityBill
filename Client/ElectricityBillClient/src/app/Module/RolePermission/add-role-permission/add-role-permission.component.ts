@@ -33,4 +33,9 @@ export class AddRolePermissionComponent implements OnInit {
     });
   }
 
+  GetUrlByRoleId(RoleId:any){
+    console.log(RoleId);
+
+  }
+
 }

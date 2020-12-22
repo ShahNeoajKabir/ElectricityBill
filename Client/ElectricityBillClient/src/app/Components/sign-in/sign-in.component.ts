@@ -11,7 +11,7 @@ import { SecurityService } from '../../Service/Security/security.service';
 })
 export class SignInComponent implements OnInit {
 
-  objLogin: VMLogin = new VMLogin();
+  public objLogin: VMLogin = new VMLogin();
   
 
   constructor(private Securityservice: SecurityService, private router: Router, private authservice: AuthService) { }
@@ -28,7 +28,7 @@ export class SignInComponent implements OnInit {
 
         this.router.navigate(['/dashboard']);
         } else {
-          this.router.navigate(['/Co-Ordinator']);
+          this.router.navigate(['/CustomerDashboard']);
 
         }
 

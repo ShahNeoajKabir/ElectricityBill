@@ -52,7 +52,18 @@ namespace SecurityBLLManager
         }
         public List<User> GetAllMeterReader()
         {
-            List<User> user = _db.User.Where(p => p.UserTypeId == 4).ToList();
+            List<User> user = new List<User>();
+            var meterassignLiost = _db.ZoneAssign.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).Select(c => c.UserId).ToArray();
+            if (meterassignLiost.Length > 0)
+            {
+                user = _db.User.Where(p => !meterassignLiost.Contains(p.UserId) &&  p.UserTypeId == 3).ToList();
+
+            }
+            else
+            {
+                user = _db.User.Where(p => p.UserTypeId == 3).ToList();
+
+            }
             return user;
         }
 

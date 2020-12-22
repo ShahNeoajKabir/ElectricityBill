@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Customer } from '../../../Model/Customer';
 import { CustomerService } from '../../../Service/Customer/customer.service';
+import { MeterAssignService } from '../../../Service/MeterAssign/meter-assign.service';
 
 @Component({
   selector: 'app-pending-customer',
@@ -13,7 +14,7 @@ export class PendingCustomerComponent implements OnInit {
 
   public search:string="";
 
-  constructor(private customerservice:CustomerService,private router:Router,private activatedroute:ActivatedRoute) { }
+  constructor(private customerservice:CustomerService,private router:Router,private activatedroute:ActivatedRoute,private assignmeter:MeterAssignService) { }
 
   ngOnInit(): void {
     this.customerservice.GetAllPending().subscribe((res: any) => {

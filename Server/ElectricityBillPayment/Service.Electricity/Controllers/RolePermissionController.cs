@@ -28,7 +28,7 @@ namespace Service.Electricity.Controllers
         {
             try
             {
-                RolePermission permission = JsonConvert.DeserializeObject<RolePermission>(message.Content.ToString());
+                VMRolePermission permission = JsonConvert.DeserializeObject<VMRolePermission>(message.Content.ToString());
                 await _bLLManager.AddRolePermission(permission);
                 return Ok(permission);
             }

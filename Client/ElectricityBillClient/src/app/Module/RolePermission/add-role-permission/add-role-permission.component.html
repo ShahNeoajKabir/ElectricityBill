@@ -2,7 +2,7 @@
 <div class="col-md-7">
     <label>Role Name</label>
     <select name="RoleName" class="form-control"
-    [(ngModel)]="objrolepermision.RoleId">
+    [(ngModel)]="objrolepermision.RoleId" (change)="GetUrlByRoleId(objrolepermision.RoleId)">
     
     <option *ngFor="let Role of lstrole"
     [value]="Role.RoleId">{{Role.RoleName}}

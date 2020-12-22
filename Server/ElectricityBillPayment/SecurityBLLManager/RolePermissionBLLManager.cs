@@ -1,6 +1,7 @@
 ﻿using Context;
 using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
+using ModelClass.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,11 @@ namespace SecurityBLLManager
         {
             try
             {
+                var url = _database.URL.Where(p => p.Url == uRL.Url).FirstOrDefault();
+                if (url != null)
+                {
+                    throw new Exception("Url Already exists");
+                }
                 await _database.URL.AddAsync(uRL);
                 await _database.SaveChangesAsync();
                 return uRL;
@@ -36,15 +42,33 @@ namespace SecurityBLLManager
             List<URL>uRLs= _database.URL.ToList();
             return uRLs;
         }
-        public async Task<RolePermission> AddRolePermission(RolePermission rolePermission)
+        public async Task<VMRolePermission> AddRolePermission(VMRolePermission vMRolePermission)
         {
             try
             {
-                Role role = new Role();
-                rolePermission.RoleId = role.RoleId;
-                await _database.RolePermission.AddAsync(rolePermission);
-                await _database.SaveChangesAsync();
-                return rolePermission;
+                var rolepermission = _database.RolePermission.AsNoTracking().Where(p => p.RoleId == vMRolePermission.RoleId).ToList();
+                if (rolepermission.Count > 0)
+                {
+                    _database.RolePermission.RemoveRange(rolepermission);
+                    await _database.SaveChangesAsync();
+
+                }
+                foreach (var item in vMRolePermission.Urls)
+                {
+                    var rolepermissions = new RolePermission()
+                    {
+                        RoleId = vMRolePermission.RoleId,
+                        UrlId = item.UrlId,
+
+
+                    };
+                    _database.RolePermission.Add(rolepermissions);
+                    
+
+                }
+                _database.SaveChanges();
+                return vMRolePermission;
+                
 
             }
             catch (Exception ex)
@@ -73,7 +97,7 @@ namespace SecurityBLLManager
     public interface IRolePermissionBLLManager
     {
         Task<URL> AddUrl(URL uRL);
-        Task<RolePermission> AddRolePermission(RolePermission rolePermission);
+        Task<VMRolePermission> AddRolePermission(VMRolePermission vMRolePermission);
         Task<RolePermission> GetById(RolePermission rolePermission);
         List<URL> GetAll();
     }

@@ -12,7 +12,7 @@ using Service.Electricity.Handler;
 
 namespace Service.Electricity.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/Role")]
     [ApiController]
     public class RoleController : ControllerBase
@@ -46,6 +46,7 @@ namespace Service.Electricity.Controllers
         [Route("GetAll")]
         public List<Role> GetAll()
         {
+            var loginedUser = (User)HttpContext.Items["User"];
             return _roleBLL.GetAll();
         }
 

@@ -12,7 +12,7 @@ import { VMLogin } from '../../Model/VMLogin';
 })
 
 export class AuthService {
-  url="http://localhost:54667/api/Security/";
+  url="https://localhost:44318/api/Security/";
 
   constructor(
     private http: HttpClient,
@@ -23,7 +23,7 @@ export class AuthService {
 
   login(authData: VMLogin) {
     const body = {
-      Username: authData.Email,
+      Email: authData.Email,
       Password: authData.Password
     };
     return this.http.post(this.url+"Login", body).pipe(map((res: any) => {
