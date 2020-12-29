@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj": {}
+    "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj": {}
   },
   "projects": {
-    "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj": {
+    "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
+        "projectUniqueName": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
         "projectName": "Common.Electricity",
-        "projectPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
+        "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\obj\\",
+        "outputPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

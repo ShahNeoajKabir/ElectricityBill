@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './Common/Auth/auth.guard';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
@@ -58,7 +59,7 @@ export const routes: Routes = [
 
   {
     path: '',
-    component: DefaultLayoutComponent,
+    component: DefaultLayoutComponent ,canActivate: [AuthGuard],
     data: {
       title: 'Home'
     },

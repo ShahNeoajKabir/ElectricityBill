@@ -5823,11 +5823,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj",
+      "projectUniqueName": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj",
       "projectName": "Context",
-      "projectPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj",
+      "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\obj\\",
+      "outputPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5843,8 +5843,8 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj": {
-              "projectPath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj"
+            "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj": {
+              "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj"
             }
           }
         }

@@ -9,7 +9,7 @@ import { ZoneAssignRoutingModule } from './ZoneAssign-routing.module';
 
 
 @NgModule({
-  declarations: [AddZoneAssignComponent, ListZoneAssignComponent],
+  declarations: [AddZoneAssignComponent, ListZoneAssignComponent,],
   imports: [
     CommonModule,
     ZoneAssignRoutingModule,

@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 import { AuthService } from '../../Common/Auth/auth.service';
 import { VMLogin } from '../../Model/VMLogin';
 import { SecurityService } from '../../Service/Security/security.service';
-
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
@@ -12,7 +11,6 @@ import { SecurityService } from '../../Service/Security/security.service';
 export class SignInComponent implements OnInit {
 
   public objLogin: VMLogin = new VMLogin();
-  
 
   constructor(private Securityservice: SecurityService, private router: Router, private authservice: AuthService) { }
 
@@ -23,12 +21,12 @@ export class SignInComponent implements OnInit {
     this.authservice.login(this.objLogin).subscribe(res => {
 
       // tslint:disable-next-line:triple-equals
-        if (this.authservice.getLoggedUserType() === 1) {
+        if (this.authservice.getLoggedUserType() === 4) {
         console.log(this.authservice.getLoggedUserType());
 
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/CustomerDashboard/Profile']);
         } else {
-          this.router.navigate(['/CustomerDashboard']);
+          this.router.navigate(['/dashboard']);
 
         }
 

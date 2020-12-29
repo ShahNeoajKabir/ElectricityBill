@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f5wAdwDI+I9WU8XMQzBGcY86AL7NlPxdjUXQnLuKkiFj2pXOJFaGjbmfppMMq93U89ksJk+OxNRFvrte3TjOYQ==",
+  "dgSpecHash": "uJ8oK+qaNU9ww/m5HHmPloUKiCAAw2XxiZwePh7ZGKR7PQcFAoIv1DkZwEjLC36a3tuir6qPpdCHY0vCAD/DWA==",
   "success": true,
-  "projectFilePath": "E:\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj",
+  "projectFilePath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
