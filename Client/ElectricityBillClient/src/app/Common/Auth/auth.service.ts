@@ -65,5 +65,11 @@ export class AuthService {
     }
     return '';
   }
+  getLoggedUserId() {
+    if (this.tokenService.GetToken()) {
+      return this.tokenService.GetTokenValue('userid');
+    }
+    return '';
+  }
 
 }

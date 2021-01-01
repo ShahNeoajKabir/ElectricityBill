@@ -42,40 +42,11 @@ export class MakePaymentComponent implements OnInit {
   }
 
   Save(){
-    this.vmmakepayment.CustomerId=this.BillId;
-    // document.getElementById('ExpiredDate');
-     if(this.vmmakepayment.PaymentMethod==1){
-       this.paymentgetwayservice.GetCard(this.vmmakepayment.cardinformation).subscribe((res:any)=>{
-        
-         if(res!=null){
-          this.cardinformation=res;
-          if(this.cardinformation.Balance<this.vmpayment.BillAmount){
-            alert("Insuficient balance");
-          }
-          else{
-            
-          }
-         }
-         console.log(this.cardinformation);
-       })
-
-     }
-     else{
-       this.vmmakepayment.mobilebanking.MobileBankingType= this.vmmakepayment.PaymentMethod;
-       this.paymentgetwayservice.GetMobileBanking(this.vmmakepayment.mobilebanking).subscribe((res:any)=>{
-        if(res!=null){
-          this.mobilebanking=res;
-          if(this.mobilebanking.Balance<this.vmpayment.BillAmount){
-            alert("Insuficient balance");
-          }
-          else{
-            
-          }
-         }
-         console.log(this.mobilebanking);
-       })
-     }
-    console.log(this.ExpiredDate);
+    this.vmmakepayment.BillId=this.vmpayment.BillId;
+    
+    this.paymentservice.MakePayment(this.vmmakepayment).subscribe(res=>{
+      console.log(res);
+    });
   }
 
 }

@@ -9,9 +9,9 @@ export class PaymentGetwayService {
   constructor(private httpclient:HttpClient) { }
 
   public GetCard(Card:any){
-    return this.httpclient.get(this.url+"Card",Card)
+    return this.httpclient.post(this.url+"Card",Card)
   }
   public GetMobileBanking(Mobile:any){
-    return this.httpclient.get(this.url+"MobileBanking",Mobile)
+    return this.httpclient.post(this.url+"MobileBanking",Mobile)
   }
 }

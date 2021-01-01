@@ -10,6 +10,7 @@ export class VMPayment{
         UsesUnit:number;
         CustomerId:number;
         MeterId:number;
+        BillId:number;
 
         Vat:number;
         TotalBillAmount:number

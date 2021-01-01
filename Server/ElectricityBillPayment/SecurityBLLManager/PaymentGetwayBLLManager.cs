@@ -1,4 +1,6 @@
-﻿using Context;
+﻿using Common.Electricity.Utility;
+using Context;
+using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using System;
 using System.Collections.Generic;
@@ -18,8 +20,9 @@ namespace SecurityBLLManager
 
         public async Task<CardInformation> GetCardInformation(CardInformation cardInformation)
         {
-            var res = _database.CardInformation.Where(p => p.CardNumber == cardInformation.CardNumber && p.CVV == cardInformation.CVV && p.ExpiredDate == cardInformation.ExpiredDate).FirstOrDefault();
-            if (res.Pin != cardInformation.Pin)
+            var decpin = new EncryptionService().Encrypt(cardInformation.Pin);
+            var res = _database.CardInformation.Where(p => p.CardNumber == cardInformation.CardNumber && p.CVV == cardInformation.CVV ).AsNoTracking().FirstOrDefault();
+            if (res.Pin != decpin)
             {
                 throw new Exception("Invalide Pin Number");
             }

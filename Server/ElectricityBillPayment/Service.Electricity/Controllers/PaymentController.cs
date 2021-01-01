@@ -15,10 +15,12 @@ namespace Service.Electricity.Controllers
     public class PaymentController : ControllerBase
     {
         private readonly IPaymentBLLManager _paymentBLL;
-        public PaymentController(IPaymentBLLManager paymentBLL)
+        private readonly IPaymentGetwayBLLManager _paymentGetwayBLL;
+        public PaymentController(IPaymentBLLManager paymentBLL, IPaymentGetwayBLLManager paymentGetwayBLL)
         {
 
             _paymentBLL = paymentBLL;
+            _paymentGetwayBLL = paymentGetwayBLL;
         }
 
         [HttpPost]
@@ -47,8 +49,42 @@ namespace Service.Electricity.Controllers
         {
             try
             {
-                int BillId = JsonConvert.DeserializeObject<int>(message.Content.ToString());
-                return Ok(await _paymentBLL.ViewPayment(BillId));
+                VMMakePayment vMMakePayment = JsonConvert.DeserializeObject<VMMakePayment>(message.Content.ToString());
+                if (vMMakePayment.PaymentMethod == (int)Common.Electricity.Enum.Enum.PaymentMethod.Card)
+                {
+                    var cardinformation = _paymentGetwayBLL.GetCardInformation(vMMakePayment.cardInformation);
+                    if (cardinformation != null)
+                    {
+                        if (vMMakePayment.RequestAmount <= cardinformation.Result.Balance)
+                        {
+                            return Ok(await _paymentBLL.MakePayment(vMMakePayment));
+                        }
+                        
+                    }
+                    
+                }
+                else
+                {
+                    if (vMMakePayment.PaymentMethod == 2)
+                    {
+                        vMMakePayment.mobileBanking.MobileBankingType = 2;
+                    }
+                    else if (vMMakePayment.PaymentMethod == 3)
+                    {
+                        vMMakePayment.mobileBanking.MobileBankingType = 3;
+                    }
+                    var mobileinformation = _paymentGetwayBLL.GetMobileBankingInformation(vMMakePayment.mobileBanking);
+                    if (mobileinformation != null)
+                    {
+                        if (vMMakePayment.RequestAmount <= mobileinformation.Result.Balance)
+                        {
+                            return Ok(await _paymentBLL.MakePayment(vMMakePayment));
+                        }
+                    }
+                }
+                return BadRequest("Failed");
+
+                
             }
             catch (Exception ex)
             {

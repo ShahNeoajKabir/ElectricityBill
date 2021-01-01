@@ -23,6 +23,7 @@ namespace SecurityBLLManager
             Payment payment = new Payment();
             try
             {
+                var bill = _database.BillTable.Where(p => p.BillId == makePayment.BillId).AsNoTracking().FirstOrDefault();
 
 
                 //var customer = await _database.Customer.Where(p => p.MobileNo == vMPayment.MobileNo).FirstOrDefaultAsync();
@@ -34,8 +35,8 @@ namespace SecurityBLLManager
                 payment = new Payment()
                 {
                     BillId = makePayment.BillId,
-                    CustomerId = makePayment.CustomerId,
-                    MeterId = makePayment.MeterId,
+                    CustomerId = bill.CustomerId,
+                    MeterId = bill.MeterId,
                     Status = 1,
                     PaymentMethod = makePayment.PaymentMethod,
                     CreatedBy = "Customer",
@@ -48,7 +49,6 @@ namespace SecurityBLLManager
                 if (payment.PaymentId > 1)
                 {
 
-                    var bill = _database.BillTable.Where(p => p.BillId == makePayment.BillId).AsNoTracking().FirstOrDefault();
                     bill.BillStatus = (int)Common.Electricity.Enum.Enum.BillStatus.Paid;
                     _database.BillTable.Update(bill);
                     _database.SaveChanges();
@@ -77,6 +77,7 @@ namespace SecurityBLLManager
 
             var vmpayment = new VMPayment()
             {
+                BillId=bill.BillId,
                 CustomeName = customer.CustomerName,
                 MeterNumber = meter.MeterNumber,
                 BillAmount = BillAmount,

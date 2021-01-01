@@ -21,7 +21,7 @@ namespace Service.Electricity.Controllers
             _paymentGetwayBLL = paymentGetwayBLL;
         }
 
-        [HttpGet("Card")]
+        [HttpPost("Card")]
         public async Task<ActionResult> GetCard([FromBody] TempMessage message)
         {
             CardInformation cardInformation = JsonConvert.DeserializeObject<CardInformation>(message.Content.ToString());
@@ -29,7 +29,7 @@ namespace Service.Electricity.Controllers
             return Ok(_paymentGetwayBLL.GetCardInformation(cardInformation));
         }
 
-        [HttpGet("MobileBanking")]
+        [HttpPost("MobileBanking")]
         public async Task<ActionResult> GetMobileBanking([FromBody]  TempMessage message)
         {
             MobileBanking mobileBanking = JsonConvert.DeserializeObject<MobileBanking>(message.Content.ToString());

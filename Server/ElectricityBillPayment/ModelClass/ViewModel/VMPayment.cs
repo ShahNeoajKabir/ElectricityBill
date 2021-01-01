@@ -18,6 +18,7 @@ namespace ModelClass.ViewModel
         public decimal BillAmount { get; set; }
         public string PreviousUnit { get; set; }
         public string UsesUnit { get; set; }
+        public int BillId { get; set; }
 
     }
 
@@ -29,6 +30,6 @@ namespace ModelClass.ViewModel
         public int PaymentMethod { get; set; }
         public CardInformation cardInformation { get; set; }
         public MobileBanking mobileBanking { get; set; }
-        public decimal RequestAmount { get; set; }
+        public double RequestAmount { get; set; }
     }
 }
