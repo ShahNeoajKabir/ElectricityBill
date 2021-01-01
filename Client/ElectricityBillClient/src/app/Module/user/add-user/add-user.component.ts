@@ -19,6 +19,7 @@ export class AddUserComponent implements OnInit {
   public lstGender:any;
   public lstType:any;
   public lstzone:any;
+  public userid:any;
   public objuseredit: User = new User();
   imageError: string;
   isImageSaved: boolean;
@@ -45,8 +46,8 @@ export class AddUserComponent implements OnInit {
 
     if (this.ActivateRouter.snapshot.params['id'] !== undefined) {
 
-      this.objuseredit.UserId = this.ActivateRouter.snapshot.params['id' ];
-      this.userservice.GetById(this.objuseredit).subscribe(( res: any) => {
+      this.userid = this.ActivateRouter.snapshot.params['id' ];
+      this.userservice.GetById(this.userid).subscribe(( res: any) => {
 
         this.objUser = res;
         console.log(this.objUser);

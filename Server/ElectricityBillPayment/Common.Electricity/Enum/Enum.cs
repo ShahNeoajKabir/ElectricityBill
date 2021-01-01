@@ -29,7 +29,11 @@ namespace Common.Electricity.Enum
         {
             
         }
-
+        public enum BillStatus
+        {
+            Paid = 2,
+            UnPaid = 1
+        }
         public enum PaymentMethod
         {
             Card=1,

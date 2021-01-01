@@ -4,4 +4,5 @@ export class MobileBanking{
   Balance:number;
   Pin:string;
   Status:number;
+  MobileBankingType:number;
 }

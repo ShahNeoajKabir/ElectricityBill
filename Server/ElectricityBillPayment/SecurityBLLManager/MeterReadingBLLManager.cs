@@ -100,7 +100,7 @@ namespace SecurityBLLManager
                     CurrentUnit = VmMeter.CurrentUnit,
                     CustomerId = meterReadingTable.CustomerId,
                     MeterId = meterReadingTable.MeterId,
-                    BillStatus = 1,
+                    BillStatus =(int)Common.Electricity.Enum.Enum.BillStatus.UnPaid,
                     BillAmount = CalBillAmount,
                     MeterReadingId = meterReadingTable.MeterReadingId,
                     PreviousUnit = Prvmonthbill.CurrentUnit,

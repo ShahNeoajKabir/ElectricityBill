@@ -5,9 +5,9 @@ import { AddUserRoleComponent } from './add-user-role/add-user-role.component';
 import { ListUserRoleComponent } from './list-user-role/list-user-role.component';
 
 
-const routes: Routes = [{ path: 'AddUserRole', component: AddUserRoleComponent,canActivate: [AuthGuard] },
-{ path: 'View', component: ListUserRoleComponent ,canActivate: [AuthGuard] },
-{path:':id/edit', component:AddUserRoleComponent ,canActivate: [AuthGuard]}
+const routes: Routes = [{ path: 'AddUserRole', component: AddUserRoleComponent },
+{ path: 'View', component: ListUserRoleComponent  },
+{path:':id/edit', component:AddUserRoleComponent }
 
 
 

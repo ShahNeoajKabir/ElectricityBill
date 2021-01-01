@@ -38,5 +38,24 @@ namespace Service.Electricity.Controllers
             }
             
         }
+
+
+        [HttpPost]
+        [Route("MakePayment")]
+
+        public async Task<ActionResult> MakePayment([FromBody] TempMessage message)
+        {
+            try
+            {
+                int BillId = JsonConvert.DeserializeObject<int>(message.Content.ToString());
+                return Ok(await _paymentBLL.ViewPayment(BillId));
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+        }
     }
 }

@@ -5,9 +5,9 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { ListUserComponent } from './list-user/list-user.component';
 
 
-const routes: Routes = [{ path: 'AddUser', component: AddUserComponent, canActivate: [AuthGuard] },
-{ path: 'View', component: ListUserComponent , canActivate: [AuthGuard] },
-{path:':id/edit', component:AddUserComponent ,canActivate: [AuthGuard]}
+const routes: Routes = [{ path: 'AddUser', component: AddUserComponent },
+{ path: 'View', component: ListUserComponent  },
+{path:':id/edit', component:AddUserComponent }
 
 
 

@@ -5,9 +5,9 @@ import { AddMeterComponent } from './add-meter/add-meter.component';
 import { ListMeterComponent } from './list-meter/list-meter.component';
 
 
-const routes: Routes = [{ path: 'AddMeter', component: AddMeterComponent ,canActivate: [AuthGuard] },
-{ path: 'View', component: ListMeterComponent ,canActivate: [AuthGuard] },
-{path:':id/editmeter',component:AddMeterComponent ,canActivate: [AuthGuard]}
+const routes: Routes = [{ path: 'AddMeter', component: AddMeterComponent  },
+{ path: 'View', component: ListMeterComponent  },
+{path:':id/editmeter',component:AddMeterComponent }
 
 
 

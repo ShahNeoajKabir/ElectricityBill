@@ -1,5 +1,6 @@
 ﻿using Common.Electricity.Utility;
 using Context;
+using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
 using ModelClass.ViewModel;
 using System;
@@ -23,11 +24,24 @@ namespace SecurityBLLManager
             try
             {
                 vMLogin.Password = new EncryptionService().Encrypt(vMLogin.Password);
-                objuser = _dbContext.User.Where(p => p.Email == vMLogin.Email && p.Password == vMLogin.Password).Select(u => new User()
+                objuser =await _dbContext.User.Where(p => p.Email == vMLogin.Email && p.Password == vMLogin.Password).Select(u => new User()
                 {
                     UserTypeId = u.UserTypeId,
-                    Email = u.Email
-                }).FirstOrDefault();
+                    Email = u.Email,
+                    UserId=u.UserId,
+                    UserName=u.UserName,
+                    UserRole=u.UserRole,
+                    Gender=u.Gender,
+                    MobileNo=u.MobileNo,
+                    Image=u.Image,
+                    Password=u.Password,
+                    Status=u.Status,
+                    UpdatedBy=u.UpdatedBy,
+                    UpdatedDate=u.UpdatedDate,
+                    UserTypeName=u.UserTypeName,
+                    CreatedBy=u.CreatedBy,
+                    CreatedDate=u.CreatedDate
+                }).FirstOrDefaultAsync();
 
 
             }
