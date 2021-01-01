@@ -34,6 +34,11 @@ namespace Common.Electricity.Enum
             Paid = 2,
             UnPaid = 1
         }
+        public enum MobileBankingType
+        {
+            Bkash = 1,
+            Rocket = 2
+        }
         public enum PaymentMethod
         {
             Card=1,

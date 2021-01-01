@@ -109,23 +109,23 @@
           <div class="row"*ngIf="vmmakepayment.PaymentMethod==2">
             <div class="col-md-6 mb-3">
               <label for="cc-name">BKash Number</label>
-              <input type="text" class="form-control" [(ngModel)]="vmmakepayment.mobilebanking.MobileNo" name="BMobileNo" placeholder="" required="">
+              <input type="text" class="form-control" [(ngModel)]="vmmakepayment.mobilebanking.MobileNo" name="MobileNo" placeholder="" required="">
               
             </div>
             <div class="col-md-6 mb-3">
               <label for="Pin">Pin Number</label>
-              <input type="password" class="form-control" [(ngModel)]="vmmakepayment.mobilebanking.Pin" name="MPin" placeholder="">
+              <input type="password" class="form-control" [(ngModel)]="vmmakepayment.mobilebanking.Pin" name="Pin" placeholder="">
             </div>
           </div>
           <div class="row"*ngIf="vmmakepayment.PaymentMethod==3">
             <div class="col-md-6 mb-3">
               <label for="cc-name">Rocket Number</label>
-              <input type="text" class="form-control" name="RMobileNo" placeholder="" required="">
+              <input type="text" class="form-control" name="MobileNo" [(ngModel)]="vmmakepayment.mobilebanking.MobileNo" placeholder="" required="">
               
             </div>
             <div class="col-md-6 mb-3">
               <label for="Pin">Pin Number</label>
-              <input type="password" class="form-control" id="Pin" name="RPin" placeholder="">
+              <input type="password" class="form-control" [(ngModel)]="vmmakepayment.mobilebanking.Pin" name="Pin" placeholder="">
             </div>
           </div>
           <hr class="mb-4">

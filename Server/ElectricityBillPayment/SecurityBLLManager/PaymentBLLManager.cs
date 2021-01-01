@@ -24,13 +24,6 @@ namespace SecurityBLLManager
             try
             {
                 var bill = _database.BillTable.Where(p => p.BillId == makePayment.BillId).AsNoTracking().FirstOrDefault();
-
-
-                //var customer = await _database.Customer.Where(p => p.MobileNo == vMPayment.MobileNo).FirstOrDefaultAsync();
-                //var meter = await _database.MeterTable.Where(p => p.MeterNumber == vMPayment.MeterNumber).FirstOrDefaultAsync();
-
-
-                //ar res = await _database.BillTable.Where(p => p.CustomerId == customer.CustomerId && p.MeterId == meter.MeterId && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).FirstOrDefaultAsync();
                 _database.Database.BeginTransaction();
                 payment = new Payment()
                 {
@@ -93,11 +86,20 @@ namespace SecurityBLLManager
             };
             return vmpayment;
         }
+
+        public List<Payment> GetAll()
+        {
+
+
+            List<Payment> payment = _database.Payment.Where(p => p.PaymentMethod > 0).ToList();
+            return payment;
+        }
     }
 
     public interface IPaymentBLLManager
     {
         Task<Payment> MakePayment(VMMakePayment makePayment);
         Task<VMPayment> ViewPayment(int BillId);
+        List<Payment> GetAll();
     }
 }

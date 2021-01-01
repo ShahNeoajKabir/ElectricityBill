@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using ModelClass.DTO;
 using ModelClass.ViewModel;
 using Newtonsoft.Json;
 using SecurityBLLManager;
@@ -67,11 +68,11 @@ namespace Service.Electricity.Controllers
                 {
                     if (vMMakePayment.PaymentMethod == 2)
                     {
-                        vMMakePayment.mobileBanking.MobileBankingType = 2;
+                        vMMakePayment.mobileBanking.MobileBankingType = 1;
                     }
                     else if (vMMakePayment.PaymentMethod == 3)
                     {
-                        vMMakePayment.mobileBanking.MobileBankingType = 3;
+                        vMMakePayment.mobileBanking.MobileBankingType = 2;
                     }
                     var mobileinformation = _paymentGetwayBLL.GetMobileBankingInformation(vMMakePayment.mobileBanking);
                     if (mobileinformation != null)
@@ -92,6 +93,12 @@ namespace Service.Electricity.Controllers
                 throw;
             }
 
+        }
+
+        [HttpGet("GetAll")]
+        public List<Payment> GetAll()
+        {
+            return _paymentBLL.GetAll();
         }
     }
 }

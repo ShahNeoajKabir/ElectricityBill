@@ -43,6 +43,12 @@ export enum CustomerType{
   House=3
 
 }
+export enum MobileBankingType{
+
+  Bkash=1,
+  Rocket=2
+
+}
 
 export enum Religion{
 

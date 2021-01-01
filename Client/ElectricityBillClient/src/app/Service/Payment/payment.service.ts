@@ -17,4 +17,8 @@ export class PaymentService {
     return this.httpclient.post(this.url+"MakePayment",BillId);
 
   }
+  public GetAll(){
+    return this.httpclient.get(this.url+"GetAll");
+
+  }
 }

@@ -32,8 +32,9 @@ namespace SecurityBLLManager
 
         public async Task<MobileBanking> GetMobileBankingInformation(MobileBanking mobileBanking)
         {
-            var res = _database.MobileBanking.Where(p => p.MobileNo == mobileBanking.MobileNo).FirstOrDefault();
-            if (res.Pin != mobileBanking.Pin)
+            var decpin = new EncryptionService().Encrypt(mobileBanking.Pin);
+            var res = _database.MobileBanking.Where(p => p.MobileNo == mobileBanking.MobileNo).AsNoTracking().FirstOrDefault();
+            if (res.Pin != decpin)
             {
                 throw new Exception("Invalide Pin Number");
             }

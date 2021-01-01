@@ -11,6 +11,15 @@
                   </div>
                   <div class="card-body" style="height: 350px">
                     <div class="row">
+                      <div class="col-md-6">
+                        <label>Mobile Banking Type</label>
+                        <select name="MobileBankingType" class="form-control"
+                        [(ngModel)]="objmobile.MobileBankingType">
+                    <!-- <option [value]="-1">-Select-</option> -->
+                    <option *ngFor="let MobileBankingType of lstmobilebankingtype"
+                    [value]="MobileBankingType.key">{{MobileBankingType.value}}</option>
+                    </select>
+                    </div>
                     <div class="col-md-6">
                       <label>Mobile Number</label>
                       <input type="text"  name="MobileNo" [(ngModel)]="objmobile.MobileNo" class="form-control"  autocomplete="off">

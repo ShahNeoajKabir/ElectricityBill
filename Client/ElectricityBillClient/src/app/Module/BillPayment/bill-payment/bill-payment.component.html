@@ -27,7 +27,8 @@
                 <th>Customer Id</th>
                 <th>Meter Id</th>
                 <th>Bill Amount</th>
-                <th>Action</th>
+                <th>BillStatus</th>
+                <!-- <th>Action</th> -->
             </tr>
         </thead>
         <tbody >
@@ -35,8 +36,11 @@
               <td >{{objbill.CustomerId}}</td>
               <td>{{objbill.MeterId}}</td>
               <td>{{objbill.BillAmount}}</td>
+              <td ><span class="btn-success" *ngIf="objbill.BillStatus===2"> <i class="fa fa-check" aria-hidden="true"></i> Paid</span>
+                <span class="btn-danger" *ngIf="objbill.BillStatus===1"> <i class="fa fa-times" aria-hidden="true"></i> Unpaid</span>
+          </td>
 
-              <td> <a class="btn btn-primary" routerLink="../{{ objbill.BillId }}/Payment"><i class="fa fa-plus" aria-hidden="true"> Pay Bill</i></a></td>
+              <!-- <td> <a class="btn btn-primary" routerLink="../{{ objbill.BillId }}/Payment"><i class="fa fa-plus" aria-hidden="true"> Pay Bill</i></a></td> -->
           </tr>
         </tbody>
 

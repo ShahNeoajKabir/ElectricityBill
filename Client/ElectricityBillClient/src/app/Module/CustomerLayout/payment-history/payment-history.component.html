@@ -14,10 +14,6 @@
               <tr>
                   <th>Customer Name</th>
                   <th>Meter Number</th>
-                  <th>Current Unit</th>
-                  <th>Previous Unit</th>
-                  <th>Current Month</th>
-                  <th>Bill Amount</th>
                   <th>Payment Method</th>
 
 
@@ -25,7 +21,16 @@
               </tr>
           </thead>
           <tbody >
-            
+            <tr *ngFor="let payment of lstpayment">
+              <td >{{payment.CustomerId}}</td>
+              <td>{{payment.MeterId}}</td>
+              <td ><span class="btn-default" *ngIf="payment.PaymentMethod===2"> Mobile</span>
+                <span class="btn-default" *ngIf="payment.PaymentMethod===1">  Card</span>
+          </td>
+
+
+             
+          </tr>
 
         </tbody>
 
