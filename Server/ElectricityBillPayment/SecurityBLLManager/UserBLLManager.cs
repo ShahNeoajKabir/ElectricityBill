@@ -45,9 +45,18 @@ namespace SecurityBLLManager
             return search;
         }
 
-        public List<User> GetAll()
+        public async Task<List<VmUsers>> GetAll()
         {
-            List<User> user = _db.User.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
+            List<VmUsers> user =await _db.User.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).Select(c=> new VmUsers() { 
+            
+            Email=c.Email,
+            MobileNo=c.MobileNo,
+            RoleName=c.UserRole.Where(p=>p.Status==1).FirstOrDefault().Role.RoleName,
+            Status=c.Status,
+            UserId=c.UserId,
+            UserName=c.UserName
+            
+            }).ToListAsync();
             return user;
         }
         public List<User> GetAllMeterReader()
@@ -95,8 +104,15 @@ namespace SecurityBLLManager
         public async Task<User> GetByID(int user)
         {
             var res = await _db.User.Where(p => p.UserId == user).FirstOrDefaultAsync();
+            var roleid = await _db.UserRole.Where(p => p.UserId == user && p.Status == 1).FirstOrDefaultAsync();
+            if (roleid!= null)
+            {
+                res.Role = roleid.RoleId;
+            }
             return res;
         }
+
+
     }
     public interface IUserBLLManager
     {
@@ -104,7 +120,7 @@ namespace SecurityBLLManager
         Task<User> UpdateUser(User user);
         Task<User> GetByID(int user);
 
-        List<User> GetAll();
+        Task<List<VmUsers>> GetAll();
         List<User> GetAllMeterReader();
 
         Task<List<User>> Search(string UserName);

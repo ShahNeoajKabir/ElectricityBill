@@ -99,13 +99,14 @@ namespace Service.Electricity.Controllers
 
 
         }
-        [HttpGet]
+        [HttpPost]
         [Route("GetAll")]
-        public List<User> GetAll()
+        public async Task<ActionResult> GetAll([FromBody] TempMessage message)
         {
             try
             {
-                return this.userBLLManager.GetAll();
+
+                return Ok(await this.userBLLManager.GetAll());
             }
             catch (Exception ex)
             {

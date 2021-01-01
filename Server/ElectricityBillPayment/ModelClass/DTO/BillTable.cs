@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace ModelClass.DTO
@@ -22,6 +23,12 @@ namespace ModelClass.DTO
         public string UpdatedBy { get; set; }
         public DateTime? UpdatedDate { get; set; }
         public int Status { get; set; }
+        [NotMapped]
+        public string CustomerName { get; set; }
+        [NotMapped]
+
+        public string MeterNumber { get; set; }
+
         public  MeterReadingTable MeterReadingTable { get; set; }
         public  Payment Payment { get; set; }
     }

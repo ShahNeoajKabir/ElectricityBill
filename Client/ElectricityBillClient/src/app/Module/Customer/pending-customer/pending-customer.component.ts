@@ -17,7 +17,7 @@ export class PendingCustomerComponent implements OnInit {
   constructor(private customerservice:CustomerService,private router:Router,private activatedroute:ActivatedRoute,private assignmeter:MeterAssignService) { }
 
   ngOnInit(): void {
-    this.customerservice.GetAllPending().subscribe((res: any) => {
+    this.customerservice.GetAllPendingCustomer().subscribe((res: any) => {
       console.log(res);
 
       this.lstcustomer = res;

@@ -15,4 +15,6 @@ export class BillTable{
   UpdatedBy= "";
   UpdatedDate= "";
   Status= 0;
+  CustomerName="";
+  MeterNumber=""
 }

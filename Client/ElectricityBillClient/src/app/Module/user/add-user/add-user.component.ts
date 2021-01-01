@@ -49,8 +49,8 @@ export class AddUserComponent implements OnInit {
       this.userid = this.ActivateRouter.snapshot.params['id' ];
       this.userservice.GetById(this.userid).subscribe(( res: any) => {
 
-        this.objUser = res;
-        console.log(this.objUser);
+        // this.objUser = res;
+        console.log(res);
      });
       console.log(this.ActivateRouter.snapshot.params['id' ] );
 

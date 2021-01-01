@@ -38,21 +38,21 @@ namespace SecurityBLLManager
                 throw new Exception("Failed To Registration");
             }
         }
-        public List<Customer> GetAllPendingCustomer()
+        public List<Customer> GetAllPendingCustomer(int userid)
         {
             List<Customer> customer = new List<Customer>();
-            var meterassignLiost = _dbContext.MeterAssign.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Pending).Select(c => c.CustomerId).ToArray();
-            if (meterassignLiost.Length > 0)
+
+            var zone = _dbContext.ZoneAssign.Where(p => p.UserId == userid && p.Status == 1).FirstOrDefault();
+            if (zone != null)
             {
-                customer = _dbContext.Customer.Where(p => !meterassignLiost.Contains(p.CustomerId) && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
+                customer = _dbContext.Customer.Where(p => p.ZoneId == zone.ZoneId && p.Status == (int)Common.Electricity.Enum.Enum.Status.Pending).ToList();
 
             }
             else
             {
-                customer = _dbContext.Customer.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
+                customer = _dbContext.Customer.Where(p=> p.Status == (int)Common.Electricity.Enum.Enum.Status.Pending).ToList();
 
             }
-
             return customer;
         }
         public Task<List<Customer>> GetAllPending()
@@ -61,7 +61,7 @@ namespace SecurityBLLManager
             return customer;
         }
 
-        public  Task<List<Customer>> GetAll()
+        public Task<List<Customer>> GetAll()
         {
             Task<List<Customer>> customer = _dbContext.Customer.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToListAsync();
             return customer;
@@ -75,7 +75,7 @@ namespace SecurityBLLManager
 
         public async Task<Customer> GetById(Customer customer)
         {
-            var res =await  _dbContext.Customer.Where(c => c.CustomerId == customer.CustomerId).FirstOrDefaultAsync();
+            var res = await _dbContext.Customer.Where(c => c.CustomerId == customer.CustomerId).FirstOrDefaultAsync();
             return res;
         }
 
@@ -111,7 +111,7 @@ namespace SecurityBLLManager
         Task<Customer> GetById(Customer customer);
         Task<Customer> UpdateUser(Customer customer);
         Task<List<Customer>> Search(string CustomerName);
-        List<Customer> GetAllPendingCustomer();
+        List<Customer> GetAllPendingCustomer(int userid);
         Task<List<Customer>> GetAllPending();
     }
 }

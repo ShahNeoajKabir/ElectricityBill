@@ -28,8 +28,10 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
+
                 VMAddMeterReading meterReadingTable = JsonConvert.DeserializeObject<VMAddMeterReading>(message.Content.ToString());
-                await _bLLManager.AddMeterReading(meterReadingTable, ReaderId);
+                await _bLLManager.AddMeterReading(meterReadingTable, loginedUser.UserId);
                 return Ok(meterReadingTable);
             }
             catch (Exception)
@@ -43,7 +45,9 @@ namespace Service.Electricity.Controllers
         [Route("GetAll")]
         public List<MeterReadingTable> GetAll()
         {
-            return _bLLManager.GetAll();
+            var loginedUser = (User)HttpContext.Items["User"];
+
+            return _bLLManager.GetAll(loginedUser.UserId);
         }
 
 

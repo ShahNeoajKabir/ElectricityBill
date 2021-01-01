@@ -27,7 +27,10 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
+
                 MeterAssign meter = JsonConvert.DeserializeObject<MeterAssign>(message.Content.ToString());
+                meter.CreatedBy = loginedUser.UserName;
                 await _bLLmanager.AssignMeter(meter);
                 return Ok( meter);
             }
@@ -42,7 +45,9 @@ namespace Service.Electricity.Controllers
         [Route("GetAll")]
         public List<MeterAssign> GetAll()
         {
-            return _bLLmanager.GetAll();
+            var loginedUser = (User)HttpContext.Items["User"];
+
+            return _bLLmanager.GetAll(loginedUser.UserId);
         }
 
 

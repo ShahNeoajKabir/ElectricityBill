@@ -42,7 +42,49 @@ namespace SecurityBLLManager
                 Status = t.Status,
                 Year = t.Year
             }).ToList();
-            return bill;
+            List<BillTable> data = new List<BillTable>();
+            foreach (var item in bill)
+            {
+                item.CustomerName = _database.Customer.Where(p => p.CustomerId == item.CustomerId).FirstOrDefault().CustomerName;
+                item.MeterNumber = _database.MeterTable.Where(p => p.MeterId == item.MeterId).FirstOrDefault().MeterNumber;
+                data.Add(item);
+            }
+            return data;
+        }
+
+        public List<BillTable> GetByCustomer(int userid)
+        {
+            var customer = _database.Customer.Where(p => p.UserId == userid && p.Status == 1).FirstOrDefault();
+            List<BillTable> bill = _database.BillTable.Where(p=>p.CustomerId== customer.CustomerId).Select(t => new BillTable()
+            {
+                CreatedBy = t.CreatedBy,
+                CreatedDate = t.CreatedDate,
+                CurrentMonth = t.CurrentMonth,
+                CurrentUnit = t.CurrentUnit,
+                CustomerId = t.CustomerId,
+                BillAmount = t.BillAmount,
+                BillId = t.BillId,
+                BillStatus = t.BillStatus,
+                UpdatedBy = t.UpdatedBy,
+                MeterId = t.MeterId,
+                MeterReadingId = t.MeterReadingId,
+                MeterReadingTable = t.MeterReadingTable,
+                PreviousMonth = t.PreviousMonth,
+                PreviousUnit = t.PreviousUnit,
+                Payment = t.Payment,
+                UpdatedDate = t.UpdatedDate,
+                Status = t.Status,
+                Year = t.Year,
+                
+            }).ToList();
+            List<BillTable> data = new List<BillTable>();
+            foreach (var item in bill)
+            {
+                item.CustomerName = _database.Customer.Where(p => p.CustomerId == item.CustomerId).FirstOrDefault().CustomerName;
+                item.MeterNumber = _database.MeterTable.Where(p => p.MeterId == item.MeterId).FirstOrDefault().MeterNumber;
+                data.Add(item);
+            }
+            return data;
         }
 
         public async Task<BillTable> GetById(BillTable bill)
@@ -62,5 +104,6 @@ namespace SecurityBLLManager
     {
         List<BillTable> GetAll();
         Task<BillTable> GetById(BillTable bill);
+        public List<BillTable> GetByCustomer(int userid);
     }
 }

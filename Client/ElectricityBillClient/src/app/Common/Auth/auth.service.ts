@@ -71,5 +71,11 @@ export class AuthService {
     }
     return '';
   }
-
+  getUserRole() {
+    if (this.tokenService.GetToken()) {
+      return this.tokenService.GetTokenValue('Role');
+    }
+    return '';
+  }
+  
 }

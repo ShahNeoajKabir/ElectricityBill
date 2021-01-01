@@ -26,7 +26,17 @@ namespace Service.Electricity.Controllers
         [Route("GetAll")]
         public List<BillTable> GetAll()
         {
-            return _bLLManager.GetAll();
+            var loginedUser = (User)HttpContext.Items["User"];
+            if(loginedUser!=null && loginedUser.Role == 3)
+            {
+                return _bLLManager.GetByCustomer(loginedUser.UserId);
+
+            }
+            else
+            {
+                return _bLLManager.GetAll();
+
+            }
         }
 
         [HttpPost]

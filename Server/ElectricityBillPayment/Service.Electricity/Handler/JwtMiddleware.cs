@@ -49,7 +49,7 @@ namespace Service.Electricity.Handler
                 }, out SecurityToken validatedToken);
 
                 var jwtToken = (JwtSecurityToken)validatedToken;
-                var userId = int.Parse(jwtToken.Claims.First(x => x.Type == "unique_name").Value);
+                var userId = int.Parse(jwtToken.Claims.First(x => x.Type == "userid").Value);
 
                 // attach user to context on successful jwt validation
                 context.Items["User"] = userService.GetByID(userId).Result;

@@ -106,3 +106,58 @@ export const navItems: INavData[] = [
   },
 
 ];
+
+export const navItemsMeterReader: INavData[] = [
+  {
+    name: 'Dashboard',
+    url: '/dashboard',
+    icon: 'icon-speedometer',
+    badge: {
+      variant: 'info',
+      text: 'NEW'
+    }
+  },
+  // {
+  //   title: true,
+  //   name: 'Theme'
+  // },
+
+  {
+    name: 'Meter',
+    url: '/Meter/View',
+    icon: 'icon-speedometer'
+  },
+  {
+    name: 'Notice',
+    url: '/Notice/View',
+    icon: 'icon-bag'
+  },
+ 
+  {
+    name: 'Customer',
+    url: '/Customer/View',
+    icon: 'icon-user'
+  },
+  {
+    name: 'Pending Customer',
+    url: '/Customer/PendingCustomer',
+    icon: 'icon-user'
+  },
+  {
+    name: 'Dashboard',
+    url: '/Customer/Dashboard',
+    icon: 'icon-user'
+  },
+
+  {
+    name: 'Assign Meter',
+    url: '/AssignMeter/View',
+    icon: 'icon-list'
+  },
+  {
+    name: 'MeterReading',
+    url: '/MeterReading/View',
+    icon: 'icon-speedometer'
+  },
+
+];

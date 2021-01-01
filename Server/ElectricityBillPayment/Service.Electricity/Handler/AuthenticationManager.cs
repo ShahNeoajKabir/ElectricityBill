@@ -31,6 +31,9 @@ namespace Service.Electricity.Handler
             var claims = new List<Claim> {
                     new Claim(JwtRegisteredClaimNames.UniqueName, user.UserTypeId.ToString()?? string.Empty),
                     new Claim(JwtClaims.Email, user.Email?? string.Empty),
+                    new Claim("Role", user.Role.ToString()?? string.Empty),
+                    new Claim("userid", user.UserId.ToString()?? string.Empty),
+
 
                     new Claim(JwtClaims.ExpiresDate, expDate.ToString()),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),

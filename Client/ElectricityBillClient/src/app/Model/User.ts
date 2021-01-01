@@ -14,4 +14,14 @@ export class User{
     Status: number=0;
     Image:string='';
     ZoneId:number;
+    Role:number;
+}
+
+export class VmUsers{
+    UserId: number=0;
+    UserName: string='';
+    Email: string='';
+    MobileNo: string='';
+    Status: number=0;
+    RoleName:number;
 }

@@ -42,6 +42,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
 import { httpInterceptorProviders } from './Common/interceptor';
+import { AuthService } from './Common/Auth/auth.service';
 
 
 
@@ -80,7 +81,7 @@ import { httpInterceptorProviders } from './Common/interceptor';
     useClass: HashLocationStrategy,
 
 
-  }],
+  },AuthService],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

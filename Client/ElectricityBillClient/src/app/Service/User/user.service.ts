@@ -15,7 +15,7 @@ export class UserService {
   }
 
   public GetAll(){
-    return this.httpclient.get(this.url+"GetAll");
+    return this.httpclient.post(this.url+"GetAll","");
   }
   public GetAllMeterReader(){
     return this.httpclient.get(this.url+"GetAllMeterReader");

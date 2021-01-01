@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../../../Model/User';
+import { User, VmUsers } from '../../../Model/User';
 import { UserService } from '../../../Service/User/user.service';
 
 @Component({
@@ -9,8 +9,8 @@ import { UserService } from '../../../Service/User/user.service';
   styleUrls: ['./list-user.component.css']
 })
 export class ListUserComponent implements OnInit {
-  public lstUser:User[]= new Array<User>();
-  public lstuser:User[]= new Array<User>();
+  public lstUser:VmUsers[]= new Array<VmUsers>();
+  // public lstuser:User[]= new Array<User>();
 
   public searchuser:string="";
 
@@ -20,12 +20,12 @@ export class ListUserComponent implements OnInit {
   ngOnInit(): void {
     this.userservice.GetAll().subscribe((res:any)=>{
       this.lstUser=res;
-      console.log(this.lstUser);
+      console.log(res);
     });
-    this.userservice.GetAllMeterReader().subscribe((res:any)=>{
-      this.lstuser=res;
-      console.log(this.lstuser);
-    })
+    // this.userservice.GetAllMeterReader().subscribe((res:any)=>{
+    //   this.lstuser=res;
+    //   console.log(this.lstuser);
+    // })
   }
   Edit(id: any) {
 

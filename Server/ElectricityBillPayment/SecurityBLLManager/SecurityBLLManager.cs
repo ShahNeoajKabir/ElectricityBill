@@ -24,7 +24,7 @@ namespace SecurityBLLManager
             try
             {
                 vMLogin.Password = new EncryptionService().Encrypt(vMLogin.Password);
-                objuser =await _dbContext.User.Where(p => p.Email == vMLogin.Email && p.Password == vMLogin.Password).Select(u => new User()
+                objuser =await _dbContext.User.Where(p => p.Email == vMLogin.Email && p.Password == vMLogin.Password).AsNoTracking().Select(u => new User()
                 {
                     UserTypeId = u.UserTypeId,
                     Email = u.Email,
@@ -42,6 +42,15 @@ namespace SecurityBLLManager
                     CreatedBy=u.CreatedBy,
                     CreatedDate=u.CreatedDate
                 }).FirstOrDefaultAsync();
+                var Role = _dbContext.UserRole.Where(p => p.UserId == objuser.UserId && p.Status == 1).AsNoTracking().FirstOrDefault();
+                if (Role != null)
+                {
+                    objuser.Role = Role.RoleId;
+                }
+                else
+                {
+                    throw new Exception("You are not assign to any role");
+                }
 
 
             }

@@ -27,7 +27,7 @@ namespace SecurityBLLManager
             
             try
             {
-                ReaderId = 1;
+                //ReaderId = 1;
                 var customer = await _database.Customer.Where(p => p.MobileNo == VmMeter.MobileNo).FirstOrDefaultAsync();
                 var readerzone = await _database.ZoneAssign.Where(p => p.UserId == ReaderId).FirstOrDefaultAsync();
                 if (readerzone.ZoneId != customer.ZoneId)
@@ -137,19 +137,41 @@ namespace SecurityBLLManager
             return bill.BillId;
         }
 
-        public List<MeterReadingTable> GetAll()
+        public List<MeterReadingTable> GetAll(int userid)
         {
-            List<MeterReadingTable> meter = _database.MeterReadingTable.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).Select(t => new MeterReadingTable()
+            List<MeterReadingTable> meter = new List<MeterReadingTable>();
+            if (userid == 2)
             {
-                CreatedBy = t.CreatedBy,
-                CreatedDate = t.CreatedDate,
-                Status = t.Status,
-                MeterId = t.MeterId,
-                CustomerId = t.CustomerId,
-                MeterAssignId = t.MeterAssignId,
-                CurrentUnit=t.CurrentUnit
-                
-            }).ToList();
+                var zone = _database.ZoneAssign.Where(p => p.UserId == userid && p.Status==1).FirstOrDefault();
+                var userList = _database.Customer.Where(p => p.ZoneId == zone.ZoneId).Select(c=>c.CustomerId).ToArray();
+                 meter = _database.MeterReadingTable.Where(p =>userList.Contains(p.CustomerId) && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).Select(t => new MeterReadingTable()
+                {
+                    CreatedBy = t.CreatedBy,
+                    CreatedDate = t.CreatedDate,
+                    Status = t.Status,
+                    MeterId = t.MeterId,
+                    CustomerId = t.CustomerId,
+                    MeterAssignId = t.MeterAssignId,
+                    CurrentUnit = t.CurrentUnit
+
+                }).ToList();
+                //var useridList=userList.
+            }
+            else
+            {
+                 meter = _database.MeterReadingTable.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).Select(t => new MeterReadingTable()
+                {
+                    CreatedBy = t.CreatedBy,
+                    CreatedDate = t.CreatedDate,
+                    Status = t.Status,
+                    MeterId = t.MeterId,
+                    CustomerId = t.CustomerId,
+                    MeterAssignId = t.MeterAssignId,
+                    CurrentUnit = t.CurrentUnit
+
+                }).ToList();
+            }
+           
             return meter;
         }
 
@@ -157,6 +179,7 @@ namespace SecurityBLLManager
         {
             try
             {
+                
                 var res = await _database.MeterReadingTable.Where(p => p.MeterReadingId == meter.MeterReadingId).AsNoTracking().FirstOrDefaultAsync();
                 if (res != null)
                 {
@@ -194,7 +217,7 @@ namespace SecurityBLLManager
     public interface IMeterReadingBLLManager
     {
         Task<MeterReadingTable> AddMeterReading(VMAddMeterReading VmMeter, int ReaderId);
-        List<MeterReadingTable> GetAll();
+        List<MeterReadingTable> GetAll(int userid);
         Task<MeterReadingTable> UpdateMeterReading(MeterReadingTable meter);
         Task<MeterReadingTable> GetById(MeterReadingTable meter);
     }

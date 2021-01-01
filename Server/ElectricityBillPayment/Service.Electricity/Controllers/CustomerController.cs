@@ -107,9 +107,11 @@ namespace Service.Electricity.Controllers
         [Route("GetAllPendingCustomer")]
         public List<Customer> GetAlll()
         {
+            var loginedUser = (User)HttpContext.Items["User"];
+
             try
             {
-                return _customerBLLManager.GetAllPendingCustomer();
+                return _customerBLLManager.GetAllPendingCustomer(loginedUser.UserId);
             }
             catch (Exception ex)
             {
