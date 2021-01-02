@@ -13,21 +13,19 @@ import { UserService } from '../../../Service/User/user.service';
 })
 export class ProfileComponent implements OnInit {
 
-  public objuser:User =new User();
+  public objuser:any ;
   public userid:any;
 
   constructor(private utility:Utility,private router:Router, private activeroute:ActivatedRoute, private customerservice:CustomerService,private userservice:UserService) { }
 
   ngOnInit(): void {
-    if (this.activeroute.snapshot.params['id'] !== undefined) {
-
-      this.objuser.UserId = this.activeroute.snapshot.params['id' ];
-      this.userservice.GetById(this.objuser).subscribe(( res: any) => {
+    
+      this.customerservice.ViewProfile().subscribe(( res: any) => {
 
         this.objuser = res;
         console.log(this.objuser);
      });
-      console.log(this.activeroute.snapshot.params['id' ] );
+      
 
     }
     
@@ -35,4 +33,4 @@ export class ProfileComponent implements OnInit {
     
   }
 
-}
+

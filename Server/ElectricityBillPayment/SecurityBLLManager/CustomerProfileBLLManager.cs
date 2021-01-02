@@ -22,24 +22,28 @@ namespace SecurityBLLManager
         {
             try
             {
-                var user = await _database.User.Where(p => p.UserId == UserId).FirstOrDefaultAsync();
-                BillTable bill = new BillTable();
-                var customer = await _database.Customer.Where(p => p.CustomerId == bill.CustomerId).FirstOrDefaultAsync();
-                var meter = await _database.MeterTable.Where(p => p.MeterId == bill.MeterId).FirstOrDefaultAsync();
-                var UsesUnit = bill.CurrentUnit - bill.PreviousUnit;
-                var vmProfile = new VMProfile()
+
+                
+                var customer = _database.Customer.Where(p => p.UserId == UserId).FirstOrDefault();
+                var meterassign = _database.MeterAssign.Where(p => p.CustomerId == customer.CustomerId && p.Status==(int)Common.Electricity.Enum.Enum.Status.Active).FirstOrDefault();
+                var meter = _database.MeterTable.Where(p => p.MeterId == meterassign.MeterId).FirstOrDefault();
+                VMProfile vMProfile = new VMProfile()
                 {
-                    CustomerName = customer.CustomerName,
-                    MeterNumber = meter.MeterNumber,
-                    CurrentUnit = bill.CurrentUnit.ToString(),
-                    PreviousUnit = bill.PreviousUnit.ToString(),
-                    UsesUnit = UsesUnit.ToString(),
-                    Image = customer.Image,
-                    MobileNo = customer.MobileNo,
-                    TotalBillAmount = bill.BillAmount.ToString()
+                    CustomerId=customer.CustomerId,
+                    CustomerName=customer.CustomerName,
+                    Email=customer.Email,
+                    Image=customer.Image,
+                    MeterNumber=meter.MeterNumber,
+                    MobileNo=customer.MobileNo,
+                    ZoneName=_database.Zone.FirstOrDefault(p=>p.ZoneId==customer.ZoneId).ZoneName
 
                 };
-                return vmProfile;
+                return vMProfile;
+
+
+
+
+
             }
             catch (Exception ex)
             {

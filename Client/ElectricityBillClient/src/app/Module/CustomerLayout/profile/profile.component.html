@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="profile-img">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS52y5aInsxSm31CvHOFHWujqUx_wWTS9iM6s7BAm21oEN_RiGoog" alt=""/>
+                    <img src="{{objuser.Image}}" alt=""/>
                     <div class="file btn btn-lg btn-primary">
                         Change Photo
                         <input type="file" name="file"/>
@@ -13,7 +13,7 @@
             <div class="col-md-6">
                 <div class="profile-head">
                             <h5 >
-                                {{objuser.Email}}
+                                {{objuser.CustomerName}}
                             </h5>
                             
 
@@ -34,7 +34,7 @@
                                         <label>Mobile Number</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>Kshiti123</p>
+                                        <p>{{objuser.MobileNo}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
@@ -42,23 +42,23 @@
                                         <label>Meter Number</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>Kshiti Ghelani</p>
+                                        <p>{{objuser.MeterNumber}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Cureent Unit</label>
+                                        <label>Zone Name</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>kshitighelani@gmail.com</p>
+                                        <p>{{objuser.ZoneName}}</p>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <label>Previous Unit</label>
+                                        <label>Email</label>
                                     </div>
                                     <div class="col-md-6">
-                                        <p>123 456 7890</p>
+                                        <p>{{objuser.Email}}</p>
                                     </div>
                                 </div>
                                 <div class="row">

@@ -6,15 +6,14 @@ namespace ModelClass.ViewModel
 {
     public class VMProfile
     {
-        
+        public int CustomerId { get; set; }
+        public string CustomerName { get; set; }
+        public string Email { get; set; }
         public string MobileNo { get; set; }
         public string Image { get; set; }
-        public string CustomerName { get; set; }
+       
         public string MeterNumber { get; set; }
-        public string CurrentUnit { get; set; }
-        public string PreviousUnit { get; set; }
-        public string UsesUnit { get; set; }
-        public string TotalBillAmount { get; set; }
+        public string ZoneName { get; set; }
     }
 
     public class CustomerLocation

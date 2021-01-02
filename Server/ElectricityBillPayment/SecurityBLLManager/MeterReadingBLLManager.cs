@@ -137,12 +137,12 @@ namespace SecurityBLLManager
             return bill.BillId;
         }
 
-        public List<MeterReadingTable> GetAll(int userid)
+        public List<MeterReadingTable> GetAll(int roleid)
         {
             List<MeterReadingTable> meter = new List<MeterReadingTable>();
-            if (userid == 2)
+            if (roleid == (int)Common.Electricity.Enum.Enum.Role.MeterReader)
             {
-                var zone = _database.ZoneAssign.Where(p => p.UserId == userid && p.Status==1).FirstOrDefault();
+                var zone = _database.ZoneAssign.Where(p => p.UserId == roleid && p.Status==1).FirstOrDefault();
                 var userList = _database.Customer.Where(p => p.ZoneId == zone.ZoneId).Select(c=>c.CustomerId).ToArray();
                  meter = _database.MeterReadingTable.Where(p =>userList.Contains(p.CustomerId) && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).Select(t => new MeterReadingTable()
                 {

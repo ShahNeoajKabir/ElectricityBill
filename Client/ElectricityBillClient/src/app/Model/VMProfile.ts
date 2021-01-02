@@ -3,8 +3,6 @@ export class VMProfile{
     Image:string;
     CustomerName:string;
     MeterNumber:string;
-    CurrentUnit:string;
-    PreviousUnit:string;
-    UsesUnit:string;
-    TotalBillAmount:string
+    Email:string;
+    CustomerId:number;
 }

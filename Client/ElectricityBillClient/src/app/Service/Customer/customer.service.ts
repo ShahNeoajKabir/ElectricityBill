@@ -12,8 +12,8 @@ export class CustomerService {
   public AddCustomer(obj:any){
     return this.httpclient.post(this.url+"Registration",obj);
   }
-  public ViewProfile(obj:any){
-    return this.httpclient.post(this.url+"Profile",obj);
+  public ViewProfile(){
+    return this.httpclient.get(this.url+"Profile");
   }
 
   public GetById(Customer:any){
@@ -39,5 +39,6 @@ export class CustomerService {
   public GetAllCustomerLocation(){
     return this.httpclient.get(this.url+"GetCustomerLocation");
   }
+  
   
 }

@@ -112,6 +112,39 @@ namespace SecurityBLLManager
             }).ToListAsync();
             return location;
         }
+        public async Task<VMProfile> ViewProfile(int UserId)
+        {
+            try
+            {
+
+
+                var customer = _dbContext.Customer.Where(p => p.UserId == UserId).FirstOrDefault();
+                var meterassign = _dbContext.MeterAssign.Where(p => p.CustomerId == customer.CustomerId && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).FirstOrDefault();
+                var meter = _dbContext.MeterTable.Where(p => p.MeterId == meterassign.MeterId).FirstOrDefault();
+                VMProfile vMProfile = new VMProfile()
+                {
+                    CustomerId = customer.CustomerId,
+                    CustomerName = customer.CustomerName,
+                    Email = customer.Email,
+                    Image = customer.Image,
+                    MeterNumber = meter.MeterNumber,
+                    MobileNo = customer.MobileNo,
+                    ZoneName = _dbContext.Zone.FirstOrDefault(p => p.ZoneId == customer.ZoneId).ZoneName
+
+                };
+                return vMProfile;
+
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
     }
 
 
@@ -125,6 +158,7 @@ namespace SecurityBLLManager
         List<Customer> GetAllPendingCustomer(int userid);
         Task<List<Customer>> GetAllPending();
         Task<List<CustomerLocation>> GetAllCustomerLocation();
+        Task<VMProfile> ViewProfile(int UserId);
 
     }
 }

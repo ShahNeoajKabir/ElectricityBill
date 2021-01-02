@@ -162,12 +162,14 @@ namespace Service.Electricity.Controllers
 
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("Profile")]
-        public async Task<ActionResult>Profile([FromBody]TempMessage message)
+        public async Task<ActionResult>Profile()
         {
-            int UserId = JsonConvert.DeserializeObject<int>(message.Content.ToString());
-            return Ok(await _customerProfileBLL.ViewProfile(UserId));
+            var loginedUser = (User)HttpContext.Items["User"];
+
+            //int UserId = JsonConvert.DeserializeObject<int>(message.Content.ToString());
+            return Ok(await _customerBLLManager.ViewProfile(loginedUser.UserId));
         }
 
         [HttpGet("GetCustomerLocation")]
