@@ -104,7 +104,7 @@ namespace SecurityBLLManager
         public async Task<User> GetByID(int user)
         {
             var res = await _db.User.Where(p => p.UserId == user).FirstOrDefaultAsync();
-            var roleid = await _db.UserRole.Where(p => p.UserId == user && p.Status == 1).FirstOrDefaultAsync();
+            var roleid = await _db.UserRole.Where(p => p.UserId == user && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).FirstOrDefaultAsync();
             if (roleid!= null)
             {
                 res.Role = roleid.RoleId;

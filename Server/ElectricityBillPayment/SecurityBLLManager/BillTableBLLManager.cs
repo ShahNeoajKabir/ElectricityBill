@@ -54,7 +54,7 @@ namespace SecurityBLLManager
 
         public List<BillTable> GetByCustomer(int userid)
         {
-            var customer = _database.Customer.Where(p => p.UserId == userid && p.Status == 1).FirstOrDefault();
+            var customer = _database.Customer.Where(p => p.UserId == userid && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).FirstOrDefault();
             List<BillTable> bill = _database.BillTable.Where(p=>p.CustomerId== customer.CustomerId).Select(t => new BillTable()
             {
                 CreatedBy = t.CreatedBy,

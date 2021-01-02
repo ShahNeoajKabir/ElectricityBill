@@ -92,6 +92,16 @@
     </div>
     <div class="row">
       <div class="col-md-5">
+        
+          <label>Image</label>
+          <div class="card-container">
+            <input type="file" id="FUImage" name="FUImage" accept=".png, .jpg, .jpeg" (change)="handleFileInput($event.target.files)"> 
+            <button type="button" class="btn btn-danger pull-left" (click)="btnUpload()">Upload</button> 
+          </div>
+          <div class="card-container">
+            <img src="{{ImageBaseData}}" alt="Selected Image" height="200" width="200">
+          </div>
+
       </div>
       <div class="col-md-1">
         <button aria-pressed="true" class="btn btn-block btn-success active"(click)="AddCustomer()" type="button">SignUp</button>

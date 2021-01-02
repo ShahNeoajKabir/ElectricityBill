@@ -23,6 +23,7 @@ export class CustomerRegistrationComponent implements OnInit {
   public lstnationality:any;
   public  lstzone:Zone[]=new Array<Zone>();
   public objedit:Customer=new Customer();
+  ImageBaseData:string | ArrayBuffer=null;
 
   title: string = 'AGM project';
   latitude: number;
@@ -100,6 +101,31 @@ export class CustomerRegistrationComponent implements OnInit {
         this.registration.Longitude = position.coords.longitude;
         this.zoom = 15;
       });
+    }
+  }
+
+  handleFileInput(files: FileList) {
+    let me = this;
+    let file = files[0];
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      console.log(reader.result);
+      me.ImageBaseData=reader.result;
+    };
+    reader.onerror = function (error) {
+      console.log('Error: ', error);
+    };
+ }
+  btnUpload(){
+    
+    if(this.ImageBaseData==null){
+      alert("Please select file");
+    }else{     
+      
+      this.registration.Image=this.ImageBaseData.toString();
+      
+      
     }
   }
 

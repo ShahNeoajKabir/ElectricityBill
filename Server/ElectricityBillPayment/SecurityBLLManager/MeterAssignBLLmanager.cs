@@ -56,10 +56,10 @@ namespace SecurityBLLManager
         public List<MeterAssign> GetAll(int userid)
         {
             List<MeterAssign> meter = new List<MeterAssign>();
-            var zone = _dbContext.ZoneAssign.Where(p => p.UserId == userid && p.Status == 1).FirstOrDefault();
+            var zone = _dbContext.ZoneAssign.Where(p => p.UserId == userid && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).FirstOrDefault();
             if (zone != null)
             {
-                var customerid = _dbContext.Customer.Where(p => p.ZoneId == zone.ZoneId && p.Status == 1).Select(p => p.CustomerId).ToArray();
+                var customerid = _dbContext.Customer.Where(p => p.ZoneId == zone.ZoneId && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).Select(p => p.CustomerId).ToArray();
                  meter = _dbContext.MeterAssign.Where(p => customerid.Contains(p.CustomerId) && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).Select(t => new MeterAssign()
                 {
                     CreatedBy = t.CreatedBy,

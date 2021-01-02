@@ -25,7 +25,7 @@ namespace SecurityBLLManager
             {
 
                 customer.Status = (int)Common.Electricity.Enum.Enum.Status.Pending;
-                customer.Image = "Asd";
+                customer.Image = customer.Image;
                 customer.CreatedBy = "Admin";
                 customer.CreatedDate = DateTime.Now;
                 customer.Password = new EncryptionService().Encrypt(customer.Password);
@@ -43,7 +43,7 @@ namespace SecurityBLLManager
         {
             List<Customer> customer = new List<Customer>();
 
-            var zone = _dbContext.ZoneAssign.Where(p => p.UserId == userid && p.Status == 1).FirstOrDefault();
+            var zone = _dbContext.ZoneAssign.Where(p => p.UserId == userid && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).FirstOrDefault();
             if (zone != null)
             {
                 customer = _dbContext.Customer.Where(p => p.ZoneId == zone.ZoneId && p.Status == (int)Common.Electricity.Enum.Enum.Status.Pending).ToList();
