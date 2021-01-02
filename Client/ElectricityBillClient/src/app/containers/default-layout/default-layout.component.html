@@ -18,6 +18,10 @@
       <app-sidebar-nav [navItems]="navItemsMeterReaders" [perfectScrollbar] [disabled]="appSidebar.minimized"></app-sidebar-nav>
 
     </div>
+    <div *ngIf="roleId===4">
+      <app-sidebar-nav [navItems]="navItemsCoOrdinator" [perfectScrollbar] [disabled]="appSidebar.minimized"></app-sidebar-nav>
+
+    </div>
 
     <li class="nav-item">
       <a class="nav-link" (click)="authservice.removeToken()" >Logout</a>
