@@ -6,7 +6,7 @@
       </div>
       <div class="card">
         <div class="card-header">
-          <i class="fa fa-align-justify"></i> Bill History Table
+          <i class="fa fa-align-justify"></i> Bill Payment History Table
         </div>
         <div class="card-body">
           <table class="table table-striped">
@@ -14,7 +14,13 @@
               <tr>
                   <th>Customer Name</th>
                   <th>Meter Number</th>
+                  <th>Year</th>
+                  <th>Month</th>
+                  <th>Usage Unit</th>
+                  <th>Last Billed Unit</th>
+                  <th>Payment Date</th>
                   <th>Payment Method</th>
+
 
 
 
@@ -22,8 +28,13 @@
           </thead>
           <tbody >
             <tr *ngFor="let payment of lstpayment">
-              <td >{{payment.CustomerId}}</td>
-              <td>{{payment.MeterId}}</td>
+              <td >{{payment.CustomerName}}</td>
+              <td>{{payment.MeterNumber}}</td>
+              <td >{{payment.Year}}</td>
+              <td>{{payment.Month}}</td>
+              <td >{{payment.UsageUnit}}</td>
+              <td>{{payment.LastBilledUnit}}</td>
+              <td>{{payment.PaymentDate}}</td>
               <td ><span class="btn-default" *ngIf="payment.PaymentMethod===2"> Mobile</span>
                 <span class="btn-default" *ngIf="payment.PaymentMethod===1">  Card</span>
           </td>

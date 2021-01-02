@@ -8,7 +8,7 @@ import { PaymentService } from '../../../Service/Payment/payment.service';
   styleUrls: ['./payment-history.component.css']
 })
 export class PaymentHistoryComponent implements OnInit {
-  public lstpayment:Payment[]=new Array<Payment>();
+  public lstpayment:any;
 
   constructor(private paymentservice:PaymentService) { }
 

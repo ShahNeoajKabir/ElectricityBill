@@ -96,9 +96,11 @@ namespace Service.Electricity.Controllers
         }
 
         [HttpGet("GetAll")]
-        public List<Payment> GetAll()
+        public async Task<ActionResult> GetAll()
         {
-            return _paymentBLL.GetAll();
+            var loginedUser = (User)HttpContext.Items["User"];
+
+            return  Ok(await _paymentBLL.GetAll(loginedUser.UserId));
         }
     }
 }

@@ -70,7 +70,7 @@ namespace SecurityBLLManager
 
             var vmpayment = new VMPayment()
             {
-                BillId=bill.BillId,
+                BillId = bill.BillId,
                 CustomeName = customer.CustomerName,
                 MeterNumber = meter.MeterNumber,
                 BillAmount = BillAmount,
@@ -87,12 +87,46 @@ namespace SecurityBLLManager
             return vmpayment;
         }
 
-        public List<Payment> GetAll()
+        public async Task<List<VmPaymentHistory>> GetAll(int userid)
         {
+            List<VmPaymentHistory> vmPaymentHistories = new List<VmPaymentHistory>();
+            var customer = _database.Customer.Where(p => p.UserId == userid).FirstOrDefault();
+            if (customer != null)
+            {
+                var meterAssign = _database.MeterAssign.Where(p => p.CustomerId == customer.CustomerId && p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).FirstOrDefault();
+                var meternumber = _database.MeterTable.FirstOrDefault(p => p.MeterId == meterAssign.MeterId);
+                vmPaymentHistories = await _database.Payment.Where(p => p.CustomerId == customer.CustomerId).Select(c => new VmPaymentHistory()
+                {
+                    PaidAmount = _database.BillTable.FirstOrDefault(p => p.BillId == c.BillId).BillAmount,
+                    CustomerName = customer.CustomerName,
+                    LastBilledUnit = _database.BillTable.FirstOrDefault(p => p.BillId == c.BillId).CurrentUnit,
+                    PaymentMethod = c.PaymentMethod,
+                    MeterNumber = meternumber.MeterNumber,
+                    Month = _database.BillTable.FirstOrDefault(p => p.BillId == c.BillId).CurrentMonth,
+                    Year = _database.BillTable.FirstOrDefault(p => p.BillId == c.BillId).Year,
+                    UsageUnit = _database.BillTable.FirstOrDefault(p => p.BillId == c.BillId).CurrentUnit - _database.BillTable.FirstOrDefault(p => p.BillId == c.BillId).PreviousUnit,
+                    PaymentDate = c.CreatedDate.ToString("yyyy-MMMM-dd HH:mm")
+                }).ToListAsync();
+            }
+            else
+            {
+                vmPaymentHistories =await _database.Payment.Select(c => new VmPaymentHistory()
+                {
+                    PaidAmount = _database.BillTable.FirstOrDefault(p => p.BillId == c.BillId).BillAmount,
+                    CustomerName = _database.Customer.Where(p => p.CustomerId == c.CustomerId).FirstOrDefault().CustomerName,
+                    LastBilledUnit = _database.BillTable.FirstOrDefault(p => p.BillId == c.BillId).CurrentUnit,
+                    PaymentMethod = c.PaymentMethod,
+                    MeterNumber = _database.BillTable.FirstOrDefault(p=>p.BillId==c.BillId).MeterNumber,
+                    Month = _database.BillTable.FirstOrDefault(p => p.BillId == c.BillId).CurrentMonth,
+                    Year = _database.BillTable.FirstOrDefault(p => p.BillId == c.BillId).Year,
+                    UsageUnit = _database.BillTable.FirstOrDefault(p => p.BillId == c.BillId).CurrentUnit - _database.BillTable.FirstOrDefault(p => p.BillId == c.BillId).PreviousUnit,
+                    PaymentDate = c.CreatedDate.ToString("yyyy-MMMM-dd HH:mm")
+                }).ToListAsync();
+            }
+
+            return vmPaymentHistories;
 
 
-            List<Payment> payment = _database.Payment.Where(p => p.PaymentMethod > 0).ToList();
-            return payment;
         }
     }
 
@@ -100,6 +134,6 @@ namespace SecurityBLLManager
     {
         Task<Payment> MakePayment(VMMakePayment makePayment);
         Task<VMPayment> ViewPayment(int BillId);
-        List<Payment> GetAll();
+        Task<List<VmPaymentHistory>> GetAll(int userid);
     }
 }
