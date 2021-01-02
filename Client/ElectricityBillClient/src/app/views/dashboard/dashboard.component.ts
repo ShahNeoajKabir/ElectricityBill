@@ -1,14 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, NgZone, OnInit, ViewChild } from '@angular/core';
 import { getStyle, hexToRgba } from '@coreui/coreui/dist/js/coreui-utilities';
 import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
+import { AgmMap, MapsAPILoader } from '@agm/core';
+import { CustomerLocation } from '../../Model/Customer';
+import { CustomerService } from '../../Service/Customer/customer.service';
 
 @Component({
   templateUrl: 'dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {
+  @ViewChild(AgmMap,{static: true}) public agmMap: AgmMap;
+  lat=23.7509073;
+  lng= 90.3842538;
+  zoom=4;
+  public  lstLocation:[];
 
   radioModel: string = 'Month';
 
+ 
+
+  constructor(private customerService:CustomerService
+
+  ) { }
   // lineChart1
   public lineChart1Data: Array<any> = [
     {
@@ -383,6 +396,13 @@ export class DashboardComponent implements OnInit {
       this.mainChartData1.push(this.random(50, 200));
       this.mainChartData2.push(this.random(80, 100));
       this.mainChartData3.push(65);
+
+      this.customerService.GetAllCustomerLocation().subscribe((res:any)=>{
+        this.lstLocation=res
+        console.log(this.lstLocation,res)
+      })
     }
   }
+  // Get Current Location Coordinates
+  
 }

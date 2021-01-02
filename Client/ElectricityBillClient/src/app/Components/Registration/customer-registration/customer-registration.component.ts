@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { MapsAPILoader } from '@agm/core';
+import { Component, NgZone, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Blood, CustomerType, Gender, Nationality, Religion } from '../../../Common/Enum';
 import { Utility } from '../../../Common/Utility';
@@ -23,9 +24,25 @@ export class CustomerRegistrationComponent implements OnInit {
   public  lstzone:Zone[]=new Array<Zone>();
   public objedit:Customer=new Customer();
 
-  constructor(private utility:Utility, private customerservice:CustomerService,private router:Router, private ActiveRouter:ActivatedRoute,private zoneservice:ZoneService) { }
+  title: string = 'AGM project';
+  latitude: number;
+  longitude: number;
+  zoom: number;
+  address: string;
+  private geoCoder;
+
+  constructor(private mapsAPILoader: MapsAPILoader,
+    private ngZone: NgZone,private utility:Utility, private customerservice:CustomerService,private router:Router, private ActiveRouter:ActivatedRoute,private zoneservice:ZoneService) { }
 
   ngOnInit(): void {
+      this.setCurrentLocation();
+
+    // this.setCurrentLocation();
+    // this.mapsAPILoader.load().then(() => {
+    //   this.setCurrentLocation();
+    //   this.geoCoder = new google.maps.Geocoder;
+
+    // });
     this.lstGender=this.utility.enumToArray(Gender);
     this.lstreligion=this.utility.enumToArray(Religion);
     this.lstcutomertype=this.utility.enumToArray(CustomerType);
@@ -73,6 +90,17 @@ export class CustomerRegistrationComponent implements OnInit {
       } );
     }
 
+  }
+  // Get Current Location Coordinates
+  private setCurrentLocation() {
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        console.log(position)
+        this.registration.Latitude = position.coords.latitude;
+        this.registration.Longitude = position.coords.longitude;
+        this.zoom = 15;
+      });
+    }
   }
 
 

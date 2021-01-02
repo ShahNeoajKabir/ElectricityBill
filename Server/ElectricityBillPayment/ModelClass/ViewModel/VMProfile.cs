@@ -16,4 +16,10 @@ namespace ModelClass.ViewModel
         public string UsesUnit { get; set; }
         public string TotalBillAmount { get; set; }
     }
+
+    public class CustomerLocation
+    {
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
+    }
 }

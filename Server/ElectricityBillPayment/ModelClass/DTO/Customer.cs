@@ -24,8 +24,8 @@ namespace ModelClass.DTO
         public int BloodGroup { get; set; }
         public string Address { get; set; }
         public int CustomerType { get; set; }
-        public string Latitude { get; set; }
-        public string Longitude { get; set; }
+        public double Latitude { get; set; }
+        public double Longitude { get; set; }
         public string CreatedBy { get; set; }
         public DateTime CreatedDate { get; set; }
         public string UpdatedBy { get; set; }

@@ -36,4 +36,8 @@ export class CustomerService {
   public GetAllPending(){
     return this.httpclient.get(this.url+"GetAllPending");
   }
+  public GetAllCustomerLocation(){
+    return this.httpclient.get(this.url+"GetCustomerLocation");
+  }
+  
 }

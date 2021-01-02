@@ -25,6 +25,7 @@ namespace Service.Electricity.Controllers
         {
             return "value";
         }
+       
 
         // POST api/<DashboardController>
         [HttpPost]

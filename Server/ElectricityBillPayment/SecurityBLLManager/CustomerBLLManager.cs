@@ -2,6 +2,7 @@
 using Context;
 using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
+using ModelClass.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -101,6 +102,16 @@ namespace SecurityBLLManager
                 throw;
             }
         }
+
+        public async Task<List<CustomerLocation>> GetAllCustomerLocation()
+        {
+            var location = await _dbContext.Customer.Select(p => new CustomerLocation()
+            {
+                Latitude = p.Latitude,
+                Longitude = p.Longitude
+            }).ToListAsync();
+            return location;
+        }
     }
 
 
@@ -113,5 +124,7 @@ namespace SecurityBLLManager
         Task<List<Customer>> Search(string CustomerName);
         List<Customer> GetAllPendingCustomer(int userid);
         Task<List<Customer>> GetAllPending();
+        Task<List<CustomerLocation>> GetAllCustomerLocation();
+
     }
 }

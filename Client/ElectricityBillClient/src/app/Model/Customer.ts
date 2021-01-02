@@ -17,8 +17,8 @@ export class Customer{
   BloodGroup:number=0;
   Address:string='';
   CustomerType:number=0;
-  Latitude:string='';
-  Longitude:string='';
+  Latitude=0;
+  Longitude=0;
   CreatedBy:string='';
   CreatedDate:Date|undefined;
   UpdatedBy:string='';
@@ -26,4 +26,9 @@ export class Customer{
   Status:number=0;
   Image:string='';
 
+}
+
+export class CustomerLocation{
+  Latitude=0;
+  Longitude=0;
 }

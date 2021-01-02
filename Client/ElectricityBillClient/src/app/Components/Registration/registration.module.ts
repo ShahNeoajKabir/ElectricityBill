@@ -5,6 +5,7 @@ import { CustomerService } from '../../Service/Customer/customer.service';
 import { RegisterComponent } from '../../views/register/register.component';
 import { CustomerRegistrationComponent } from './customer-registration/customer-registration.component';
 import { RegistrationRoutingModule } from './registration-routing.module';
+import { AgmCoreModule } from '@agm/core';
 
 
 
@@ -13,7 +14,10 @@ import { RegistrationRoutingModule } from './registration-routing.module';
   imports: [
     CommonModule,
     RegistrationRoutingModule,
-    FormsModule
+    FormsModule,
+    AgmCoreModule.forRoot({  
+      apiKey: 'AIzaSyBib2Nuc4iRnft_GXCfAOSkobRbN7u-wJQ'  
+    }),
   ],
   providers:[CustomerService],
 })

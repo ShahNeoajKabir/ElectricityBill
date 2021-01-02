@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -44,6 +46,7 @@ import { FormsModule } from '@angular/forms';
 import { httpInterceptorProviders } from './Common/interceptor';
 import { AuthService } from './Common/Auth/auth.service';
 
+import {AgmMap,MapsAPILoader, AgmCoreModule  } from '../../node_modules/@agm/core'; 
 
 
 
@@ -54,6 +57,7 @@ import { AuthService } from './Common/Auth/auth.service';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    CommonModule,
     AppAsideModule,
     AppBreadcrumbModule.forRoot(),
     AppFooterModule,
@@ -63,10 +67,13 @@ import { AuthService } from './Common/Auth/auth.service';
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ChartsModule,
+    AgmCoreModule.forRoot({  
+      apiKey: 'AIzaSyBib2Nuc4iRnft_GXCfAOSkobRbN7u-wJQ'  
+    }),
     ToastrModule.forRoot({
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
-  })
+  }),
   ],
   declarations: [
     AppComponent,

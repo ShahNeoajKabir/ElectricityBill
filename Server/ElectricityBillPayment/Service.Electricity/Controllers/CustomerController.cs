@@ -169,5 +169,11 @@ namespace Service.Electricity.Controllers
             int UserId = JsonConvert.DeserializeObject<int>(message.Content.ToString());
             return Ok(await _customerProfileBLL.ViewProfile(UserId));
         }
+
+        [HttpGet("GetCustomerLocation")]
+        public async Task<ActionResult> GetCustomerLocation()
+        {
+            return Ok(await _customerBLLManager.GetAllCustomerLocation());
+        }
     }
 }
