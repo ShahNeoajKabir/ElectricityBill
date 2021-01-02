@@ -27,7 +27,7 @@ namespace Service.Electricity.Controllers
         public List<BillTable> GetAll()
         {
             var loginedUser = (User)HttpContext.Items["User"];
-            if(loginedUser!=null && loginedUser.Role == 3)
+            if(loginedUser!=null && loginedUser.Role == (int)Common.Electricity.Enum.Enum.Role.Customer)
             {
                 return _bLLManager.GetByCustomer(loginedUser.UserId);
 

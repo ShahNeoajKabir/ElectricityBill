@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using ModelClass.ViewModel;
+using SecurityBLLManager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +14,11 @@ namespace Service.Electricity.Controllers
     [ApiController]
     public class DashboardController : ControllerBase
     {
+        private readonly IDashboardBLLManager _dashboardBLLManager;
+        public DashboardController(IDashboardBLLManager dashboardBLLManager)
+        {
+            _dashboardBLLManager = dashboardBLLManager;
+        }
         // GET: api/<DashboardController>
         [HttpGet]
         public IEnumerable<string> Get()
@@ -25,7 +32,35 @@ namespace Service.Electricity.Controllers
         {
             return "value";
         }
-       
+
+        [HttpGet("GetDashboardData")]
+        public async Task<ActionResult> GetDashboardData()
+        {
+            try
+            {
+                var Data = new VmDashboard()
+                {
+                    ActiveCustomer = await _dashboardBLLManager.ActiveCustomer(),
+                    TotalBillAmount = await _dashboardBLLManager.TotalBillAmount(),
+                    TotalBillCollectAmount = await _dashboardBLLManager.TotalBillCollectAmount(),
+                    CustomerLocations = await _dashboardBLLManager.CustomerLocations(),
+                    LastTenTransaction = await _dashboardBLLManager.LastTenTransaction(),
+                    TotalRegisteredCustomer = await _dashboardBLLManager.TotalRegisteredCustomer(),
+                    TotalUsageUnit = await _dashboardBLLManager.TotalUsageUnit()
+
+                };
+
+                return Ok(Data);
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
+
 
         // POST api/<DashboardController>
         [HttpPost]

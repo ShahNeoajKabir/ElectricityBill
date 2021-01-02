@@ -97,6 +97,7 @@ namespace Service.Electricity
             services.AddScoped<IPaymentBLLManager, PaymentBLLManager>();
             services.AddScoped<ICustomerProfileBLLManager, CustomerProfileBLLManager>();
             services.AddScoped<IPaymentGetwayBLLManager, PaymentGetwayBLLManager>();
+            services.AddScoped<IDashboardBLLManager, DashboardBLLManager>();
 
         }
 

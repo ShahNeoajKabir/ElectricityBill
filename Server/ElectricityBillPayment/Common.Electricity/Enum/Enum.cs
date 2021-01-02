@@ -89,6 +89,13 @@ namespace Common.Electricity.Enum
             Cristian = 3,
             Budho=4
         }
+        public enum Role
+        {
+            Admin = 1,
+            MeterReader = 2,
+            Customer = 3
+            
+        }
 
 
         public enum ErrorCode

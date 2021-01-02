@@ -4,6 +4,7 @@ import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import { AgmMap, MapsAPILoader } from '@agm/core';
 import { CustomerLocation } from '../../Model/Customer';
 import { CustomerService } from '../../Service/Customer/customer.service';
+import { DashboardService } from '../../Service/Dashboard/dashboard.service';
 
 @Component({
   templateUrl: 'dashboard.component.html'
@@ -13,13 +14,13 @@ export class DashboardComponent implements OnInit {
   lat=23.7509073;
   lng= 90.3842538;
   zoom=8;
-  public  lstLocation:[];
+  public  Data:any;
 
   radioModel: string = 'Month';
 
  
 
-  constructor(private customerService:CustomerService
+  constructor(private customerService:CustomerService,private dashboardService:DashboardService
 
   ) { }
   // lineChart1
@@ -397,9 +398,9 @@ export class DashboardComponent implements OnInit {
       this.mainChartData2.push(this.random(80, 100));
       this.mainChartData3.push(65);
 
-      this.customerService.GetAllCustomerLocation().subscribe((res:any)=>{
-        this.lstLocation=res
-        console.log(this.lstLocation,res)
+      this.dashboardService.GetDashboardData().subscribe((res:any)=>{
+        this.Data=res
+        console.log(this.Data,res)
       })
     }
   }

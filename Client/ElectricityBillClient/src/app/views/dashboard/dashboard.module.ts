@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard.component';
 import { DashboardRoutingModule } from './dashboard-routing.module';
 import {AgmMap,MapsAPILoader, AgmCoreModule  } from '../../../../node_modules/@agm/core'; 
 import { CustomerService } from '../../Service/Customer/customer.service';
+import { DashboardService } from '../../Service/Dashboard/dashboard.service';
 
 
 @NgModule({
@@ -26,6 +27,6 @@ import { CustomerService } from '../../Service/Customer/customer.service';
     ButtonsModule.forRoot()
   ],
   declarations: [ DashboardComponent ],
-  providers:[CustomerService]
+  providers:[CustomerService,DashboardService]
 })
 export class DashboardModule { }
