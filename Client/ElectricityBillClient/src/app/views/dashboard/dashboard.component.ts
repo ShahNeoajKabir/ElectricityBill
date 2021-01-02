@@ -12,7 +12,7 @@ export class DashboardComponent implements OnInit {
   @ViewChild(AgmMap,{static: true}) public agmMap: AgmMap;
   lat=23.7509073;
   lng= 90.3842538;
-  zoom=4;
+  zoom=8;
   public  lstLocation:[];
 
   radioModel: string = 'Month';
