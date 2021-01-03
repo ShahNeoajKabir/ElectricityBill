@@ -47,6 +47,7 @@ export class UserPayBillComponent implements OnInit {
     
     this.paymentservice.MakePayment(this.vmmakepayment).subscribe(res=>{
       console.log(res);
+      this.router.navigate(['/CustomerDashboard/BillHistory'])
     });
   }
 

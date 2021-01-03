@@ -35,16 +35,6 @@ export const navItems: INavData[] = [
     icon: 'icon-speedometer'
   },
   {
-    name: 'Notice',
-    url: '/Notice/View',
-    icon: 'icon-bag'
-  },
-  {
-    name: 'URL',
-    url: '/RolePermission/AddUrl',
-    icon: 'icon-drop'
-  },
-  {
     name: 'Zone',
     url: '/Zone/View',
     icon: 'icon-location-pin'
@@ -64,11 +54,7 @@ export const navItems: INavData[] = [
     url: '/Customer/PendingCustomer',
     icon: 'icon-user'
   },
-  {
-    name: 'Dashboard',
-    url: '/Customer/Dashboard',
-    icon: 'icon-user'
-  },
+
   {
     name: 'Billl',
     url: '/Bill/View',
@@ -91,11 +77,7 @@ export const navItems: INavData[] = [
     url: '/MobileBanking/View',
     icon: 'icon-user'
   },
-  {
-    name: 'Signin',
-    url: '/Security/Login',
-    icon: 'icon-user'
-  },
+  
   {
     name: 'Assign Meter',
     url: '/AssignMeter/View',
@@ -113,8 +95,7 @@ export const navItems: INavData[] = [
   },
 
 ];
-
-export const navItemsMeterReader: INavData[] = [
+export const navItemsCoOrdinators: INavData[] = [
   {
     name: 'Dashboard',
     url: '/dashboard',
@@ -124,6 +105,58 @@ export const navItemsMeterReader: INavData[] = [
       text: 'NEW'
     }
   },
+  // {
+  //   title: true,
+  //   name: 'Theme'
+  // },
+  {
+    name: 'User',
+    url: '/User/View',
+    icon: 'icon-user'
+  },
+  {
+    name: 'Meter',
+    url: '/Meter/View',
+    icon: 'icon-speedometer'
+  },
+
+  {
+    name: 'Zone',
+    url: '/Zone/View',
+    icon: 'icon-location-pin'
+  },
+  {
+    name: 'ZoneAssign',
+    url: '/ZoneAssign/View',
+    icon: 'icon-location-pin'
+  },
+  {
+    name: 'Customer',
+    url: '/Customer/View',
+    icon: 'icon-user'
+  },
+  {
+    name: 'Pending Customer',
+    url: '/Customer/PendingCustomer',
+    icon: 'icon-user'
+  },
+
+  {
+    name: 'Assign Meter',
+    url: '/AssignMeter/View',
+    icon: 'icon-list'
+  },
+  {
+    name: 'Unit Price',
+    url: '/UnitPrice/View',
+    icon: 'icon-list'
+  },
+
+
+];
+
+export const navItemsMeterReader: INavData[] = [
+ 
   // {
   //   title: true,
   //   name: 'Theme'
@@ -146,56 +179,4 @@ export const navItemsMeterReader: INavData[] = [
   },
 
 ];
-export const navItemsCoOrdinator: INavData[] = [
-  {
-    name: 'Dashboard',
-    url: '/dashboard',
-    icon: 'icon-speedometer',
-    badge: {
-      variant: 'info',
-      text: 'NEW'
-    }
-  },
 
-  {
-    name: 'Meter',
-    url: '/Meter/View',
-    icon: 'icon-speedometer'
-  },
-  {
-    name: 'Notice',
-    url: '/Notice/View',
-    icon: 'icon-bag'
-  },
-
-  {
-    name: 'Customer',
-    url: '/Customer/View',
-    icon: 'icon-user'
-  },
-  {
-    name: 'Pending Customer',
-    url: '/Customer/PendingCustomer',
-    icon: 'icon-user'
-  },
-  {
-    name: 'Dashboard',
-    url: '/Customer/Dashboard',
-    icon: 'icon-user'
-  },
-
-
-
-  {
-    name: 'Assign Meter',
-    url: '/AssignMeter/View',
-    icon: 'icon-list'
-  },
-  {
-    name: 'Unit Price',
-    url: '/UnitPrice/View',
-    icon: 'icon-list'
-  },
-
-
-];

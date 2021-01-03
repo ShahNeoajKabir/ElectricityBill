@@ -54,18 +54,23 @@ export class AssignMeterComponent implements OnInit {
   }
   submit() {
     console.log(this.lstmeterassign);
-    
-      this.meterassignservice.AssignMeter(this.lstmeterassign).subscribe(res => {
-        this.router.navigate(['/AssignMeter/View']);
-
+    if (this.lstmeterassign.MeterAssignId > 0 ) {
+      this.meterassignservice.UpdateAssign(this.lstmeterassign).subscribe(res => {
         
+          this.router.navigate(['/AssignMeter/View']);
+          console.log(res);
+       
+      } );
+    }
+    else {
+      this.meterassignservice.AssignMeter(this.lstmeterassign).subscribe(res => {
+        
+          this.router.navigate(['/AssignMeter/View']);
           console.log(res);
         
-      });
-    
+      } );
+    }
+  }
 
 }
 
-
-
-}

@@ -33,10 +33,10 @@ namespace Service.Electricity.Controllers
                 var loginedUser = (User)HttpContext.Items["User"];
                 
                 MeterAssign meter = JsonConvert.DeserializeObject<MeterAssign>(message.Content.ToString());
-               
 
+                Customer customer = new Customer();
                 meter.CreatedBy = loginedUser.UserName;
-                
+
                 await _bLLmanager.AssignMeter(meter);
                 return Ok( meter);
             }

@@ -12,6 +12,8 @@ namespace ModelClass.ViewModel
             LastTenTransaction = new List<VmLastTenTransaction>();
         }
         public long TotalRegisteredCustomer { get; set; }
+        public long TotalFemale { get; set; }
+        public long TotalMale { get; set; }
         public double TotalUsageUnit { get; set; }
         public long ActiveCustomer { get; set; }
         public double TotalBillAmount { get; set; }

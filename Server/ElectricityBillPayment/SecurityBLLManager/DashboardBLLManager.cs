@@ -63,6 +63,16 @@ namespace SecurityBLLManager
             var totalBill =await _dbContext.BillTable.Where(p => p.BillStatus == (int)Common.Electricity.Enum.Enum.BillStatus.Paid).SumAsync(c => c.BillAmount);
             return totalBill;
         }
+        public async Task<long> ToTalFemale()
+        {
+            var female = await _dbContext.Customer.Where(p => p.Gender == (int)Common.Electricity.Enum.Enum.Gender.Female).CountAsync();
+            return female;
+        }
+        public async Task<long> ToTalMale()
+        {
+            var male = await _dbContext.Customer.Where(p => p.Gender == (int)Common.Electricity.Enum.Enum.Gender.Male).CountAsync();
+            return male;
+        }
 
         public async Task<long> TotalRegisteredCustomer()
         {
@@ -86,5 +96,7 @@ namespace SecurityBLLManager
         Task<double> TotalBillCollectAmount();
         Task<List<CustomerLocation>> CustomerLocations();
         Task<List<VmLastTenTransaction>> LastTenTransaction();
+        Task<long> ToTalFemale();
+        Task<long> ToTalMale();
     }
 }

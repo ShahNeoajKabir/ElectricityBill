@@ -64,7 +64,6 @@ namespace Service.Electricity.Controllers
                         if (vMMakePayment.RequestAmount <= cardinformation.Result.Balance)
                         {
                             payment.CreatedBy = loginedUser.UserName;
-                            await _mailer.SendEmailAsync(loginedUser.Email, "Payment Succestfull", "Your Tranjaction Id Is"+payment.PaymentId);
                             return Ok(await _paymentBLL.MakePayment(vMMakePayment));
                         }
                         
@@ -87,7 +86,6 @@ namespace Service.Electricity.Controllers
                         if (vMMakePayment.RequestAmount <= mobileinformation.Result.Balance)
                         {
                             payment.CreatedBy = loginedUser.CreatedBy;
-                            await _mailer.SendEmailAsync(loginedUser.Email, "Payment Succestfull", "Your Tranjaction Id Is" + payment.PaymentId);
 
                             return Ok(await _paymentBLL.MakePayment(vMMakePayment));
                         }
