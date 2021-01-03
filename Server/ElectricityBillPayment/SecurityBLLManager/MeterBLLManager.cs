@@ -21,7 +21,7 @@ namespace SecurityBLLManager
         {
             try
             {
-                meter.CreatedBy = "Admin";
+                
                 meter.CreatedDate = DateTime.Now;
                 await _dbContext.MeterTable.AddAsync(meter);
                 await _dbContext.SaveChangesAsync();
@@ -71,7 +71,7 @@ namespace SecurityBLLManager
                 var id = await _dbContext.MeterTable.Where(p => p.MeterId == meter.MeterId).AsNoTracking().FirstOrDefaultAsync();
                 if (id != null)
                 {
-                    meter.UpdatedBy = "Admin";
+                    
                     meter.UpdatedDate = DateTime.Now;
                     _dbContext.MeterTable.Update(meter);
                     await _dbContext.SaveChangesAsync();

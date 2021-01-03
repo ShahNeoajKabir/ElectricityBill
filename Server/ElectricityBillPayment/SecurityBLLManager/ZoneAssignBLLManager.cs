@@ -24,7 +24,7 @@ namespace SecurityBLLManager
             try
             {
                 
-                    zoneAssign.CreatedBy = "Admin";
+                    
                     zoneAssign.CreatedDate = DateTime.Now;
                     await _database.ZoneAssign.AddAsync(zoneAssign);
                     await _database.SaveChangesAsync();
@@ -64,7 +64,7 @@ namespace SecurityBLLManager
                 var res = await _database.ZoneAssign.Where(p => p.ZoneAssignId == zoneAssign.ZoneAssignId).AsNoTracking().FirstOrDefaultAsync();
                 if (res != null)
                 {
-                    zoneAssign.UpdatedBy = "Admin";
+                    
                     zoneAssign.UpdatedDate = DateTime.Now;
                     _database.ZoneAssign.Update(zoneAssign);
                     await _database.SaveChangesAsync();

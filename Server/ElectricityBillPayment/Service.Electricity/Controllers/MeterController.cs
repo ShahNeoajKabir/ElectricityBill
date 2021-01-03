@@ -27,7 +27,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 MeterTable meter = JsonConvert.DeserializeObject<MeterTable>(message.Content.ToString());
+                meter.CreatedBy = loginedUser.UserName;
                 await _meterBLL.AddMeter(meter);
                 return Ok( meter);
             }
@@ -80,7 +82,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 MeterTable meter = JsonConvert.DeserializeObject<MeterTable>(message.Content.ToString());
+                meter.UpdatedBy = loginedUser.UserName;
                 await _meterBLL.UpdateMeter(meter);
                 return Ok( meter);
             }

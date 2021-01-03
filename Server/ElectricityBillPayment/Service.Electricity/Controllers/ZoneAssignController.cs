@@ -26,7 +26,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 ZoneAssign zoneAssign = JsonConvert.DeserializeObject<ZoneAssign>(message.Content.ToString());
+                zoneAssign.CreatedBy = loginedUser.UserName;
                 await _bLLManager.AssignZone(zoneAssign);
                 return Ok(zoneAssign);
             }
@@ -51,7 +53,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 ZoneAssign zoneAssign = JsonConvert.DeserializeObject<ZoneAssign>(message.Content.ToString());
+                zoneAssign.UpdatedBy = loginedUser.UserName;
                 await _bLLManager.UpdateZoneAssign(zoneAssign);
                 return Ok(zoneAssign);
             }

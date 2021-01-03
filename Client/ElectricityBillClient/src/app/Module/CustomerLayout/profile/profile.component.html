@@ -1,26 +1,26 @@
 <div class="container emp-profile">
     <form method="post">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-6">
                 <div class="profile-img">
                     <img src="{{objuser.Image}}" alt=""/>
                     <div class="file btn btn-lg btn-primary">
-                        Change Photo
+                        {{objuser.CustomerName}} Photo
                         <input type="file" name="file"/>
                     </div>
                 </div>
             </div>
             <div class="col-md-6">
                 <div class="profile-head">
-                            <h5 >
+                    <h5 style="text-decoration: underline;">
+                        User Name
+                    </h5>
+                            <h5 style="color: rgb(5, 5, 133); font-weight: bold; font-size: 2em;" >
                                 {{objuser.CustomerName}}
                             </h5>
                             
 
                 </div>
-            </div>
-            <div class="col-md-2">
-                <input type="submit" class="profile-edit-btn" name="btnAddMore" value="Edit Profile"/>
             </div>
         </div>
         <div class="row">
@@ -59,14 +59,6 @@
                                     </div>
                                     <div class="col-md-6">
                                         <p>{{objuser.Email}}</p>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <label>Total Bill Amount</label>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <p>Web Developer and Designer</p>
                                     </div>
                                 </div>
                     </div>

@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
-import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
@@ -18,10 +17,6 @@ import { AppComponent } from './app.component';
 
 // Import containers
 import { DefaultLayoutComponent } from './containers';
-
-import { P404Component } from './views/error/404.component';
-import { P500Component } from './views/error/500.component';
-import { RegisterComponent } from './views/register/register.component';
 
 const APP_CONTAINERS = [
   DefaultLayoutComponent
@@ -46,7 +41,8 @@ import { FormsModule } from '@angular/forms';
 import { httpInterceptorProviders } from './Common/interceptor';
 import { AuthService } from './Common/Auth/auth.service';
 
-import {AgmMap,MapsAPILoader, AgmCoreModule  } from '../../node_modules/@agm/core'; 
+import {AgmMap,MapsAPILoader, AgmCoreModule  } from '../../node_modules/@agm/core';
+import { ListMeterAssignforCustomerComponent } from './Module/MeterAssign/list-meter-assignfor-customer/list-meter-assignfor-customer.component'; 
 
 
 

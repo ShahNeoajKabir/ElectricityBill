@@ -22,7 +22,7 @@ namespace SecurityBLLManager
         {
             try
             {
-                unitPrice.CreatedBy = "Admin";
+                
                 unitPrice.CreatedDate = DateTime.Now;
                 await _database.UnitPrice.AddAsync(unitPrice);
                 await _database.SaveChangesAsync();
@@ -48,7 +48,7 @@ namespace SecurityBLLManager
                 var res = await _database.UnitPrice.Where(p => p.UnitPriceId == unitPrice.UnitPriceId).AsNoTracking().FirstOrDefaultAsync();
                 if (res != null)
                 {
-                    unitPrice.UpdatedBy = "Admin";
+                    
                     unitPrice.UpdatedDate = DateTime.Now;
                     _database.UnitPrice.Update(unitPrice);
                     await _database.SaveChangesAsync();

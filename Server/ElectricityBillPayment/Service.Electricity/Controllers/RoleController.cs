@@ -32,6 +32,7 @@ namespace Service.Electricity.Controllers
                 var loginedUser = (User)HttpContext.Items["User"];
 
                 Role role = JsonConvert.DeserializeObject<Role>(message.Content.ToString());
+                role.CreatedBy = loginedUser.UserName;
                 await _roleBLL.AddRole(role);
                 return Ok( role);
             }
@@ -76,7 +77,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 Role role = JsonConvert.DeserializeObject<Role>(message.Content.ToString());
+                role.UpdatedBy = loginedUser.UserName;
                 await _roleBLL.UpdateRole(role);
                 return Ok(role);
             }

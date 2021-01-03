@@ -21,7 +21,7 @@ namespace SecurityBLLManager
         {
             try
             {
-                support.CreatedBy = "Customer";
+                
                 support.CreatedDate = DateTime.Now;
                 await _dbContext.Support.AddAsync(support);
                 await _dbContext.SaveChangesAsync();
@@ -54,7 +54,7 @@ namespace SecurityBLLManager
                 var id = await _dbContext.Support.Where(p => p.SupportId == support.SupportId).AsNoTracking().FirstOrDefaultAsync();
                 if (id != null)
                 {
-                    support.UpdatedBy = "Customer";
+                    
                     support.UpdatedDate = DateTime.Now;
                     _dbContext.Support.Update(support);
                     await _dbContext.SaveChangesAsync();

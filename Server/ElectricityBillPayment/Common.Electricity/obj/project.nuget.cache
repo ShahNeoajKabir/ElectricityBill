@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Evi0q623u4NdM7kRZO/QcdlB1DnBBJTHpm96OWbSLdTfqQmHaRWT8RcpVza2n8G5Zlx2NIgQg81UcLnxOjxzrg==",
+  "dgSpecHash": "MNqxEzl9qVJ5zOcZRKXt582M4JAKKR845V2tnUGF6MgNsL28rRxFv2Bwi0jMeSq3pm/tBsZjbBW0zQsnB2dhLw==",
   "success": true,
-  "projectFilePath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
+  "projectFilePath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

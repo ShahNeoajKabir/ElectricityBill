@@ -5472,11 +5472,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj",
+      "projectUniqueName": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj",
       "projectName": "SecurityBLLManager",
-      "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj",
+      "projectPath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\obj\\",
+      "outputPath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5492,11 +5492,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj": {
-              "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj"
+            "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj": {
+              "projectPath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj"
             },
-            "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj": {
-              "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj"
+            "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj": {
+              "projectPath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj"
             }
           }
         }

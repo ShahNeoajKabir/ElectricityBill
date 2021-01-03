@@ -75,6 +75,13 @@ export const navItems: INavData[] = [
     icon: 'icon-user'
   },
   {
+    name: 'PaymentHistory',
+    url: '/Bill/PaimentHistory',
+    icon: 'icon-user'
+  },
+
+  
+  {
     name: 'Card',
     url: '/Card/View',
     icon: 'icon-user'
@@ -123,13 +130,13 @@ export const navItemsMeterReader: INavData[] = [
   // },
 
   
+ 
+ 
   {
-    name: 'Notice',
-    url: '/Notice/View',
-    icon: 'icon-bag'
+    name: 'Customer Meter',
+    url: '/AssignMeter/CustomerMeter',
+    icon: 'icon-list'
   },
- 
- 
   
   
   {

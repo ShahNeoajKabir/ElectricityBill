@@ -14,6 +14,7 @@ namespace SecurityBLLManager
     {
 
         private readonly DatabaseContext _dbContext;
+        
         public MeterAssignBLLmanager(DatabaseContext dbContext)
         {
             _dbContext = dbContext;
@@ -52,6 +53,7 @@ namespace SecurityBLLManager
                 throw;
             }
         }
+       
 
         public List<MeterAssign> GetAll(int userid)
         {
@@ -104,7 +106,7 @@ namespace SecurityBLLManager
                 var id = await _dbContext.MeterAssign.Where(p => p.MeterAssignId == meter.MeterAssignId).AsNoTracking().FirstOrDefaultAsync();
                 if (id != null)
                 {
-                    meter.UpdatedBy = "CoOrdinator";
+                    
                     meter.UpdatedDate = DateTime.Now;
                     _dbContext.MeterAssign.Update(meter);
                     await _dbContext.SaveChangesAsync();
@@ -144,6 +146,7 @@ namespace SecurityBLLManager
                 Status = (int)Common.Electricity.Enum.Enum.Status.Active
 
             };
+
             _dbContext.User.Add(user);
             var res = _dbContext.SaveChanges();
             
@@ -154,7 +157,7 @@ namespace SecurityBLLManager
                 {
                     RoleId = 3,
                     UserId = user.UserId,
-                    CreatedBy = "MeterReader",
+                    CreatedBy = "CoOrdinator",
                     CreatedDate = DateTime.Now
                 };
                 _dbContext.UserRole.Add(userRole);

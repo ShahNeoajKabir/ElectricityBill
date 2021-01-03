@@ -21,34 +21,7 @@ export const routes: Routes = [
 
   },
 
-  // {
-  //   path: '404',
-  //   component: P404Component,
-  //   data: {
-  //     title: 'Page 404'
-  //   }
-  // },
-  // {
-  //   path: '500',
-  //   component: P500Component,
-  //   data: {
-  //     title: 'Page 500'
-  //   }
-  // },
-  // {
-  //   path: 'login',
-  //   component: LoginComponent,
-  //   data: {
-  //     title: 'Login Page'
-  //   }
-  // },
-  // {
-  //   path: 'register',
-  //   component: RegisterComponent,
-  //   data: {
-  //     title: 'Register Page'
-  //   }
-  // },
+  
   { path: '', loadChildren: () => import('../app/Components/signin.module').then(m => m.SigninModule) },
   { path: 'CustomerRegistration', loadChildren: () => import('../app/Components/Registration/registration.module').then(m => m.RegistrationModule) },
 

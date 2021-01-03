@@ -47,7 +47,7 @@ namespace SecurityBLLManager
                         MeterAssignId = res.MeterAssignId,
                         Status = res.Status,
                         CurrentUnit = VmMeter.CurrentUnit,
-                        CreatedBy = "MeterReader",
+                        
                         CreatedDate = DateTime.Now
 
                     };
@@ -65,10 +65,7 @@ namespace SecurityBLLManager
                     }
                     
 
-                    //meterReadingTable.CreatedBy = "MeterReader";
-                    //meterReadingTable.CreatedDate = DateTime.Now;
-                    //await _database.MeterReadingTable.AddAsync(meterReadingTable);
-                    //await _database.SaveChangesAsync();
+                    
 
 
                 }
@@ -107,7 +104,6 @@ namespace SecurityBLLManager
                     Status = 1,
                     Year = VmMeter.Year,
                     PreviousMonth = Prvmonthbill.CurrentMonth,
-                    CreatedBy = "MeterReader",
                     CreatedDate = DateTime.Now
                 };
             }
@@ -128,7 +124,7 @@ namespace SecurityBLLManager
                     Status = 1,
                     Year = VmMeter.Year,
                     PreviousMonth = 0,
-                    CreatedBy = "MeterReader",
+                    
                     CreatedDate = DateTime.Now
                 };
             }
@@ -170,6 +166,7 @@ namespace SecurityBLLManager
                     CurrentUnit = t.CurrentUnit
 
                 }).ToList();
+               
             }
            
             return meter;
@@ -183,7 +180,7 @@ namespace SecurityBLLManager
                 var res = await _database.MeterReadingTable.Where(p => p.MeterReadingId == meter.MeterReadingId).AsNoTracking().FirstOrDefaultAsync();
                 if (res != null)
                 {
-                    meter.UpdatedBy = "MeterReader";
+                    
                     meter.UpdatedDate = DateTime.Now;
                     _database.MeterReadingTable.Update(meter);
                     await _database.SaveChangesAsync();

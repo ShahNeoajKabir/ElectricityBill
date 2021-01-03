@@ -22,7 +22,7 @@ namespace SecurityBLLManager
         {
             try
             {
-                zone.CreatedBy = "Admin";
+                
                 zone.CreatedDate = DateTime.Now;
                 await _dbContext.Zone.AddAsync(zone);
                 await _dbContext.SaveChangesAsync();
@@ -57,7 +57,7 @@ namespace SecurityBLLManager
                 var id = await _dbContext.Zone.Where(c => c.ZoneId == zone.ZoneId).AsNoTracking().FirstOrDefaultAsync();
                 if (id != null)
                 {
-                    zone.UpdatedBy = "Admin";
+                   
                     zone.UpdatedDate = DateTime.Now;
                     _dbContext.Zone.Update(zone);
                    await _dbContext.SaveChangesAsync();

@@ -30,7 +30,7 @@ export class AddUserRoleComponent implements OnInit {
 
   ngOnInit(): void {
     this.lststatus=this.utility.enumToArray(Status);
-    this.userservice.GetAll().subscribe((res: any) => {
+    this.userservice.GetAllUnAssinUser().subscribe((res: any) => {
       console.log(res);
 
       this.lstuser = res;

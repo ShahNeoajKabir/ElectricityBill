@@ -75,19 +75,18 @@ export class CustomerRegistrationComponent implements OnInit {
     console.log(this.registration);
     if (this.registration.CustomerId > 0 ) {
       this.customerservice.UpdateUser(this.registration).subscribe(res => {
-        if (res === 1) {
-          this.router.navigate(['/User/View']);
+        
+          this.router.navigate(['/Login']);
           console.log(res);
-        }
-        console.log(res);
+        
+        
       } );
     } else {
       this.customerservice.AddCustomer(this.registration).subscribe(res => {
-        if (res === 1) {
-          this.router.navigate(['/User/View']);
+        
+          this.router.navigate(['/Login']);
           console.log(res);
-        }
-        console.log(res);
+        
       } );
     }
 

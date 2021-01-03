@@ -8,6 +8,7 @@ using ModelClass.DTO;
 using ModelClass.ViewModel;
 using Newtonsoft.Json;
 using SecurityBLLManager;
+using Service.Electricity.MailConfig;
 
 namespace Service.Electricity.Controllers
 {
@@ -16,9 +17,11 @@ namespace Service.Electricity.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserBLLManager userBLLManager;
-        public UserController(IUserBLLManager userBLLManager)
+        private readonly IMailer _mailer;
+        public UserController(IUserBLLManager userBLLManager, IMailer mailer)
         {
             this.userBLLManager = userBLLManager;
+            _mailer = mailer; 
         }
 
         [HttpPost]
@@ -27,9 +30,10 @@ namespace Service.Electricity.Controllers
         {
             try
             {
-
+                var loginedUser = (User)HttpContext.Items["User"];
                 User user = JsonConvert.DeserializeObject<User>(message.Content.ToString());
-                
+                await _mailer.SendEmailAsync(user.Email, "User", "now you are authurized for login" + "Your Emai Is" + user.Email + "Your Password Is" + user.Password);
+                user.CreatedBy = loginedUser.UserName;
                 await this.userBLLManager.AddUser(user);
                 return Ok(user);
             }
@@ -48,8 +52,11 @@ namespace Service.Electricity.Controllers
             try
             {
                 User user = JsonConvert.DeserializeObject<User>(message.Content.ToString());
+                var loginedUser = (User)HttpContext.Items["User"];
+                user.UpdatedBy = loginedUser.UserName;
 
-                
+
+
                 await this.userBLLManager.UpdateUser(user);
                 return Ok(user);
             }
@@ -132,6 +139,22 @@ namespace Service.Electricity.Controllers
 
 
         }
+        [HttpGet]
+        [Route("GetAllUnAssinUser")]
+        public List<User> GetAllUnAssignUser()
+        {
+            try
+            {
+                return this.userBLLManager.GetAllUnAssignUser();
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+
+
+        }
 
 
         [HttpGet]
@@ -142,12 +165,7 @@ namespace Service.Electricity.Controllers
 
             return "hello";
         }
-        //[HttpPost]
-        //[Route("AddUser")]
-        //public void AddUser([FromBody]User user)
-        //{
-        //    _userBLLManager.AddUser(user);
-        //}
+        
 
     }
 }

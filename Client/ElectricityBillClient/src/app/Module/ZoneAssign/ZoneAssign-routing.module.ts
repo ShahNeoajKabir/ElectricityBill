@@ -6,9 +6,9 @@ import { ListZoneAssignComponent } from './list-zone-assign/list-zone-assign.com
 
 
 
-const routes: Routes = [{ path: 'AssignZone', component: AddZoneAssignComponent ,canActivate: [AuthGuard]},
-{ path: 'View', component: ListZoneAssignComponent ,canActivate: [AuthGuard] },
-{path:':id/edit', component:AddZoneAssignComponent ,canActivate: [AuthGuard]}
+const routes: Routes = [{ path: 'AssignZone', component: AddZoneAssignComponent },
+{ path: 'View', component: ListZoneAssignComponent  },
+{path:':id/edit', component:AddZoneAssignComponent }
 
 
 

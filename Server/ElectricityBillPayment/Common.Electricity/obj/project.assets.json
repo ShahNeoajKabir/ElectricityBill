@@ -5413,11 +5413,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
+      "projectUniqueName": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
       "projectName": "Common.Electricity",
-      "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
+      "projectPath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\Common.Electricity.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\obj\\",
+      "outputPath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Common.Electricity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

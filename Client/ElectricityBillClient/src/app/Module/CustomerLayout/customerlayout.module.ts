@@ -7,11 +7,12 @@ import { CustomerLayoutRoutingModule } from './customerlayout-routing.module';
 import { BillHistroryComponent } from './bill-histrory/bill-histrory.component';
 import { PaymentHistoryComponent } from './payment-history/payment-history.component';
 import { ProfileComponent } from './profile/profile.component';
+import { UserPayBillComponent } from './user-pay-bill/user-pay-bill.component';
 
 
 
 @NgModule({
-  declarations: [CustomerLayoutComponent, BillHistroryComponent, PaymentHistoryComponent,ProfileComponent],
+  declarations: [CustomerLayoutComponent, BillHistroryComponent, PaymentHistoryComponent,ProfileComponent, UserPayBillComponent],
   imports: [
     CommonModule,
     CustomerLayoutRoutingModule,

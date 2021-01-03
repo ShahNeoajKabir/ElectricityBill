@@ -28,7 +28,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 CardInformation card = JsonConvert.DeserializeObject<CardInformation>(message.Content.ToString());
+                
                 await _bLLManager.AddCard(card);
                 return Ok(card);
             }

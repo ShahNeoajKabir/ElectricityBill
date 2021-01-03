@@ -8,6 +8,7 @@ using ModelClass.DTO;
 using ModelClass.ViewModel;
 using Newtonsoft.Json;
 using SecurityBLLManager;
+using Service.Electricity.MailConfig;
 
 namespace Service.Electricity.Controllers
 {
@@ -16,9 +17,11 @@ namespace Service.Electricity.Controllers
     public class AssignMeterController : ControllerBase
     {
         private readonly IMeterAssignBLLmanager _bLLmanager;
-        public AssignMeterController(IMeterAssignBLLmanager bLLmanager)
+        private readonly IMailer _mailer;
+        public AssignMeterController(IMeterAssignBLLmanager bLLmanager, IMailer mailer)
         {
             _bLLmanager = bLLmanager;
+            _mailer = mailer;
         }
 
         [HttpPost]
@@ -28,9 +31,12 @@ namespace Service.Electricity.Controllers
             try
             {
                 var loginedUser = (User)HttpContext.Items["User"];
-
+                
                 MeterAssign meter = JsonConvert.DeserializeObject<MeterAssign>(message.Content.ToString());
+               
+
                 meter.CreatedBy = loginedUser.UserName;
+                
                 await _bLLmanager.AssignMeter(meter);
                 return Ok( meter);
             }
@@ -76,7 +82,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 MeterAssign meter = JsonConvert.DeserializeObject<MeterAssign>(message.Content.ToString());
+                meter.UpdatedBy = loginedUser.UserName;
                 await _bLLmanager.UpdateAssign(meter);
                 return Ok(meter);
             }

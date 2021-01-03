@@ -19,7 +19,7 @@ namespace SecurityBLLManager
 
         public async Task<Role> AddRole(Role role)
         {
-            role.CreatedBy = "Admin";
+            
             role.CreatedDate = DateTime.Now;
 
             await _db.Role.AddAsync(role);
@@ -46,7 +46,7 @@ namespace SecurityBLLManager
                 var id = await _db.Role.Where(p => p.RoleId == role.RoleId).AsNoTracking().FirstOrDefaultAsync();
                 if (id != null)
                 {
-                    role.UpdatedBy = "Admin";
+                    
                     role.UpdatedDate = DateTime.Now;
                     _db.Role.Update(role);
                     await _db.SaveChangesAsync();
