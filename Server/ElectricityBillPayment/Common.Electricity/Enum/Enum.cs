@@ -93,7 +93,8 @@ namespace Common.Electricity.Enum
         {
             Admin = 1,
             MeterReader = 2,
-            Customer = 3
+            Customer = 3,
+            CoOrdinator=4
             
         }
 

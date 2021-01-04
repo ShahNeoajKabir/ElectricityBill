@@ -8,6 +8,7 @@ using ModelClass.DTO;
 using ModelClass.ViewModel;
 using Newtonsoft.Json;
 using SecurityBLLManager;
+using Service.Electricity.MailConfig;
 
 namespace Service.Electricity.Controllers
 {
@@ -17,11 +18,13 @@ namespace Service.Electricity.Controllers
     {
         private readonly IPaymentBLLManager _paymentBLL;
         private readonly IPaymentGetwayBLLManager _paymentGetwayBLL;
-        public PaymentController(IPaymentBLLManager paymentBLL, IPaymentGetwayBLLManager paymentGetwayBLL)
+        private readonly IMailer _mailer;
+        public PaymentController(IPaymentBLLManager paymentBLL, IPaymentGetwayBLLManager paymentGetwayBLL, IMailer mailer)
         {
 
             _paymentBLL = paymentBLL;
             _paymentGetwayBLL = paymentGetwayBLL;
+            _mailer = mailer;
         }
 
         [HttpPost]
@@ -50,7 +53,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                Payment payment = new Payment();
                 VMMakePayment vMMakePayment = JsonConvert.DeserializeObject<VMMakePayment>(message.Content.ToString());
+                var loginedUser = (User)HttpContext.Items["User"];
                 if (vMMakePayment.PaymentMethod == (int)Common.Electricity.Enum.Enum.PaymentMethod.Card)
                 {
                     var cardinformation = _paymentGetwayBLL.GetCardInformation(vMMakePayment.cardInformation);
@@ -58,6 +63,7 @@ namespace Service.Electricity.Controllers
                     {
                         if (vMMakePayment.RequestAmount <= cardinformation.Result.Balance)
                         {
+                            payment.CreatedBy = loginedUser.UserName;
                             return Ok(await _paymentBLL.MakePayment(vMMakePayment));
                         }
                         
@@ -79,6 +85,8 @@ namespace Service.Electricity.Controllers
                     {
                         if (vMMakePayment.RequestAmount <= mobileinformation.Result.Balance)
                         {
+                            payment.CreatedBy = loginedUser.CreatedBy;
+
                             return Ok(await _paymentBLL.MakePayment(vMMakePayment));
                         }
                     }

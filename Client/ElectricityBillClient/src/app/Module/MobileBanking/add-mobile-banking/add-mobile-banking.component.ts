@@ -25,9 +25,17 @@ export class AddMobileBankingComponent implements OnInit {
   }
 
   AddMobile(){
-    this.mobilebankingservice.AddMobile(this.objmobile).subscribe(res=>{
-      console.log(res);
-    })
+    console.log(this.objmobile);
+    
+    
+    this.mobilebankingservice.AddMobile(this.objmobile).subscribe(res => {
+      
+        this.router.navigate(['/MobileBanking/View']);
+        console.log(res);
+      
+    } );
+  
+}
 
 }
-}
+

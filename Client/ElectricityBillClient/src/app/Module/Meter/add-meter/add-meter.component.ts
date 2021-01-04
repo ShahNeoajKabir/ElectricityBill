@@ -45,20 +45,18 @@ export class AddMeterComponent implements OnInit {
     console.log(this.objMeter);
     if (this.objMeter.MeterId > 0 ) {
       this.meterservice.UpdateMeter(this.objMeter).subscribe(res => {
-        if (res === 1) {
+        
           this.router.navigate(['/Meter/View']);
           console.log(res);
-        }
-        console.log(res);
+       
       } );
     }
     else {
       this.meterservice.AddMeter(this.objMeter).subscribe(res => {
-        if (res === 1) {
+        
           this.router.navigate(['/Meter/View']);
           console.log(res);
-        }
-        console.log(res);
+        
       } );
     }
   }

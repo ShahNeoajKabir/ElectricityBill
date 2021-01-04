@@ -22,7 +22,7 @@ namespace SecurityBLLManager
         {
             try
             {
-                user.CreatedBy = "Admin";
+                
                 user.CreatedDate = DateTime.Now;
 
                 user.Password = new EncryptionService().Encrypt(user.Password);
@@ -59,6 +59,22 @@ namespace SecurityBLLManager
             }).ToListAsync();
             return user;
         }
+        public List<User> GetAllUnAssignUser()
+        {
+            List<User> user = new List<User>();
+            var userrolelist = _db.UserRole.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).Select(c => c.UserId).ToArray();
+            if (userrolelist.Length > 0)
+            {
+                user = _db.User.Where(p => !userrolelist.Contains(p.UserId)).ToList();
+
+            }
+            else
+            {
+                user = _db.User.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
+
+            }
+            return user;
+        }
         public List<User> GetAllMeterReader()
         {
             List<User> user = new List<User>();
@@ -83,7 +99,7 @@ namespace SecurityBLLManager
                 var id = await _db.User.Where(p => p.UserId == user.UserId).AsNoTracking().FirstOrDefaultAsync();
                 if (id != null)
                 {
-                    user.UpdatedBy = "Admin";
+                   
                     user.UpdatedDate = DateTime.Now;
 
                     _db.User.Update(user);
@@ -124,5 +140,6 @@ namespace SecurityBLLManager
         List<User> GetAllMeterReader();
 
         Task<List<User>> Search(string UserName);
+        List<User> GetAllUnAssignUser();
     }
 }

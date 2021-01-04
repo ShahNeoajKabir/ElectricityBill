@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Context.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20201211173121_Zone")]
-    partial class Zone
+    [Migration("20210102183246_User")]
+    partial class User
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -70,12 +70,48 @@ namespace Context.Migrations
                     b.Property<DateTime?>("UpdatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<int>("Year")
+                        .HasColumnType("int");
+
                     b.HasKey("BillId");
 
                     b.HasIndex("MeterReadingId")
                         .IsUnique();
 
                     b.ToTable("BillTable");
+                });
+
+            modelBuilder.Entity("ModelClass.DTO.CardInformation", b =>
+                {
+                    b.Property<int>("CardInformationId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<double>("Balance")
+                        .HasColumnType("float");
+
+                    b.Property<string>("CVV")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CardName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CardNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("ExpiredDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Pin")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("CardInformationId");
+
+                    b.ToTable("CardInformation");
                 });
 
             modelBuilder.Entity("ModelClass.DTO.Customer", b =>
@@ -118,11 +154,11 @@ namespace Context.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("Latitude")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("Latitude")
+                        .HasColumnType("float");
 
-                    b.Property<string>("Longitude")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<double>("Longitude")
+                        .HasColumnType("float");
 
                     b.Property<string>("MobileNo")
                         .HasColumnType("nvarchar(max)");
@@ -155,9 +191,6 @@ namespace Context.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("CustomerId");
-
-                    b.HasIndex("ZoneId")
-                        .IsUnique();
 
                     b.ToTable("Customer");
                 });
@@ -273,6 +306,33 @@ namespace Context.Migrations
                     b.ToTable("MeterTable");
                 });
 
+            modelBuilder.Entity("ModelClass.DTO.MobileBanking", b =>
+                {
+                    b.Property<int>("MobileBankingId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<double>("Balance")
+                        .HasColumnType("float");
+
+                    b.Property<int>("MobileBankingType")
+                        .HasColumnType("int");
+
+                    b.Property<string>("MobileNo")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Pin")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("MobileBankingId");
+
+                    b.ToTable("MobileBanking");
+                });
+
             modelBuilder.Entity("ModelClass.DTO.Notice", b =>
                 {
                     b.Property<int>("NoticeId")
@@ -325,8 +385,8 @@ namespace Context.Migrations
                     b.Property<int>("MeterId")
                         .HasColumnType("int");
 
-                    b.Property<string>("PaymentMethod")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("PaymentMethod")
+                        .HasColumnType("int");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -375,6 +435,24 @@ namespace Context.Migrations
                     b.ToTable("Role");
                 });
 
+            modelBuilder.Entity("ModelClass.DTO.RolePermission", b =>
+                {
+                    b.Property<int>("RolePermissionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("RoleId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UrlId")
+                        .HasColumnType("int");
+
+                    b.HasKey("RolePermissionId");
+
+                    b.ToTable("RolePermission");
+                });
+
             modelBuilder.Entity("ModelClass.DTO.Support", b =>
                 {
                     b.Property<int>("SupportId")
@@ -408,6 +486,27 @@ namespace Context.Migrations
                     b.ToTable("Support");
                 });
 
+            modelBuilder.Entity("ModelClass.DTO.URL", b =>
+                {
+                    b.Property<int>("UrlId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Url")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UrlId");
+
+                    b.ToTable("URL");
+                });
+
             modelBuilder.Entity("ModelClass.DTO.UnitPrice", b =>
                 {
                     b.Property<int>("UnitPriceId")
@@ -415,11 +514,26 @@ namespace Context.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
+                    b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("CustomerType")
                         .HasColumnType("int");
 
-                    b.Property<double>("UnitperPrice")
-                        .HasColumnType("float");
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UnitperPrice")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UpdatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("UnitPriceId");
 
@@ -592,17 +706,6 @@ namespace Context.Migrations
                     b.Navigation("MeterReadingTable");
                 });
 
-            modelBuilder.Entity("ModelClass.DTO.Customer", b =>
-                {
-                    b.HasOne("ModelClass.DTO.Zone", "Zone")
-                        .WithOne("Customer")
-                        .HasForeignKey("ModelClass.DTO.Customer", "ZoneId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Zone");
-                });
-
             modelBuilder.Entity("ModelClass.DTO.MeterAssign", b =>
                 {
                     b.HasOne("ModelClass.DTO.Customer", "Customer")
@@ -721,8 +824,6 @@ namespace Context.Migrations
 
             modelBuilder.Entity("ModelClass.DTO.Zone", b =>
                 {
-                    b.Navigation("Customer");
-
                     b.Navigation("ZoneAssign");
                 });
 #pragma warning restore 612, 618

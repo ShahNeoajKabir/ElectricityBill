@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zPUcvHVVd1hOzizLtM2Af65rP9+tLEaQeWM2jt0bpOTK71V5mZugguaUjmUX5L//d7s5pTupOguy68mAHtWKog==",
+  "dgSpecHash": "Pi4Dj/mj/oCItxs95G8yNZancjk4H5WeoOxuiOeBCelsu+/3U8wgFwMIsesbSGSUukaIoIBHMDAw/9y8MB12gg==",
   "success": true,
-  "projectFilePath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\Service.Electricity.csproj",
+  "projectFilePath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\Service.Electricity.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\mailkit\\2.10.0\\mailkit.2.10.0.nupkg.sha512",

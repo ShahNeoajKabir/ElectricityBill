@@ -47,47 +47,30 @@ export class AssignMeterComponent implements OnInit {
     });
     if (this.activeroute.snapshot.params[ 'id'] !== undefined) {
       this.lstmeterassign.CustomerId = this.activeroute.snapshot.params[ 'id'];
-      // this.meterassignservice.GetById(this.objedit).subscribe((res: any) => {
-      //   this.lstmeterassign = res;
-      //   console.log(this.lstmeterassign);
-      // });
       console.log(this.activeroute.snapshot.params[ 'id']);
     }
 
-    // if (this.activeroute.snapshot.params[ 'id'] !== undefined) {
-    //   this.objedit.MeterAssignId = this.activeroute.snapshot.params[ 'id'];
-    //   this.meterassignservice.GetById(this.objedit).subscribe((res: any) => {
-    //     this.lstmeterassign = res;
-    //     console.log(this.lstmeterassign);
-    //   });
-    //   console.log(this.activeroute.snapshot.params[ 'id']);
-    // }
+  
   }
   submit() {
     console.log(this.lstmeterassign);
-    if ( this.lstmeterassign.MeterAssignId > 0) {
+    if (this.lstmeterassign.MeterAssignId > 0 ) {
       this.meterassignservice.UpdateAssign(this.lstmeterassign).subscribe(res => {
-        if ( res === 1) {
-        this.router.navigate(['/AssignMeter/View']);
-
-        console.log(res);
-
-        }
-        console.log(res);
-      });
-    } else {
-      this.meterassignservice.AssignMeter(this.lstmeterassign).subscribe(res => {
-        this.router.navigate(['/AssignMeter/View']);
-
-        if ( res === 1) {
+        
+          this.router.navigate(['/AssignMeter/View']);
           console.log(res);
-        }
-        console.log(res);
-      });
+       
+      } );
     }
+    else {
+      this.meterassignservice.AssignMeter(this.lstmeterassign).subscribe(res => {
+        
+          this.router.navigate(['/AssignMeter/View']);
+          console.log(res);
+        
+      } );
+    }
+  }
 
 }
 
-
-
-}

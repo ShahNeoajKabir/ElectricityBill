@@ -5802,11 +5802,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj",
+      "projectUniqueName": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj",
       "projectName": "ModelClass",
-      "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj",
+      "projectPath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\ModelClass.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\obj\\",
+      "outputPath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\ModelClass\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",

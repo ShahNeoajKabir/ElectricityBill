@@ -46,7 +46,9 @@ namespace Service.Electricity.Controllers
                     CustomerLocations = await _dashboardBLLManager.CustomerLocations(),
                     LastTenTransaction = await _dashboardBLLManager.LastTenTransaction(),
                     TotalRegisteredCustomer = await _dashboardBLLManager.TotalRegisteredCustomer(),
-                    TotalUsageUnit = await _dashboardBLLManager.TotalUsageUnit()
+                    TotalUsageUnit = await _dashboardBLLManager.TotalUsageUnit(),
+                    TotalFemale = await _dashboardBLLManager.ToTalFemale(),
+                    TotalMale = await _dashboardBLLManager.ToTalMale()
 
                 };
 

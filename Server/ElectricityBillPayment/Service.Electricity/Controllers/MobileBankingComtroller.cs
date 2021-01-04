@@ -27,7 +27,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 MobileBanking mobile = JsonConvert.DeserializeObject<MobileBanking>(message.Content.ToString());
+               
                 await _bLLmanager.AddMobile(mobile);
                 return Ok(mobile);
             }
@@ -51,6 +53,7 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 MobileBanking mobile = JsonConvert.DeserializeObject<MobileBanking>(message.Content.ToString());
                 return Ok(await _bLLmanager.GetById(mobile));
             }

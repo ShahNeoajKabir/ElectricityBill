@@ -6,9 +6,9 @@ import { ListZoneComponent } from './list-zone/list-zone.component';
 
 
 
-const routes: Routes = [{ path: 'AddZone', component: AddZoneComponent,canActivate: [AuthGuard] },
-{ path: 'View', component: ListZoneComponent,canActivate: [AuthGuard] },
-{path:':id/edit', component:AddZoneComponent, canActivate: [AuthGuard]}
+const routes: Routes = [{ path: 'AddZone', component: AddZoneComponent },
+{ path: 'View', component: ListZoneComponent },
+{path:':id/edit', component:AddZoneComponent}
 
 
 

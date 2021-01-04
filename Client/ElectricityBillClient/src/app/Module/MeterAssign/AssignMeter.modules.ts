@@ -5,11 +5,12 @@ import { AssignMeterComponent } from './assign-meter/assign-meter.component';
 import { ListAssignMeterComponent } from './list-assign-meter/list-assign-meter.component';
 import { AssignMeterRoutingModule } from './assignmeter-routing.module';
 import { MeterAssignService } from '../../Service/MeterAssign/meter-assign.service';
+import { ListMeterAssignforCustomerComponent } from './list-meter-assignfor-customer/list-meter-assignfor-customer.component';
 
 
 
 @NgModule({
-  declarations: [AssignMeterComponent, ListAssignMeterComponent],
+  declarations: [AssignMeterComponent, ListAssignMeterComponent,ListMeterAssignforCustomerComponent],
   imports: [
     CommonModule,
     AssignMeterRoutingModule,

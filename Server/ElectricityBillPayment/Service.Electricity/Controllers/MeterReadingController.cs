@@ -28,9 +28,11 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                MeterReadingTable readingTable = new MeterReadingTable();
                 var loginedUser = (User)HttpContext.Items["User"];
 
                 VMAddMeterReading meterReadingTable = JsonConvert.DeserializeObject<VMAddMeterReading>(message.Content.ToString());
+                readingTable.CreatedBy = loginedUser.UserName;
                 await _bLLManager.AddMeterReading(meterReadingTable, loginedUser.UserId);
                 return Ok(meterReadingTable);
             }
@@ -76,7 +78,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 MeterReadingTable meter = JsonConvert.DeserializeObject<MeterReadingTable>(message.Content.ToString());
+                meter.UpdatedBy = loginedUser.UserName;
                 await _bLLManager.UpdateMeterReading(meter);
                 return Ok(meter);
             }

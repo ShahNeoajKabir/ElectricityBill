@@ -22,7 +22,7 @@ namespace SecurityBLLManager
         {
             try
             {
-                userRole.CreatedBy = "Admin";
+                
                 userRole.CreatedDate = DateTime.Now;
                 await _dbContext.UserRole.AddAsync(userRole);
                 await _dbContext.SaveChangesAsync();
@@ -66,7 +66,7 @@ namespace SecurityBLLManager
                 var res =await _dbContext.UserRole.Where(p => p.UserRoleId == userRole.UserRoleId).AsNoTracking().FirstOrDefaultAsync();
                 if (res != null)
                 {
-                    userRole.UpdatedBy = "Admin";
+                    
                     userRole.UpdatedDate = DateTime.Now;
                     _dbContext.UserRole.Update(userRole);
                    await  _dbContext.SaveChangesAsync();

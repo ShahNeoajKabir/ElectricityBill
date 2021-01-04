@@ -30,6 +30,7 @@ export class AddMeterReadingComponent implements OnInit {
 
   Submit() {
     this.meterreadingservice.AddMeterReading(this.vmaddmeter).subscribe(res=>{
+      this.router.navigate(['/MeterReading/View'])
       console.log(res);
     })
 

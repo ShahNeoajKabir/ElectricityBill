@@ -34,8 +34,15 @@ public lststatus:any;
   }
 
   AddCard(){
-    this.cardservice.AddCard(this.objcard).subscribe(res=>{
-      console.log(res);
-    })
-}
+    console.log(this.objcard);
+    
+    
+      this.cardservice.AddCard(this.objcard).subscribe(res => {
+        
+          this.router.navigate(['/Card/View']);
+          console.log(res);
+        
+      } );
+    
+  }
 }

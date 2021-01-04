@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { MeterAssign } from '../../../Model/MeterAssign';
+import { User } from '../../../Model/User';
 import { MeterAssignService } from '../../../Service/MeterAssign/meter-assign.service';
 
 
@@ -12,6 +13,9 @@ import { MeterAssignService } from '../../../Service/MeterAssign/meter-assign.se
 export class ListAssignMeterComponent implements OnInit {
 
   public objassign:MeterAssign[]=new Array<MeterAssign>();
+
+
+
   public search:string="";
 
   constructor(private meterassignservice:MeterAssignService,private router:Router ) { }

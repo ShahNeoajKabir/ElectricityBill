@@ -2,7 +2,7 @@
       <div class="col-lg-12">
         <div class="row" style="margin-bottom: 20px; margin-top: 10px;">
           <div class="col-md-1.5">
-              <button aria-pressed="true" class="btn btn-block btn-success active" [routerLink]="['/AssignMeter/AddAssignMeter']"  type="button"><i class="fa fa-plus-circle fa-lg "></i> Assign Meter</button>
+              <button aria-pressed="true" class="btn btn-block btn-success active"  [routerLink]="['/AssignMeter/AddAssignMeter']"  type="button"><i class="fa fa-plus-circle fa-lg "></i> Assign Meter</button>
           </div>
           <div class="col-md-6">
 
@@ -25,6 +25,9 @@
               <thead>
                 <tr>
                     <th>Customer Name</th>
+                    <th>Mobile Number</th>
+
+
                     <th>Meter Number</th>
                     <th>Status</th>
 
@@ -34,6 +37,9 @@
             <tbody >
               <tr *ngFor="let lstassign of objassign">
                   <td >{{lstassign.Customer.CustomerName}}</td>
+                  <td >{{lstassign.Customer.MobileNo}}</td>
+
+
                   <td>{{lstassign.MeterTable.MeterNumber}}</td>
                   <td ><span class="btn-success" *ngIf="lstassign.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
                     <span class="btn-danger" *ngIf="lstassign.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>

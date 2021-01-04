@@ -32,7 +32,7 @@ namespace SecurityBLLManager
                     MeterId = bill.MeterId,
                     Status = (int)Common.Electricity.Enum.Enum.Status.Active,
                     PaymentMethod = makePayment.PaymentMethod,
-                    CreatedBy = "Customer",
+                    
                     CreatedDate = DateTime.Now,
 
                 };

@@ -42,19 +42,17 @@ export class AddZoneComponent implements OnInit {
     console.log(this.objzone);
     if (this.objzone.ZoneId > 0 ) {
       this.zoneservice.UpdateZone(this.objzone).subscribe(res => {
-        if (res === 1) {
+        
           this.router.navigate(['/Zone/View']);
           console.log(res);
-        }
-        console.log(res);
+        
       } );
     } else {
       this.zoneservice.AddZone(this.objzone).subscribe(res => {
-        if (res === 1) {
+       
           this.router.navigate(['/Zone/View']);
           console.log(res);
-        }
-        console.log(res);
+        
       } );
     }
 

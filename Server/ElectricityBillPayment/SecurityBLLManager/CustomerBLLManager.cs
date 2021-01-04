@@ -26,7 +26,7 @@ namespace SecurityBLLManager
 
                 customer.Status = (int)Common.Electricity.Enum.Enum.Status.Pending;
                 customer.Image = customer.Image;
-                customer.CreatedBy = "Admin";
+                customer.CreatedBy = customer.CustomerName;
                 customer.CreatedDate = DateTime.Now;
                 customer.Password = new EncryptionService().Encrypt(customer.Password);
                 await _dbContext.Customer.AddAsync(customer);

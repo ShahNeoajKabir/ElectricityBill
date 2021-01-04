@@ -32,9 +32,10 @@ namespace Service.Electricity.Controllers
         {
             try
             {
-                await _mailer.SendEmailAsync("bappyron@gmail.com", "Test", "Pending Customer");
+                //await _mailer.SendEmailAsync("bappyron@gmail.com", "Test", "Pending Customer");
 
                 Customer customer = JsonConvert.DeserializeObject<Customer>(message.Content.ToString());
+                await _mailer.SendEmailAsync(customer.Email, "Registration", "Registration Successful Please Wait for Confirmation");
                 await _customerBLLManager.AddCustomer(customer);
                 return Ok(customer);
             }
@@ -52,8 +53,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 Customer customer = JsonConvert.DeserializeObject<Customer>(message.Content.ToString());
-
+                customer.UpdatedBy = loginedUser.UserName;
                 await _customerBLLManager.UpdateUser(customer);
                 return Ok( customer);
             }

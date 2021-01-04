@@ -66,6 +66,14 @@ export enum UserType {
   
 
 }
+export enum Role {
+  Admin= 1,
+  MeterReader= 2,
+  Customer= 3,
+  CoOrdinator= 4
+  
+
+}
 export enum Blood
         {
             A = 1,

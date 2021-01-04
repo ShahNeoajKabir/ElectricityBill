@@ -1,0 +1,136 @@
+<div class="container">
+   
+
+    <div class="row">
+      <div class="col-md-4 order-md-2 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+          <span class="text-muted">Your Billing Amount</span>
+        </h4>
+        <ul class="list-group mb-3">
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Current Unit</h6>
+            </div>
+            <span class="text-muted">{{vmpayment.CurrentUnit}}</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Previous Unit</h6>
+            </div>
+            <span class="text-muted">{{vmpayment.PreviousUnit}}</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Uses Unit</h6>
+            </div>
+            <span class="text-muted">{{vmpayment.UsesUnit}}</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between lh-condensed">
+            <div>
+              <h6 class="my-0">Bill Amount</h6>
+            </div>
+            <span class="text-muted">{{vmpayment.BillAmount}}</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between bg-light">
+            <div >
+              <h6 class="my-0">Vat </h6>
+            </div>
+            <span >{{vmpayment.Vat}}</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">
+            <span class="text-success">Total Bill Amount</span>
+            <strong>{{vmpayment.TotalBillAmount}}</strong>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-8 order-md-1">
+        <h4 class="mb-3" style="color: rgb(6, 85, 6);font-size: 22px;font-weight: bold;">Make Payment</h4>
+        <form class="needs-validation" novalidate="">
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="CustomerName">Customer Name</label>
+              <input type="text" class="form-control" disabled [(ngModel)]="vmpayment.CustomeName" name="CustomerName" placeholder="" value="" >
+              
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="MeterNumber">Meter number</label>
+              <input type="text" class="form-control" disabled [(ngModel)]="vmpayment.MeterNumber"  name="MeterNumber" placeholder="" value="" >
+              
+            </div>
+          </div>
+
+          <div class="mb-3">
+            <label for="Email">Email</label>
+            <input type="email" [(ngModel)]="vmpayment.Email" disabled class="form-control"  name="Email" placeholder="you@example.com">
+          </div>
+          <div class="mb-3">
+            <label>Payment Method</label>
+            <select name="PaymentMethod" class="form-control"
+            [(ngModel)]="vmmakepayment.PaymentMethod"
+            >
+            <!-- <option [value]="-1">-Select-</option> -->
+            <option *ngFor="let payment of lstpaymnetmethod"
+            [value]="payment.key">{{payment.value}}</option>
+            </select>
+          </div>
+          <div class="row"*ngIf="vmmakepayment.PaymentMethod==1">
+            <div class="col-md-6 mb-3">
+              <label for="cc-name">Name on card</label>
+              <input type="text" class="form-control" [(ngModel)]="vmmakepayment.cardinformation.CardName" name="CardName" placeholder="" required="">
+              <small class="text-muted">Full name as displayed on card</small>
+              <div class="invalid-feedback">
+                Name on card is required
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="CardNumber">card number</label>
+              <input type="text" class="form-control" [(ngModel)]="vmmakepayment.cardinformation.CardNumber"  name="CardNumber" placeholder="" required="">
+              <div class="invalid-feedback">
+                card number is required
+              </div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="ExpiredDate">Expired Date</label>
+              <input type="month" class="form-control"  [(ngModel)]="vmmakepayment.cardinformation.ExpiredDate" name="ExpiredDate" placeholder="">
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="CVV">CVV</label>
+              <input type="text" class="form-control" [(ngModel)]="vmmakepayment.cardinformation.CVV" placeholder="" name="CVV">
+              <div class="invalid-feedback">
+                Security code required
+              </div>
+            </div>
+            
+            <div class="col-md-6 mb-3">
+              <label for="Pin">Pin Number</label>
+              <input type="password" class="form-control" [(ngModel)]="vmmakepayment.cardinformation.Pin" name="Pin" placeholder="">
+            </div>
+          </div>
+          <div class="row"*ngIf="vmmakepayment.PaymentMethod==2">
+            <div class="col-md-6 mb-3">
+              <label for="cc-name">BKash Number</label>
+              <input type="text" class="form-control" [(ngModel)]="vmmakepayment.mobilebanking.MobileNo" name="MobileNo" placeholder="" required="">
+              
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="Pin">Pin Number</label>
+              <input type="password" class="form-control" [(ngModel)]="vmmakepayment.mobilebanking.Pin" name="Pin" placeholder="">
+            </div>
+          </div>
+          <div class="row"*ngIf="vmmakepayment.PaymentMethod==3">
+            <div class="col-md-6 mb-3">
+              <label for="cc-name">Rocket Number</label>
+              <input type="text" class="form-control" name="MobileNo" [(ngModel)]="vmmakepayment.mobilebanking.MobileNo" placeholder="" required="">
+              
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="Pin">Pin Number</label>
+              <input type="password" class="form-control" [(ngModel)]="vmmakepayment.mobilebanking.Pin" name="Pin" placeholder="">
+            </div>
+          </div>
+          <hr class="mb-4">
+          <button class="btn btn-primary btn-lg btn-block" (click)="Save()" type="submit">Make Payment</button>
+        </form>
+      </div>
+    </div>
+  </div>

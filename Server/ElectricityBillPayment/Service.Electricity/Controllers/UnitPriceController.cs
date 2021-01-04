@@ -27,7 +27,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 UnitPrice unitPrice = JsonConvert.DeserializeObject<UnitPrice>(message.Content.ToString());
+                unitPrice.CreatedBy = loginedUser.UserName;
                 await _bLLManager.AddUnitPrice(unitPrice);
                 return Ok(unitPrice);
             }
@@ -44,7 +46,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 UnitPrice unitPrice = JsonConvert.DeserializeObject<UnitPrice>(message.Content.ToString());
+                unitPrice.UpdatedBy = loginedUser.UserName;
                 await _bLLManager.UpdateUnitPrice(unitPrice);
                 return Ok(unitPrice);
             }

@@ -6040,11 +6040,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\Service.Electricity.csproj",
+      "projectUniqueName": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\Service.Electricity.csproj",
       "projectName": "Service.Electricity",
-      "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\Service.Electricity.csproj",
+      "projectPath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\Service.Electricity.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\obj\\",
+      "outputPath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Service.Electricity\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6060,11 +6060,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj": {
-              "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj"
+            "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj": {
+              "projectPath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\Context\\Context.csproj"
             },
-            "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj": {
-              "projectPath": "E:\\25.11.2020\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj"
+            "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj": {
+              "projectPath": "E:\\Final Defence Project\\ElectricityBill\\Server\\ElectricityBillPayment\\SecurityBLLManager\\SecurityBLLManager.csproj"
             }
           }
         }

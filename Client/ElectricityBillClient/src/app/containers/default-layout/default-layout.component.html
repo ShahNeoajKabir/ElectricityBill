@@ -14,12 +14,12 @@
       <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="appSidebar.minimized"></app-sidebar-nav>
 
     </div>
-    <div *ngIf="roleId==2">
-      <app-sidebar-nav [navItems]="navItemsMeterReaders" [perfectScrollbar] [disabled]="appSidebar.minimized"></app-sidebar-nav>
+    <div *ngIf="roleId==4">
+      <app-sidebar-nav [navItems]="navItemsCoOrdinators" [perfectScrollbar] [disabled]="appSidebar.minimized"></app-sidebar-nav>
 
     </div>
-    <div *ngIf="roleId===4">
-      <app-sidebar-nav [navItems]="navItemsCoOrdinator" [perfectScrollbar] [disabled]="appSidebar.minimized"></app-sidebar-nav>
+    <div *ngIf="roleId==2">
+      <app-sidebar-nav [navItems]="navItemsMeterReaders" [perfectScrollbar] [disabled]="appSidebar.minimized"></app-sidebar-nav>
 
     </div>
 

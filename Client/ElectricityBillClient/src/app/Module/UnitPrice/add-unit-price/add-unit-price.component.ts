@@ -40,19 +40,17 @@ export class AddUnitPriceComponent implements OnInit {
     console.log(this.objunitprice);
     if (this.objunitprice.UnitPriceId > 0 ) {
       this.unitpriceservice.UpdateUnitPrice(this.objunitprice).subscribe(res => {
-        if (res === 1) {
+        
           this.router.navigate(['/UnitPrice/View']);
           console.log(res);
-        }
-        console.log(res);
+        
       } );
     } else {
       this.unitpriceservice.AddUnitPrice(this.objunitprice).subscribe(res => {
-        if (res === 1) {
+        
           this.router.navigate(['/UnitPrice/View']);
           console.log(res);
-        }
-        console.log(res);
+        
       } );
     }
 
