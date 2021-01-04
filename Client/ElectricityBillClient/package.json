@@ -58,6 +58,7 @@
     "npm": "^7.3.0",
     "rxjs": "^6.6.0",
     "simple-line-icons": "^2.5.2",
+    "sweetalert2": "^10.12.7",
     "ts-helpers": "^1.1.2",
     "tslib": "^1.13.0",
     "web-animations-js": "^2.3.2",
