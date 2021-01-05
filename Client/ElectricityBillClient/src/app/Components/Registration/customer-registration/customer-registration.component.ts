@@ -6,6 +6,7 @@ import { Utility } from '../../../Common/Utility';
 import { Customer } from '../../../Model/Customer';
 import { Zone } from '../../../Model/Zone';
 import { CustomerService } from '../../../Service/Customer/customer.service';
+import { NotificationService } from '../../../Service/Notification/notification.service';
 import { ZoneService } from '../../../Service/Zone/zone.service';
 
 @Component({
@@ -32,7 +33,7 @@ export class CustomerRegistrationComponent implements OnInit {
   address: string;
   private geoCoder;
 
-  constructor(private mapsAPILoader: MapsAPILoader,
+  constructor(private mapsAPILoader: MapsAPILoader,private notificationservice:NotificationService,
     private ngZone: NgZone,private utility:Utility, private customerservice:CustomerService,private router:Router, private ActiveRouter:ActivatedRoute,private zoneservice:ZoneService) { }
 
   ngOnInit(): void {
@@ -78,15 +79,23 @@ export class CustomerRegistrationComponent implements OnInit {
         
           this.router.navigate(['/Login']);
           console.log(res);
+          
         
         
       } );
     } else {
       this.customerservice.AddCustomer(this.registration).subscribe(res => {
         
-          this.router.navigate(['/Login']);
+          
           console.log(res);
+          if(res){
+            this.notificationservice.successNotification("Registration Successfull");
+            this.router.navigate(['/Login']);
+          }
         
+      }, er=>{
+        this.notificationservice.ErrorNotification("Invalide Request Please try Again");
+        this.router.navigate(['/CustomerRegistration/Registration']);
       } );
     }
 

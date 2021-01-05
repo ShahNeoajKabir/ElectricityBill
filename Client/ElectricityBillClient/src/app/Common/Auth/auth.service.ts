@@ -61,7 +61,7 @@ export class AuthService {
 
   getLoggedEmail() {
     if (this.tokenService.GetToken()) {
-      return this.tokenService.GetTokenValue('email');
+      return this.tokenService.GetTokenValue('Email');
     }
     return '';
   }

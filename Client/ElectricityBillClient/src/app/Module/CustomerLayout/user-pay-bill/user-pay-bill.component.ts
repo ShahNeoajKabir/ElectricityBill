@@ -6,6 +6,7 @@ import { CardInformation } from '../../../Model/CardInformation';
 import { MobileBanking } from '../../../Model/MobileBanking';
 import { Payment } from '../../../Model/Payment';
 import { VMMakePayment, VMPayment } from '../../../Model/VMPayment';
+import { NotificationService } from '../../../Service/Notification/notification.service';
 import { PaymentService } from '../../../Service/Payment/payment.service';
 import { PaymentGetwayService } from '../../../Service/PaymentGetway/payment-getway.service';
 
@@ -26,7 +27,8 @@ export class UserPayBillComponent implements OnInit {
   public mobilebanking:MobileBanking=new MobileBanking();
   public cardinformation:CardInformation=new CardInformation();
 
-  constructor(private utility:Utility,private router:Router, private activateroute:ActivatedRoute, private paymentservice:PaymentService ,private paymentgetwayservice:PaymentGetwayService) { }
+  constructor(private utility:Utility,private router:Router, private activateroute:ActivatedRoute, private notificationservice:NotificationService,
+    private paymentservice:PaymentService ,private paymentgetwayservice:PaymentGetwayService) { }
 
   ngOnInit(): void {
     this.lstpaymnetmethod=this.utility.enumToArray(PaymentMethod);
@@ -47,7 +49,14 @@ export class UserPayBillComponent implements OnInit {
     
     this.paymentservice.MakePayment(this.vmmakepayment).subscribe(res=>{
       console.log(res);
-      this.router.navigate(['/CustomerDashboard/BillHistory'])
+      if(res){
+        this.notificationservice.successNotification("Payment is successfull");
+        this.router.navigate(['/CustomerDashboard/PaymentHistory']);
+      }
+      
+    },er=>{
+      this.notificationservice.ErrorNotification("Invalide Request Please Try again");
+        this.router.navigate(['/CustomerDashboard/BillHistory']);
     });
   }
 

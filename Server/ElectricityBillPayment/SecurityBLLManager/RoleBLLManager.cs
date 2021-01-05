@@ -19,12 +19,28 @@ namespace SecurityBLLManager
 
         public async Task<Role> AddRole(Role role)
         {
-            
-            role.CreatedDate = DateTime.Now;
+            if (role.RoleName != null)
+            {
+                var check = _db.Role.Where(p => p.RoleName == role.RoleName).FirstOrDefault();
+                if (check != null)
+                {
+                    throw new Exception("");
+                }
+                else
+                {
+                    role.CreatedDate = DateTime.Now;
 
-            await _db.Role.AddAsync(role);
-            await _db.SaveChangesAsync();
-            return role;
+                    await _db.Role.AddAsync(role);
+                    await _db.SaveChangesAsync();
+                    return role;
+                }
+                
+            }
+            else
+            {
+                throw new Exception("");
+            }
+            
         }
 
         public List<Role> GetAll()

@@ -22,11 +22,18 @@ namespace SecurityBLLManager
         {
             try
             {
+                if(unitPrice.UnitperPrice>0 && unitPrice.CustomerType > 0)
+                {
+                    unitPrice.CreatedDate = DateTime.Now;
+                    await _database.UnitPrice.AddAsync(unitPrice);
+                    await _database.SaveChangesAsync();
+                    return unitPrice;
+                }
+                else
+                {
+                    throw new Exception("");
+                }
                 
-                unitPrice.CreatedDate = DateTime.Now;
-                await _database.UnitPrice.AddAsync(unitPrice);
-                await _database.SaveChangesAsync();
-                return unitPrice;
             }
             catch (Exception ex)
             {

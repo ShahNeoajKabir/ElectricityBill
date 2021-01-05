@@ -23,14 +23,28 @@ namespace SecurityBLLManager
         {
             try
             {
+                var uniqueemail = _dbContext.User.Where(p => p.Email == customer.Email).FirstOrDefault();
+                var uniueq = _dbContext.Customer.Where(p => p.Email == customer.Email).FirstOrDefault();
+                if(customer.CustomerName!=null && customer.Email!=null && customer.CustomerType>0 && customer.MobileNo != null )
+                {
+                    if(uniueq!=null && uniqueemail != null)
+                    {
+                        throw new Exception("");
+                    }
 
-                customer.Status = (int)Common.Electricity.Enum.Enum.Status.Pending;
-                customer.Image = customer.Image;
-                customer.CreatedBy = customer.CustomerName;
-                customer.CreatedDate = DateTime.Now;
-                customer.Password = new EncryptionService().Encrypt(customer.Password);
-                await _dbContext.Customer.AddAsync(customer);
-                await _dbContext.SaveChangesAsync();
+                    else
+                    {
+                        customer.Status = (int)Common.Electricity.Enum.Enum.Status.Pending;
+                        customer.Image = customer.Image;
+                        customer.CreatedBy = customer.CustomerName;
+                        customer.CreatedDate = DateTime.Now;
+                        customer.Password = new EncryptionService().Encrypt(customer.Password);
+                        await _dbContext.Customer.AddAsync(customer);
+                        await _dbContext.SaveChangesAsync();
+                        
+                    }
+
+                }
                 return customer;
             }
             catch (Exception ex)

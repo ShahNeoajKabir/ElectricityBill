@@ -22,16 +22,28 @@ namespace SecurityBLLManager
         {
             try
             {
-                mobile.Status = (int)Common.Electricity.Enum.Enum.Status.Active;
-                mobile.Pin = new EncryptionService().Encrypt(mobile.Pin);
-                await _database.MobileBanking.AddAsync(mobile);
-                await _database.SaveChangesAsync();
+                if(mobile.MobileNo!=null && mobile.Pin!=null && mobile.Balance > 0)
+                {
+                    var check = _database.MobileBanking.Where(p => p.MobileNo == mobile.MobileNo).FirstOrDefault();
+                    if (check != null)
+                    {
+                        throw new Exception("");
+                    }
+                    else
+                    {
+                        mobile.Status = (int)Common.Electricity.Enum.Enum.Status.Active;
+                        mobile.Pin = new EncryptionService().Encrypt(mobile.Pin);
+                        await _database.MobileBanking.AddAsync(mobile);
+                        await _database.SaveChangesAsync();
+                       
+                    }
+                }
                 return mobile;
             }
             catch (Exception ex)
             {
 
-                throw;
+                throw new Exception("");
             }
         }
 

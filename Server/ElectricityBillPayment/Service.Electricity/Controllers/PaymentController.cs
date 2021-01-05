@@ -64,7 +64,13 @@ namespace Service.Electricity.Controllers
                         if (vMMakePayment.RequestAmount <= cardinformation.Result.Balance)
                         {
                             payment.CreatedBy = loginedUser.UserName;
-                            return Ok(await _paymentBLL.MakePayment(vMMakePayment));
+                            var paymentt = await _paymentBLL.MakePayment(vMMakePayment);
+                            if (paymentt.PaymentId >0)
+                            {
+                                await _mailer.SendEmailAsync(loginedUser.Email, "Payment Info", "You Payment Is Successfull Your trazaction Id Is" + payment.PaymentId);
+                                return Ok(paymentt);
+                            }
+                            
                         }
                         
                     }
@@ -87,10 +93,17 @@ namespace Service.Electricity.Controllers
                         {
                             payment.CreatedBy = loginedUser.CreatedBy;
 
-                            return Ok(await _paymentBLL.MakePayment(vMMakePayment));
+                            var paymentt = await _paymentBLL.MakePayment(vMMakePayment);
+                            if (paymentt.PaymentId > 0)
+                            {
+                                await _mailer.SendEmailAsync(loginedUser.Email, "Payment Info", "You Payment Is Successfull Your trazaction Id Is" + payment.PaymentId);
+                                return Ok(paymentt);
+                            }
+
                         }
                     }
                 }
+
                 return BadRequest("Failed");
 
                 

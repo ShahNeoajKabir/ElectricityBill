@@ -6,6 +6,7 @@ import { MeterAssign } from '../../../Model/MeterAssign';
 import { CustomerService } from '../../../Service/Customer/customer.service';
 import { MeterService } from '../../../Service/Meter/meter.service';
 import { MeterAssignService } from '../../../Service/MeterAssign/meter-assign.service';
+import { NotificationService } from '../../../Service/Notification/notification.service';
 
 @Component({
   selector: 'app-assign-meter',
@@ -26,7 +27,8 @@ export class AssignMeterComponent implements OnInit {
     private activeroute:ActivatedRoute,
     private utility:Utility,
     private meterservice:MeterService,
-    private customerservice:CustomerService
+    private customerservice:CustomerService,
+    private notificationservice:NotificationService
     ) { }
 
   ngOnInit(): void {
@@ -56,19 +58,35 @@ export class AssignMeterComponent implements OnInit {
     console.log(this.lstmeterassign);
     if (this.lstmeterassign.MeterAssignId > 0 ) {
       this.meterassignservice.UpdateAssign(this.lstmeterassign).subscribe(res => {
-        
+        console.log(res);
+        if(res){
+          this.notificationservice.updateNotification("Successfully Updated");
           this.router.navigate(['/AssignMeter/View']);
-          console.log(res);
+        }
+          
+         
        
+      },er=>{
+        this.notificationservice.ErrorNotification("Failed To Update");
+        this.router.navigate(['/AssignMeter/View'])
       } );
     }
     else {
       this.meterassignservice.AssignMeter(this.lstmeterassign).subscribe(res => {
         
-          this.router.navigate(['/AssignMeter/View']);
+          
           console.log(res);
-        
-      } );
+          if(res){
+            this.notificationservice.successNotification("Successfully Added");
+            this.router.navigate(['/AssignMeter/View']);
+          }
+            
+           
+         
+        },er=>{
+          this.notificationservice.ErrorNotification("Failed To Added");
+          this.router.navigate(['/AssignMeter/View'])
+        } );
     }
   }
 

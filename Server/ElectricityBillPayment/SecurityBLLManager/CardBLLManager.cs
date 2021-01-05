@@ -23,10 +23,22 @@ namespace SecurityBLLManager
         {
             try
             {
-                card.Status = (int)Common.Electricity.Enum.Enum.Status.Active;
-                card.Pin = new EncryptionService().Encrypt(card.Pin);
-                await _database.CardInformation.AddAsync(card);
-                await _database.SaveChangesAsync();
+                if(card.CardNumber!=null && card.CardName!=null && card.Balance>0 && card.CVV!=null)
+                {
+                    var cardcheck = _database.CardInformation.Where(p => p.CardNumber == card.CardNumber).FirstOrDefault();
+                    if (cardcheck != null)
+                    {
+                        throw new Exception("");
+                    }
+                    else
+                    {
+                        card.Status = (int)Common.Electricity.Enum.Enum.Status.Active;
+                        card.Pin = new EncryptionService().Encrypt(card.Pin);
+                        await _database.CardInformation.AddAsync(card);
+                        await _database.SaveChangesAsync();
+                    }
+                }
+                
                 return card;
             }
             catch (Exception ex)

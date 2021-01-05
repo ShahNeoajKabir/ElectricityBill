@@ -7,12 +7,15 @@ export class NotificationService {
 
   constructor() { }
 
-  successNotification(){
-    Swal.fire('Hi', 'Successfully save', 'success')
+  successNotification(massage:string){
+    Swal.fire(massage);
+  }
+  updateNotification(updatemassage:string){
+    Swal.fire(updatemassage);
   }
 
-  ErrorNotification(){
-    Swal.fire('Hi', 'Data Not Save', 'error')
+  ErrorNotification(errormassage:string){
+    Swal.fire(errormassage);
   }
 
 

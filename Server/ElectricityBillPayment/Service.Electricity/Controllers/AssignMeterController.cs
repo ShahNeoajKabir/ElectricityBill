@@ -36,11 +36,18 @@ namespace Service.Electricity.Controllers
 
                 Customer customer = new Customer();
                 meter.CreatedBy = loginedUser.UserName;
+                var assign= await _bLLmanager.AssignMeter(meter);
+                if (assign.MeterAssignId > 0)
+                {
+                    await _mailer.SendEmailAsync(customer.Email, "Request Accepted", "now you are authurized for login" + "Your Emai Is" + customer.Email + "Your Password Is 123456");
+                    return Ok(assign);
+                }
 
-                await _bLLmanager.AssignMeter(meter);
+
                 return Ok( meter);
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;

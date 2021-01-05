@@ -3,6 +3,7 @@ using Common.Electricity.Utility;
 using Context;
 using Microsoft.EntityFrameworkCore;
 using ModelClass.DTO;
+using ModelClass.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,13 +23,36 @@ namespace SecurityBLLManager
         {
             try
             {
+                var uniqueemail = _db.User.Where(p => p.Email == user.Email).FirstOrDefault();
+
+                if(user.Email!=null && user.UserName!=null&&user.MobileNo!=null && user.UserTypeId>0)
+                {
+                    if (uniqueemail != null)
+                    {
+                        throw new Exception("");
+                    }
+                    else
+                    {
+                        user.CreatedDate = DateTime.Now;
+
+                        user.Password = new EncryptionService().Encrypt(user.Password);
+
+
+                        await _db.User.AddAsync(user);
+                        await _db.SaveChangesAsync();
+
+                    }
+                    
+                    
+                    return user;
+                }
+                else
+                {
+                    throw new Exception("");
+                    
+                }
                 
-                user.CreatedDate = DateTime.Now;
-
-                user.Password = new EncryptionService().Encrypt(user.Password);
-
-                await _db.User.AddAsync(user);
-                await _db.SaveChangesAsync();
+                
             }
             catch (Exception ex)
             {
@@ -36,7 +60,7 @@ namespace SecurityBLLManager
                 throw;
             }
             
-            return user;
+            
         }
         public async Task<List<User>> Search(string UserName)
         {
@@ -99,11 +123,20 @@ namespace SecurityBLLManager
                 var id = await _db.User.Where(p => p.UserId == user.UserId).AsNoTracking().FirstOrDefaultAsync();
                 if (id != null)
                 {
-                   
-                    user.UpdatedDate = DateTime.Now;
+                var uniqueemail = _db.User.Where(p => p.Email == user.Email).AsNoTracking().FirstOrDefault();
+                    if (uniqueemail != null)
+                    {
+                        throw new Exception("");
+                    }
+                    else
+                    {
+                        user.UpdatedDate = DateTime.Now;
 
-                    _db.User.Update(user);
-                    await _db.SaveChangesAsync();
+                        _db.User.Update(user);
+                        await _db.SaveChangesAsync(); 
+                    }
+
+                    
 
                 }
 
@@ -128,7 +161,22 @@ namespace SecurityBLLManager
             return res;
         }
 
+        public async Task<bool> ChangePassword(VMChangePassword vMChangePassword)
+        {
+            var result = false;
+            vMChangePassword.OldPassword = new EncryptionService().Encrypt(vMChangePassword.OldPassword);
+            vMChangePassword.NewPassword = new EncryptionService().Encrypt(vMChangePassword.NewPassword);
+            var user = await _db.User.Where(p => p.UserId ==Convert.ToInt32( vMChangePassword.UserId) && p.Email == vMChangePassword.Email && p.Password == vMChangePassword.OldPassword).AsNoTracking().FirstOrDefaultAsync();
+            if (user != null)
+            {
+                user.Password = vMChangePassword.NewPassword;
+                _db.User.Update(user);
+                _db.SaveChanges();
+                result = true;
 
+            }
+            return result;
+        }
     }
     public interface IUserBLLManager
     {
@@ -141,5 +189,6 @@ namespace SecurityBLLManager
 
         Task<List<User>> Search(string UserName);
         List<User> GetAllUnAssignUser();
+        Task<Boolean> ChangePassword(VMChangePassword vMChangePassword);
     }
 }

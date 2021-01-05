@@ -2,6 +2,7 @@ import { Route } from '@angular/compiler/src/core';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Status } from '../../../Common/Enum';
+import { NotificationService } from '../../../Service/Notification/notification.service';
 import { Utility } from '../../../Common/Utility';
 import { MeterTable } from '../../../Model/MeterTable';
 import { MeterService } from '../../../Service/Meter/meter.service';
@@ -22,7 +23,9 @@ export class AddMeterComponent implements OnInit {
     private meterservice:MeterService,
      private utility:Utility,
      private router:Router,
-     private activeroute:ActivatedRoute) { }
+     private activeroute:ActivatedRoute,
+     private notificationservice:NotificationService,
+     ) { }
 
 
   ngOnInit(): void {
@@ -44,20 +47,35 @@ export class AddMeterComponent implements OnInit {
   AddMeter(){
     console.log(this.objMeter);
     if (this.objMeter.MeterId > 0 ) {
-      this.meterservice.UpdateMeter(this.objMeter).subscribe(res => {
-        
+      this.meterservice.UpdateMeter(this.objMeter).subscribe(res=>{
+        console.log(res);
+        if(res){
+          this.notificationservice.updateNotification("Successfully Updated");
           this.router.navigate(['/Meter/View']);
-          console.log(res);
-       
-      } );
+
+        }
+      },er=>{
+        this.notificationservice.ErrorNotification("Failed To Added Please Try Again");
+        this.router.navigate(['/Meter/View']);
+      });
+         
     }
     else {
-      this.meterservice.AddMeter(this.objMeter).subscribe(res => {
-        
+
+      this.meterservice.AddMeter(this.objMeter).subscribe(res=>{
+        console.log(res);
+        if(res){
+          this.notificationservice.successNotification("Meter Added Successfully");
           this.router.navigate(['/Meter/View']);
-          console.log(res);
+        }
+      },er=>{
+        this.notificationservice.ErrorNotification("Failed To Added Please Try Again");
+        this.router.navigate(['/Meter/AddMeter']);
+      });
+       
+          
         
-      } );
+      
     }
   }
 

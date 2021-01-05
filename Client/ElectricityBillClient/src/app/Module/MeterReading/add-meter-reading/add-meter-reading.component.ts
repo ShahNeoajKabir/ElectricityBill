@@ -4,6 +4,7 @@ import { Month, Status } from '../../../Common/Enum';
 import { Utility } from '../../../Common/Utility';
 import { VMAddMeterReading } from '../../../Model/VMAddMeterReading';
 import { MeterReadingService } from '../../../Service/MeterReading/meter-reading.service';
+import { NotificationService } from '../../../Service/Notification/notification.service';
 
 @Component({
   selector: 'app-add-meter-reading',
@@ -20,6 +21,7 @@ export class AddMeterReadingComponent implements OnInit {
     private router:Router,
     private activatedroute:ActivatedRoute,
     private utility:Utility,
+    private notificationservice:NotificationService
   ) { }
 
   ngOnInit(): void {
@@ -30,32 +32,20 @@ export class AddMeterReadingComponent implements OnInit {
 
   Submit() {
     this.meterreadingservice.AddMeterReading(this.vmaddmeter).subscribe(res=>{
-      this.router.navigate(['/MeterReading/View'])
+      
       console.log(res);
+      if(res){
+        this.notificationservice.successNotification("Bill Added Successfull");
+        this.router.navigate(['/MeterReading/View']);
+
+      }
+    },er=>{
+      this.notificationservice.ErrorNotification("Invalide Request, Please Try again");
+      this.router.navigate(['/MeterReading/AddMeterReading']);
     })
 
 
-    // console.log(this.objmeterreading);
-    // if ( this.objmeterreading.MeterReadingId > 0) {
-    //   this.meterreadingservice.UpdateMeterReading(this.objmeterreading).subscribe(res => {
-    //     if ( res === 1) {
-    //     this.router.navigate(['/MeterReading/View']);
-
-    //     console.log(res);
-
-    //     }
-    //     console.log(res);
-    //   });
-    // } else {
-    //   this.meterreadingservice.AddMeterReading(this.objmeterreading).subscribe(res => {
-    //     this.router.navigate(['/MeterReading/View']);
-
-    //     if ( res === 1) {
-    //       console.log(res);
-    //     }
-    //     console.log(res);
-    //   });
-    // }
+    
   }
 
 }

@@ -6,6 +6,7 @@ import { User } from '../../../Model/User';
 import { UserService } from '../../../Service/User/user.service';
 import { ZoneService } from '../../../Service/Zone/zone.service';
 import * as _ from 'lodash';
+import { NotificationService } from '../../../Service/Notification/notification.service';
 
 @Component({
   selector: 'app-add-user',
@@ -29,7 +30,8 @@ export class AddUserComponent implements OnInit {
     private router: Router,
     private ActivateRouter: ActivatedRoute,
     private utility:Utility,
-    private zoneservice:ZoneService
+    private zoneservice:ZoneService,
+    private notificationservice:NotificationService
   ) { }
 
   ngOnInit(): void {
@@ -63,19 +65,28 @@ export class AddUserComponent implements OnInit {
     console.log(this.objUser);
     if (this.objUser.UserId > 0 ) {
       this.userservice.UpdateUser(this.objUser).subscribe(res => {
-        if (res === 1) {
-          this.router.navigate(['/User/View']);
-          console.log(res);
-        }
+       
         console.log(res);
+        if(res){
+          this.notificationservice.updateNotification("Successfully Updated");
+          this.router.navigate(['/User/View']);
+        }
+      },er=>{
+        this.notificationservice.ErrorNotification("Failed To Update");
+          this.router.navigate(['/User/AddUser']);
       } );
     } else {
       this.userservice.AddUser(this.objUser).subscribe(res => {
-        if (res === 1) {
-          this.router.navigate(['/User/View']);
-          console.log(res);
-        }
+        
         console.log(res);
+        if(res){
+          this.notificationservice.successNotification("User Added Successfully");
+          this.router.navigate(['/User/View']);
+        }
+      },er=>{
+        this.notificationservice.ErrorNotification("Failed To Added");
+          this.router.navigate(['/User/AddUser']);
+
       } );
     }
 

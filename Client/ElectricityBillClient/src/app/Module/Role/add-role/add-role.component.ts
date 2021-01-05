@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Status } from '../../../Common/Enum';
 import { Utility } from '../../../Common/Utility';
 import { Role } from '../../../Model/Role';
+import { NotificationService } from '../../../Service/Notification/notification.service';
 import { RoleService } from '../../../Service/Role/role.service';
 
 @Component({
@@ -19,7 +20,8 @@ export class AddRoleComponent implements OnInit {
     private roleservice:RoleService,
     private router:Router,
     private utility:Utility,
-    private ActivateRouter:ActivatedRoute
+    private ActivateRouter:ActivatedRoute,
+    private notificationservice:NotificationService
     
     ) { }
 
@@ -44,19 +46,26 @@ export class AddRoleComponent implements OnInit {
     console.log(this.objRole);
     if (this.objRole.RoleId > 0 ) {
       this.roleservice.UpdateRole(this.objRole).subscribe(res => {
-        if (res === 1) {
-          this.router.navigate(['/Role/View']);
-          console.log(res);
-        }
         console.log(res);
+        if(res){
+          this.notificationservice.updateNotification("Successfully updated")
+          this.router.navigate(['/Role/View']);
+        }
+      },er=>{
+        this.notificationservice.ErrorNotification("Failed to  updated")
+          this.router.navigate(['/Role/AddRole']);
       } );
     } else {
       this.roleservice.AddRole(this.objRole).subscribe(res => {
-        if (res === 1) {
-          this.router.navigate(['/Role/View']);
-          console.log(res);
-        }
+        
         console.log(res);
+        if(res){
+          this.notificationservice.successNotification("Role Added Successfully updated")
+          this.router.navigate(['/Role/View']);
+        }
+      },er=>{
+        this.notificationservice.ErrorNotification("Failed to  updated")
+          this.router.navigate(['/Role/AddRole']);
       } );
     }
 

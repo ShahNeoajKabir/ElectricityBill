@@ -32,9 +32,10 @@ namespace Service.Electricity.Controllers
             {
                 var loginedUser = (User)HttpContext.Items["User"];
                 User user = JsonConvert.DeserializeObject<User>(message.Content.ToString());
-                await _mailer.SendEmailAsync(user.Email, "User", "now you are authurized for login" + "Your Emai Is" + user.Email + "Your Password Is" + user.Password);
                 user.CreatedBy = loginedUser.UserName;
                 await this.userBLLManager.AddUser(user);
+                await _mailer.SendEmailAsync(user.Email, "User", "now you are authurized for login" + "Your Emai Is" + user.Email + "Your Password Is" + user.Password);
+
                 return Ok(user);
             }
             catch (Exception ex)
@@ -155,6 +156,7 @@ namespace Service.Electricity.Controllers
 
 
         }
+        
 
 
         [HttpGet]

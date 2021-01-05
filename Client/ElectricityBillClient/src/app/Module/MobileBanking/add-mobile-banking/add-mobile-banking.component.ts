@@ -4,6 +4,7 @@ import { MobileBankingType, Status } from '../../../Common/Enum';
 import { Utility } from '../../../Common/Utility';
 import { MobileBanking } from '../../../Model/MobileBanking';
 import { MobileBankingService } from '../../../Service/Mobilebanking/mobile-banking.service';
+import { NotificationService } from '../../../Service/Notification/notification.service';
 
 @Component({
   selector: 'app-add-mobile-banking',
@@ -16,7 +17,7 @@ export class AddMobileBankingComponent implements OnInit {
   public lststatus:any;
   public lstmobilebankingtype:any;
 
-  constructor(private mobilebankingservice:MobileBankingService,private utility:Utility,private router:Router) { }
+  constructor(private mobilebankingservice:MobileBankingService,private utility:Utility,private router:Router, private notificationservice:NotificationService) { }
 
   ngOnInit(): void {
     this.lststatus=this.utility.enumToArray(Status);
@@ -30,8 +31,12 @@ export class AddMobileBankingComponent implements OnInit {
     
     this.mobilebankingservice.AddMobile(this.objmobile).subscribe(res => {
       
-        this.router.navigate(['/MobileBanking/View']);
         console.log(res);
+        if(res){
+          this.notificationservice.successNotification("successful");
+        this.router.navigate(['/MobileBanking/View']);
+
+        }
       
     } );
   

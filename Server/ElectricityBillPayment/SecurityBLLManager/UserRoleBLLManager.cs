@@ -22,11 +22,20 @@ namespace SecurityBLLManager
         {
             try
             {
+                if(userRole.UserId>0 && userRole.RoleId > 0)
+                {
+                    userRole.CreatedDate = DateTime.Now;
+                    await _dbContext.UserRole.AddAsync(userRole);
+                    await _dbContext.SaveChangesAsync();
+                    return userRole;
+                }
+                else
+                {
+                    throw new Exception("");
+
+                }
                 
-                userRole.CreatedDate = DateTime.Now;
-                await _dbContext.UserRole.AddAsync(userRole);
-                await _dbContext.SaveChangesAsync();
-                return userRole;
+                
             }
             catch (Exception ex)
             {

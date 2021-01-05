@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService } from '../../Common/Auth/auth.service';
-import { navItems } from '../../_nav';
+import { navItems, navItemsCoOrdinators } from '../../_nav';
 import { navItemsMeterReader } from '../../_nav';
 
 
@@ -13,6 +13,8 @@ export class DefaultLayoutComponent implements OnInit {
   public sidebarMinimized = false;
   public navItems = navItems;
   public navItemsMeterReaders = navItemsMeterReader;
+  public navItemsCoOrdinators = navItemsCoOrdinators;
+
 
   public roleId:any;
   constructor( private router:Router,public authservice: AuthService) { }

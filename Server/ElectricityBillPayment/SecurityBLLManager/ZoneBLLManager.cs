@@ -22,13 +22,26 @@ namespace SecurityBLLManager
         {
             try
             {
+                var check = _dbContext.Zone.Where(p => p.ZoneName == zone.ZoneName).FirstOrDefault();
+                if(zone.ZoneName!=null && zone.Status > 0)
+                {
+                    if (check != null)
+                    {
+                        throw new Exception("");
+                    }
+
+                    else
+                    {
+                        zone.CreatedDate = DateTime.Now;
+                        await _dbContext.Zone.AddAsync(zone);
+                        await _dbContext.SaveChangesAsync();
+                    }
+                }
                 
-                zone.CreatedDate = DateTime.Now;
-                await _dbContext.Zone.AddAsync(zone);
-                await _dbContext.SaveChangesAsync();
+                
                 return zone;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;

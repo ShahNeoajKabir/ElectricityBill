@@ -21,16 +21,36 @@ namespace SecurityBLLManager
         {
             try
             {
+                if(meter.MeterNumber!=null && meter.ExpiredDate!=null && meter.Status > 0)
+                {
+                    var meternumbercheck = _dbContext.MeterTable.Where(p => p.MeterNumber == meter.MeterNumber).FirstOrDefault();
+                    if (meternumbercheck != null)
+                    {
+                        throw new Exception("");
+                    }
+                    else
+                    {
+                        meter.CreatedDate = DateTime.Now;
+
+                        await _dbContext.MeterTable.AddAsync(meter);
+                        await _dbContext.SaveChangesAsync();
+                    }
+                   
+                    return meter;
+                }
+                else
+                {
+                    throw new Exception("Failed To Add");
+                    return meter;
+                }
+
                 
-                meter.CreatedDate = DateTime.Now;
-                await _dbContext.MeterTable.AddAsync(meter);
-                await _dbContext.SaveChangesAsync();
-                return meter;
+
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw new Exception("Failed To Added");
             }
         }
 
@@ -75,12 +95,18 @@ namespace SecurityBLLManager
                     meter.UpdatedDate = DateTime.Now;
                     _dbContext.MeterTable.Update(meter);
                     await _dbContext.SaveChangesAsync();
+                    return meter;
+                }
+                else
+                {
+                    throw new Exception("Failed To Update");
+                    return meter;
                 }
 
-                return meter;
+                
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;
