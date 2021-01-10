@@ -31,12 +31,30 @@
               <td >{{payment.CustomerName}}</td>
               <td>{{payment.MeterNumber}}</td>
               <td >{{payment.Year}}</td>
-              <td>{{payment.Month}}</td>
+              <td><span class="btn-default" *ngIf="payment.Month===1">January</span>
+                <span class="btn-default" *ngIf="payment.Month===2">February</span>
+                <span class="btn-default" *ngIf="payment.Month===3">March</span>
+                <span class="btn-default" *ngIf="payment.Month===4">April</span>
+                <span class="btn-default" *ngIf="payment.Month===5">May</span>
+                <span class="btn-default" *ngIf="payment.Month===6">June</span>
+                <span class="btn-default" *ngIf="payment.Month===7">July</span>
+                <span class="btn-default" *ngIf="payment.Month===8">August</span>
+                <span class="btn-default" *ngIf="payment.Month===9">September</span>
+                <span class="btn-default" *ngIf="payment.Month===10">October</span>
+                <span class="btn-default" *ngIf="payment.Month===11">November</span>
+                <span class="btn-default" *ngIf="payment.Month===12">December</span>
+                </td>
               <td >{{payment.UsageUnit}}</td>
               <td>{{payment.LastBilledUnit}}</td>
               <td>{{payment.PaymentDate}}</td>
-              <td ><span class="btn-default" *ngIf="payment.PaymentMethod===2"> Mobile</span>
-                <span class="btn-default" *ngIf="payment.PaymentMethod===1">  Card</span>
+              <td ><span class="btn-default" *ngIf="payment.PaymentMethod===2">
+                <img src="https://png.pngtree.com/png-vector/20190301/ourlarge/pngtree-vector-mobile-banking-icon-png-image_747098.jpg" style="height: 30px; width: 30px;" class="img-avatar" alt="admin@bootstrapmaster.com">
+                <span class="avatar-status badge-success"></span>
+              </span>
+                <span class="btn-default" *ngIf="payment.PaymentMethod===1"> 
+                  <img src="https://png.pngtree.com/png-clipart/20190520/original/pngtree-vector-credit-card-icon-png-image_4278064.jpg" style="height: 30px; width: 30px;" class="img-avatar" alt="admin@bootstrapmaster.com">
+                  <span class="avatar-status badge-success"></span>
+                </span>
           </td>
 
 

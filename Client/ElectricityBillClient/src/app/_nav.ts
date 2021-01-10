@@ -105,35 +105,10 @@ export const navItemsCoOrdinators: INavData[] = [
       text: 'NEW'
     }
   },
-  // {
-  //   title: true,
-  //   name: 'Theme'
-  // },
-  {
-    name: 'User',
-    url: '/User/View',
-    icon: 'icon-user'
-  },
   {
     name: 'Meter',
     url: '/Meter/View',
     icon: 'icon-speedometer'
-  },
-
-  {
-    name: 'Zone',
-    url: '/Zone/View',
-    icon: 'icon-location-pin'
-  },
-  {
-    name: 'ZoneAssign',
-    url: '/ZoneAssign/View',
-    icon: 'icon-location-pin'
-  },
-  {
-    name: 'Customer',
-    url: '/Customer/View',
-    icon: 'icon-user'
   },
   {
     name: 'Pending Customer',

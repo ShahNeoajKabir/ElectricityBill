@@ -25,7 +25,7 @@ namespace SecurityBLLManager
             {
                 var uniqueemail = _db.User.Where(p => p.Email == user.Email).FirstOrDefault();
 
-                if(user.Email!=null && user.UserName!=null&&user.MobileNo!=null && user.UserTypeId>0)
+                if(user.Email!=null && user.UserName!=null && user.MobileNo!=null && user.UserTypeId>0)
                 {
                     if (uniqueemail != null)
                     {

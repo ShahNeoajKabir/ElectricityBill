@@ -60,11 +60,11 @@ export class AddRoleComponent implements OnInit {
         
         console.log(res);
         if(res){
-          this.notificationservice.successNotification("Role Added Successfully updated")
+          this.notificationservice.successNotification("Role Added Successfully Added")
           this.router.navigate(['/Role/View']);
         }
       },er=>{
-        this.notificationservice.ErrorNotification("Failed to  updated")
+        this.notificationservice.ErrorNotification("Failed to  Added")
           this.router.navigate(['/Role/AddRole']);
       } );
     }

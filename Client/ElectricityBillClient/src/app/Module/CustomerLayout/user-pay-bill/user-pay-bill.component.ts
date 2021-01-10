@@ -50,7 +50,7 @@ export class UserPayBillComponent implements OnInit {
     this.paymentservice.MakePayment(this.vmmakepayment).subscribe(res=>{
       console.log(res);
       if(res){
-        this.notificationservice.successNotification("Payment is successfull");
+        this.notificationservice.successNotification("Payment is successful");
         this.router.navigate(['/CustomerDashboard/PaymentHistory']);
       }
       

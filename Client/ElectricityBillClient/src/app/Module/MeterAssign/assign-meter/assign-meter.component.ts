@@ -74,19 +74,17 @@ export class AssignMeterComponent implements OnInit {
     else {
       this.meterassignservice.AssignMeter(this.lstmeterassign).subscribe(res => {
         
-          
+        this.router.navigate(['/AssignMeter/View']);
+        this.notificationservice.successNotification("Successfully added");
+
+        if ( res === 1) {
           console.log(res);
-          if(res){
-            this.notificationservice.successNotification("Successfully Added");
-            this.router.navigate(['/AssignMeter/View']);
-          }
-            
-           
-         
-        },er=>{
-          this.notificationservice.ErrorNotification("Failed To Added");
-          this.router.navigate(['/AssignMeter/View'])
-        } );
+        }
+        console.log(res);
+      }, er=>{
+        this.router.navigate(['/AssignMeter/AddAssignMeter']);
+        this.notificationservice.ErrorNotification("Failed to added");
+      });
     }
   }
 

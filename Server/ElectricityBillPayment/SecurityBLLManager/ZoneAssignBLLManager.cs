@@ -29,6 +29,10 @@ namespace SecurityBLLManager
                     await _database.ZoneAssign.AddAsync(zoneAssign);
                     await _database.SaveChangesAsync();
                 }
+                else
+                {
+                    throw new Exception("Try Again");
+                }
                     
                    
                     

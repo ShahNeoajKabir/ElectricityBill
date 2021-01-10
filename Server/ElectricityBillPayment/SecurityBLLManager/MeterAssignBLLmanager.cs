@@ -27,7 +27,7 @@ namespace SecurityBLLManager
             {
                 var customer = await _dbContext.Customer.Where(p => p.CustomerId == meter.CustomerId).FirstOrDefaultAsync();
                 _dbContext.Database.BeginTransaction();
-                if (customer != null)
+                if (customer != null && meter.MeterId>0 )
                 {
                     meter.CreatedDate = DateTime.Now;
                     await _dbContext.MeterAssign.AddAsync(meter);

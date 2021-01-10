@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Status } from '../../../Common/Enum';
 import { Utility } from '../../../Common/Utility';
 import { ZoneAssign } from '../../../Model/ZoneAssign';
+import { NotificationService } from '../../../Service/Notification/notification.service';
 import { UserService } from '../../../Service/User/user.service';
 import { ZoneService } from '../../../Service/Zone/zone.service';
 import { ZoneAssignService } from '../../../Service/ZoneAssign/zone-assign.service';
@@ -25,7 +26,8 @@ export class AddZoneAssignComponent implements OnInit {
     private router:Router,
     private userservice:UserService,
     private zoneservice:ZoneService,
-    private utility:Utility
+    private utility:Utility,
+    private notificationservice:NotificationService
     ) { }
 
   ngOnInit(): void {
@@ -68,11 +70,15 @@ export class AddZoneAssignComponent implements OnInit {
     } else {
       this.zoneassignservice.AssignZone(this.objzoneassign).subscribe(res => {
         this.router.navigate(['/ZoneAssign/View']);
+        this.notificationservice.successNotification("Successfully added");
 
         if ( res === 1) {
           console.log(res);
         }
         console.log(res);
+      }, er=>{
+        this.router.navigate(['/ZoneAssign/AssignZone']);
+        this.notificationservice.ErrorNotification("Failed to added");
       });
     }
   }

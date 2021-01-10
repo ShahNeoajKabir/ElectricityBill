@@ -147,9 +147,15 @@
                     <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </td>
-                <td class="text-center">
-                  {{customer.PaymentMethod}}
-                  <!-- <i class="fa fa-cc-mastercard" style="font-size:24px"></i> -->
+                <td class="text-center" *ngIf="customer.PaymentMethod===1">
+                  
+                  <img src="https://png.pngtree.com/png-clipart/20190520/original/pngtree-vector-credit-card-icon-png-image_4278064.jpg" style="height: 30px; width: 30px;" class="img-avatar" alt="admin@bootstrapmaster.com">
+                  <span class="avatar-status badge-success"></span>
+                </td>
+                <td class="text-center" *ngIf="customer.PaymentMethod===2">
+                  
+                  <img src="https://png.pngtree.com/png-vector/20190301/ourlarge/pngtree-vector-mobile-banking-icon-png-image_747098.jpg" style="height: 30px; width: 30px;" class="img-avatar" alt="admin@bootstrapmaster.com">
+                  <span class="avatar-status badge-success"></span>
                 </td>
                 <td>
                   <!-- <div class="small text-muted">{{customer.PaidAmount}}</div> -->

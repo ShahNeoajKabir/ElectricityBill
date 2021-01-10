@@ -7,6 +7,8 @@ import { ListAssignMeterComponent } from './list-assign-meter/list-assign-meter.
 import { ListMeterAssignforCustomerComponent } from './list-meter-assignfor-customer/list-meter-assignfor-customer.component';
 
 const route: Routes =[
+  { path: 'AddAssignMeter', component: AssignMeterComponent ,canActivate: [AuthGuard]},
+
   { path: ':id/AddAssignMeter', component: AssignMeterComponent ,canActivate: [AuthGuard]},
   {path: 'View', component:ListAssignMeterComponent ,canActivate: [AuthGuard]},
   {path: ':id/edit', component:AssignMeterComponent ,canActivate: [AuthGuard]},

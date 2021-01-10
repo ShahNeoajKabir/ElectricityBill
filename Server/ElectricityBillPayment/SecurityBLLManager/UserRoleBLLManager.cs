@@ -72,13 +72,19 @@ namespace SecurityBLLManager
         {
             try
             {
+                
                 var res =await _dbContext.UserRole.Where(p => p.UserRoleId == userRole.UserRoleId).AsNoTracking().FirstOrDefaultAsync();
-                if (res != null)
+                if (res != null && userRole.UserId>0 )
                 {
                     
                     userRole.UpdatedDate = DateTime.Now;
                     _dbContext.UserRole.Update(userRole);
                    await  _dbContext.SaveChangesAsync();
+                }
+
+                else
+                {
+                    throw new Exception("Try Again");
                 }
 
                 return userRole;
