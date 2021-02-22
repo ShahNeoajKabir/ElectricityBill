@@ -6,6 +6,8 @@ import { CustomerLayoutComponent } from './customer-layout/customer-layout.compo
 import { PaymentHistoryComponent } from './payment-history/payment-history.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UserPayBillComponent } from './user-pay-bill/user-pay-bill.component';
+import { BillPaperViewComponent } from './bill-paper-view/bill-paper-view.component';
+
 
 
 const routes: Routes = [
@@ -15,6 +17,9 @@ children:[
 { path: 'Profile', component: ProfileComponent },
 { path: 'PaymentHistory', component: PaymentHistoryComponent },
 { path: ':id/MakePayment', component: UserPayBillComponent },
+{ path: 'BillPaper', component: BillPaperViewComponent },
+
+
 
 
 ]

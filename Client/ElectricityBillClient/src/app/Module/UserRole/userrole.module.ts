@@ -6,6 +6,7 @@ import { AddUserRoleComponent } from './add-user-role/add-user-role.component';
 import { ListUserRoleComponent } from './list-user-role/list-user-role.component';
 import { UserRoleRoutingModule } from './userrole-routing.module';
 import { UserRoleService } from '../../Service/UserRole/user-role.service';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -14,7 +15,8 @@ import { UserRoleService } from '../../Service/UserRole/user-role.service';
   imports: [
     CommonModule,
     UserRoleRoutingModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers:[UserRoleService],
 })

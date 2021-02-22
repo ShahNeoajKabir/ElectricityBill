@@ -51,11 +51,43 @@ namespace SecurityBLLManager
                 throw;
             }
         }
+        public async Task<VMBillPaper> ViewBillPaper(int BillId)
+        {
+            var bill = await _database.BillTable.Where(p => p.BillId == BillId).FirstOrDefaultAsync();
+            var customer = await _database.Customer.Where(p => p.CustomerId == bill.CustomerId).FirstOrDefaultAsync();
+            var meter = await _database.MeterTable.Where(p => p.MeterId == bill.MeterId).FirstOrDefaultAsync();
+            decimal vat = (decimal)(5 * bill.BillAmount) / 100;
+            decimal BillAmount = (decimal)bill.BillAmount - vat;
+            double UsesUnit = bill.CurrentUnit - bill.PreviousUnit;
+
+
+            var ViewBillPaper = new VMBillPaper()
+            {
+                BillId = bill.BillId,
+                CustomeName = customer.CustomerName,
+                MeterNumber = meter.MeterNumber,
+                BillAmount = BillAmount,
+                CurrentUnit = bill.CurrentUnit.ToString(),
+                PreviousUnit = bill.PreviousUnit.ToString(),
+                Email = customer.Email,
+                MobileNo=customer.MobileNo,
+                TotalBillAmount = (decimal)bill.BillAmount,
+                CreatedBy=bill.CreatedBy,
+                CreatedDate=bill.CreatedDate,
+                Vat = vat,
+                CustomeId = customer.CustomerId,
+                MeterId = meter.MeterId,
+                UsesUnit = UsesUnit.ToString()
+
+            };
+            return ViewBillPaper;
+        }
     }
 
 
     public interface ICustomerProfileBLLManager
     {
         Task<VMProfile> ViewProfile(int UserId);
+        Task<VMBillPaper> ViewBillPaper(int BillId);
     }
 }

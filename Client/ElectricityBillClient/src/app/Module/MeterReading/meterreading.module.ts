@@ -5,6 +5,7 @@ import { AddMeterReadingComponent } from './add-meter-reading/add-meter-reading.
 import { ListMeterReadingComponent } from './list-meter-reading/list-meter-reading.component';
 import { MeterReadingRoutingModule } from './meterreading-routing.mdule';
 import { MeterReadingService } from '../../Service/MeterReading/meter-reading.service';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -13,7 +14,8 @@ import { MeterReadingService } from '../../Service/MeterReading/meter-reading.se
   imports: [
     CommonModule,
     MeterReadingRoutingModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers:[MeterReadingService],
 })

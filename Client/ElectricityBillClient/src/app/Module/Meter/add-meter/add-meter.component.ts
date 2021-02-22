@@ -1,5 +1,5 @@
-import { Route } from '@angular/compiler/src/core';
-import { Component, OnInit } from '@angular/core';
+
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Status } from '../../../Common/Enum';
 import { NotificationService } from '../../../Service/Notification/notification.service';
@@ -19,12 +19,13 @@ export class AddMeterComponent implements OnInit {
  public lstStatus:any;
 
 
+
   constructor(
     private meterservice:MeterService,
      private utility:Utility,
      private router:Router,
      private activeroute:ActivatedRoute,
-     private notificationservice:NotificationService,
+     private notification:NotificationService
      ) { }
 
 
@@ -50,12 +51,12 @@ export class AddMeterComponent implements OnInit {
       this.meterservice.UpdateMeter(this.objMeter).subscribe(res=>{
         console.log(res);
         if(res){
-          this.notificationservice.updateNotification("Successfully Updated");
+          this.notification.updateNotification();
           this.router.navigate(['/Meter/View']);
 
         }
       },er=>{
-        this.notificationservice.ErrorNotification("Failed To Added Please Try Again");
+        this.notification.ErrorNotification();
         this.router.navigate(['/Meter/View']);
       });
          
@@ -65,11 +66,11 @@ export class AddMeterComponent implements OnInit {
       this.meterservice.AddMeter(this.objMeter).subscribe(res=>{
         console.log(res);
         if(res){
-          this.notificationservice.successNotification("Meter Added Successfully");
+          this.notification.successNotification();
           this.router.navigate(['/Meter/View']);
         }
       },er=>{
-        this.notificationservice.ErrorNotification("Failed To Added Please Try Again");
+        this.notification.ErrorNotification();
         this.router.navigate(['/Meter/AddMeter']);
       });
        

@@ -32,10 +32,8 @@ export class SignInComponent implements OnInit {
 
         }
 
-        console.log(res);
-
     }, er=>{
-      this.notificationservice.ErrorNotification("Invalide UserName Or Password");
+      this.notificationservice.ErrorNotification();
       this.router.navigate(['/Login'])
 
     });

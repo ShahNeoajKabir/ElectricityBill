@@ -5,6 +5,7 @@ import { AddZoneAssignComponent } from './add-zone-assign/add-zone-assign.compon
 import { ListZoneAssignComponent } from './list-zone-assign/list-zone-assign.component';
 import { ZoneAssignService } from '../../Service/ZoneAssign/zone-assign.service';
 import { ZoneAssignRoutingModule } from './ZoneAssign-routing.module';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -13,7 +14,8 @@ import { ZoneAssignRoutingModule } from './ZoneAssign-routing.module';
   imports: [
     CommonModule,
     ZoneAssignRoutingModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers:[ZoneAssignService],
 })

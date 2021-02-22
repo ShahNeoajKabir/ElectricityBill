@@ -74,7 +74,7 @@ namespace SecurityBLLManager
 
         public List<MeterTable> GetAllMeter()
         {
-            List<MeterTable> meter = _dbContext.MeterTable.Where(p => p.Status == (int)Common.Electricity.Enum.Enum.Status.Active).ToList();
+            List<MeterTable> meter = _dbContext.MeterTable.ToList();
             return meter;
         }
         public async Task<List<MeterTable>> Search(string MeterNumber)

@@ -15,7 +15,9 @@ export class CustomerService {
   public ViewProfile(){
     return this.httpclient.get(this.url+"Profile");
   }
-
+  public ViewBillPaper(){
+    return this.httpclient.get(this.url+"ViewBillPaper");
+  }
   public GetById(Customer:any){
     return this.httpclient.post(this.url+"GetbyID",Customer);
   }

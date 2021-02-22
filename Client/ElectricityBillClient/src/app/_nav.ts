@@ -17,7 +17,7 @@ export const navItems: INavData[] = [
   {
     name: 'User',
     url: '/User/View',
-    icon: 'icon-user'
+    icon: 'icon-user-following'
   },
   {
     name: 'Role',
@@ -27,7 +27,7 @@ export const navItems: INavData[] = [
   {
     name: 'User Role',
     url: '/UserRole/View',
-    icon: 'icon-people'
+    icon: 'icon-speech ',
   },
   {
     name: 'Meter',
@@ -52,25 +52,25 @@ export const navItems: INavData[] = [
   {
     name: 'Pending Customer',
     url: '/Customer/PendingCustomer',
-    icon: 'icon-user'
+    icon: 'icon-user-unfollow'
   },
 
   {
     name: 'Billl',
     url: '/Bill/View',
-    icon: 'icon-user'
+    icon: 'icon-wallet'
   },
   {
     name: 'PaymentHistory',
     url: '/Bill/PaimentHistory',
-    icon: 'icon-user'
+    icon: 'icon-wallet'
   },
 
   
   {
     name: 'Card',
     url: '/Card/View',
-    icon: 'icon-user'
+    icon: 'icon-credit-card'
   },
   {
     name: 'MobileBanking',
@@ -91,7 +91,12 @@ export const navItems: INavData[] = [
   {
     name: 'MeterReading',
     url: '/MeterReading/View',
-    icon: 'icon-speedometer'
+    icon: 'icon-calculator'
+  },
+  {
+    name: 'ChangePassword',
+    url: '/ChangePassword',
+    icon: 'icon-key'
   },
 
 ];
@@ -126,6 +131,12 @@ export const navItemsCoOrdinators: INavData[] = [
     url: '/UnitPrice/View',
     icon: 'icon-list'
   },
+  {
+    name: 'ChangePassword',
+    url: '/ChangePassword',
+    icon: 'icon-key'
+  },
+
 
 
 ];
@@ -152,6 +163,12 @@ export const navItemsMeterReader: INavData[] = [
     url: '/MeterReading/View',
     icon: 'icon-speedometer'
   },
+  {
+    name: 'ChangePassword',
+    url: '/ChangePassword',
+    icon: 'icon-key'
+  },
+
 
 ];
 

@@ -53,7 +53,6 @@ export class CustomerRegistrationComponent implements OnInit {
 
     this.zoneservice.GetAll().subscribe((res:any)=>{
       this.lstzone=res;
-      console.log(this.lstzone);
 
     });
 
@@ -65,7 +64,6 @@ export class CustomerRegistrationComponent implements OnInit {
       this.customerservice.GetById(this.objedit).subscribe(( res: any) => {
 
         this.registration = res;
-        console.log(this.registration);
      });
       console.log(this.ActiveRouter.snapshot.params['id' ] );
 
@@ -78,7 +76,6 @@ export class CustomerRegistrationComponent implements OnInit {
       this.customerservice.UpdateUser(this.registration).subscribe(res => {
         
           this.router.navigate(['/Login']);
-          console.log(res);
           
         
         
@@ -89,12 +86,12 @@ export class CustomerRegistrationComponent implements OnInit {
           
           console.log(res);
           if(res){
-            this.notificationservice.successNotification("Registration Successfull");
+            this.notificationservice.Massagereply("Registration Successful");
             this.router.navigate(['/Login']);
           }
         
       }, er=>{
-        this.notificationservice.ErrorNotification("Invalide Request Please try Again");
+        this.notificationservice.ErrorNotification();
         this.router.navigate(['/CustomerRegistration/Registration']);
       } );
     }

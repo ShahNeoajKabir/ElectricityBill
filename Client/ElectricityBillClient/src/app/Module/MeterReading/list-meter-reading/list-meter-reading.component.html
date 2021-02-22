@@ -7,14 +7,14 @@
       <div class="col-md-7">
 
       </div>
-      <div class="col-md-4">
+      <!-- <div class="col-md-4">
         <form class="form-header" action="" method="POST">
             <input class="form-control" [(ngModel)]="search" type="text" name="search" placeholder="Search for Information &amp; reports..." />
             <button class="btn btn-success" (click)="Search()" type="submit">
               <i class="fas fa-search"></i>
             </button>
         </form>
-      </div>
+      </div> -->
     </div>
     <div class="card">
       <div class="card-header">
@@ -28,7 +28,6 @@
                 <th>Meter Number</th>
                 <th>Current Unit</th>
                 <th>Status</th>
-                <th>Action</th>
             </tr>
         </thead>
         <tbody >
@@ -40,7 +39,7 @@
               <td ><span class="btn-success" *ngIf="objmeterreading.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
                 <span class="btn-danger" *ngIf="objmeterreading.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
           </td>
-              <td><a class="btn btn-warning" routerLink="../{{ objmeterreading.MeterReadingId }}/edit"><i class="fas fa-edit"></i></a></td>
+              
           </tr>
         </tbody>
 

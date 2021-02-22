@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Status } from '../../../Common/Enum';
 import { Utility } from '../../../Common/Utility';
 import { Zone } from '../../../Model/Zone';
+import { NotificationService } from '../../../Service/Notification/notification.service';
 import { ZoneService } from '../../../Service/Zone/zone.service';
 
 @Component({
@@ -19,7 +20,8 @@ export class AddZoneComponent implements OnInit {
     private zoneservice:ZoneService,
     private utility:Utility,
     private ActivateRouter:ActivatedRoute,
-    private router:Router
+    private router:Router,
+    private notification:NotificationService
     ) { }
 
   ngOnInit(): void {
@@ -43,16 +45,29 @@ export class AddZoneComponent implements OnInit {
     if (this.objzone.ZoneId > 0 ) {
       this.zoneservice.UpdateZone(this.objzone).subscribe(res => {
         
+        console.log(res);
+        if(res){
+          this.notification.updateNotification();
           this.router.navigate(['/Zone/View']);
-          console.log(res);
+        }
         
+      },er=>{
+        this.notification.ErrorNotification();
+        this.router.navigate(['/Zone/AddZone']);
       } );
     } else {
       this.zoneservice.AddZone(this.objzone).subscribe(res => {
        
-          this.router.navigate(['/Zone/View']);
+          
           console.log(res);
+          if(res){
+            this.notification.successNotification();
+            this.router.navigate(['/Zone/View']);
+          }
         
+      },er=>{
+        this.notification.ErrorNotification();
+        this.router.navigate(['/Zone/AddZone']);
       } );
     }
 

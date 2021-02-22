@@ -173,6 +173,15 @@ namespace Service.Electricity.Controllers
             //int UserId = JsonConvert.DeserializeObject<int>(message.Content.ToString());
             return Ok(await _customerBLLManager.ViewProfile(loginedUser.UserId));
         }
+        [HttpGet]
+        [Route("ViewBillPaper")]
+        public async Task<ActionResult> ViewBillPaper()
+        {
+            var loginedUser = (User)HttpContext.Items["User"];
+
+            //int UserId = JsonConvert.DeserializeObject<int>(message.Content.ToString());
+            return Ok(await _customerBLLManager.ViewBillPaper(loginedUser.UserId));
+        }
 
         [HttpGet("GetCustomerLocation")]
         public async Task<ActionResult> GetCustomerLocation()

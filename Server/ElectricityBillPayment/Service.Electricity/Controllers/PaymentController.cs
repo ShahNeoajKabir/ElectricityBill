@@ -67,7 +67,7 @@ namespace Service.Electricity.Controllers
                             var paymentt = await _paymentBLL.MakePayment(vMMakePayment);
                             if (paymentt.PaymentId >0)
                             {
-                                await _mailer.SendEmailAsync(loginedUser.Email, "Payment Info", "You Payment Is Successfull Your trazaction Id Is" + payment.PaymentId);
+                                await _mailer.SendEmailAsync(loginedUser.Email, "Payment Info", "You Payment Is Successfull Your transaction Id Is" + payment.PaymentId);
                                 return Ok(paymentt);
                             }
                             

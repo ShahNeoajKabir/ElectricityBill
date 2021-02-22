@@ -156,6 +156,28 @@ namespace Service.Electricity.Controllers
 
 
         }
+        [HttpPost]
+        [Route("ChangePassword")]
+        public async Task<ActionResult>ChangePassword([FromBody] TempMessage message)
+        {
+            try
+            {
+                
+                VMChangePassword vMChange = JsonConvert.DeserializeObject<VMChangePassword>(message.Content.ToString());
+               
+                
+
+                return Ok(await this.userBLLManager.ChangePassword(vMChange));
+
+            }
+            catch (Exception ex)
+            {
+
+                return BadRequest();
+            }
+             
+
+        } 
         
 
 

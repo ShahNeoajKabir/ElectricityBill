@@ -23,7 +23,7 @@ namespace SecurityBLLManager
         {
             try
             {
-                if(zoneAssign.ZoneAssignId>0 && zoneAssign.UserId > 0)
+                if(zoneAssign.ZoneId>0 && zoneAssign.UserId > 0)
                 {
                     zoneAssign.CreatedDate = DateTime.Now;
                     await _database.ZoneAssign.AddAsync(zoneAssign);

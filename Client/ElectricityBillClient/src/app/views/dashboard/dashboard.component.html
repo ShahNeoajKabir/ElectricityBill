@@ -126,9 +126,7 @@
                 </td>
                 <td>
                   <div>{{customer.CustomerName}}</div>
-                  <div class="small text-muted">
-                    <span>New</span> | Registered: Jan 1, 2015
-                  </div>
+                  
                 </td>
                 <td class="text-center">
                   {{customer.ZoneName}}
@@ -140,7 +138,7 @@
                       <strong>{{customer.BilledUnit}}</strong>
                     </div>
                     <div class="float-right">
-                      <small class="text-muted">{{customer.BillPaidDate}}</small>
+                      <small class="text-muted">{{customer.BillPaidDate | date }}</small>
                     </div>
                   </div>
                   <div class="progress progress-xs">

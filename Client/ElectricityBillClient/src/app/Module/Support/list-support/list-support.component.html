@@ -1,72 +1,46 @@
-<div class="animated fadeIn">
-    <div class="col-lg-12">
-      <div class="row" style="margin-bottom: 20px; margin-top: 10px;">
-        <div class="col-md-1">
-            <button aria-pressed="true" class="btn btn-block btn-success active" [routerLink]="['/Support/AddSupport']" type="button"><i class="fa fa-plus-circle fa-lg "></i> Support</button>
-        </div>
-        <div class="col-md-7">
-
-        </div>
-        <div class="col-md-4">
-          <form class="form-inline" action="" method="POST">
-              <input class="form-control" [(ngModel)]="search" type="text" name="search" placeholder="Search for Information &amp; reports..." />
-              <button class="btn btn-success" (click)="Search()" type="submit">
-                <i class="fas fa-search"></i>
-              </button>
-          </form>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <i class="fa fa-align-justify"></i> Support Table
-        </div>
-        <div class="card-body">
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                  <th>Content</th>
-                  <th>Subject</th>
-                  <th>Status</th>
-                  <th>Action</th>
-
-
-              </tr>
-          </thead>
-          <tbody >
-            <tr *ngFor="let objsupport of lstSupport">
-                <td >{{objsupport.SupportContent}}</td>
-                <td>{{objsupport.SupportSubject}}</td>
-                <td ><span class="btn-success" *ngIf="objsupport.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
-                  <span class="btn-danger" *ngIf="objsupport.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
-            </td>
-
-
-
-            <td> <a class="btn btn-warning" routerLink="../{{ objsupport.SupportId }}/edit"><i class="fas fa-edit"></i></a></td>
-
-            </tr>
-
-        </tbody>
-
-
-          </table>
-          <ul class="pagination">
-            <li class="page-item"><a class="page-link" href="#">Prev</a></li>
-            <li class="page-item active">
-              <a class="page-link" href="#">1</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item"><a class="page-link" href="#">4</a></li>
-            <li class="page-item"><a class="page-link" href="#">Next</a></li>
-          </ul>
-        </div>
-      </div>
+<div class="app-body">
+  <main class="main d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card mx-4">
+            <div class="card-body p-4">
+<form>
+  <h1 style="text-align: center;">Add User</h1>
+  <p class="text-muted">Create your Account</p>
+  <div class="input-group mb-12">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i class="icon-user"></i></span>
     </div>
-    <!--/.col-->
+    <input type="text" class="form-control"  [(ngModel)]="objSupport.SupportContent" name="SupportContent" placeholder="SupportContent" autocomplete="SupportContent" required>
+  </div>
+  <div class="input-group mb-12">
+    <div class="input-group-prepend">
+      <span class="input-group-text">@</span>
     </div>
-
-
-
-
-
+    <input type="text" class="form-control" [(ngModel)]="objSupport.SupportSubject" name="SupportSubject" placeholder="SupportSubject" autocomplete="SupportSubject" required>
+    
+  </div>
+  <div class="input-group mb-12">
+    <div class="input-group-prepend">
+      <span class="input-group-text"><i >Status</i></span>
+    </div>
+    <select name="Status" class="form-control"
+      [(ngModel)]="objSupport.Status" name="Status">
+      <option *ngFor="let status of lststatus"
+      [value]="status.key">{{status.value}}</option>
+      </select>
+  </div>
+    
+  
+  
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+    
+    

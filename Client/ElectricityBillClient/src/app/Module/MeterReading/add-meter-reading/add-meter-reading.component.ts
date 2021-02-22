@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ModalDirective } from 'ngx-bootstrap/modal';
 import { Month, Status } from '../../../Common/Enum';
 import { Utility } from '../../../Common/Utility';
 import { VMAddMeterReading } from '../../../Model/VMAddMeterReading';
@@ -21,7 +22,7 @@ export class AddMeterReadingComponent implements OnInit {
     private router:Router,
     private activatedroute:ActivatedRoute,
     private utility:Utility,
-    private notificationservice:NotificationService
+    private notification:NotificationService
   ) { }
 
   ngOnInit(): void {
@@ -35,12 +36,12 @@ export class AddMeterReadingComponent implements OnInit {
       
       console.log(res);
       if(res){
-        this.notificationservice.successNotification("Bill Added Successfull");
+        this.notification.successNotification();
         this.router.navigate(['/MeterReading/View']);
 
       }
     },er=>{
-      this.notificationservice.ErrorNotification("Invalide Request, Please Try again");
+      this.notification.ErrorNotification();
       this.router.navigate(['/MeterReading/AddMeterReading']);
     })
 

@@ -65,6 +65,7 @@ export class AddUserRoleComponent implements OnInit {
       this.userroleservice.UpdateUserRole(this.objuserrole).subscribe(res => {
         if ( res === 1) {
         this.router.navigate(['/UserRole/View']);
+        this.notificationservice.updateNotification();
 
         console.log(res);
 
@@ -75,7 +76,7 @@ export class AddUserRoleComponent implements OnInit {
       this.userroleservice.AddUserRole(this.objuserrole).subscribe(res => {
         
         this.router.navigate(['/UserRole/View']);
-          this.notificationservice.successNotification("User Role AssignSuccessful");
+          this.notificationservice.successNotification();
 
         if ( res === 1) {
           console.log(res);
@@ -83,7 +84,7 @@ export class AddUserRoleComponent implements OnInit {
         console.log(res);
       }, er=>{
         this.router.navigate(['/UserRole/AddUserRole']);
-          this.notificationservice.ErrorNotification("Failed to added");
+          this.notificationservice.ErrorNotification();
       });
     }
   }

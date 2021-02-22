@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ModalDirective } from 'ngx-bootstrap/modal';
 import { Status } from '../../../Common/Enum';
 import { Utility } from '../../../Common/Utility';
 import { CardInformation } from '../../../Model/CardInformation';
@@ -15,6 +16,7 @@ export class AddCardComponent implements OnInit {
 public objcard:CardInformation=new CardInformation();
 public editcard:CardInformation=new CardInformation();
 public lststatus:any;
+
 
   constructor(private cardservice:CardService,private utility:Utility,private router:Router,private ActivateRouter:ActivatedRoute , private notificationservice:NotificationService) { }
 
@@ -43,12 +45,12 @@ public lststatus:any;
          
           console.log(res);
           if(res){
-            this.notificationservice.successNotification("Card Added Successfully");
+            this.notificationservice.successNotification();
             this.router.navigate(['/Card/View'])
           }
         
       },er=>{
-        this.notificationservice.ErrorNotification("Invalide request please try again");
+        this.notificationservice.ErrorNotification();
         this.router.navigate(['/Card/AddCard']);
       });
     

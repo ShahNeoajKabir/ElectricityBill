@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ModalDirective } from 'ngx-bootstrap/modal';
 import { CustomerType, Status } from '../../../Common/Enum';
 import { Utility } from '../../../Common/Utility';
 import { UnitPrice } from '../../../Model/UnitPrice';
+import { NotificationService } from '../../../Service/Notification/notification.service';
 import { UnitPriceService } from '../../../Service/UnitPrice/unit-price.service';
 
 @Component({
@@ -16,7 +18,7 @@ export class AddUnitPriceComponent implements OnInit {
   public lststatus:any;
   public lstcustomertype:any;
 
-  constructor(private unitpriceservice:UnitPriceService,private activatedroute:ActivatedRoute,private router:Router,private unitility:Utility) { }
+  constructor(private unitpriceservice:UnitPriceService,private activatedroute:ActivatedRoute,private router:Router,private unitility:Utility, private notification:NotificationService) { }
 
   ngOnInit(): void {
     this.lstcustomertype=this.unitility.enumToArray(CustomerType);
@@ -41,16 +43,31 @@ export class AddUnitPriceComponent implements OnInit {
     if (this.objunitprice.UnitPriceId > 0 ) {
       this.unitpriceservice.UpdateUnitPrice(this.objunitprice).subscribe(res => {
         
-          this.router.navigate(['/UnitPrice/View']);
+          
           console.log(res);
+          if(res){
+            
+            this.router.navigate(['UnitPrice/View']);
+            this.notification.updateNotification();
+          }
         
+      },er=>{
+        this.notification.ErrorNotification();
+        this.router.navigate(['AddUnitPrice']);
       } );
     } else {
       this.unitpriceservice.AddUnitPrice(this.objunitprice).subscribe(res => {
         
-          this.router.navigate(['/UnitPrice/View']);
+          
           console.log(res);
+          if(res){
+            this.notification.successNotification();
+            this.router.navigate(['UnitePrice/View']);
+          }
         
+      },er=>{
+        this.notification.ErrorNotification();
+        this.router.navigate(['UnitePrice/AddUnitPrice']);
       } );
     }
 

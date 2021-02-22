@@ -5,6 +5,7 @@ import { MobileBankingService } from '../../Service/Mobilebanking/mobile-banking
 import { AddMobileBankingComponent } from './add-mobile-banking/add-mobile-banking.component';
 import { ListMobileBankingComponent } from './list-mobile-banking/list-mobile-banking.component';
 import { MobileBankingRoutingModule } from './mobilebanking-routing.module';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -13,7 +14,8 @@ import { MobileBankingRoutingModule } from './mobilebanking-routing.module';
   imports: [
     CommonModule,
     MobileBankingRoutingModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers:[MobileBankingService],
 })

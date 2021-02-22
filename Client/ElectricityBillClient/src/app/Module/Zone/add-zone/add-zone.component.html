@@ -1,17 +1,15 @@
 <form>
     <div class="row">
-    <div class="col-md-5">
-      <label>Zone Name</label>
-      <input type="text"  name="ZoneName" [(ngModel)]="objzone.ZoneName" class="form-control"  autocomplete="off">
-    </div>
-    <div class="col-md-5">
-    <label>Status</label>
-    <select name="Status" class="form-control"
-    [(ngModel)]="objzone.Status">
-    <option *ngFor="let status of lststatus"
-    [value]="status.key">{{status.value}}</option>
-    </select>
-    </div>
+      <div class="col-md-5">
+        <label>Zone Name</label>
+        <input type="text"  name="ZoneName" [(ngModel)]="objzone.ZoneName" class="form-control"  autocomplete="off">
+      </div>
+      <div class="col-md-5">
+          <label>Status</label>
+          <select name="Status" class="form-control"[(ngModel)]="objzone.Status">
+          <option *ngFor="let status of lststatus"[value]="status.key">{{status.value}}</option>
+        </select>
+      </div>
     </div>
     <div class="row">
       <div class="col-md-5">
@@ -22,5 +20,6 @@
       <div class="col-md-5">
       </div>
     </div>
-    </form>
+</form>
+
     

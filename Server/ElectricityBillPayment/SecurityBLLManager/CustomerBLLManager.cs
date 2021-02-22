@@ -21,6 +21,7 @@ namespace SecurityBLLManager
 
         public async Task<Customer> AddCustomer(Customer customer)
         {
+            
             try
             {
                 var uniqueemail = _dbContext.User.Where(p => p.Email == customer.Email).FirstOrDefault();
@@ -159,6 +160,39 @@ namespace SecurityBLLManager
                 throw;
             }
         }
+        public async Task<VMBillPaper> ViewBillPaper(int UserId)
+        {
+            
+            var customer = await _dbContext.Customer.Where(p => p.UserId == UserId).FirstOrDefaultAsync();
+            var bill = await _dbContext.BillTable.Where(p => p.CustomerId == customer.CustomerId).OrderByDescending(p=>p.CreatedDate).FirstOrDefaultAsync();
+            var meter = await _dbContext.MeterTable.Where(p => p.MeterId == bill.MeterId).FirstOrDefaultAsync();
+            decimal vat = (decimal)(5 * bill.BillAmount) / 100;
+            decimal BillAmount = (decimal)bill.BillAmount - vat;
+            double UsesUnit = bill.CurrentUnit - bill.PreviousUnit;
+
+
+            var ViewBillPaper = new VMBillPaper()
+            {
+                BillId = bill.BillId,
+                CustomeName = customer.CustomerName,
+                MeterNumber = meter.MeterNumber,
+                BillAmount = BillAmount,
+                CurrentUnit = bill.CurrentUnit.ToString(),
+                PreviousUnit = bill.PreviousUnit.ToString(),
+                Email = customer.Email,
+                MobileNo = customer.MobileNo,
+                TotalBillAmount = (decimal)bill.BillAmount,
+                CreatedBy = bill.CreatedBy,
+                CreatedDate = bill.CreatedDate,
+                Vat = vat,
+                CustomeId = customer.CustomerId,
+                MeterId = meter.MeterId,
+                ZoneName = _dbContext.Zone.FirstOrDefault(p => p.ZoneId == customer.ZoneId).ZoneName,
+                UsesUnit = UsesUnit.ToString()
+
+            };
+            return ViewBillPaper;
+        }
     }
 
 
@@ -173,6 +207,7 @@ namespace SecurityBLLManager
         Task<List<Customer>> GetAllPending();
         Task<List<CustomerLocation>> GetAllCustomerLocation();
         Task<VMProfile> ViewProfile(int UserId);
+        Task<VMBillPaper> ViewBillPaper(int BillId);
 
     }
 }

@@ -1,17 +1,18 @@
 <form>
 <div class="row">
-<div class="col-md-12 d-flex justify-content-center">
-  <div class="form-group">
-    <label>Image</label>
-    <input type="file" (change)="fileChangeEvent($event)" name="Image" class="au-input au-input--full"  >
-  </div>
-  <div class="card" style="width: 18rem;">
-    <img   [src]="objUser.Image" alt="Add Image" class="img img-responsive img-full">
-    <div class="card-body">
-      <a (click)="removeImage()" class="btn btn-primary">Remove Image</a>
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text">Image</span>
     </div>
+    <div class="card-container">
+      <input type="file" id="FUImage" name="FUImage" accept=".png, .jpg, .jpeg" (change)="handleFileInput($event.target.files)"> 
+      <button type="button" class="btn btn-danger pull-left" (click)="btnUpload()">Upload</button> 
+    </div>
+    <div class="card-container">
+      <img src="{{ImageBaseData}}" alt="Selected Image" height="200" width="200">
+    </div>
+
   </div>
-</div>
 <div class="col-md-5">
     <label>User Name</label>
     <input type="text"  name="UserName" [(ngModel)]="objUser.UserName" class="form-control"  >
@@ -78,4 +79,5 @@
   </div>
 </div>
 </form>
+
 

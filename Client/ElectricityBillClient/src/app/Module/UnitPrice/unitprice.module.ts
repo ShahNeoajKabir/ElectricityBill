@@ -8,7 +8,6 @@ import { UnitPriceRoutingModule } from './unitprice-routing.module';
 
 
 
-
 @NgModule({
   declarations: [AddUnitPriceComponent, ListUnitPriceComponent],
   imports: [

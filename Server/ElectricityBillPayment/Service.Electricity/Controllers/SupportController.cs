@@ -28,7 +28,9 @@ namespace Service.Electricity.Controllers
         {
             try
             {
+                var loginedUser = (User)HttpContext.Items["User"];
                 Support support = JsonConvert.DeserializeObject<Support>(message.Content.ToString());
+                support.CreatedBy = loginedUser.UserName;
                 await _supportBLL.AddSupport(support);
                 return Ok(support);
             }

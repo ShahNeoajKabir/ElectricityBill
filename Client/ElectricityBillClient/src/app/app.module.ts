@@ -42,8 +42,6 @@ import { httpInterceptorProviders } from './Common/interceptor';
 import { AuthService } from './Common/Auth/auth.service';
 
 import {AgmMap,MapsAPILoader, AgmCoreModule  } from '../../node_modules/@agm/core';
-import { ListMeterAssignforCustomerComponent } from './Module/MeterAssign/list-meter-assignfor-customer/list-meter-assignfor-customer.component'; 
-
 
 
 @NgModule({
@@ -66,10 +64,8 @@ import { ListMeterAssignforCustomerComponent } from './Module/MeterAssign/list-m
     AgmCoreModule.forRoot({  
       apiKey: 'AIzaSyBib2Nuc4iRnft_GXCfAOSkobRbN7u-wJQ'  
     }),
-    ToastrModule.forRoot({
-      positionClass: 'toast-bottom-right',
-      preventDuplicates: true,
-  }),
+    ToastrModule.forRoot(
+  ),
   ],
   declarations: [
     AppComponent,

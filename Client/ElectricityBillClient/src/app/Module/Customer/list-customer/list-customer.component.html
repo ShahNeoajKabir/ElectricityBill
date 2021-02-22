@@ -1,20 +1,11 @@
 <div class="animated fadeIn">
   <div class="col-lg-12">
     <div class="row" style="margin-bottom: 20px; margin-top: 10px;">
-      <!-- <div class="col-md-1">
-          <button aria-pressed="true" class="btn btn-block btn-success active" [routerLink]="['/Customer/Registration']"  type="button"><i class="fa fa-plus-circle fa-lg "></i>  Customer</button>
-      </div> -->
+     
       <div class="col-md-8">
 
       </div>
-      <div class="col-md-4">
-        <form class="form-inline" action="" method="POST">
-            <input class="form-control" [(ngModel)]="search" type="text" name="search" placeholder="Search for Information &amp; reports..." />
-            <button class="btn btn-success" (click)="Search()" type="submit">
-              <i class="fas fa-search"></i>
-            </button>
-        </form>
-      </div>
+      
     </div>
     <div class="card">
       <div class="card-header">
@@ -32,7 +23,6 @@
                 <th>CustomerType</th>
                 <th>Address</th>
                 <th>Status</th>
-                <th>Action</th>
             </tr>
         </thead>
         <tbody >
@@ -60,7 +50,7 @@
               <td ><span class="btn-success" *ngIf="objcustomer.Status===1"> <i class="fa fa-check" aria-hidden="true"></i> Active</span>
                 <span class="btn-danger" *ngIf="objcustomer.Status===2"> <i class="fa fa-times" aria-hidden="true"></i> Deactived</span>
           </td>
-              <td> <a class="btn btn-warning" routerLink="../{{ objcustomer.CustomerId }}/edit"><i class="fas fa-edit"></i></a></td>
+              
           </tr>
         </tbody>
 

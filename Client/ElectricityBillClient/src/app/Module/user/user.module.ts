@@ -6,16 +6,18 @@ import { UserRoutingModule } from './user-routing.module';
 import { FormsModule } from '@angular/forms';
 import { UserService } from '../../Service/User/user.service';
 import { ListMeterReaderComponent } from './list-meter-reader/list-meter-reader.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
 
 @NgModule({
-  declarations: [AddUserComponent, ListUserComponent, ListMeterReaderComponent],
+  declarations: [AddUserComponent, ListUserComponent, ListMeterReaderComponent, ],
   imports: [
     CommonModule,
     UserRoutingModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers:[UserService],
 })

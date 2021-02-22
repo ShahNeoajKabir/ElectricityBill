@@ -36,7 +36,7 @@ namespace SecurityBLLManager
                 }
                 else
                 {
-                    throw new Exception("Customer not Fount");
+                    throw new Exception("Customer not Found");
                 }
 
 
@@ -50,7 +50,7 @@ namespace SecurityBLLManager
             catch (Exception ex)
             {
                 _dbContext.Database.RollbackTransaction();
-                throw;
+                throw new Exception("Something is wrong");
             }
         }
        

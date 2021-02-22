@@ -27,7 +27,7 @@ namespace SecurityBLLManager
                 await _dbContext.SaveChangesAsync();
                 return support;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
                 throw;

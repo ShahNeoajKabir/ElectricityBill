@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ModalDirective } from 'ngx-bootstrap/modal';
 import { Status } from '../../../Common/Enum';
 import { Utility } from '../../../Common/Utility';
 import { MeterAssign } from '../../../Model/MeterAssign';
@@ -28,23 +29,19 @@ export class AssignMeterComponent implements OnInit {
     private utility:Utility,
     private meterservice:MeterService,
     private customerservice:CustomerService,
-    private notificationservice:NotificationService
+    private notification:NotificationService
     ) { }
 
   ngOnInit(): void {
     this.lststatus=this.utility.enumToArray(Status);
     this.meterservice.GetAll().subscribe((res: any) => {
-      console.log(res);
 
       this.lstmetertable = res;
-      console.log(this.lstmetertable);
 
     });
     this.customerservice.GetAllPendingCustomer().subscribe((res: any) => {
-      console.log(res);
 
       this.lstcustomer = res;
-      console.log(this.lstcustomer);
 
     });
     if (this.activeroute.snapshot.params[ 'id'] !== undefined) {
@@ -55,35 +52,28 @@ export class AssignMeterComponent implements OnInit {
   
   }
   submit() {
-    console.log(this.lstmeterassign);
     if (this.lstmeterassign.MeterAssignId > 0 ) {
       this.meterassignservice.UpdateAssign(this.lstmeterassign).subscribe(res => {
-        console.log(res);
-        if(res){
-          this.notificationservice.updateNotification("Successfully Updated");
+        this.notification.updateNotification();
           this.router.navigate(['/AssignMeter/View']);
-        }
+       
           
          
        
       },er=>{
-        this.notificationservice.ErrorNotification("Failed To Update");
+        this.notification.ErrorNotification();
         this.router.navigate(['/AssignMeter/View'])
       } );
     }
     else {
       this.meterassignservice.AssignMeter(this.lstmeterassign).subscribe(res => {
-        
+        this.notification.successNotification();
         this.router.navigate(['/AssignMeter/View']);
-        this.notificationservice.successNotification("Successfully added");
-
-        if ( res === 1) {
-          console.log(res);
-        }
-        console.log(res);
+        
+        
       }, er=>{
         this.router.navigate(['/AssignMeter/AddAssignMeter']);
-        this.notificationservice.ErrorNotification("Failed to added");
+        this.notification.ErrorNotification();
       });
     }
   }

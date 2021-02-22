@@ -89,44 +89,236 @@ namespace SecurityBLLManager
             var Prvmonthbill = await _database.BillTable.Where(p => p.CustomerId == meterReadingTable.CustomerId && p.MeterId == meterReadingTable.MeterId).OrderBy(p=>p.CreatedDate).LastOrDefaultAsync();
             if (Prvmonthbill != null )
             {
-                var CalBillAmount = unit.UnitperPrice * (meterReadingTable.CurrentUnit - Prvmonthbill.CurrentUnit);
-
-                bill = new BillTable()
+                var usesunit = meterReadingTable.CurrentUnit - Prvmonthbill.CurrentUnit;
+                if (usesunit < 0)
                 {
-                    CurrentMonth = VmMeter.Month,
-                    CurrentUnit = VmMeter.CurrentUnit,
-                    CustomerId = meterReadingTable.CustomerId,
-                    MeterId = meterReadingTable.MeterId,
-                    BillStatus =(int)Common.Electricity.Enum.Enum.BillStatus.UnPaid,
-                    BillAmount = CalBillAmount,
-                    MeterReadingId = meterReadingTable.MeterReadingId,
-                    PreviousUnit = Prvmonthbill.CurrentUnit,
-                    Status = 1,
-                    Year = VmMeter.Year,
-                    PreviousMonth = Prvmonthbill.CurrentMonth,
-                    CreatedDate = DateTime.Now
-                };
+                    throw new Exception("Something is wrong");
+                }
+                else {
+                    if (usesunit <= 75)
+                    {
+                        var CalBillAmount = unit.UnitperPrice * usesunit;
+
+                        bill = new BillTable()
+                        {
+                            CurrentMonth = VmMeter.Month,
+                            CurrentUnit = VmMeter.CurrentUnit,
+                            CustomerId = meterReadingTable.CustomerId,
+                            MeterId = meterReadingTable.MeterId,
+                            BillStatus = (int)Common.Electricity.Enum.Enum.BillStatus.UnPaid,
+                            BillAmount = CalBillAmount,
+                            MeterReadingId = meterReadingTable.MeterReadingId,
+                            PreviousUnit = Prvmonthbill.CurrentUnit,
+                            Status = 1,
+                            Year = VmMeter.Year,
+                            PreviousMonth = Prvmonthbill.CurrentMonth,
+                            CreatedDate = DateTime.Now
+                        };
+                    }
+                    else if (usesunit <= 200)
+                    {
+                        var unitprice = unit.UnitperPrice + 1;
+                        var CalBillAmount = unitprice * usesunit;
+                        bill = new BillTable()
+                        {
+                            CurrentMonth = VmMeter.Month,
+                            CurrentUnit = VmMeter.CurrentUnit,
+                            CustomerId = meterReadingTable.CustomerId,
+                            MeterId = meterReadingTable.MeterId,
+                            BillStatus = (int)Common.Electricity.Enum.Enum.BillStatus.UnPaid,
+                            BillAmount = CalBillAmount,
+                            MeterReadingId = meterReadingTable.MeterReadingId,
+                            PreviousUnit = Prvmonthbill.CurrentUnit,
+                            Status = 1,
+                            Year = VmMeter.Year,
+                            PreviousMonth = Prvmonthbill.CurrentMonth,
+                            CreatedDate = DateTime.Now
+                        };
+                    }
+                    else if (usesunit <= 400)
+                    {
+                        var unitprice = unit.UnitperPrice + 2;
+                        var CalBillAmount = unitprice * usesunit;
+                        bill = new BillTable()
+                        {
+                            CurrentMonth = VmMeter.Month,
+                            CurrentUnit = VmMeter.CurrentUnit,
+                            CustomerId = meterReadingTable.CustomerId,
+                            MeterId = meterReadingTable.MeterId,
+                            BillStatus = (int)Common.Electricity.Enum.Enum.BillStatus.UnPaid,
+                            BillAmount = CalBillAmount,
+                            MeterReadingId = meterReadingTable.MeterReadingId,
+                            PreviousUnit = Prvmonthbill.CurrentUnit,
+                            Status = 1,
+                            Year = VmMeter.Year,
+                            PreviousMonth = Prvmonthbill.CurrentMonth,
+                            CreatedDate = DateTime.Now
+                        };
+                    }
+                    else if (usesunit <= 600)
+                    {
+                        var unitprice = unit.UnitperPrice + 3;
+                        var CalBillAmount = unitprice * usesunit;
+                        bill = new BillTable()
+                        {
+                            CurrentMonth = VmMeter.Month,
+                            CurrentUnit = VmMeter.CurrentUnit,
+                            CustomerId = meterReadingTable.CustomerId,
+                            MeterId = meterReadingTable.MeterId,
+                            BillStatus = (int)Common.Electricity.Enum.Enum.BillStatus.UnPaid,
+                            BillAmount = CalBillAmount,
+                            MeterReadingId = meterReadingTable.MeterReadingId,
+                            PreviousUnit = Prvmonthbill.CurrentUnit,
+                            Status = 1,
+                            Year = VmMeter.Year,
+                            PreviousMonth = Prvmonthbill.CurrentMonth,
+                            CreatedDate = DateTime.Now
+                        };
+                    }
+                    else if (usesunit >600)
+                    {
+                        var unitprice = unit.UnitperPrice + 5;
+                        var CalBillAmount = unitprice * usesunit;
+                        bill = new BillTable()
+                        {
+                            CurrentMonth = VmMeter.Month,
+                            CurrentUnit = VmMeter.CurrentUnit,
+                            CustomerId = meterReadingTable.CustomerId,
+                            MeterId = meterReadingTable.MeterId,
+                            BillStatus = (int)Common.Electricity.Enum.Enum.BillStatus.UnPaid,
+                            BillAmount = CalBillAmount,
+                            MeterReadingId = meterReadingTable.MeterReadingId,
+                            PreviousUnit = Prvmonthbill.CurrentUnit,
+                            Status = 1,
+                            Year = VmMeter.Year,
+                            PreviousMonth = Prvmonthbill.CurrentMonth,
+                            CreatedDate = DateTime.Now
+                        };
+                    }
+
+                }
+
+
+
             }
             else
             {
-                var CalBillAmount = unit.UnitperPrice * meterReadingTable.CurrentUnit ;
-
-                bill = new BillTable()
+                var usesunit = meterReadingTable.CurrentUnit-0;
+                if (usesunit < 0)
                 {
-                    CurrentMonth = VmMeter.Month,
-                    CurrentUnit = VmMeter.CurrentUnit,
-                    CustomerId = meterReadingTable.CustomerId,
-                    MeterId = meterReadingTable.MeterId,
-                    BillStatus = 1,
-                    BillAmount = CalBillAmount,
-                    MeterReadingId = meterReadingTable.MeterReadingId,
-                    PreviousUnit = 0,
-                    Status = 1,
-                    Year = VmMeter.Year,
-                    PreviousMonth = 0,
-                    
-                    CreatedDate = DateTime.Now
-                };
+                    throw new Exception("Something is wrong please try again");
+                }
+                else
+                {
+                    if (usesunit <= 75)
+                    {
+                        var CalBillAmount = unit.UnitperPrice * usesunit;
+
+                        bill = new BillTable()
+                        {
+                            CurrentMonth = VmMeter.Month,
+                            CurrentUnit = VmMeter.CurrentUnit,
+                            CustomerId = meterReadingTable.CustomerId,
+                            MeterId = meterReadingTable.MeterId,
+                            BillStatus = 1,
+                            BillAmount = CalBillAmount,
+                            MeterReadingId = meterReadingTable.MeterReadingId,
+                            PreviousUnit = 0,
+                            Status = 1,
+                            Year = VmMeter.Year,
+                            PreviousMonth = 0,
+
+                            CreatedDate = DateTime.Now
+                        };
+                    }
+                    else if (usesunit <= 200)
+                    {
+                        var unitprice = unit.UnitperPrice + 1;
+                        var CalBillAmount = unitprice * usesunit;
+                        bill = new BillTable()
+                        {
+                            CurrentMonth = VmMeter.Month,
+                            CurrentUnit = VmMeter.CurrentUnit,
+                            CustomerId = meterReadingTable.CustomerId,
+                            MeterId = meterReadingTable.MeterId,
+                            BillStatus = 1,
+                            BillAmount = CalBillAmount,
+                            MeterReadingId = meterReadingTable.MeterReadingId,
+                            PreviousUnit = 0,
+                            Status = 1,
+                            Year = VmMeter.Year,
+                            PreviousMonth = 0,
+
+                            CreatedDate = DateTime.Now
+                        };
+                    }
+                    else if (usesunit <= 400)
+                    {
+                        var unitprice = unit.UnitperPrice + 2;
+                        var CalBillAmount = unitprice * usesunit;
+                        bill = new BillTable()
+                        {
+                            CurrentMonth = VmMeter.Month,
+                            CurrentUnit = VmMeter.CurrentUnit,
+                            CustomerId = meterReadingTable.CustomerId,
+                            MeterId = meterReadingTable.MeterId,
+                            BillStatus = 1,
+                            BillAmount = CalBillAmount,
+                            MeterReadingId = meterReadingTable.MeterReadingId,
+                            PreviousUnit = 0,
+                            Status = 1,
+                            Year = VmMeter.Year,
+                            PreviousMonth = 0,
+
+                            CreatedDate = DateTime.Now
+                        };
+                    }
+                    else if (usesunit <= 600)
+                    {
+                        var unitprice = unit.UnitperPrice + 3;
+                        var CalBillAmount = unitprice * usesunit;
+                        bill = new BillTable()
+                        {
+                            CurrentMonth = VmMeter.Month,
+                            CurrentUnit = VmMeter.CurrentUnit,
+                            CustomerId = meterReadingTable.CustomerId,
+                            MeterId = meterReadingTable.MeterId,
+                            BillStatus = 1,
+                            BillAmount = CalBillAmount,
+                            MeterReadingId = meterReadingTable.MeterReadingId,
+                            PreviousUnit = 0,
+                            Status = 1,
+                            Year = VmMeter.Year,
+                            PreviousMonth = 0,
+
+                            CreatedDate = DateTime.Now
+                        };
+                    }
+                    else if (usesunit > 600)
+                    {
+                        var unitprice = unit.UnitperPrice + 5;
+                        var CalBillAmount = unitprice * usesunit;
+                        bill = new BillTable()
+                        {
+                            CurrentMonth = VmMeter.Month,
+                            CurrentUnit = VmMeter.CurrentUnit,
+                            CustomerId = meterReadingTable.CustomerId,
+                            MeterId = meterReadingTable.MeterId,
+                            BillStatus = 1,
+                            BillAmount = CalBillAmount,
+                            MeterReadingId = meterReadingTable.MeterReadingId,
+                            PreviousUnit = 0,
+                            Status = 1,
+                            Year = VmMeter.Year,
+                            PreviousMonth = 0,
+
+                            CreatedDate = DateTime.Now
+                        };
+                    }
+                }
+               
+
+                
             }
             await _database.BillTable.AddAsync(bill);
             await _database.SaveChangesAsync();
@@ -149,6 +341,7 @@ namespace SecurityBLLManager
                     CustomerId = t.CustomerId,
                     MeterAssignId = t.MeterAssignId,
                     CurrentUnit = t.CurrentUnit
+                    
 
                 }).ToList();
                 //var useridList=userList.

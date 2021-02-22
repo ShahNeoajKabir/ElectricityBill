@@ -22,6 +22,7 @@ export class AddUserComponent implements OnInit {
   public lstzone:any;
   public userid:any;
   public objuseredit: User = new User();
+  ImageBaseData:string | ArrayBuffer=null;
   imageError: string;
   isImageSaved: boolean;
   cardImageBase64: string;
@@ -68,11 +69,11 @@ export class AddUserComponent implements OnInit {
        
         console.log(res);
         if(res){
-          this.notificationservice.updateNotification("Successfully Updated");
+          this.notificationservice.updateNotification();
           this.router.navigate(['/User/View']);
         }
       },er=>{
-        this.notificationservice.ErrorNotification("Failed To Update");
+        this.notificationservice.ErrorNotification();
           this.router.navigate(['/User/AddUser']);
       } );
     } else {
@@ -80,11 +81,11 @@ export class AddUserComponent implements OnInit {
         
         console.log(res);
         if(res){
-          this.notificationservice.successNotification("User Added Successfully");
+          this.notificationservice.successNotification();
           this.router.navigate(['/User/View']);
         }
       },er=>{
-        this.notificationservice.ErrorNotification("Failed To Added");
+        this.notificationservice.ErrorNotification();
           this.router.navigate(['/User/AddUser']);
 
       } );
@@ -92,63 +93,87 @@ export class AddUserComponent implements OnInit {
 
 
   }
-  fileChangeEvent(fileInput: any) {
-    this.imageError = null;
-    if (fileInput.target.files && fileInput.target.files[0]) {
-        // Size Filter Bytes
-        const max_size = 20971520;
-        const allowed_types = ['image/png', 'image/jpeg'];
-        const max_height = 15200;
-        const max_width = 25600;
-  
-        if (fileInput.target.files[0].size > max_size) {
-            this.imageError =
-                'Maximum size allowed is ' + max_size / 1000 + 'Mb';
-  
-            return false;
-        }
-  
-        if (!_.includes(allowed_types, fileInput.target.files[0].type)) {
-            this.imageError = 'Only Images are allowed ( JPG | PNG )';
-            return false;
-        }
-        const reader = new FileReader();
-        reader.onload = (e: any) => {
-            const image = new Image();
-            image.src = e.target.result;
-            image.onload = rs => {
-                const img_height = rs.currentTarget['height'];
-                const img_width = rs.currentTarget['width'];
-  
-                console.log(img_height, img_width);
-  
-  
-                if (img_height > max_height && img_width > max_width) {
-                    this.imageError =
-                        'Maximum dimentions allowed ' +
-                        max_height +
-                        '*' +
-                        max_width +
-                        'px';
-                    return false;
-                } else {
-                    const imgBase64Path = e.target.result;
-                    this.cardImageBase64 = imgBase64Path;
-                    this.isImageSaved = true;
-                    this.objUser.Image = this.cardImageBase64;
-                    // this.previewImagePath = imgBase64Path;
-                }
-            };
-        };
-  
-        reader.readAsDataURL(fileInput.target.files[0]);
+  handleFileInput(files: FileList) {
+    let me = this;
+    let file = files[0];
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      console.log(reader.result);
+      me.ImageBaseData=reader.result;
+    };
+    reader.onerror = function (error) {
+      console.log('Error: ', error);
+    };
+ }
+  btnUpload(){
+    
+    if(this.ImageBaseData==null){
+      alert("Please select file");
+    }else{     
+      
+      this.objUser.Image=this.ImageBaseData.toString();
+      
+      
     }
-  }
+  // fileChangeEvent(fileInput: any) {
+  //   this.imageError = null;
+  //   if (fileInput.target.files && fileInput.target.files[0]) {
+  //       // Size Filter Bytes
+  //       const max_size = 20971520;
+  //       const allowed_types = ['image/png', 'image/jpeg'];
+  //       const max_height = 15200;
+  //       const max_width = 25600;
   
-  removeImage() {
-    this.cardImageBase64 = null;
-    this.objUser.Image =  null;
-    this.isImageSaved = false;
-  }
+  //       if (fileInput.target.files[0].size > max_size) {
+  //           this.imageError =
+  //               'Maximum size allowed is ' + max_size / 1000 + 'Mb';
+  
+  //           return false;
+  //       }
+  
+  //       if (!_.includes(allowed_types, fileInput.target.files[0].type)) {
+  //           this.imageError = 'Only Images are allowed ( JPG | PNG )';
+  //           return false;
+  //       }
+  //       const reader = new FileReader();
+  //       reader.onload = (e: any) => {
+  //           const image = new Image();
+  //           image.src = e.target.result;
+  //           image.onload = rs => {
+  //               const img_height = rs.currentTarget['height'];
+  //               const img_width = rs.currentTarget['width'];
+  
+  //               console.log(img_height, img_width);
+  
+  
+  //               if (img_height > max_height && img_width > max_width) {
+  //                   this.imageError =
+  //                       'Maximum dimentions allowed ' +
+  //                       max_height +
+  //                       '*' +
+  //                       max_width +
+  //                       'px';
+  //                   return false;
+  //               } else {
+  //                   const imgBase64Path = e.target.result;
+  //                   this.cardImageBase64 = imgBase64Path;
+  //                   this.isImageSaved = true;
+  //                   this.objUser.Image = this.cardImageBase64;
+  //                   // this.previewImagePath = imgBase64Path;
+  //               }
+  //           };
+  //       };
+  
+  //       reader.readAsDataURL(fileInput.target.files[0]);
+  //   }
+  // }
+  
+  // removeImage() {
+  //   this.cardImageBase64 = null;
+  //   this.objUser.Image =  null;
+  //   this.isImageSaved = false;
+  // }
 
+}
 }

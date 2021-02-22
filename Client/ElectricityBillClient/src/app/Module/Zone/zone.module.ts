@@ -6,6 +6,7 @@ import { AddZoneComponent } from './add-zone/add-zone.component';
 import { ListZoneComponent } from './list-zone/list-zone.component';
 import { ZoneRoutingModule } from './zone-routing.module';
 import { ZoneService } from '../../Service/Zone/zone.service';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -14,7 +15,8 @@ import { ZoneService } from '../../Service/Zone/zone.service';
   imports: [
     CommonModule,
     ZoneRoutingModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers:[ZoneService],
 })

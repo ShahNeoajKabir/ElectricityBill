@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ModalDirective } from 'ngx-bootstrap/modal';
 import { Status } from '../../../Common/Enum';
 import { Utility } from '../../../Common/Utility';
 import { Role } from '../../../Model/Role';
@@ -21,7 +22,7 @@ export class AddRoleComponent implements OnInit {
     private router:Router,
     private utility:Utility,
     private ActivateRouter:ActivatedRoute,
-    private notificationservice:NotificationService
+    private notification:NotificationService
     
     ) { }
 
@@ -48,11 +49,11 @@ export class AddRoleComponent implements OnInit {
       this.roleservice.UpdateRole(this.objRole).subscribe(res => {
         console.log(res);
         if(res){
-          this.notificationservice.updateNotification("Successfully updated")
+          this.notification.updateNotification();
           this.router.navigate(['/Role/View']);
         }
       },er=>{
-        this.notificationservice.ErrorNotification("Failed to  updated")
+        this.notification.ErrorNotification();
           this.router.navigate(['/Role/AddRole']);
       } );
     } else {
@@ -60,11 +61,11 @@ export class AddRoleComponent implements OnInit {
         
         console.log(res);
         if(res){
-          this.notificationservice.successNotification("Role Added Successfully Added")
+          this.notification.successNotification();
           this.router.navigate(['/Role/View']);
         }
       },er=>{
-        this.notificationservice.ErrorNotification("Failed to  Added")
+        this.notification.ErrorNotification();
           this.router.navigate(['/Role/AddRole']);
       } );
     }

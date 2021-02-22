@@ -399,8 +399,7 @@ export class DashboardComponent implements OnInit {
       this.mainChartData3.push(65);
 
       this.dashboardService.GetDashboardData().subscribe((res:any)=>{
-        this.Data=res
-        console.log(this.Data,res)
+        this.Data=res;
       })
     }
   }

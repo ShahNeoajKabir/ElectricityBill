@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 @Injectable({
   providedIn: 'root'
@@ -7,16 +8,21 @@ export class NotificationService {
 
   constructor() { }
 
-  successNotification(massage:string){
-    Swal.fire(massage);
+  successNotification(){
+    Swal.fire("Data Added successfully !!");
   }
-  updateNotification(updatemassage:string){
-    Swal.fire(updatemassage);
+  
+  updateNotification(){
+    Swal.fire("Data Updated successfully !!");
   }
 
-  ErrorNotification(errormassage:string){
-    Swal.fire(errormassage);
+  ErrorNotification(){
+    Swal.fire("Something is wrong !! Please Try Again");
   }
+  Massagereply(message:string){
+    Swal.fire(message);
+  }
+ 
 
 
 }

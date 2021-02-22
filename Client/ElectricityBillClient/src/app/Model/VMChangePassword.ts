@@ -3,4 +3,5 @@ export class VMChangePassword{
     Email:string;
     OldPassword:string;
     NewPassword:string;
+    RetypePassword:string;
 }

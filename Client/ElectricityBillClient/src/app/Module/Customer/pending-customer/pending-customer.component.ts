@@ -18,10 +18,8 @@ export class PendingCustomerComponent implements OnInit {
 
   ngOnInit(): void {
     this.customerservice.GetAllPendingCustomer().subscribe((res: any) => {
-      console.log(res);
 
       this.lstcustomer = res;
-      console.log(this.lstcustomer);
 
     });
     
@@ -34,7 +32,6 @@ export class PendingCustomerComponent implements OnInit {
   Search(){
     this.customerservice.Search(this.search).subscribe((res:any)=>{
       this.lstcustomer=res;
-      console.log(this.lstcustomer);
     })
   }
 

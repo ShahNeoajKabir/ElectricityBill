@@ -1,0 +1,110 @@
+<div class="container emp-profile" style="margin-top:5% ;">
+    <form method="post">
+        <div class="row">
+            <div class="col-md-1"></div>
+            
+            <div class="col-md-10">
+                <div class="tab-content profile-tab" id="myTabContent">
+                    <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Customer Name</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>{{objuser.CustomeName}}</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label>Email</label>
+                            </div>
+                            <div class="col-md-6">
+                                <p>{{objuser.Email}}</p>
+                            </div>
+                        </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Mobile Number</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{objuser.MobileNo}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Meter Number</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{objuser.MeterNumber}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Zone Name</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{objuser.ZoneName}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Bill CreatedDate</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{objuser.CreatedDate | date }}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>CurrentUnit</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{objuser.CurrentUnit}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>PreviousUnit</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{objuser.PreviousUnit}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>UsesUnit</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{objuser.UsesUnit}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>BillAmount</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{objuser.BillAmount}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>Vat</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{objuser.Vat}}</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label>TotalBillAmount</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>{{objuser.TotalBillAmount}}</p>
+                                    </div>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+  </div>

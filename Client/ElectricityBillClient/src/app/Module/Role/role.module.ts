@@ -6,6 +6,7 @@ import { ListRoleComponent } from './list-role/list-role.component';
 
 import { RoleRoutingModule } from './role-routing.module';
 import { RoleService } from '../../Service/Role/role.service';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -14,7 +15,8 @@ import { RoleService } from '../../Service/Role/role.service';
   imports: [
     CommonModule,
     RoleRoutingModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers:[RoleService],
 })

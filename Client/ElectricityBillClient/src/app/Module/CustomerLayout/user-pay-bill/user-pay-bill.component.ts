@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { PaymentMethod } from '../../../Common/Enum';
 import { Utility } from '../../../Common/Utility';
@@ -27,8 +27,13 @@ export class UserPayBillComponent implements OnInit {
   public mobilebanking:MobileBanking=new MobileBanking();
   public cardinformation:CardInformation=new CardInformation();
 
-  constructor(private utility:Utility,private router:Router, private activateroute:ActivatedRoute, private notificationservice:NotificationService,
-    private paymentservice:PaymentService ,private paymentgetwayservice:PaymentGetwayService) { }
+  constructor(private utility:Utility,
+    private router:Router, 
+    private activateroute:ActivatedRoute, 
+    private paymentservice:PaymentService ,
+    private paymentgetwayservice:PaymentGetwayService,
+    private notification:NotificationService
+    ) { }
 
   ngOnInit(): void {
     this.lstpaymnetmethod=this.utility.enumToArray(PaymentMethod);
@@ -50,12 +55,12 @@ export class UserPayBillComponent implements OnInit {
     this.paymentservice.MakePayment(this.vmmakepayment).subscribe(res=>{
       console.log(res);
       if(res){
-        this.notificationservice.successNotification("Payment is successful");
+        this.notification.successNotification();
         this.router.navigate(['/CustomerDashboard/PaymentHistory']);
       }
       
     },er=>{
-      this.notificationservice.ErrorNotification("Invalide Request Please Try again");
+      this.notification.ErrorNotification();
         this.router.navigate(['/CustomerDashboard/BillHistory']);
     });
   }

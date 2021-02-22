@@ -37,4 +37,7 @@ export class UserService {
   public UpdateUser(User:any){
     return this.httpclient.post(this.url+"UpdateUser",User);
   }
+  public ChangePassword(User:any){
+    return this.httpclient.post(this.url+"ChangePassword",User);
+  }
 }

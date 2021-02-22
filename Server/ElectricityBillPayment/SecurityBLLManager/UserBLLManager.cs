@@ -163,19 +163,47 @@ namespace SecurityBLLManager
 
         public async Task<bool> ChangePassword(VMChangePassword vMChangePassword)
         {
-            var result = false;
-            vMChangePassword.OldPassword = new EncryptionService().Encrypt(vMChangePassword.OldPassword);
-            vMChangePassword.NewPassword = new EncryptionService().Encrypt(vMChangePassword.NewPassword);
-            var user = await _db.User.Where(p => p.UserId ==Convert.ToInt32( vMChangePassword.UserId) && p.Email == vMChangePassword.Email && p.Password == vMChangePassword.OldPassword).AsNoTracking().FirstOrDefaultAsync();
-            if (user != null)
+            bool res = false;
+            try
             {
-                user.Password = vMChangePassword.NewPassword;
-                _db.User.Update(user);
-                _db.SaveChanges();
-                result = true;
+                
+                
+                vMChangePassword.OldPassword = new EncryptionService().Encrypt(vMChangePassword.OldPassword);
+                vMChangePassword.NewPassword = new EncryptionService().Encrypt(vMChangePassword.NewPassword);
+                vMChangePassword.RetypePassword = new EncryptionService().Encrypt(vMChangePassword.RetypePassword);
+                var user = await _db.User.Where(p => p.UserId == Convert.ToInt32(vMChangePassword.UserId) && p.Email == vMChangePassword.Email && p.Password == vMChangePassword.OldPassword).FirstOrDefaultAsync();
+                if (user != null)
+                {
+                    if(vMChangePassword.NewPassword==vMChangePassword.RetypePassword && vMChangePassword.OldPassword != vMChangePassword.NewPassword)
+                    {
+                        user.Password = vMChangePassword.NewPassword;
+                        user.UpdatedDate = DateTime.Now;
 
+                        _db.User.Update(user);
+
+                        var count = await _db.SaveChangesAsync();
+                        if (count > 0)
+                        {
+                            res = true;
+                        }
+
+                    }
+                    else
+                    {
+                        throw new Exception("Try Again");
+                    }
+
+
+                }
+                return res;
             }
-            return result;
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+          
+            
         }
     }
     public interface IUserBLLManager
@@ -189,6 +217,6 @@ namespace SecurityBLLManager
 
         Task<List<User>> Search(string UserName);
         List<User> GetAllUnAssignUser();
-        Task<Boolean> ChangePassword(VMChangePassword vMChangePassword);
+        Task<bool> ChangePassword(VMChangePassword vMChangePassword);
     }
 }

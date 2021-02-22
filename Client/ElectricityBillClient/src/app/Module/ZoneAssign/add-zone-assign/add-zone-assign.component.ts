@@ -59,26 +59,23 @@ export class AddZoneAssignComponent implements OnInit {
     console.log(this.objzoneassign);
     if ( this.objzoneassign.ZoneAssignId > 0) {
       this.zoneassignservice.UpdateZoneAssign(this.objzoneassign).subscribe(res => {
-        if ( res === 1) {
+        
         this.router.navigate(['/ZoneAssign/View']);
+        this.notificationservice.updateNotification();
 
-        console.log(res);
+        
 
-        }
-        console.log(res);
+        
       });
     } else {
       this.zoneassignservice.AssignZone(this.objzoneassign).subscribe(res => {
         this.router.navigate(['/ZoneAssign/View']);
-        this.notificationservice.successNotification("Successfully added");
+        this.notificationservice.successNotification();
 
-        if ( res === 1) {
-          console.log(res);
-        }
-        console.log(res);
+        
       }, er=>{
         this.router.navigate(['/ZoneAssign/AssignZone']);
-        this.notificationservice.ErrorNotification("Failed to added");
+        this.notificationservice.ErrorNotification();
       });
     }
   }

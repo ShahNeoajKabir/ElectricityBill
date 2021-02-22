@@ -6,6 +6,7 @@ import { AddCardComponent } from './add-card/add-card.component';
 import { ListCardComponent } from './list-card/list-card.component';
 import { CardService } from '../../Service/Card/card.service';
 import { CardRoutingModule } from './card-routing.module';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -14,7 +15,8 @@ import { CardRoutingModule } from './card-routing.module';
   imports: [
     CommonModule,
     CardRoutingModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers:[CardService],
 })

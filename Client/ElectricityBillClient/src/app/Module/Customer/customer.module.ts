@@ -5,6 +5,7 @@ import { ListCustomerComponent } from './list-customer/list-customer.component';
 import { CustomerRoutingModule } from './customer-routing.modules';
 import { CustomerService } from '../../Service/Customer/customer.service';
 import { PendingCustomerComponent } from './pending-customer/pending-customer.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 
@@ -13,7 +14,8 @@ import { PendingCustomerComponent } from './pending-customer/pending-customer.co
   imports: [
     CommonModule,
     CustomerRoutingModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
   ],
   providers:[CustomerService],
 })
