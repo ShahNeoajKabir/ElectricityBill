@@ -5,6 +5,10 @@ import { AgmMap, MapsAPILoader } from '@agm/core';
 import { CustomerLocation } from '../../Model/Customer';
 import { CustomerService } from '../../Service/Customer/customer.service';
 import { DashboardService } from '../../Service/Dashboard/dashboard.service';
+import { MeterService } from '../../Service/Meter/meter.service';
+import { MeterTable } from '../../Model/MeterTable';
+import { Status } from '../../Common/Enum';
+import * as Chart from 'chart.js';
 
 @Component({
   templateUrl: 'dashboard.component.html'
@@ -15,12 +19,16 @@ export class DashboardComponent implements OnInit {
   lng= 90.3842538;
   zoom=8;
   public  Data:any;
+  Chart:any;
+  Charts:any;
 
   radioModel: string = 'Month';
+  lstMeter:MeterTable[]=new Array<MeterTable>();
 
- 
 
-  constructor(private customerService:CustomerService,private dashboardService:DashboardService
+  constructor(private customerService:CustomerService,
+    private meterservice:MeterService,
+    private dashboardService:DashboardService
 
   ) { }
   // lineChart1
@@ -401,8 +409,133 @@ export class DashboardComponent implements OnInit {
       this.dashboardService.GetDashboardData().subscribe((res:any)=>{
         this.Data=res;
       })
+
     }
+    this.meterservice.GetAllMeter().subscribe((res:any)=>{
+      this.lstMeter=res;
+      console.log( "Meter Reding table",this.lstMeter);
+
+      let active=this.lstMeter.filter(s=>s.Status==Status.Active).length;
+      let inactive=this.lstMeter.filter(s=>s.Status==Status.Inactive).length;
+      let pending=this.lstMeter.filter(s=>s.Status==Status.Pending).length;
+      let deletes=this.lstMeter.filter(s=>s.Status==Status.Delete).length;
+
+
+    this.Chart=new Chart('canvas',{
+
+      type:'pie',
+      data:{
+        labels:['Active','Inactive','Pending','Delete'],
+        datasets:[{
+            data: [active,inactive,pending,deletes],
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9"],
+
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Meter Graph'
+        },
+        legend:{
+          display:false
+        }
+      }
+    });
+    this.Charts=new Chart('bar-char',{
+
+      type:'bar',
+      data:{
+        labels:['Active','Inactive','Pending','Delete',],
+        datasets:[{
+            data: [active,inactive,pending,deletes,0],
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Meter Graph'
+        },
+        legend:{
+          display:false
+        }
+      }
+    });
+    this.Charts=new Chart('radar-char',{
+
+      type:'radar',
+      data:{
+        labels:['Active','Inactive','Pending','Delete',0],
+        datasets:[{
+        fill: true,
+
+            data: [active,inactive,pending,deletes],
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Meter Graph'
+        },
+        legend:{
+          display:false
+        }
+      }
+    });
+    this.Charts=new Chart('horizontalBar-char',{
+
+      type:'horizontalBar',
+      data:{
+        labels:['Active','Inactive','Pending','Delete'],
+        datasets:[{
+        fill: true,
+
+            data: [active,inactive,pending,deletes,0],
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Meter Graph'
+        },
+        legend:{
+          display:false
+        }
+      }
+    })
+    this.Charts=new Chart('polarArea-char',{
+
+      type:'polarArea',
+      data:{
+        labels:['Active','Inactive','Pending','Delete',],
+        datasets:[{
+        fill: true,
+
+            data: [active,inactive,pending,deletes,0],
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: 'Meter Graph'
+        },
+        legend:{
+          display:false
+        }
+      }
+    })
+    console.log("This.chats",this.Charts);
+  })
+
   }
   // Get Current Location Coordinates
-  
+
 }

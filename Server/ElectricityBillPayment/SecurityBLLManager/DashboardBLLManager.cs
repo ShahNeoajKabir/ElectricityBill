@@ -1,5 +1,6 @@
 ﻿using Context;
 using Microsoft.EntityFrameworkCore;
+using ModelClass.DTO;
 using ModelClass.ViewModel;
 using System;
 using System.Collections.Generic;
@@ -74,6 +75,7 @@ namespace SecurityBLLManager
             return male;
         }
 
+
         public async Task<long> TotalRegisteredCustomer()
         {
             var count =await _dbContext.Customer.CountAsync();
@@ -84,6 +86,10 @@ namespace SecurityBLLManager
         {
             var usage =await _dbContext.BillTable.SumAsync(p => p.CurrentUnit - p.PreviousUnit);
             return usage;
+        }
+        public async Task<List<MeterTable>> Meter()
+        {
+            return (await _dbContext.MeterTable.ToListAsync());
         }
     }
 
@@ -98,5 +104,6 @@ namespace SecurityBLLManager
         Task<List<VmLastTenTransaction>> LastTenTransaction();
         Task<long> ToTalFemale();
         Task<long> ToTalMale();
+        Task<List<MeterTable>>Meter();
     }
 }

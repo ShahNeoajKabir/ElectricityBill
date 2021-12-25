@@ -155,7 +155,7 @@ namespace SecurityBLLManager
                 result = user.UserId;
                 UserRole userRole = new UserRole()
                 {
-                    RoleId = 3,
+                    RoleId = 4,
                     UserId = user.UserId,
                     CreatedBy = "CoOrdinator",
                     CreatedDate = DateTime.Now

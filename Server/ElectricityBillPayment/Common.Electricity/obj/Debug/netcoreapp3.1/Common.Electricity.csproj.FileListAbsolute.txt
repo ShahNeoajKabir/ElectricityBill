@@ -70,3 +70,15 @@ E:\Final Defence Project\ElectricityBill\Server\ElectricityBillPayment\Common.El
 E:\Final Defence Project\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.dll
 E:\Final Defence Project\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.pdb
 E:\Final Defence Project\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.genruntimeconfig.cache
+F:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.deps.json
+F:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.runtimeconfig.json
+F:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.runtimeconfig.dev.json
+F:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.dll
+F:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\bin\Debug\netcoreapp3.1\Common.Electricity.pdb
+F:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.csprojAssemblyReference.cache
+F:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.AssemblyInfoInputs.cache
+F:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.AssemblyInfo.cs
+F:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.csproj.CoreCompileInputs.cache
+F:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.dll
+F:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.pdb
+F:\ElectricityBill\Server\ElectricityBillPayment\Common.Electricity\obj\Debug\netcoreapp3.1\Common.Electricity.genruntimeconfig.cache

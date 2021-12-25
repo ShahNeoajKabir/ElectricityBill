@@ -112,3 +112,22 @@ E:\Final Defence Project\ElectricityBill\Server\ElectricityBillPayment\SecurityB
 E:\Final Defence Project\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netcoreapp3.1\SecurityBLLManager.dll
 E:\Final Defence Project\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netcoreapp3.1\SecurityBLLManager.pdb
 E:\Final Defence Project\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netcoreapp3.1\SecurityBLLManager.genruntimeconfig.cache
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netcoreapp3.1\SecurityBLLManager.deps.json
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netcoreapp3.1\SecurityBLLManager.runtimeconfig.json
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netcoreapp3.1\SecurityBLLManager.runtimeconfig.dev.json
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netcoreapp3.1\SecurityBLLManager.dll
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netcoreapp3.1\SecurityBLLManager.pdb
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netcoreapp3.1\Common.Electricity.dll
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netcoreapp3.1\Context.dll
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netcoreapp3.1\ModelClass.dll
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netcoreapp3.1\Common.Electricity.pdb
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netcoreapp3.1\Context.pdb
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\bin\Debug\netcoreapp3.1\ModelClass.pdb
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netcoreapp3.1\SecurityBLLManager.csprojAssemblyReference.cache
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netcoreapp3.1\SecurityBLLManager.AssemblyInfoInputs.cache
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netcoreapp3.1\SecurityBLLManager.AssemblyInfo.cs
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netcoreapp3.1\SecurityBLLManager.csproj.CoreCompileInputs.cache
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netcoreapp3.1\SecurityBLLManager.csproj.CopyComplete
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netcoreapp3.1\SecurityBLLManager.dll
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netcoreapp3.1\SecurityBLLManager.pdb
+F:\ElectricityBill\Server\ElectricityBillPayment\SecurityBLLManager\obj\Debug\netcoreapp3.1\SecurityBLLManager.genruntimeconfig.cache

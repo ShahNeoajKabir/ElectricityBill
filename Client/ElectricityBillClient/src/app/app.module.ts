@@ -69,7 +69,7 @@ import {AgmMap,MapsAPILoader, AgmCoreModule  } from '../../node_modules/@agm/cor
   ],
   declarations: [
     AppComponent,
-    ...APP_CONTAINERS,
+    APP_CONTAINERS,
     // P404Component,
     // P500Component,
     // LoginComponent,

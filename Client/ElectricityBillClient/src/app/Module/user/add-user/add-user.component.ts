@@ -66,7 +66,7 @@ export class AddUserComponent implements OnInit {
     console.log(this.objUser);
     if (this.objUser.UserId > 0 ) {
       this.userservice.UpdateUser(this.objUser).subscribe(res => {
-       
+
         console.log(res);
         if(res){
           this.notificationservice.updateNotification();
@@ -78,7 +78,7 @@ export class AddUserComponent implements OnInit {
       } );
     } else {
       this.userservice.AddUser(this.objUser).subscribe(res => {
-        
+
         console.log(res);
         if(res){
           this.notificationservice.successNotification();
@@ -107,14 +107,14 @@ export class AddUserComponent implements OnInit {
     };
  }
   btnUpload(){
-    
+
     if(this.ImageBaseData==null){
       alert("Please select file");
-    }else{     
-      
+    }else{
+
       this.objUser.Image=this.ImageBaseData.toString();
-      
-      
+
+
     }
   // fileChangeEvent(fileInput: any) {
   //   this.imageError = null;
@@ -124,14 +124,14 @@ export class AddUserComponent implements OnInit {
   //       const allowed_types = ['image/png', 'image/jpeg'];
   //       const max_height = 15200;
   //       const max_width = 25600;
-  
+
   //       if (fileInput.target.files[0].size > max_size) {
   //           this.imageError =
   //               'Maximum size allowed is ' + max_size / 1000 + 'Mb';
-  
+
   //           return false;
   //       }
-  
+
   //       if (!_.includes(allowed_types, fileInput.target.files[0].type)) {
   //           this.imageError = 'Only Images are allowed ( JPG | PNG )';
   //           return false;
@@ -143,10 +143,10 @@ export class AddUserComponent implements OnInit {
   //           image.onload = rs => {
   //               const img_height = rs.currentTarget['height'];
   //               const img_width = rs.currentTarget['width'];
-  
+
   //               console.log(img_height, img_width);
-  
-  
+
+
   //               if (img_height > max_height && img_width > max_width) {
   //                   this.imageError =
   //                       'Maximum dimentions allowed ' +
@@ -164,11 +164,11 @@ export class AddUserComponent implements OnInit {
   //               }
   //           };
   //       };
-  
+
   //       reader.readAsDataURL(fileInput.target.files[0]);
   //   }
   // }
-  
+
   // removeImage() {
   //   this.cardImageBase64 = null;
   //   this.objUser.Image =  null;
